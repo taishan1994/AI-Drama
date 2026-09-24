@@ -1,0 +1,212 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "MiniMax_H3_Ref2VA_pruned_int8_convrot.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "MiniMaxH3SigmaShift",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "shift_video": 12,
+      "shift_audio": 3
+    }
+  },
+  "3": {
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 271000013
+    }
+  },
+  "4": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+      "type": "minimax",
+      "device": "default"
+    }
+  },
+  "5": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_video_vae_fp16.safetensors"
+    }
+  },
+  "6": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_audio_vae_fp32.safetensors"
+    }
+  },
+  "7": {
+    "class_type": "MiniMaxH3ReferenceToVideo",
+    "inputs": {
+      "clip": [
+        "4",
+        0
+      ],
+      "vae": [
+        "5",
+        0
+      ],
+      "audio_vae": [
+        "6",
+        0
+      ],
+      "prompt": "[reference generation] 图片一和图片二是同一张角色板锁定的高台首帧，必须保持相同人物、相同石碑、相同老松和相同月夜构图，不得重新设计人物。上美影二维手绘动画，纸张纹理、墨线、平涂色块、电影胶片颗粒。唯一行旅者必须始终保持：木簪高髻、长黑发披背、蓝灰分层外袍、白色破边内层、赭红腰封、黑布靴、右腕红绳、编织肩带和一个圆形藤背包。0到2秒人物右手扶住高石碑，衣摆和发尾被冷风轻吹；2到5秒镜头缓慢向右侧横移并轻微拉远，只露出原有两块石碑和左侧老松，人物始终落地；5到8秒人物转头望向云海但不露正脸，保持同一服装、发型、背包和体态。只出现一个人物、两块石碑、一棵老松和云海；禁止复制石碑、第二背包、第二人物、鸟群、船、日出日落、海面、文字和字幕。生成静音视频。",
+      "width": 1344,
+      "height": 768,
+      "length": 195,
+      "ref_image_size": "max",
+      "ref_images.ref_image_0": [
+        "20",
+        0
+      ],
+      "ref_images.ref_image_1": [
+        "21",
+        0
+      ]
+    }
+  },
+  "8": {
+    "class_type": "BasicGuider",
+    "inputs": {
+      "model": [
+        "15",
+        0
+      ],
+      "conditioning": [
+        "7",
+        0
+      ]
+    }
+  },
+  "9": {
+    "class_type": "KSamplerSelect",
+    "inputs": {
+      "sampler_name": "euler"
+    }
+  },
+  "10": {
+    "class_type": "SamplerCustomAdvanced",
+    "inputs": {
+      "noise": [
+        "3",
+        0
+      ],
+      "guider": [
+        "8",
+        0
+      ],
+      "sampler": [
+        "9",
+        0
+      ],
+      "sigmas": [
+        "15",
+        1
+      ],
+      "latent_image": [
+        "7",
+        1
+      ]
+    }
+  },
+  "11": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "10",
+        0
+      ],
+      "vae": [
+        "5",
+        0
+      ]
+    }
+  },
+  "13": {
+    "class_type": "CreateVideo",
+    "inputs": {
+      "images": [
+        "11",
+        0
+      ],
+      "fps": 24,
+      "bit_depth": 8
+    }
+  },
+  "14": {
+    "class_type": "SaveVideo",
+    "inputs": {
+      "video": [
+        "13",
+        0
+      ],
+      "filename_prefix": "逍遥仙重制/R13_高台远景_Ref2VA角色锁定_PDD8",
+      "format": "mp4",
+      "codec": "auto"
+    }
+  },
+  "15": {
+    "class_type": "MiniMaxH3PDDAccApply",
+    "inputs": {
+      "model": [
+        "2",
+        0
+      ],
+      "pdd_file": "MiniMax-H3-Ref2VA-Acc-8Step.safetensors",
+      "nfe": "8",
+      "lora_strength": 1,
+      "head_strength": 1,
+      "on_off_grid": "error"
+    }
+  },
+  "20": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "逍遥仙/关键帧/R13_角色板锁定_高台首帧.png"
+    }
+  },
+  "21": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "逍遥仙/关键帧/R13_角色板锁定_高台首帧.png"
+    }
+  },
+  "22": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "songgong/角色设定板/角色设定板_阴差.png"
+    }
+  },
+  "23": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "songgong/角色设定板/角色设定板_张秀才.png"
+    }
+  },
+  "24": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "songgong/环境设定板/环境设定板_阴司府廨大殿.png"
+    }
+  },
+  "25": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "songgong/道具设定板/道具设定板_题纸中文_A03.png"
+    }
+  },
+  "26": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "songgong/道具设定板/道具设定板_片名中文.png"
+    }
+  }
+}

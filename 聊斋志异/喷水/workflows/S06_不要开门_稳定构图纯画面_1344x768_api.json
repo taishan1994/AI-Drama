@@ -1,0 +1,16 @@
+{
+  "1":{"class_type":"UNETLoader","inputs":{"unet_name":"MiniMax_H3_FL2VA_pruned_int8_convrot.safetensors","weight_dtype":"default"}},
+  "2":{"class_type":"MiniMaxH3SigmaShift","inputs":{"model":["1",0],"shift_video":12,"shift_audio":3}},
+  "3":{"class_type":"RandomNoise","inputs":{"noise_seed":26091608}},
+  "4":{"class_type":"CLIPLoader","inputs":{"clip_name":"qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors","type":"minimax","device":"default"}},
+  "5":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_video_vae_fp16.safetensors"}},
+  "7":{"class_type":"MiniMaxH3ImageToVideo","inputs":{"clip":["4",0],"vae":["5",0],"width":1344,"height":768,"length":144,"first_frame":["20",0],"prompt":"只生成稳定的无声画面，不要生成任何文字。严格锁定首帧构图和人物数量：一间深夜荒宅厅堂，左后方纸窗，中央偏左饭桌，后方中间卧榻，最右通院木门；左前窗下坐着阿绣，卧榻左侧站着阿莲，太夫人平躺在卧榻内侧。宋玉叔不出现。全程三个人都必须始终存在，不能换位、不能消失、不能增加人物，阿绣始终坐在左前，阿莲始终站在卧榻左侧，太夫人始终在卧榻内侧。0至2秒：阿莲只在原地抬手指向左后方纸窗，脚步不移动，身体不穿过饭桌；2至3秒：保持构图和停顿；3至5秒：太夫人在原位缓慢坐起并抬起一只手示意阻止，阿莲仍停在卧榻左侧；5秒至结尾：三人保持位置，只有太夫人手势和极轻微灯火变化。镜头固定正面中远景，不推拉、不摇移、不前进后退、不转场。保持上美影二维手绘、墨线、水彩纸张纹理、冷蓝夜色和一盏低矮暖灯。窗户玻璃和纸窗保持干燥、空无一物，窗外只有静止的深蓝夜色；不要水、雨幕、液体、喷溅、烟雾、鬼怪、白发、动物或任何特效。人物嘴部只做极轻微自然动作，绝不出现字幕、对白、旁白、标题、汉字、英文、标牌或水印。"}},
+  "8":{"class_type":"BasicGuider","inputs":{"model":["15",0],"conditioning":["7",0]}},
+  "9":{"class_type":"KSamplerSelect","inputs":{"sampler_name":"euler"}},
+  "10":{"class_type":"SamplerCustomAdvanced","inputs":{"noise":["3",0],"guider":["8",0],"sampler":["9",0],"sigmas":["15",1],"latent_image":["7",1]}},
+  "11":{"class_type":"VAEDecode","inputs":{"samples":["10",0],"vae":["5",0]}},
+  "13":{"class_type":"CreateVideo","inputs":{"images":["11",0],"fps":24,"bit_depth":8}},
+  "14":{"class_type":"SaveVideo","inputs":{"video":["13",0],"filename_prefix":"pengshui/S06_不要开门_稳定构图纯画面_上美影_1344x768","format":"mp4","codec":"auto"}},
+  "15":{"class_type":"MiniMaxH3PDDAccApply","inputs":{"model":["2",0],"pdd_file":"MiniMax-H3-FL2VA-Acc-8Step.safetensors","nfe":"8","lora_strength":1.0,"head_strength":1.0,"on_off_grid":"error","partition_check":"error"}},
+  "20":{"class_type":"LoadImage","inputs":{"image":"喷水/S06_new_start_asset.png"}}
+}

@@ -1,0 +1,19 @@
+{
+  "1":{"class_type":"UNETLoader","inputs":{"unet_name":"MiniMax_H3_FL2VA_pruned_int8_convrot.safetensors","weight_dtype":"default"}},
+  "2":{"class_type":"MiniMaxH3SigmaShift","inputs":{"model":["1",0],"shift_video":12,"shift_audio":3}},
+  "3":{"class_type":"RandomNoise","inputs":{"noise_seed":26091604}},
+  "4":{"class_type":"CLIPLoader","inputs":{"clip_name":"qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors","type":"minimax","device":"default"}},
+  "5":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_video_vae_fp16.safetensors"}},
+  "6":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_audio_vae_fp32.safetensors"}},
+  "7":{"class_type":"MiniMaxH3ReferenceToVideo","inputs":{"clip":["4",0],"vae":["5",0],"audio_vae":["6",0],"width":1344,"height":768,"length":144,"ref_image_size":"max","ref_images.ref_image_0":["20",0],"ref_audios.ref_audio_0":["22",0],"prompt":"<Picture 1> 是 S04 厅堂首帧的唯一画面锚点；<Audio 1> 是宋玉叔首次对白的唯一男声纹参考。直接从 <Picture 1> 开始，保持16:9、1344x768和当前版本上美影式二维手绘动画。固定荒宅厅堂：纸窗左后方，低矮饭桌中央偏左，卧榻后方中间，通院木门最右侧，四人始终在同一空间中。四人身份固定：宋玉叔为三十余岁清瘦文人、青灰长衫、黑幞头，坐在饭桌右侧；太夫人为银发低髻、深灰褐衣，坐在饭桌内侧；阿莲为高瘦深青衣，站在卧榻左侧；阿绣为年轻圆脸浅青衣，坐在左侧窗下。前段太夫人用自然、略慢的年长女声问：这院子以前住过什么人？停顿后，宋玉叔使用与 <Audio 1> 相同的低沉克制男声、放慢语速回答：房主只说多年空着，没提别的。再停顿，太夫人用同一女声问：空着的院子，墙根为何总是湿的？宋玉叔只张口准备回答，院外传来极轻的扑扑喷水声，四人同时停住。墙根、饭桌、地面、窗台和左下角绝不出现可见水花、水雾或水流；水声只来自画外院落。灯火向一侧倾斜但不变大。<Audio 1> 只用于锁定宋玉叔声纹，不得直接照搬其原台词；太夫人的声音保持同一略沙哑温和年长女声。两人不得串音、不得重复台词，不得生成额外人声。阿莲和阿绣全程闭口。环境只保留室内木材轻响、衣料、碗筷、油灯火苗、远处风声，以及画外三次轻微湿润喷水声；无旁白、无音乐、无动物叫声、无其他人声。人物脸型、服装、门窗家具位置稳定，不穿模、不增殖、不消失、不改变镜头方向。不要字幕、文字、水印、现代物件、真人摄影质感。"}},
+  "8":{"class_type":"BasicGuider","inputs":{"model":["15",0],"conditioning":["7",0]}},
+  "9":{"class_type":"KSamplerSelect","inputs":{"sampler_name":"euler"}},
+  "10":{"class_type":"SamplerCustomAdvanced","inputs":{"noise":["3",0],"guider":["8",0],"sampler":["9",0],"sigmas":["15",1],"latent_image":["7",1]}},
+  "11":{"class_type":"VAEDecode","inputs":{"samples":["10",0],"vae":["5",0]}},
+  "12":{"class_type":"VAEDecodeAudio","inputs":{"samples":["10",0],"vae":["6",0]}},
+  "13":{"class_type":"CreateVideo","inputs":{"images":["11",0],"audio":["12",0],"fps":24,"bit_depth":8}},
+  "14":{"class_type":"SaveVideo","inputs":{"video":["13",0],"filename_prefix":"pengshui/S04_母子晚饭_声纹锁定_宋玉叔S02参考_无可见水花_上美影_1344x768","format":"mp4","codec":"auto"}},
+  "15":{"class_type":"MiniMaxH3PDDAccApply","inputs":{"model":["2",0],"pdd_file":"MiniMax-H3-FL2VA-Acc-8Step.safetensors","nfe":"8","lora_strength":1.0,"head_strength":1.0,"on_off_grid":"error","partition_check":"error"}},
+  "20":{"class_type":"LoadImage","inputs":{"image":"喷水/S04_new_start_asset.png"}},
+  "22":{"class_type":"LoadAudio","inputs":{"audio":"喷水/S02_宋玉叔首次对白_声纹基准.wav"}}
+}

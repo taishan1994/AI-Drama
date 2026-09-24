@@ -1,0 +1,233 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "MiniMax_H3_Ref2VA_pruned_int8_convrot.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "MiniMaxH3SigmaShift",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "shift_video": 12,
+      "shift_audio": 3
+    }
+  },
+  "3": {
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 26091072
+    }
+  },
+  "4": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+      "type": "minimax",
+      "device": "default"
+    }
+  },
+  "5": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_video_vae_fp16.safetensors"
+    }
+  },
+  "6": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_audio_vae_fp32.safetensors"
+    }
+  },
+  "7": {
+    "class_type": "MiniMaxH3ReferenceToVideo",
+    "inputs": {
+      "clip": [
+        "4",
+        0
+      ],
+      "vae": [
+        "5",
+        0
+      ],
+      "audio_vae": [
+        "6",
+        0
+      ],
+      "prompt": "subject_definitions:\n<Subject 1> is the exact five-person composition in <Picture 1>: one old innkeeper and exactly four distinct carters, all standing.\n<Picture 1> is the exact final frame of shot 6 and must control the doorway, corpse room, character count and positions.\n<Audio 1> is only the old innkeeper voice-timbre reference for <Subject 1> (S1); do not copy its words, timing, rhythm, pauses, or acoustic content.\n\nsummary:\n[keyframe completion + reference generation + audio reference] Generate an 8-second continuation from <Picture 1> with the same five people and the same room. Only the old innkeeper speaks; the whole soundtrack contains dialogue only.\n\nretention_analysis:\n<Subject 1> ([Shot 1]): fully_preserved - preserve five people and fixed room geometry.\n<Picture 1> ([Shot 1] first frame): fully_preserved - exact opening composition.\n<Audio 1>: reference - match the old innkeeper's voice timbre and delivery.\n\ndetailed_description:\nShanghai Animation Film Studio-inspired 2D hand-painted animation with ink contours and painted paper texture. [Shot 1] Start exactly from <Picture 1>. Keep one distinct old innkeeper and exactly four distinct carters, all five visible and standing; no carter sits, kneels or disappears. Use <Audio 1> only for <Subject 1> (S1). The camera slowly pushes toward the covered corpse while preserving the doorway, doorframe, bench, offering table and five-person layout. <Subject 1> (S1) speaks once from near the beginning and remains the only audible source: <d>[Chinese] 这是我刚去世的儿媳妇。</d> No other vocal event occurs.\n\noverall_soundscape: Rain, low wind, soft footsteps, cloth movement and faint candle crackle remain audible throughout. The old innkeeper's single line is mixed clearly above the ambience. No carter voice, no narration, no additional human voice, no animal calls, and no music.\n\nnon_diegetic_music: No music.",
+      "width": 1344,
+      "height": 768,
+      "length": 192,
+      "ref_image_size": "max",
+      "ref_images.ref_image_0": [
+        "20",
+        0
+      ],
+      "ref_images.ref_image_1": [
+        "21",
+        0
+      ],
+      "ref_audios.ref_audio_0": [
+        "22",
+        0
+      ]
+    }
+  },
+  "8": {
+    "class_type": "BasicGuider",
+    "inputs": {
+      "model": [
+        "15",
+        0
+      ],
+      "conditioning": [
+        "7",
+        0
+      ]
+    }
+  },
+  "9": {
+    "class_type": "KSamplerSelect",
+    "inputs": {
+      "sampler_name": "euler"
+    }
+  },
+  "10": {
+    "class_type": "SamplerCustomAdvanced",
+    "inputs": {
+      "noise": [
+        "3",
+        0
+      ],
+      "guider": [
+        "8",
+        0
+      ],
+      "sampler": [
+        "9",
+        0
+      ],
+      "sigmas": [
+        "15",
+        1
+      ],
+      "latent_image": [
+        "7",
+        1
+      ]
+    }
+  },
+  "11": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "10",
+        0
+      ],
+      "vae": [
+        "5",
+        0
+      ]
+    }
+  },
+  "12": {
+    "class_type": "VAEDecodeAudio",
+    "inputs": {
+      "samples": [
+        "10",
+        0
+      ],
+      "vae": [
+        "6",
+        0
+      ]
+    }
+  },
+  "13": {
+    "class_type": "CreateVideo",
+    "inputs": {
+      "images": [
+        "11",
+        0
+      ],
+      "audio": [
+        "12",
+        0
+      ],
+      "fps": 24,
+      "bit_depth": 8
+    }
+  },
+  "14": {
+    "class_type": "SaveVideo",
+    "inputs": {
+      "video": [
+        "13",
+        0
+      ],
+      "filename_prefix": "shibian/S07B_全程对白版_H3Ref2VA",
+      "format": "mp4",
+      "codec": "auto"
+    }
+  },
+  "15": {
+    "class_type": "MiniMaxH3PDDAccApply",
+    "inputs": {
+      "model": [
+        "2",
+        0
+      ],
+      "pdd_file": "MiniMax-H3-Ref2VA-Acc-8Step.safetensors",
+      "nfe": "8",
+      "lora_strength": 1,
+      "head_strength": 1,
+      "on_off_grid": "error"
+    }
+  },
+  "20": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "shibian/S06_00003_tail.png"
+    }
+  },
+  "21": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "shibian/S06_00003_tail.png"
+    }
+  },
+  "22": {
+    "class_type": "LoadAudio",
+    "inputs": {
+      "audio": "shibian/老翁_加长纯人声参考_16k.wav"
+    }
+  },
+  "23": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "songgong/角色设定板/角色设定板_张秀才.png"
+    }
+  },
+  "24": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "songgong/环境设定板/环境设定板_阴司府廨大殿.png"
+    }
+  },
+  "25": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "songgong/道具设定板/道具设定板_题纸中文_A03.png"
+    }
+  },
+  "26": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "songgong/道具设定板/道具设定板_片名中文.png"
+    }
+  }
+}

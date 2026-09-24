@@ -1,0 +1,19 @@
+{
+  "1":{"class_type":"UNETLoader","inputs":{"unet_name":"MiniMax_H3_FL2VA_pruned_int8_convrot.safetensors","weight_dtype":"default"}},
+  "2":{"class_type":"MiniMaxH3SigmaShift","inputs":{"model":["1",0],"shift_video":12,"shift_audio":3}},
+  "3":{"class_type":"RandomNoise","inputs":{"noise_seed":2026092305}},
+  "4":{"class_type":"CLIPLoader","inputs":{"clip_name":"qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors","type":"minimax","device":"default"}},
+  "5":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_video_vae_fp16.safetensors"}},
+  "6":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_audio_vae_fp32.safetensors"}},
+  "7":{"class_type":"MiniMaxH3ImageToVideo","inputs":{"clip":["4",0],"vae":["5",0],"width":1344,"height":768,"length":226,"first_frame":["20",0],"last_frame":["21",0],"prompt":"以图1为绝对首帧、图2为绝对尾帧，生成约9.4秒、24fps、16:9、1344x768的连续叙事动画。用前景遮挡完成城市站厅到办公室的剪接：开头成人林小满在站厅保持图1姿势，身边模糊通勤人流横向经过；一位近景剪影从镜头前完全经过，遮满画面时自然匹配切换到同风格夜间办公室，不呈现人物身体变形或瞬移。办公室必须沿用图2中的同一多格窗、木桌、右侧暖台灯和书架，所有固定家具不漂移。成年人（25岁，深棕发松束于后颈，灰蓝通勤外套、米色上衣）已坐在办公桌前，低头安静看着手中唯一一张家乡旧照片。橄榄色帆布包放在桌子左侧前沿，唯一红纸风车放在包边；笔记本电脑闭合在照片左边。她用手指轻抚照片边缘，疲惫地放松肩膀，动作克制。镜头从中景非常缓慢推近照片，不越轴、不抽动、不改变家具位置；最后准确到图2尾帧构图和手势。画面保持手绘绘本电影质感、彩铅轮廓、水粉背景和纸纹。不要新增人物，不改变成年角色脸型/服装/发型，不复制照片或风车，不产生可读文字、字幕、UI、水印。禁止对白、唱歌、哼唱、旁白、口型、环境人声、动物叫声、音乐；生成的音轨将被丢弃，成片只使用指定歌曲。"}},
+  "8":{"class_type":"BasicGuider","inputs":{"model":["15",0],"conditioning":["7",0]}},
+  "9":{"class_type":"KSamplerSelect","inputs":{"sampler_name":"euler"}},
+  "10":{"class_type":"SamplerCustomAdvanced","inputs":{"noise":["3",0],"guider":["8",0],"sampler":["9",0],"sigmas":["15",1],"latent_image":["7",1]}},
+  "11":{"class_type":"VAEDecode","inputs":{"samples":["10",0],"vae":["5",0]}},
+  "12":{"class_type":"VAEDecodeAudio","inputs":{"samples":["10",0],"vae":["6",0]}},
+  "13":{"class_type":"CreateVideo","inputs":{"images":["11",0],"audio":["12",0],"fps":24,"bit_depth":8}},
+  "14":{"class_type":"SaveVideo","inputs":{"video":["13",0],"filename_prefix":"mv_hometown/S05_夜办公室_photo_raw","format":"mp4","codec":"auto"}},
+  "15":{"class_type":"MiniMaxH3PDDAccApply","inputs":{"model":["2",0],"pdd_file":"MiniMax-H3-FL2VA-Acc-8Step.safetensors","nfe":"8","lora_strength":1.0,"head_strength":1.0,"on_off_grid":"error","partition_check":"error"}},
+  "20":{"class_type":"LoadImage","inputs":{"image":"mv_hometown/S05_first_frame.png"}},
+  "21":{"class_type":"LoadImage","inputs":{"image":"mv_hometown/S05_last_frame.png"}}
+}

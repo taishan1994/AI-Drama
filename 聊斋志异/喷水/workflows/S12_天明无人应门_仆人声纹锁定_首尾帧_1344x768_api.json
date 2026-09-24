@@ -1,0 +1,20 @@
+{
+  "1":{"class_type":"UNETLoader","inputs":{"unet_name":"MiniMax_H3_FL2VA_pruned_int8_convrot.safetensors","weight_dtype":"default"}},
+  "2":{"class_type":"MiniMaxH3SigmaShift","inputs":{"model":["1",0],"shift_video":12,"shift_audio":3}},
+  "3":{"class_type":"RandomNoise","inputs":{"noise_seed":26091614}},
+  "4":{"class_type":"CLIPLoader","inputs":{"clip_name":"qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors","type":"minimax","device":"default"}},
+  "5":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_video_vae_fp16.safetensors"}},
+  "6":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_audio_vae_fp32.safetensors"}},
+  "7":{"class_type":"MiniMaxH3ReferenceToVideo","inputs":{"clip":["4",0],"vae":["5",0],"audio_vae":["6",0],"width":1344,"height":768,"length":144,"ref_image_size":"max","ref_images.ref_image_0":["20",0],"ref_images.ref_image_1":["21",0],"ref_audios.ref_audio_0":["22",0],"prompt":"<Picture 1>是黑场之后的S12清晨首帧，<Picture 2>是尾帧构图，<Audio 1>只用于锁定宋家仆人的粗粝男声纹，不照搬参考台词。生成6秒16:9、1344x768上美影二维手绘电影动画。时间固定为清晨淡灰金色光线，荒宅正门关闭，门位中央偏右、石阶、院墙、树和陶罐位置保持不变。0至1.5秒第一名粗褐衣男仆端木盆走到门前，面对门；1.5至2.8秒他用拳轻敲关闭的木门两次，同时只说完整一句“夫人，早饭好了。”，语速自然偏慢，使用与<Audio 1>一致的仆人男声；对白前后禁止任何其他人声。2.8至4秒门内没有回应，仆人退半步低头听门下动静；4至6秒另外两名不同脸型、不同身形的粗褐衣仆人从画面左侧进入，停在第一名身后，三人都面向关闭的门，不打开门、不穿门、不互换位置。门槛下出现一条清澈细水线带少量黑土，沿门缝向外缓慢流出，不能喷涌。三名仆人必须始终只有三个，不能增殖、消失、换脸，服装和发式保持粗褐衣布巾。时间和光线绝不变成夜晚，门始终关闭。音轨环境为远处极轻晨鸟、木盆轻响、两次敲门、门下细水声；除指定一句对白外禁止旁白、第二第三仆人说话、重复对白、额外人声、音乐、动物近叫和噪声。无字幕、无文字、水印、现代物件。"}},
+  "8":{"class_type":"BasicGuider","inputs":{"model":["15",0],"conditioning":["7",0]}},
+  "9":{"class_type":"KSamplerSelect","inputs":{"sampler_name":"euler"}},
+  "10":{"class_type":"SamplerCustomAdvanced","inputs":{"noise":["3",0],"guider":["8",0],"sampler":["9",0],"sigmas":["15",1],"latent_image":["7",1]}},
+  "11":{"class_type":"VAEDecode","inputs":{"samples":["10",0],"vae":["5",0]}},
+  "12":{"class_type":"VAEDecodeAudio","inputs":{"samples":["10",0],"vae":["6",0]}},
+  "13":{"class_type":"CreateVideo","inputs":{"images":["11",0],"audio":["12",0],"fps":24,"bit_depth":8}},
+  "14":{"class_type":"SaveVideo","inputs":{"video":["13",0],"filename_prefix":"pengshui/S12_天明无人应门_仆人声纹锁定_首尾帧_上美影_1344x768","format":"mp4","codec":"auto"}},
+  "15":{"class_type":"MiniMaxH3PDDAccApply","inputs":{"model":["2",0],"pdd_file":"MiniMax-H3-FL2VA-Acc-8Step.safetensors","nfe":"8","lora_strength":1.0,"head_strength":1.0,"on_off_grid":"error","partition_check":"error"}},
+  "20":{"class_type":"LoadImage","inputs":{"image":"喷水/S12_new_start_asset.png"}},
+  "21":{"class_type":"LoadImage","inputs":{"image":"喷水/S12_new_end_asset.png"}},
+  "22":{"class_type":"LoadAudio","inputs":{"audio":"喷水/S03_宋家仆人_声纹基准.wav"}}
+}

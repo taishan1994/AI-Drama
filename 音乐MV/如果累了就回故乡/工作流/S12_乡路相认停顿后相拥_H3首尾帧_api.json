@@ -1,0 +1,19 @@
+{
+  "1":{"class_type":"UNETLoader","inputs":{"unet_name":"MiniMax_H3_FL2VA_pruned_int8_convrot.safetensors","weight_dtype":"default"}},
+  "2":{"class_type":"MiniMaxH3SigmaShift","inputs":{"model":["1",0],"shift_video":12,"shift_audio":3}},
+  "3":{"class_type":"RandomNoise","inputs":{"noise_seed":2026092312}},
+  "4":{"class_type":"CLIPLoader","inputs":{"clip_name":"qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors","type":"minimax","device":"default"}},
+  "5":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_video_vae_fp16.safetensors"}},
+  "6":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_audio_vae_fp32.safetensors"}},
+  "7":{"class_type":"MiniMaxH3ImageToVideo","inputs":{"clip":["4",0],"vae":["5",0],"width":1344,"height":768,"length":226,"first_frame":["20",0],"last_frame":["21",0],"prompt":"以图1为绝对首帧、图2为绝对尾帧，生成约9.4秒、24fps、16:9、1344x768温暖手绘绘本电影动画，彩铅轮廓、水粉背景、轻纸纹、柔和晨光一致。保持图1里的同一条村路、老槐树、石墙、房屋、早晨光线和两个人的身份。成年林小满在路的近处，奶奶在树下远处，先隔着一段距离安静对望约一秒。随后两人沿同一条路彼此缓慢走近，步伐自然、速度适中；不要跑、不要瞬移、不要突然换景别。小满肩上始终背着同一橄榄色帆布包，唯一红纸风车固定在包侧。奶奶是同一位身材较小、银灰发髻/靛蓝头巾、深棕布衣的老人；小满是同一位25岁成年女性，深棕后束发、灰蓝外套、米色上衣、深色长裤。走到彼此面前时先短暂停下，奶奶抬手轻触小满肩臂，小满自然俯身拥抱奶奶；拥抱后稳定停留，表现克制而真实的亲情。摄影机只缓慢向前跟随，不绕轴，不大幅变焦；远近变化由人物沿道路走动形成。背景中的老树、巷口、石墙和栅栏位置稳定，地面透视不变。结束准确匹配图2：两位女性在道路中央自然拥抱、全身可见、人物比例正常、只有一个背包和一只风车。严禁多余人物/肢体、人物身份互换、奶奶年轻化、小满变童年、包/风车复制、背景建筑漂移、过度戏剧表情、奔跑、字幕、歌词、文字、水印。无对白、唱歌、哼唱、旁白、环境人声、动物声或音乐；H3音轨将丢弃，成片只用指定歌曲。"}},
+  "8":{"class_type":"BasicGuider","inputs":{"model":["15",0],"conditioning":["7",0]}},
+  "9":{"class_type":"KSamplerSelect","inputs":{"sampler_name":"euler"}},
+  "10":{"class_type":"SamplerCustomAdvanced","inputs":{"noise":["3",0],"guider":["8",0],"sampler":["9",0],"sigmas":["15",1],"latent_image":["7",1]}},
+  "11":{"class_type":"VAEDecode","inputs":{"samples":["10",0],"vae":["5",0]}},
+  "12":{"class_type":"VAEDecodeAudio","inputs":{"samples":["10",0],"vae":["6",0]}},
+  "13":{"class_type":"CreateVideo","inputs":{"images":["11",0],"audio":["12",0],"fps":24,"bit_depth":8}},
+  "14":{"class_type":"SaveVideo","inputs":{"video":["13",0],"filename_prefix":"mv_hometown/S12_乡路相认停顿后相拥_raw","format":"mp4","codec":"auto"}},
+  "15":{"class_type":"MiniMaxH3PDDAccApply","inputs":{"model":["2",0],"pdd_file":"MiniMax-H3-FL2VA-Acc-8Step.safetensors","nfe":"8","lora_strength":1.0,"head_strength":1.0,"on_off_grid":"error","partition_check":"error"}},
+  "20":{"class_type":"LoadImage","inputs":{"image":"mv_hometown/S12_first_frame.png"}},
+  "21":{"class_type":"LoadImage","inputs":{"image":"mv_hometown/S12_last_frame.png"}}
+}

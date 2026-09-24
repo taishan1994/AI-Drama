@@ -1,0 +1,20 @@
+{
+  "1":{"class_type":"UNETLoader","inputs":{"unet_name":"MiniMax_H3_FL2VA_pruned_int8_convrot.safetensors","weight_dtype":"default"}},
+  "2":{"class_type":"MiniMaxH3SigmaShift","inputs":{"model":["1",0],"shift_video":12,"shift_audio":3}},
+  "3":{"class_type":"RandomNoise","inputs":{"noise_seed":26092120}},
+  "4":{"class_type":"CLIPLoader","inputs":{"clip_name":"qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors","type":"minimax","device":"default"}},
+  "5":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_video_vae_fp16.safetensors"}},
+  "6":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_audio_vae_fp32.safetensors"}},
+  "7":{"class_type":"MiniMaxH3ReferenceToVideo","inputs":{"clip":["4",0],"vae":["5",0],"audio_vae":["6",0],"width":1344,"height":768,"length":240,"ref_image_size":"max","ref_images.ref_image_0":["20",0],"ref_images.ref_image_1":["21",0],"ref_audios.ref_audio_0":["22",0],"prompt":"<Picture 1>是S12实际尾帧，必须连续承接；<Picture 2>是镜面正对镜头的最终插入画面；<Audio 1>只锁定旁白声纹。上美影《喷水》同类二维手绘动画，粗手工墨线、赛璐璐平涂、宣纸水彩肌理、低饱和古代书房、电影胶片颗粒。必须遵守真实手部与镜子运动：0至2秒方栋仍坐左侧，妻子在右后方；2至4秒方栋右手从身体前方伸向书案，手指真实握住铜镜下方镜柄，镜面先呈侧斜角，不能一开始就正对镜头；4至6秒方栋以镜柄为转轴缓慢转动铜镜，手腕和镜柄同步，镜面从侧斜逐渐转向方栋视线和镜头，不能出现镜子脱手、镜柄穿手或镜面与手方向相反；6至8秒镜头沿铜镜中心平稳推进，镜面逐渐放大占据画面，形成有动机的转场；8至10秒进入镜中眼部插入特写，清楚显示左眼重瞳、右眼旋螺状障碍，重瞳和旋螺只在镜中出现，不出现实体瞳人。方栋、妻子、门窗、卧榻和书案位置保持一致，人数始终只有两人。旁白只说一次“原来，两枚瞳人已合居一眶。”，在镜面放大并进入眼部特写后开始，旁白只用Audio 1。禁止方栋对白、妻子对白、瞳人声、第二旁白、音乐、狗叫、额外人声、随机噪声、画面文字、字幕、水印和任何可读汉字。"}},
+  "8":{"class_type":"BasicGuider","inputs":{"model":["15",0],"conditioning":["7",0]}},
+  "9":{"class_type":"KSamplerSelect","inputs":{"sampler_name":"euler"}},
+  "10":{"class_type":"SamplerCustomAdvanced","inputs":{"noise":["3",0],"guider":["8",0],"sampler":["9",0],"sigmas":["15",1],"latent_image":["7",1]}},
+  "11":{"class_type":"VAEDecode","inputs":{"samples":["10",0],"vae":["5",0]}},
+  "12":{"class_type":"VAEDecodeAudio","inputs":{"samples":["10",0],"vae":["6",0]}},
+  "13":{"class_type":"CreateVideo","inputs":{"images":["11",0],"audio":["12",0],"fps":24,"bit_depth":8}},
+  "14":{"class_type":"SaveVideo","inputs":{"video":["13",0],"filename_prefix":"tongrenyu/S13_重瞳真相_镜面转场_旁白声纹_无额外人声_喷水风格_首尾帧_v2_1344x768","format":"mp4","codec":"auto"}},
+  "15":{"class_type":"MiniMaxH3PDDAccApply","inputs":{"model":["2",0],"pdd_file":"MiniMax-H3-FL2VA-Acc-8Step.safetensors","nfe":"8","lora_strength":1.0,"head_strength":1.0,"on_off_grid":"error","partition_check":"error"}},
+  "20":{"class_type":"LoadImage","inputs":{"image":"tongrenyu/S13_首帧_承接S12_方栋看清妻子_喷水风格.png"}},
+  "21":{"class_type":"LoadImage","inputs":{"image":"tongrenyu/S13_尾帧_镜前重瞳真相_喷水风格_v1.png"}},
+  "22":{"class_type":"LoadAudio","inputs":{"audio":"tongrenyu/旁白_VO-NARRATOR-01.wav"}}
+}

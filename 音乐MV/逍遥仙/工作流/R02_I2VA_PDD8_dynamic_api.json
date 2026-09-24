@@ -1,0 +1,162 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "MiniMax_H3_FL2VA_pruned_int8_convrot.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "MiniMaxH3SigmaShift",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "shift_video": 12,
+      "shift_audio": 3
+    }
+  },
+  "3": {
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 261000002
+    }
+  },
+  "4": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+      "type": "minimax",
+      "device": "default"
+    }
+  },
+  "5": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_video_vae_fp16.safetensors"
+    }
+  },
+  "7": {
+    "class_type": "MiniMaxH3ImageToVideo",
+    "inputs": {
+      "clip": [
+        "4",
+        0
+      ],
+      "vae": [
+        "5",
+        0
+      ],
+      "width": 1344,
+      "height": 768,
+      "length": 195,
+      "first_frame": [
+        "20",
+        0
+      ],
+      "prompt": "中国传统手绘美术动画，上美影二维动画质感，电影胶片颗粒。严格从参考首帧连续开始：同一旧木渡口、同一纸灯在右上、同一条木舟停在远处，深蓝夜色和雾的位置保持稳定。0到1.5秒，行旅者从画面最右侧背对镜头走入木栈道，完整出现一个人，双脚始终接触木板；1.5到4.5秒，他沿栈道向左前方走三步，蓝灰长衫、赭色腰封、背后圆形行囊和右手红绳保持一致，衣摆受同一方向的风摆动；4.5到6.5秒，他在渡口中央停下并抬头看向远山，镜头轻微跟随但不改变空间方向；6.5到8秒，纸灯光斑在木板上随风移动，行旅者保持背影站定。只出现这一名行旅者，不得出现船夫、路人或第二个人。动作连续，不能静帧，不能变脸，不能漂浮。无字幕、无对白、无旁白、无音乐，生成静音画面。"
+    }
+  },
+  "8": {
+    "class_type": "BasicGuider",
+    "inputs": {
+      "model": [
+        "15",
+        0
+      ],
+      "conditioning": [
+        "7",
+        0
+      ]
+    }
+  },
+  "9": {
+    "class_type": "KSamplerSelect",
+    "inputs": {
+      "sampler_name": "euler"
+    }
+  },
+  "10": {
+    "class_type": "SamplerCustomAdvanced",
+    "inputs": {
+      "noise": [
+        "3",
+        0
+      ],
+      "guider": [
+        "8",
+        0
+      ],
+      "sampler": [
+        "9",
+        0
+      ],
+      "sigmas": [
+        "15",
+        1
+      ],
+      "latent_image": [
+        "7",
+        1
+      ]
+    }
+  },
+  "11": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "10",
+        0
+      ],
+      "vae": [
+        "5",
+        0
+      ]
+    }
+  },
+  "13": {
+    "class_type": "CreateVideo",
+    "inputs": {
+      "images": [
+        "11",
+        0
+      ],
+      "fps": 24,
+      "bit_depth": 8
+    }
+  },
+  "14": {
+    "class_type": "SaveVideo",
+    "inputs": {
+      "video": [
+        "13",
+        0
+      ],
+      "filename_prefix": "逍遥仙重制/R02_行旅者入渡口_PDD8",
+      "format": "mp4",
+      "codec": "auto"
+    }
+  },
+  "15": {
+    "class_type": "MiniMaxH3PDDAccApply",
+    "inputs": {
+      "model": [
+        "2",
+        0
+      ],
+      "pdd_file": "MiniMax-H3-FL2VA-Acc-8Step.safetensors",
+      "nfe": "8",
+      "lora_strength": 1.0,
+      "head_strength": 1.0,
+      "on_off_grid": "error",
+      "partition_check": "error"
+    }
+  },
+  "20": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "逍遥仙/关键帧/R02_三视图人物_右侧入画首帧.png"
+    }
+  }
+}

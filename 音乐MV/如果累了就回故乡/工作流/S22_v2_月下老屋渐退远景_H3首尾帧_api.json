@@ -1,0 +1,19 @@
+{
+  "1":{"class_type":"UNETLoader","inputs":{"unet_name":"MiniMax_H3_FL2VA_pruned_int8_convrot.safetensors","weight_dtype":"default"}},
+  "2":{"class_type":"MiniMaxH3SigmaShift","inputs":{"model":["1",0],"shift_video":12,"shift_audio":3}},
+  "3":{"class_type":"RandomNoise","inputs":{"noise_seed":2026092325}},
+  "4":{"class_type":"CLIPLoader","inputs":{"clip_name":"qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors","type":"minimax","device":"default"}},
+  "5":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_video_vae_fp16.safetensors"}},
+  "6":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_audio_vae_fp32.safetensors"}},
+  "7":{"class_type":"MiniMaxH3ImageToVideo","inputs":{"clip":["4",0],"vae":["5",0],"width":1344,"height":768,"length":137,"first_frame":["20",0],"last_frame":["21",0],"prompt":"约5.8秒，24fps，16:9。温暖手绘绘本电影风格，彩铅轮廓、水粉夜色和细纸纹。以图1为开场，以图2为准确尾帧，连续完成一段稳定、缓慢的摄影机后拉：从亮着暖灯、窗台放着一只红纸风车的老屋中景，平滑退到能看见整面屋墙、月下石路和周围树影的远景。房屋身份、瓦檐、格窗、窗灯、月亮和风车位置保持一致；房屋在画面中逐渐变小是摄影机后移造成的透视变化，不是房屋形变。窗内可见安静相依的祖孙剪影，始终留在室内。树枝随夜风轻摆，红纸风车缓缓转动，灯光温暖稳定。机位平稳匀速后移，最后停在图2构图，给尾奏留白。纯画面生成，后期使用原曲；不出现对白、旁白、哼唱、环境人声、动物声、字幕、歌词、文字或水印。"}},
+  "8":{"class_type":"BasicGuider","inputs":{"model":["15",0],"conditioning":["7",0]}},
+  "9":{"class_type":"KSamplerSelect","inputs":{"sampler_name":"euler"}},
+  "10":{"class_type":"SamplerCustomAdvanced","inputs":{"noise":["3",0],"guider":["8",0],"sampler":["9",0],"sigmas":["15",1],"latent_image":["7",1]}},
+  "11":{"class_type":"VAEDecode","inputs":{"samples":["10",0],"vae":["5",0]}},
+  "12":{"class_type":"VAEDecodeAudio","inputs":{"samples":["10",0],"vae":["6",0]}},
+  "13":{"class_type":"CreateVideo","inputs":{"images":["11",0],"audio":["12",0],"fps":24,"bit_depth":8}},
+  "14":{"class_type":"SaveVideo","inputs":{"video":["13",0],"filename_prefix":"mv_hometown/S22_v2_月下老屋渐退远景_raw","format":"mp4","codec":"auto"}},
+  "15":{"class_type":"MiniMaxH3PDDAccApply","inputs":{"model":["2",0],"pdd_file":"MiniMax-H3-FL2VA-Acc-8Step.safetensors","nfe":"8","lora_strength":1.0,"head_strength":1.0,"on_off_grid":"error","partition_check":"error"}},
+  "20":{"class_type":"LoadImage","inputs":{"image":"mv_hometown/S22_v2_first_frame.png"}},
+  "21":{"class_type":"LoadImage","inputs":{"image":"mv_hometown/S22_v2_last_frame.png"}}
+}

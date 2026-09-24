@@ -1,0 +1,162 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "MiniMax_H3_FL2VA_pruned_int8_convrot.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "MiniMaxH3SigmaShift",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "shift_video": 12,
+      "shift_audio": 3
+    }
+  },
+  "3": {
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 261000020
+    }
+  },
+  "4": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+      "type": "minimax",
+      "device": "default"
+    }
+  },
+  "5": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_video_vae_fp16.safetensors"
+    }
+  },
+  "7": {
+    "class_type": "MiniMaxH3ImageToVideo",
+    "inputs": {
+      "clip": [
+        "4",
+        0
+      ],
+      "vae": [
+        "5",
+        0
+      ],
+      "width": 1344,
+      "height": 768,
+      "length": 195,
+      "first_frame": [
+        "20",
+        0
+      ],
+      "prompt": "中国传统手绘二维动画，上美影手绘质感，墨线、平涂色块、纸张肌理与轻微电影胶片颗粒。严格从R20四季循环首帧开始，全镜头固定机位、固定夜间曝光与构图；画面只有左侧院墙、檐下纸灯、花树、木桌、木椅、石板地面及行旅者，没有院门或门洞。同一位行旅者保持木簪高髻、长黑发、蓝灰外袍、白色破边内层、赭红腰带、黑布靴、右腕红绳，圆形藤编背包靠在椅旁；他全程坐在原位不动。只让同一棵树和天气按明确顺序完整走过一年，场景不切换：0到1.5秒【春】，枝头粉白花盛开，少量花瓣飘落；1.5到3秒【夏】，花瓣自然转为浓密翠绿树叶，树冠茂盛，出现轻柔夏雨；3到4.5秒【秋】，绿叶逐渐转为金黄并缓慢落下；4.5到6秒【冬】，枝叶落尽，细雪覆盖树枝、桌沿和石板，雪花清晰可见；6到8秒【再回春】，积雪缓慢融去，枝头重新绽出同样的粉白花，几片花瓣飘落，结尾季节与开头春景呼应。每个季节阶段都要一眼可区分，按春、夏、秋、冬、春顺序连续渐变，不能只换光线或云层。全程保持深蓝夜色和檐下暖纸灯，不变成白天；人物、院墙、桌椅、道具、镜头位置、景别和比例都不动。桌上始终只有原有的一只酒壶、一只酒盏和一本路引，不复制。绝不生成门、门洞、外景、地平线、海面、船或水上景物；禁止人物动作、变脸、换装、背包移动或复制、家具漂移、昼夜变化、场景跳切、其他人物、字幕和文字。纯静音输出，无对白、旁白、音乐或环境声。"
+    }
+  },
+  "8": {
+    "class_type": "BasicGuider",
+    "inputs": {
+      "model": [
+        "15",
+        0
+      ],
+      "conditioning": [
+        "7",
+        0
+      ]
+    }
+  },
+  "9": {
+    "class_type": "KSamplerSelect",
+    "inputs": {
+      "sampler_name": "euler"
+    }
+  },
+  "10": {
+    "class_type": "SamplerCustomAdvanced",
+    "inputs": {
+      "noise": [
+        "3",
+        0
+      ],
+      "guider": [
+        "8",
+        0
+      ],
+      "sampler": [
+        "9",
+        0
+      ],
+      "sigmas": [
+        "15",
+        1
+      ],
+      "latent_image": [
+        "7",
+        1
+      ]
+    }
+  },
+  "11": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "10",
+        0
+      ],
+      "vae": [
+        "5",
+        0
+      ]
+    }
+  },
+  "13": {
+    "class_type": "CreateVideo",
+    "inputs": {
+      "images": [
+        "11",
+        0
+      ],
+      "fps": 24,
+      "bit_depth": 8
+    }
+  },
+  "14": {
+    "class_type": "SaveVideo",
+    "inputs": {
+      "video": [
+        "13",
+        0
+      ],
+      "filename_prefix": "逍遥仙重制/R20_院中四季_春夏秋冬再回春_PDD8",
+      "format": "mp4",
+      "codec": "auto"
+    }
+  },
+  "15": {
+    "class_type": "MiniMaxH3PDDAccApply",
+    "inputs": {
+      "model": [
+        "2",
+        0
+      ],
+      "pdd_file": "MiniMax-H3-FL2VA-Acc-8Step.safetensors",
+      "nfe": "8",
+      "lora_strength": 1.0,
+      "head_strength": 1.0,
+      "on_off_grid": "error",
+      "partition_check": "error"
+    }
+  },
+  "20": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "逍遥仙/关键帧/R20_四季循环_无院门首帧.png"
+    }
+  }
+}

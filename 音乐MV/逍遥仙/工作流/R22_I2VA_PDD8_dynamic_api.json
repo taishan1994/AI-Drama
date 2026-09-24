@@ -1,0 +1,162 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "MiniMax_H3_FL2VA_pruned_int8_convrot.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "MiniMaxH3SigmaShift",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "shift_video": 12,
+      "shift_audio": 3
+    }
+  },
+  "3": {
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 261000022
+    }
+  },
+  "4": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+      "type": "minimax",
+      "device": "default"
+    }
+  },
+  "5": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_video_vae_fp16.safetensors"
+    }
+  },
+  "7": {
+    "class_type": "MiniMaxH3ImageToVideo",
+    "inputs": {
+      "clip": [
+        "4",
+        0
+      ],
+      "vae": [
+        "5",
+        0
+      ],
+      "width": 1344,
+      "height": 768,
+      "length": 195,
+      "first_frame": [
+        "20",
+        0
+      ],
+      "prompt": "中国传统手绘动画，上美影二维手绘质感，墨线、纸张纹理、平涂色块与克制的电影胶片颗粒。严格从提供的门环特写首帧开始，固定近景构图：画面只包含同一行旅者的蓝灰衣袖、白色破边袖口、右手、圆形藤编背包的一部分和深色木门上的一个圆门环；木门板填满背景。人物外观与角色板一致，袖色、编织背包纹路、手部形状和门环样式不变。镜头固定不移动。0到2秒，右手维持轻握门环，只有指尖自然收紧；2到4秒，手指轻轻抬起门环约一厘米后停住，木门本身完全不动；4到6秒，门环缓慢回到原位，手仍握着门环；6到8秒，手指稍稍放松，衣袖和背包只有极轻微的呼吸起伏。门板始终封闭并填满背景，绝不出现门缝、门外景色或其他空间。禁止开门、推门、拉门、镜头推拉、人物全身、脸、其他人、天空、海面、地平线、太阳、船、物品复制、字幕或文字。生成纯静音视频，无对白、无旁白、无音乐、无环境声或其他音频。"
+    }
+  },
+  "8": {
+    "class_type": "BasicGuider",
+    "inputs": {
+      "model": [
+        "15",
+        0
+      ],
+      "conditioning": [
+        "7",
+        0
+      ]
+    }
+  },
+  "9": {
+    "class_type": "KSamplerSelect",
+    "inputs": {
+      "sampler_name": "euler"
+    }
+  },
+  "10": {
+    "class_type": "SamplerCustomAdvanced",
+    "inputs": {
+      "noise": [
+        "3",
+        0
+      ],
+      "guider": [
+        "8",
+        0
+      ],
+      "sampler": [
+        "9",
+        0
+      ],
+      "sigmas": [
+        "15",
+        1
+      ],
+      "latent_image": [
+        "7",
+        1
+      ]
+    }
+  },
+  "11": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "10",
+        0
+      ],
+      "vae": [
+        "5",
+        0
+      ]
+    }
+  },
+  "13": {
+    "class_type": "CreateVideo",
+    "inputs": {
+      "images": [
+        "11",
+        0
+      ],
+      "fps": 24,
+      "bit_depth": 8
+    }
+  },
+  "14": {
+    "class_type": "SaveVideo",
+    "inputs": {
+      "video": [
+        "13",
+        0
+      ],
+      "filename_prefix": "逍遥仙重制/R22_院门前停步_PDD8",
+      "format": "mp4",
+      "codec": "auto"
+    }
+  },
+  "15": {
+    "class_type": "MiniMaxH3PDDAccApply",
+    "inputs": {
+      "model": [
+        "2",
+        0
+      ],
+      "pdd_file": "MiniMax-H3-FL2VA-Acc-8Step.safetensors",
+      "nfe": "8",
+      "lora_strength": 1.0,
+      "head_strength": 1.0,
+      "on_off_grid": "error",
+      "partition_check": "error"
+    }
+  },
+  "20": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "逍遥仙/关键帧/R22_门环特写_首帧.png"
+    }
+  }
+}

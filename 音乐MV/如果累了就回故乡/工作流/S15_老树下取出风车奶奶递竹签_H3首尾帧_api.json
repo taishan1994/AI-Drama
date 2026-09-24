@@ -1,0 +1,19 @@
+{
+  "1":{"class_type":"UNETLoader","inputs":{"unet_name":"MiniMax_H3_FL2VA_pruned_int8_convrot.safetensors","weight_dtype":"default"}},
+  "2":{"class_type":"MiniMaxH3SigmaShift","inputs":{"model":["1",0],"shift_video":12,"shift_audio":3}},
+  "3":{"class_type":"RandomNoise","inputs":{"noise_seed":2026092615}},
+  "4":{"class_type":"CLIPLoader","inputs":{"clip_name":"qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors","type":"minimax","device":"default"}},
+  "5":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_video_vae_fp16.safetensors"}},
+  "6":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_audio_vae_fp32.safetensors"}},
+  "7":{"class_type":"MiniMaxH3ImageToVideo","inputs":{"clip":["4",0],"vae":["5",0],"width":1344,"height":768,"length":226,"first_frame":["20",0],"last_frame":["21",0],"prompt":"以图1为绝对首帧、图2为绝对尾帧，生成约9.4秒、24fps、16:9温暖手绘绘本电影动画，彩铅线条、水粉背景、轻纸纹保持一致。始终是同一棵老树和同一干燥村巷，不切换场景。成年小满与奶奶沿用角色板身份和图1服装。动作分清先后：两人从图1老树下走向旁边矮石凳；小满坐下，把肩上帆布包放在自己身边；她从包侧取下唯一红纸风车并检查弯折纸叶；奶奶从旁拿出唯一一根细竹签，递给小满；小满右手接过竹签，左手稳稳握住风车柄。不要同时出现两个风车；风车一直属于小满，竹签一直属于奶奶直到交接。镜头平稳中景，动作慢而清楚，身体和手保持自然，不推拉摇移。背景树、房屋、石墙固定；结束精确匹配图2：小满坐在石凳上手持一只红纸风车，奶奶站在她左边递出一根竹签，包在凳边。禁止风车复制/消失、竹签变长/变多、道具漂浮、穿手、人物换脸换衣、任何水体、溪流、额外人物、字幕、歌词、文字、水印。无对白、唱歌、哼唱、旁白、环境人声、动物声或音乐；H3音轨丢弃，只用原歌曲。"}},
+  "8":{"class_type":"BasicGuider","inputs":{"model":["15",0],"conditioning":["7",0]}},
+  "9":{"class_type":"KSamplerSelect","inputs":{"sampler_name":"euler"}},
+  "10":{"class_type":"SamplerCustomAdvanced","inputs":{"noise":["3",0],"guider":["8",0],"sampler":["9",0],"sigmas":["15",1],"latent_image":["7",1]}},
+  "11":{"class_type":"VAEDecode","inputs":{"samples":["10",0],"vae":["5",0]}},
+  "12":{"class_type":"VAEDecodeAudio","inputs":{"samples":["10",0],"vae":["6",0]}},
+  "13":{"class_type":"CreateVideo","inputs":{"images":["11",0],"audio":["12",0],"fps":24,"bit_depth":8}},
+  "14":{"class_type":"SaveVideo","inputs":{"video":["13",0],"filename_prefix":"mv_hometown/S15_老树下取出风车奶奶递竹签_raw","format":"mp4","codec":"auto"}},
+  "15":{"class_type":"MiniMaxH3PDDAccApply","inputs":{"model":["2",0],"pdd_file":"MiniMax-H3-FL2VA-Acc-8Step.safetensors","nfe":"8","lora_strength":1.0,"head_strength":1.0,"on_off_grid":"error","partition_check":"error"}},
+  "20":{"class_type":"LoadImage","inputs":{"image":"mv_hometown/S15_first_frame.png"}},
+  "21":{"class_type":"LoadImage","inputs":{"image":"mv_hometown/S15_last_frame.png"}}
+}

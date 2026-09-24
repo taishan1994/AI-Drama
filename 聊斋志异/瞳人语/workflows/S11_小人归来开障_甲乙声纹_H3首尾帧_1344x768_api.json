@@ -1,0 +1,21 @@
+{
+  "1":{"class_type":"UNETLoader","inputs":{"unet_name":"MiniMax_H3_FL2VA_pruned_int8_convrot.safetensors","weight_dtype":"default"}},
+  "2":{"class_type":"MiniMaxH3SigmaShift","inputs":{"model":["1",0],"shift_video":12,"shift_audio":3}},
+  "3":{"class_type":"RandomNoise","inputs":{"noise_seed":26092111}},
+  "4":{"class_type":"CLIPLoader","inputs":{"clip_name":"qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors","type":"minimax","device":"default"}},
+  "5":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_video_vae_fp16.safetensors"}},
+  "6":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_audio_vae_fp32.safetensors"}},
+  "7":{"class_type":"MiniMaxH3ReferenceToVideo","inputs":{"clip":["4",0],"vae":["5",0],"audio_vae":["6",0],"width":1344,"height":768,"length":240,"ref_image_size":"max","ref_images.ref_image_0":["20",0],"ref_images.ref_image_1":["21",0],"ref_audios.ref_audio_0":["22",0],"ref_audios.ref_audio_1":["23",0],"prompt":"<Picture 1>是S10B v3的实际尾帧，必须连续承接；<Picture 2>是本镜头尾帧关键帧。<Audio 1>只用于锁定瞳人甲声纹，<Audio 2>只用于锁定瞳人乙声纹。生成10秒、16:9、1344x768的《喷水》同类上美影二维手绘动画：手工墨线、二维赛璐璐平涂、宣纸水彩肌理、低饱和青灰夜色、电影胶片颗粒。空间和动作必须有因果：首帧中方栋仍坐在书房左侧，门在最右侧，书案在下方前景，两个豆粒小人已在门外石板路；方栋身体、手臂、经卷、书案、门窗位置保持连续。0至2秒，甲和乙在门外同时停步并转身面向室内，甲在前乙在后；2至4秒两小人沿刚才出门的同一路径从门外返回门槛，脚踏石板和门槛，不能瞬移、不能从空气中出现；4至6秒甲先沿书案右边缘向方栋面部走，乙紧跟，始终保持青灰甲在前、金白乙在后；6至8秒镜头连续推近方栋右眼，微光轨迹从门槛连接到眼部，不切换成另一个房间；8至10秒进入右眼微距，两小人沿青灰与金白的细微手绘光线到达眼睑和灰翳交界，甲在前乙在后，稳定到达尾帧，表现即将进入眼部开障。不要血腥、不要撕裂、不要把小人放大成人、不要增加第三个小人。对白严格轮流：约3秒瞳人甲说“隧道太绕”，约6秒瞳人乙说“不如自己开一扇门”；甲说完后乙才能说，不能重叠，不能出现方栋、旁白、妻子、婢女或任何其他人声。其余只允许细微灵异光声、极轻脚步、连续室内夜声；禁止音乐、狗叫、随机噪声、字幕、文字和水印。"}},
+  "8":{"class_type":"BasicGuider","inputs":{"model":["15",0],"conditioning":["7",0]}},
+  "9":{"class_type":"KSamplerSelect","inputs":{"sampler_name":"euler"}},
+  "10":{"class_type":"SamplerCustomAdvanced","inputs":{"noise":["3",0],"guider":["8",0],"sampler":["9",0],"sigmas":["15",1],"latent_image":["7",1]}},
+  "11":{"class_type":"VAEDecode","inputs":{"samples":["10",0],"vae":["5",0]}},
+  "12":{"class_type":"VAEDecodeAudio","inputs":{"samples":["10",0],"vae":["6",0]}},
+  "13":{"class_type":"CreateVideo","inputs":{"images":["11",0],"audio":["12",0],"fps":24,"bit_depth":8}},
+  "14":{"class_type":"SaveVideo","inputs":{"video":["13",0],"filename_prefix":"tongrenyu/S11_小人归来开障_甲乙声纹_无额外人声_喷水风格_首尾帧_v1_1344x768","format":"mp4","codec":"auto"}},
+  "15":{"class_type":"MiniMaxH3PDDAccApply","inputs":{"model":["2",0],"pdd_file":"MiniMax-H3-FL2VA-Acc-8Step.safetensors","nfe":"8","lora_strength":1.0,"head_strength":1.0,"on_off_grid":"error","partition_check":"error"}},
+  "20":{"class_type":"LoadImage","inputs":{"image":"tongrenyu/S11_首帧_承接S10B_两瞳人在门外_喷水风格.png"}},
+  "21":{"class_type":"LoadImage","inputs":{"image":"tongrenyu/S11_尾帧_方栋右眼微距_两瞳人到眼缘_喷水风格_v1.png"}},
+  "22":{"class_type":"LoadAudio","inputs":{"audio":"tongrenyu/瞳人甲_VO-PUPIL-A-01.wav"}},
+  "23":{"class_type":"LoadAudio","inputs":{"audio":"tongrenyu/瞳人乙_VO-PUPIL-B-01.wav"}}
+}

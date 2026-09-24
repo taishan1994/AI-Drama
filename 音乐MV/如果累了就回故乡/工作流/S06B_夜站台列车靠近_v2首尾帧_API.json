@@ -1,0 +1,19 @@
+{
+  "1":{"class_type":"UNETLoader","inputs":{"unet_name":"MiniMax_H3_FL2VA_pruned_int8_convrot.safetensors","weight_dtype":"default"}},
+  "2":{"class_type":"MiniMaxH3SigmaShift","inputs":{"model":["1",0],"shift_video":12,"shift_audio":3}},
+  "3":{"class_type":"RandomNoise","inputs":{"noise_seed":2026092365}},
+  "4":{"class_type":"CLIPLoader","inputs":{"clip_name":"qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors","type":"minimax","device":"default"}},
+  "5":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_video_vae_fp16.safetensors"}},
+  "6":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_audio_vae_fp32.safetensors"}},
+  "7":{"class_type":"MiniMaxH3ImageToVideo","inputs":{"clip":["4",0],"vae":["5",0],"width":1344,"height":768,"length":141,"first_frame":["20",0],"last_frame":["21",0],"prompt":"以图1作为绝对首帧、图2作为绝对尾帧，生成约5.9秒、24fps、16:9的单一手绘动画镜头。两帧中小满完全相同：她站在画面左侧同一像素位置，身高、朝向、衣服、发型、帆布包和红风车均保持不变；站台、棚顶、长椅、轨道、灯列和摄像机机位全部静止不动。唯一动作是右侧夜班列车沿既有铁轨由远及近缓慢驶进，车窗暖光逐格向镜头方向移动，列车从图1的较远位置连续抵达图2的较近位置。车轮始终压在铁轨上，车厢透视与站台平行，速度平稳，不横向漂移、不瞬移。小满全程站在安全线内，只轻微呼吸并看向列车。结尾精确匹配图2中列车距离和所有人物/环境位置。画风与输入图一致的细腻手绘绘本电影动画，彩铅轮廓、水粉背景、纸纹。禁止摄像机推拉摇移，禁止人物移动或变形，禁止新增人群/列车、字幕、文字、水印。无对白、唱歌、哼唱、旁白、环境人声、动物声或音乐；H3生成音轨将丢弃，成片只用指定歌曲。"}},
+  "8":{"class_type":"BasicGuider","inputs":{"model":["15",0],"conditioning":["7",0]}},
+  "9":{"class_type":"KSamplerSelect","inputs":{"sampler_name":"euler"}},
+  "10":{"class_type":"SamplerCustomAdvanced","inputs":{"noise":["3",0],"guider":["8",0],"sampler":["9",0],"sigmas":["15",1],"latent_image":["7",1]}},
+  "11":{"class_type":"VAEDecode","inputs":{"samples":["10",0],"vae":["5",0]}},
+  "12":{"class_type":"VAEDecodeAudio","inputs":{"samples":["10",0],"vae":["6",0]}},
+  "13":{"class_type":"CreateVideo","inputs":{"images":["11",0],"audio":["12",0],"fps":24,"bit_depth":8}},
+  "14":{"class_type":"SaveVideo","inputs":{"video":["13",0],"filename_prefix":"mv_hometown/S06B_夜站台列车靠近_v2_raw","format":"mp4","codec":"auto"}},
+  "15":{"class_type":"MiniMaxH3PDDAccApply","inputs":{"model":["2",0],"pdd_file":"MiniMax-H3-FL2VA-Acc-8Step.safetensors","nfe":"8","lora_strength":1.0,"head_strength":1.0,"on_off_grid":"error","partition_check":"error"}},
+  "20":{"class_type":"LoadImage","inputs":{"image":"mv_hometown/S06B_station_first_frame.png"}},
+  "21":{"class_type":"LoadImage","inputs":{"image":"mv_hometown/S06B_station_last_frame_v2.png"}}
+}

@@ -1,0 +1,19 @@
+{
+  "1":{"class_type":"UNETLoader","inputs":{"unet_name":"MiniMax_H3_FL2VA_pruned_int8_convrot.safetensors","weight_dtype":"default"}},
+  "2":{"class_type":"MiniMaxH3SigmaShift","inputs":{"model":["1",0],"shift_video":12,"shift_audio":3}},
+  "3":{"class_type":"RandomNoise","inputs":{"noise_seed":26091609}},
+  "4":{"class_type":"CLIPLoader","inputs":{"clip_name":"qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors","type":"minimax","device":"default"}},
+  "5":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_video_vae_fp16.safetensors"}},
+  "6":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_audio_vae_fp32.safetensors"}},
+  "7":{"class_type":"MiniMaxH3ReferenceToVideo","inputs":{"clip":["4",0],"vae":["5",0],"audio_vae":["6",0],"width":1344,"height":768,"length":168,"ref_image_size":"max","ref_images.ref_image_0":["20",0],"ref_images.ref_image_1":["21",0],"prompt":"<Picture 1> 是 S06 结尾窗孔视角的首帧，<Picture 2> 是本镜尾帧角色与构图锚点。生成《喷水》S07《窗孔窥视》，7秒，16:9、1344x768，当前版上美影二维手绘动画，墨线、水彩纸张纹理、深夜冷蓝月光和电影胶片颗粒。必须从窗孔内部向院落外看，画面四周始终保留破旧纸窗孔的模糊边缘，绝不切回室内、绝不显示窗内人物。空间固定：左侧老井和院墙，右侧宋家屋檐和亮着的窗，中央是湿石板院路，月光方向固定。0至1.8秒院中空无一人，只听见画外两次极轻的湿脚步/扑声；1.8至3秒一只矮小湿脚从画面下方踏入月光，停顿；3至5.8秒第二只脚跟上，镜头沿脚和驼背身体缓慢向上仰，完整显现喷水老妇；5.8至7秒老妇停在院路中央偏右，保持尾帧姿态，不靠近窗孔。喷水老妇形象必须固定为：身材极矮、明显驼背、灰黑旧袍、扫帚般蓬乱湿白发、异常高的发髻、短腿、双臂下垂、鹤一样一跳一停的步态；脸埋在阴影中，始终不直视窗孔，不说话。她每落一步，只在胸腔前方出现极细短暂的冷雾和地面细小水痕，禁止水柱、水幕、大水花、喷泉、夸张白雾；老妇不能穿过窗、不能进入屋内。画面中不出现阿莲、阿绣、太夫人、宋玉叔、其他人、动物、文字、字幕、水印或现代物件。人物形象不增殖、不换脸、不漂移，井、院墙、屋檐、窗孔位置不变，镜头运动只允许从脚缓慢向上仰，不得前后拉扯或突然转场。音轨禁止对白、旁白、音乐和任何人声，只保留湿脚步、极轻的扑水声、细雾落在石板上的声音、远处低风和屋檐滴水；不生成呻吟、喘息、笑声、动物声或额外人声。"}},
+  "8":{"class_type":"BasicGuider","inputs":{"model":["15",0],"conditioning":["7",0]}},
+  "9":{"class_type":"KSamplerSelect","inputs":{"sampler_name":"euler"}},
+  "10":{"class_type":"SamplerCustomAdvanced","inputs":{"noise":["3",0],"guider":["8",0],"sampler":["9",0],"sigmas":["15",1],"latent_image":["7",1]}},
+  "11":{"class_type":"VAEDecode","inputs":{"samples":["10",0],"vae":["5",0]}},
+  "12":{"class_type":"VAEDecodeAudio","inputs":{"samples":["10",0],"vae":["6",0]}},
+  "13":{"class_type":"CreateVideo","inputs":{"images":["11",0],"audio":["12",0],"fps":24,"bit_depth":8}},
+  "14":{"class_type":"SaveVideo","inputs":{"video":["13",0],"filename_prefix":"pengshui/S07_窗孔窥视_老妇首次建立_首尾帧_上美影_1344x768","format":"mp4","codec":"auto"}},
+  "15":{"class_type":"MiniMaxH3PDDAccApply","inputs":{"model":["2",0],"pdd_file":"MiniMax-H3-FL2VA-Acc-8Step.safetensors","nfe":"8","lora_strength":1.0,"head_strength":1.0,"on_off_grid":"error","partition_check":"error"}},
+  "20":{"class_type":"LoadImage","inputs":{"image":"喷水/S07_new_start_asset.png"}},
+  "21":{"class_type":"LoadImage","inputs":{"image":"喷水/S07_new_end_asset.png"}}
+}

@@ -1,0 +1,17 @@
+{
+  "1":{"class_type":"UNETLoader","inputs":{"unet_name":"MiniMax_H3_FL2VA_pruned_int8_convrot.safetensors","weight_dtype":"default"}},
+  "2":{"class_type":"MiniMaxH3SigmaShift","inputs":{"model":["1",0],"shift_video":12,"shift_audio":3}},
+  "3":{"class_type":"RandomNoise","inputs":{"noise_seed":26091620}},
+  "4":{"class_type":"CLIPLoader","inputs":{"clip_name":"qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors","type":"minimax","device":"default"}},
+  "5":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_video_vae_fp16.safetensors"}},
+  "7":{"class_type":"MiniMaxH3ImageToVideo","inputs":{"clip":["4",0],"vae":["5",0],"width":1344,"height":768,"length":144,"first_frame":["20",0],"last_frame":["21",0],"prompt":"纯画面、无声、无文字生成。严格从S15尾帧开始，保持清晨荒宅厅堂和人物位置：宋玉叔站在左后方破窗前，阿绣留在画面左下角，太夫人和阿莲在远处倒地且不动；饭桌中央偏左、卧榻后方、破窗位置固定。0至1.5秒宋玉叔从阿绣旁边走到破窗前，动作缓慢自然；1.5至3秒他伸出右手触碰破窗木框，手掌只接触木框；3至4.5秒镜头平稳推近他的手，木框上出现且始终保留五道竖向深色湿痕，五道痕迹分开、像手指按过；4.5至6秒镜头沿地面的连续细湿线向窗下缓慢移动，宋玉叔不消失，阿绣不移动，停在尾帧构图。不能增加老妇、不能出现老太婆、不能增加太夫人或其他人物，不能改变人物脸型服装，不能字幕、汉字、英文、文字、水印。不能让湿痕变成手掌或大水流，不能改变空间、不能漂移、不能跳切、不能前后倒退。只保留自然手部动作、衣袖轻动和水珠缓慢下落，禁止任何可见额外特效。"}},
+  "8":{"class_type":"BasicGuider","inputs":{"model":["15",0],"conditioning":["7",0]}},
+  "9":{"class_type":"KSamplerSelect","inputs":{"sampler_name":"euler"}},
+  "10":{"class_type":"SamplerCustomAdvanced","inputs":{"noise":["3",0],"guider":["8",0],"sampler":["9",0],"sigmas":["15",1],"latent_image":["7",1]}},
+  "11":{"class_type":"VAEDecode","inputs":{"samples":["10",0],"vae":["5",0]}},
+  "13":{"class_type":"CreateVideo","inputs":{"images":["11",0],"fps":24,"bit_depth":8}},
+  "14":{"class_type":"SaveVideo","inputs":{"video":["13",0],"filename_prefix":"pengshui/S16_窗上的五道湿痕_稳定纯画面无字幕_上美影_1344x768","format":"mp4","codec":"auto"}},
+  "15":{"class_type":"MiniMaxH3PDDAccApply","inputs":{"model":["2",0],"pdd_file":"MiniMax-H3-FL2VA-Acc-8Step.safetensors","nfe":"8","lora_strength":1.0,"head_strength":1.0,"on_off_grid":"error","partition_check":"error"}},
+  "20":{"class_type":"LoadImage","inputs":{"image":"喷水/S16_new_start_asset.png"}},
+  "21":{"class_type":"LoadImage","inputs":{"image":"喷水/S16_new_end_asset.png"}}
+}

@@ -1,0 +1,17 @@
+{
+  "1":{"class_type":"UNETLoader","inputs":{"unet_name":"MiniMax_H3_FL2VA_pruned_int8_convrot.safetensors","weight_dtype":"default"}},
+  "2":{"class_type":"MiniMaxH3SigmaShift","inputs":{"model":["1",0],"shift_video":12,"shift_audio":3}},
+  "3":{"class_type":"RandomNoise","inputs":{"noise_seed":26091616}},
+  "4":{"class_type":"CLIPLoader","inputs":{"clip_name":"qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors","type":"minimax","device":"default"}},
+  "5":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_video_vae_fp16.safetensors"}},
+  "7":{"class_type":"MiniMaxH3ImageToVideo","inputs":{"clip":["4",0],"vae":["5",0],"width":1344,"height":768,"length":144,"first_frame":["20",0],"last_frame":["21",0],"prompt":"只生成无声纯画面，禁止生成文字。严格保持清晨同一座荒宅正门：淡灰金色晨光，关闭的厚木门中央偏右，石阶、院墙、窗、树和陶罐位置固定。第一名粗褐衣男仆端木盆从左侧走到门前，另外两名不同脸型的粗褐衣男仆在后段从左侧进入，三人始终面向关闭的门，只有三个人，不增殖、不消失、不换脸、不穿模。动作仅包括端盆、轻敲两次、退半步、两名仆人走近；门全程绝对关闭，不开门、不进入。门缝下只保留一条极细、透明、贴着门槛的短水线，不能向台阶下流，不能变宽，不能分叉，不能形成瀑布、喷泉、水流或积水。镜头固定中远景，不推拉、不摇晃、不改变白天光线。禁止老妇、白发、动物、字幕、文字、水印、现代物件。"}},
+  "8":{"class_type":"BasicGuider","inputs":{"model":["15",0],"conditioning":["7",0]}},
+  "9":{"class_type":"KSamplerSelect","inputs":{"sampler_name":"euler"}},
+  "10":{"class_type":"SamplerCustomAdvanced","inputs":{"noise":["3",0],"guider":["8",0],"sampler":["9",0],"sigmas":["15",1],"latent_image":["7",1]}},
+  "11":{"class_type":"VAEDecode","inputs":{"samples":["10",0],"vae":["5",0]}},
+  "13":{"class_type":"CreateVideo","inputs":{"images":["11",0],"fps":24,"bit_depth":8}},
+  "14":{"class_type":"SaveVideo","inputs":{"video":["13",0],"filename_prefix":"pengshui/S12_天明无人应门_稳定画面细水线_上美影_1344x768","format":"mp4","codec":"auto"}},
+  "15":{"class_type":"MiniMaxH3PDDAccApply","inputs":{"model":["2",0],"pdd_file":"MiniMax-H3-FL2VA-Acc-8Step.safetensors","nfe":"8","lora_strength":1.0,"head_strength":1.0,"on_off_grid":"error","partition_check":"error"}},
+  "20":{"class_type":"LoadImage","inputs":{"image":"喷水/S12_new_start_asset.png"}},
+  "21":{"class_type":"LoadImage","inputs":{"image":"喷水/S12_new_end_asset.png"}}
+}

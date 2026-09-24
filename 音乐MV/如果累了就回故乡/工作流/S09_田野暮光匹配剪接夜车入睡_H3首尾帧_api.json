@@ -1,0 +1,19 @@
+{
+  "1":{"class_type":"UNETLoader","inputs":{"unet_name":"MiniMax_H3_FL2VA_pruned_int8_convrot.safetensors","weight_dtype":"default"}},
+  "2":{"class_type":"MiniMaxH3SigmaShift","inputs":{"model":["1",0],"shift_video":12,"shift_audio":3}},
+  "3":{"class_type":"RandomNoise","inputs":{"noise_seed":2026092309}},
+  "4":{"class_type":"CLIPLoader","inputs":{"clip_name":"qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors","type":"minimax","device":"default"}},
+  "5":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_video_vae_fp16.safetensors"}},
+  "6":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_audio_vae_fp32.safetensors"}},
+  "7":{"class_type":"MiniMaxH3ImageToVideo","inputs":{"clip":["4",0],"vae":["5",0],"width":1344,"height":768,"length":226,"first_frame":["20",0],"last_frame":["21",0],"prompt":"以图1作为绝对首帧、图2作为绝对尾帧，生成约9.4秒、24fps、16:9、1344x768的暖色手绘绘本电影动画。全片彩铅轮廓、水粉背景、轻微纸纹与柔和胶片光感一致。此镜从童年记忆明确回到同一列夜车，不允许童年身体直接变成成年身体。开头约1秒保持图1田埂、童年小满和奶奶的位置关系；随后小满向奶奶走一步，夕阳透过老树枝叶，枝叶被微风轻轻吹动并逐渐遮满画面，暖色光斑自然占满画面，完成一次有意图的柔和匹配剪接：树叶间的夕阳光斑变成夜车车窗外移动的暖色灯点，暗部渐变显现列车窗框和蓝色座椅。遮挡转场后直接呈现成年林小满已经安静睡在列车靠窗座位上，严格匹配图2成年角色脸型、深棕后束发、灰蓝外套、米色上衣；不要出现童年版，不要年龄变形。列车内布局服从图2：大窗在左，蓝色座椅固定，右侧走道和暖色灯列固定；成年小满头部自然靠在窗侧座椅，闭眼呼吸轻微，唯一橄榄色帆布包放在相邻座位，唯一红纸风车插在包边。窗外夜景灯点平稳向后流动，后半段远处天际仅稍微变浅，不突变成白天。摄影机进入车厢后保持中景稳定，仅有极轻微慢推，不摇晃、不变焦跳切。结束准确匹配图2人物、座椅、窗框、包、风车的位置和比例。禁止额外乘客、其他人脸、童年小满出现在车厢、复制人物或道具、风车漂浮、座椅/窗户移动、服饰变化、闪白、字幕、歌词、文字、水印。无对白、唱歌、哼唱、旁白、环境人声、动物声或音乐；H3音轨将丢弃，成片只用指定歌曲。"}},
+  "8":{"class_type":"BasicGuider","inputs":{"model":["15",0],"conditioning":["7",0]}},
+  "9":{"class_type":"KSamplerSelect","inputs":{"sampler_name":"euler"}},
+  "10":{"class_type":"SamplerCustomAdvanced","inputs":{"noise":["3",0],"guider":["8",0],"sampler":["9",0],"sigmas":["15",1],"latent_image":["7",1]}},
+  "11":{"class_type":"VAEDecode","inputs":{"samples":["10",0],"vae":["5",0]}},
+  "12":{"class_type":"VAEDecodeAudio","inputs":{"samples":["10",0],"vae":["6",0]}},
+  "13":{"class_type":"CreateVideo","inputs":{"images":["11",0],"audio":["12",0],"fps":24,"bit_depth":8}},
+  "14":{"class_type":"SaveVideo","inputs":{"video":["13",0],"filename_prefix":"mv_hometown/S09_田野暮光匹配剪接夜车入睡_raw","format":"mp4","codec":"auto"}},
+  "15":{"class_type":"MiniMaxH3PDDAccApply","inputs":{"model":["2",0],"pdd_file":"MiniMax-H3-FL2VA-Acc-8Step.safetensors","nfe":"8","lora_strength":1.0,"head_strength":1.0,"on_off_grid":"error","partition_check":"error"}},
+  "20":{"class_type":"LoadImage","inputs":{"image":"mv_hometown/S09_first_frame.png"}},
+  "21":{"class_type":"LoadImage","inputs":{"image":"mv_hometown/S09_last_frame.png"}}
+}

@@ -1,0 +1,19 @@
+{
+  "1":{"class_type":"UNETLoader","inputs":{"unet_name":"MiniMax_H3_FL2VA_pruned_int8_convrot.safetensors","weight_dtype":"default"}},
+  "2":{"class_type":"MiniMaxH3SigmaShift","inputs":{"model":["1",0],"shift_video":12,"shift_audio":3}},
+  "3":{"class_type":"RandomNoise","inputs":{"noise_seed":26092022}},
+  "4":{"class_type":"CLIPLoader","inputs":{"clip_name":"qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors","type":"minimax","device":"default"}},
+  "5":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_video_vae_fp16.safetensors"}},
+  "6":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_audio_vae_fp32.safetensors"}},
+  "7":{"class_type":"MiniMaxH3ReferenceToVideo","inputs":{"clip":["4",0],"vae":["5",0],"audio_vae":["6",0],"width":1344,"height":768,"length":168,"ref_image_size":"max","ref_images.ref_image_0":["20",0],"ref_images.ref_image_1":["21",0],"prompt":"<Picture 1>是S02已验收成片的实际尾帧，必须连续承接；<Picture 2>是S03已验收尾帧构图。生成7秒、16:9、1344x768的《喷水》同类上美影二维手绘电影动画：粗手工墨线、二维平涂、灰蓝与赭褐色块、米白宣纸肌理、电影胶片颗粒。0至1秒保持S02尾帧的原道路方向和运动方向；1至5秒镜头沿同方向平稳靠近唯一车厢的车帘，车帘逐渐进入右侧前景，车外背景只保留同一道路、柳树、远山和方栋在左侧远处行走；不得切换成另一条路、不得改变方栋左右位置、不得出现第二辆车或任何可数马匹。5至7秒稳定到车帘近景：婢女在车帘前偏左，侧身向车外回头发现方栋；贵女在车厢内偏右后方坐着，只露上半身，神情矜持。严格保持婢女和贵女的脸型、发型、服装、年龄和相对位置，不得把两人画成同一张脸，不得新增车夫、路人、动物或第三个人。全片唯一人声只有婢女一句完整对白：‘哪里来的轻薄狂徒，竟敢一路窥看！’，婢女说完后才结束；禁止方栋、贵女、旁白、其他人声、重叠声、开头杂音、喊叫回声。保留自然车轮、马蹄、车铃和春风环境声；无音乐、狗叫、呻吟、字幕、文字、水印、现代物件。"}},
+  "8":{"class_type":"BasicGuider","inputs":{"model":["15",0],"conditioning":["7",0]}},
+  "9":{"class_type":"KSamplerSelect","inputs":{"sampler_name":"euler"}},
+  "10":{"class_type":"SamplerCustomAdvanced","inputs":{"noise":["3",0],"guider":["8",0],"sampler":["9",0],"sigmas":["15",1],"latent_image":["7",1]}},
+  "11":{"class_type":"VAEDecode","inputs":{"samples":["10",0],"vae":["5",0]}},
+  "12":{"class_type":"VAEDecodeAudio","inputs":{"samples":["10",0],"vae":["6",0]}},
+  "13":{"class_type":"CreateVideo","inputs":{"images":["11",0],"audio":["12",0],"fps":24,"bit_depth":8}},
+  "14":{"class_type":"SaveVideo","inputs":{"video":["13",0],"filename_prefix":"tongrenyu/S03_贵女先察觉婢女回头_婢女首次对白_喷水风格_v2_1344x768","format":"mp4","codec":"auto"}},
+  "15":{"class_type":"MiniMaxH3PDDAccApply","inputs":{"model":["2",0],"pdd_file":"MiniMax-H3-FL2VA-Acc-8Step.safetensors","nfe":"8","lora_strength":1.0,"head_strength":1.0,"on_off_grid":"error","partition_check":"error"}},
+  "20":{"class_type":"LoadImage","inputs":{"image":"tongrenyu/S03_首帧_车帘进入前景_承接S02_v2_exact.png"}},
+  "21":{"class_type":"LoadImage","inputs":{"image":"tongrenyu/S03_尾帧_贵女先察觉婢女回头_v2_exact.png"}}
+}

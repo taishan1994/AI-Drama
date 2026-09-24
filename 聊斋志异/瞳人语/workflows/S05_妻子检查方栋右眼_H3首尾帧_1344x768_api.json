@@ -1,0 +1,20 @@
+{
+  "1":{"class_type":"UNETLoader","inputs":{"unet_name":"MiniMax_H3_FL2VA_pruned_int8_convrot.safetensors","weight_dtype":"default"}},
+  "2":{"class_type":"MiniMaxH3SigmaShift","inputs":{"model":["1",0],"shift_video":12,"shift_audio":3}},
+  "3":{"class_type":"RandomNoise","inputs":{"noise_seed":26092031}},
+  "4":{"class_type":"CLIPLoader","inputs":{"clip_name":"qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors","type":"minimax","device":"default"}},
+  "5":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_video_vae_fp16.safetensors"}},
+  "6":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_audio_vae_fp32.safetensors"}},
+  "7":{"class_type":"MiniMaxH3ReferenceToVideo","inputs":{"clip":["4",0],"vae":["5",0],"audio_vae":["6",0],"width":1344,"height":768,"length":168,"ref_image_size":"max","ref_images.ref_image_0":["20",0],"ref_images.ref_image_1":["21",0],"prompt":"<Picture 1>为S05首帧，<Picture 2>为S05尾帧。生成7秒、16:9、1344x768的《喷水》同类上美影二维手绘电影动画：粗手工墨线、二维赛璐璐平涂、低饱和青灰与旧木褐、宣纸水彩肌理、电影胶片颗粒。严格保持方栋书房固定空间：卧榻在画面左侧，书案在右前景，窗在后方右侧，门在最右侧，位置不改变。方栋始终是瘦削成年书生，黑色儒生幞头、深青长袍、短须；妻子始终是蓝灰衣裙、灰围裙、固定发髻的成年女子。0至1秒承接首帧：方栋坐在左侧卧榻边缘，右手轻按右眼并流泪，妻子站在右侧一步处关切看向他的右眼；1至4秒妻子缓慢靠近卧榻，俯身检查方栋右眼，手部动作自然、不能穿模，方栋保持坐姿；4至7秒妻子轻托方栋额头并查看右眼，眼白只出现薄薄灰白雾翳，泪水自然，稳定到达尾帧。两人动作连续，不瞬移、不变脸、不换衣、不改变卧榻书案窗门位置。声音全片只允许妻子一句完整对白“眼上像蒙了一层雾”，对白期间方栋闭口；只保留室内低底噪、油灯轻响、衣料摩擦和极轻窗风，禁止方栋声、旁白、其他人声、重叠对白、音乐、狗叫、随机噪声。无字幕、文字、水印、额外人物、夸张发光、血腥写实、3D或照片感。"
+  }},
+  "8":{"class_type":"BasicGuider","inputs":{"model":["15",0],"conditioning":["7",0]}},
+  "9":{"class_type":"KSamplerSelect","inputs":{"sampler_name":"euler"}},
+  "10":{"class_type":"SamplerCustomAdvanced","inputs":{"noise":["3",0],"guider":["8",0],"sampler":["9",0],"sigmas":["15",1],"latent_image":["7",1]}},
+  "11":{"class_type":"VAEDecode","inputs":{"samples":["10",0],"vae":["5",0]}},
+  "12":{"class_type":"VAEDecodeAudio","inputs":{"samples":["10",0],"vae":["6",0]}},
+  "13":{"class_type":"CreateVideo","inputs":{"images":["11",0],"audio":["12",0],"fps":24,"bit_depth":8}},
+  "14":{"class_type":"SaveVideo","inputs":{"video":["13",0],"filename_prefix":"tongrenyu/S05_妻子检查方栋右眼_声纹建立_喷水风格_首尾帧_v1_1344x768","format":"mp4","codec":"auto"}},
+  "15":{"class_type":"MiniMaxH3PDDAccApply","inputs":{"model":["2",0],"pdd_file":"MiniMax-H3-FL2VA-Acc-8Step.safetensors","nfe":"8","lora_strength":1.0,"head_strength":1.0,"on_off_grid":"error","partition_check":"error"}},
+  "20":{"class_type":"LoadImage","inputs":{"image":"tongrenyu/S05_首帧_方栋坐卧榻妻子靠近_喷水风格_v1_exact.png"}},
+  "21":{"class_type":"LoadImage","inputs":{"image":"tongrenyu/S05_尾帧_妻子检查方栋右眼_薄灰翳_喷水风格_v1_exact.png"}}
+}

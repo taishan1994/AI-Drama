@@ -1,0 +1,20 @@
+{
+  "1":{"class_type":"UNETLoader","inputs":{"unet_name":"MiniMax_H3_FL2VA_pruned_int8_convrot.safetensors","weight_dtype":"default"}},
+  "2":{"class_type":"MiniMaxH3SigmaShift","inputs":{"model":["1",0],"shift_video":12,"shift_audio":3}},
+  "3":{"class_type":"RandomNoise","inputs":{"noise_seed":26091621}},
+  "4":{"class_type":"CLIPLoader","inputs":{"clip_name":"qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors","type":"minimax","device":"default"}},
+  "5":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_video_vae_fp16.safetensors"}},
+  "6":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_audio_vae_fp32.safetensors"}},
+  "7":{"class_type":"MiniMaxH3ReferenceToVideo","inputs":{"clip":["4",0],"vae":["5",0],"audio_vae":["6",0],"width":1344,"height":768,"length":144,"ref_image_size":"max","ref_images.ref_image_0":["20",0],"ref_images.ref_image_1":["21",0],"ref_audios.ref_audio_0":["22",0],"prompt":"<Picture 1>是S16尾帧，<Picture 2>是S17尾帧；<Audio 1>只锁定宋玉叔清瘦克制男声纹。生成6秒16:9、1344x768上美影二维手绘电影动画。清晨同一荒宅院落，破窗和窗下湿线作为空间锚点。0至1秒宋玉叔从破窗边沿湿线走到院落左侧老井，三名仆人跟随但不超过他；1至2秒他依次查看干涸井口、无积水屋檐和空的排水沟，三名仆人分别停在这些位置，动作自然且人物各有脸型；2至3.5秒一名仆人在破窗下用木棍拨开湿泥，发现一小撮湿白发和腐烂布角，白发不是完整尸体；3.5至4.5秒布角渗出一滴清水，所有人停住；4.5至5.5秒宋玉叔只用<Audio 1>的男声完整说“掘这里。”，语速低沉清楚；5.5至6秒他指向湿土，停在<Picture 2>。无其他对白、无旁白、无重复台词、无额外人声。环境声只保留井绳轻响、木棍拨土、屋檐风声和一滴水声。保持清晨、院墙、破窗、老井、湿线位置稳定；老妇不出现全身，不能出现尸体、动物、字幕、文字、水印、现代物件。"}},
+  "8":{"class_type":"BasicGuider","inputs":{"model":["15",0],"conditioning":["7",0]}},
+  "9":{"class_type":"KSamplerSelect","inputs":{"sampler_name":"euler"}},
+  "10":{"class_type":"SamplerCustomAdvanced","inputs":{"noise":["3",0],"guider":["8",0],"sampler":["9",0],"sigmas":["15",1],"latent_image":["7",1]}},
+  "11":{"class_type":"VAEDecode","inputs":{"samples":["10",0],"vae":["5",0]}},
+  "12":{"class_type":"VAEDecodeAudio","inputs":{"samples":["10",0],"vae":["6",0]}},
+  "13":{"class_type":"CreateVideo","inputs":{"images":["11",0],"audio":["12",0],"fps":24,"bit_depth":8}},
+  "14":{"class_type":"SaveVideo","inputs":{"video":["13",0],"filename_prefix":"pengshui/S17_查找水源_宋玉叔声纹锁定_首尾帧_上美影_1344x768","format":"mp4","codec":"auto"}},
+  "15":{"class_type":"MiniMaxH3PDDAccApply","inputs":{"model":["2",0],"pdd_file":"MiniMax-H3-FL2VA-Acc-8Step.safetensors","nfe":"8","lora_strength":1.0,"head_strength":1.0,"on_off_grid":"error","partition_check":"error"}},
+  "20":{"class_type":"LoadImage","inputs":{"image":"喷水/S17_new_start_asset.png"}},
+  "21":{"class_type":"LoadImage","inputs":{"image":"喷水/S17_new_end_asset.png"}},
+  "22":{"class_type":"LoadAudio","inputs":{"audio":"喷水/S02_宋玉叔首次对白_声纹基准.wav"}}
+}

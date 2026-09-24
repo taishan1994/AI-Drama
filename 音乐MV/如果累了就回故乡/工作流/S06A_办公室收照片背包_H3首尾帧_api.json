@@ -1,0 +1,19 @@
+{
+  "1":{"class_type":"UNETLoader","inputs":{"unet_name":"MiniMax_H3_FL2VA_pruned_int8_convrot.safetensors","weight_dtype":"default"}},
+  "2":{"class_type":"MiniMaxH3SigmaShift","inputs":{"model":["1",0],"shift_video":12,"shift_audio":3}},
+  "3":{"class_type":"RandomNoise","inputs":{"noise_seed":2026092361}},
+  "4":{"class_type":"CLIPLoader","inputs":{"clip_name":"qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors","type":"minimax","device":"default"}},
+  "5":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_video_vae_fp16.safetensors"}},
+  "6":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_audio_vae_fp32.safetensors"}},
+  "7":{"class_type":"MiniMaxH3ImageToVideo","inputs":{"clip":["4",0],"vae":["5",0],"width":1344,"height":768,"length":124,"first_frame":["20",0],"last_frame":["21",0],"prompt":"以图1作为绝对首帧、图2作为绝对尾帧，生成约5.2秒、24fps、16:9、1344x768的单镜头手绘叙事动画。全程固定办公室机位，不推拉、不摇移、不切镜；窗户、木桌、台灯、书架、椅子和电脑位置必须固定。成年林小满保持同一张脸、深棕后束发、灰蓝外套、米色上衣和深色长裤。动作只做清楚的三步：她先把手里那张唯一旧照片放入桌左侧橄榄色帆布包；随后把包背到左肩，红纸风车留在包侧；最后站起，走向画面最左侧的办公室门，停在门口并轻扶门框，准确到达图2尾帧。每个动作连续、速度自然，身体完整不裁切，包大小真实且只出现一个。不要关灯，不要把办公室变成别处，不要让照片/包/风车消失或复制，不要出现额外人物、字幕、文字、水印。禁止对白、唱歌、哼唱、旁白、口型、环境人声、动物叫声和音乐；模型音轨将被丢弃，成片只使用指定歌曲。"}},
+  "8":{"class_type":"BasicGuider","inputs":{"model":["15",0],"conditioning":["7",0]}},
+  "9":{"class_type":"KSamplerSelect","inputs":{"sampler_name":"euler"}},
+  "10":{"class_type":"SamplerCustomAdvanced","inputs":{"noise":["3",0],"guider":["8",0],"sampler":["9",0],"sigmas":["15",1],"latent_image":["7",1]}},
+  "11":{"class_type":"VAEDecode","inputs":{"samples":["10",0],"vae":["5",0]}},
+  "12":{"class_type":"VAEDecodeAudio","inputs":{"samples":["10",0],"vae":["6",0]}},
+  "13":{"class_type":"CreateVideo","inputs":{"images":["11",0],"audio":["12",0],"fps":24,"bit_depth":8}},
+  "14":{"class_type":"SaveVideo","inputs":{"video":["13",0],"filename_prefix":"mv_hometown/S06A_办公室收照片背包_raw","format":"mp4","codec":"auto"}},
+  "15":{"class_type":"MiniMaxH3PDDAccApply","inputs":{"model":["2",0],"pdd_file":"MiniMax-H3-FL2VA-Acc-8Step.safetensors","nfe":"8","lora_strength":1.0,"head_strength":1.0,"on_off_grid":"error","partition_check":"error"}},
+  "20":{"class_type":"LoadImage","inputs":{"image":"mv_hometown/S06A_first_frame.png"}},
+  "21":{"class_type":"LoadImage","inputs":{"image":"mv_hometown/S06A_last_frame.png"}}
+}

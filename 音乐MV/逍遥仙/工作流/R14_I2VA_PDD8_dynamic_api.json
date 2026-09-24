@@ -1,0 +1,162 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "MiniMax_H3_FL2VA_pruned_int8_convrot.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "MiniMaxH3SigmaShift",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "shift_video": 12,
+      "shift_audio": 3
+    }
+  },
+  "3": {
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 261000014
+    }
+  },
+  "4": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+      "type": "minimax",
+      "device": "default"
+    }
+  },
+  "5": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_video_vae_fp16.safetensors"
+    }
+  },
+  "7": {
+    "class_type": "MiniMaxH3ImageToVideo",
+    "inputs": {
+      "clip": [
+        "4",
+        0
+      ],
+      "vae": [
+        "5",
+        0
+      ],
+      "width": 1344,
+      "height": 768,
+      "length": 195,
+      "first_frame": [
+        "20",
+        0
+      ],
+      "prompt": "中国传统手绘美术动画，上美影二维动画质感，电影胶片颗粒。严格从 R13 尾帧连续开始，保持同一高台、两块旧石碑、老松、云海和冷蓝电影色调。唯一行旅者严格沿用三视图：长黑发高束发、蓝灰长袍、赭色腰封、黑布靴、右腕红绳、背后一个圆形藤编背包；头发、脸、服装颜色、背包大小和人物比例不能改变。0到2秒，人物右手仍扶着右侧石碑，风从右向左吹动衣摆和发尾；2到4秒，云海在高台下方向左流动，远山保持原位，人物微微眯眼望向远方；4到6秒，风力增强，长袍下摆和红腰带明显摆动，人物脚底牢牢站在地面，不后退、不漂浮；6到8秒，镜头缓慢绕到人物左后侧，仍能看到单个背包和两块石碑，云层在背景流动，人物保持站定。只出现一个人物、一个背包、两块原有石碑和自然云雾；禁止新增人物、鸟群、建筑、武器、字幕、文字、变脸、换装、脚漂浮、石碑复制、场景跳变和整体曝光闪烁。无对白、无旁白、无音乐，生成静音画面。"
+    }
+  },
+  "8": {
+    "class_type": "BasicGuider",
+    "inputs": {
+      "model": [
+        "15",
+        0
+      ],
+      "conditioning": [
+        "7",
+        0
+      ]
+    }
+  },
+  "9": {
+    "class_type": "KSamplerSelect",
+    "inputs": {
+      "sampler_name": "euler"
+    }
+  },
+  "10": {
+    "class_type": "SamplerCustomAdvanced",
+    "inputs": {
+      "noise": [
+        "3",
+        0
+      ],
+      "guider": [
+        "8",
+        0
+      ],
+      "sampler": [
+        "9",
+        0
+      ],
+      "sigmas": [
+        "15",
+        1
+      ],
+      "latent_image": [
+        "7",
+        1
+      ]
+    }
+  },
+  "11": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "10",
+        0
+      ],
+      "vae": [
+        "5",
+        0
+      ]
+    }
+  },
+  "13": {
+    "class_type": "CreateVideo",
+    "inputs": {
+      "images": [
+        "11",
+        0
+      ],
+      "fps": 24,
+      "bit_depth": 8
+    }
+  },
+  "14": {
+    "class_type": "SaveVideo",
+    "inputs": {
+      "video": [
+        "13",
+        0
+      ],
+      "filename_prefix": "逍遥仙重制/R14_高台风云_角色板锁定_PDD8",
+      "format": "mp4",
+      "codec": "auto"
+    }
+  },
+  "15": {
+    "class_type": "MiniMaxH3PDDAccApply",
+    "inputs": {
+      "model": [
+        "2",
+        0
+      ],
+      "pdd_file": "MiniMax-H3-FL2VA-Acc-8Step.safetensors",
+      "nfe": "8",
+      "lora_strength": 1.0,
+      "head_strength": 1.0,
+      "on_off_grid": "error",
+      "partition_check": "error"
+    }
+  },
+  "20": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "逍遥仙/关键帧/R14_角色板锁定_高台首帧.png"
+    }
+  }
+}

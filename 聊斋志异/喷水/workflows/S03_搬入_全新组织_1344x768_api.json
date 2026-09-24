@@ -1,0 +1,18 @@
+{
+  "1":{"class_type":"UNETLoader","inputs":{"unet_name":"MiniMax_H3_FL2VA_pruned_int8_convrot.safetensors","weight_dtype":"default"}},
+  "2":{"class_type":"MiniMaxH3SigmaShift","inputs":{"model":["1",0],"shift_video":12,"shift_audio":3}},
+  "3":{"class_type":"RandomNoise","inputs":{"noise_seed":26091603}},
+  "4":{"class_type":"CLIPLoader","inputs":{"clip_name":"qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors","type":"minimax","device":"default"}},
+  "5":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_video_vae_fp16.safetensors"}},
+  "6":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_audio_vae_fp32.safetensors"}},
+  "7":{"class_type":"MiniMaxH3ImageToVideo","inputs":{"clip":["4",0],"vae":["5",0],"width":1344,"height":768,"length":144,"first_frame":["20",0],"prompt":"直接从提供的S03首帧开始，保持16:9、1344x768和当前版本上美影式二维手绘动画风格。固定荒宅厅堂空间：纸窗始终在左后方，低矮饭桌始终在中央偏左，卧榻始终在后方中间，通往院落的木门始终在最右侧。只有四个人：阿莲是高瘦、深青衣的年长婢女，始终在卧榻左侧整理被褥；阿绣是年轻圆脸、浅青衣婢女，始终在左侧窗下查看墙根；两名外貌明显不同的宋家仆人从右侧门口搬一只木箱进入，仆人甲方脸深棕衣，仆人乙窄脸褐衣，四人不得变脸、合并、消失或增殖。动作顺序：前段两名仆人缓慢把木箱从右侧门口搬到右侧地面；阿莲轻轻整理卧榻被褥；阿绣蹲下触碰一条从墙根向窗外延伸的细湿痕，抬头看向干燥的屋檐；后段阿莲走近拉起阿绣，阿莲只说一次：别盯着看。夫人还等着安置。对白只能由阿莲发出，不能有其他人声。环境只保留木箱摩擦地面、布料、脚步、孤灯火苗、远处夜虫和井边一声低沉咕噜；无旁白、无音乐、无额外人声、无字幕、无文字、水印、现代物件。湿痕连续且只在墙根，其他地面、墙面、屋檐保持干燥，镜头稳定不漂移。"}},
+  "8":{"class_type":"BasicGuider","inputs":{"model":["15",0],"conditioning":["7",0]}},
+  "9":{"class_type":"KSamplerSelect","inputs":{"sampler_name":"euler"}},
+  "10":{"class_type":"SamplerCustomAdvanced","inputs":{"noise":["3",0],"guider":["8",0],"sampler":["9",0],"sigmas":["15",1],"latent_image":["7",1]}},
+  "11":{"class_type":"VAEDecode","inputs":{"samples":["10",0],"vae":["5",0]}},
+  "12":{"class_type":"VAEDecodeAudio","inputs":{"samples":["10",0],"vae":["6",0]}},
+  "13":{"class_type":"CreateVideo","inputs":{"images":["11",0],"audio":["12",0],"fps":24,"bit_depth":8}},
+  "14":{"class_type":"SaveVideo","inputs":{"video":["13",0],"filename_prefix":"pengshui/S03_搬入_上美影_1344x768","format":"mp4","codec":"auto"}},
+  "15":{"class_type":"MiniMaxH3PDDAccApply","inputs":{"model":["2",0],"pdd_file":"MiniMax-H3-FL2VA-Acc-8Step.safetensors","nfe":"8","lora_strength":1.0,"head_strength":1.0,"on_off_grid":"error","partition_check":"error"}},
+  "20":{"class_type":"LoadImage","inputs":{"image":"喷水/S03_new_start_asset.png"}}
+}

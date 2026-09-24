@@ -1,0 +1,21 @@
+{
+  "1":{"class_type":"UNETLoader","inputs":{"unet_name":"MiniMax_H3_FL2VA_pruned_int8_convrot.safetensors","weight_dtype":"default"}},
+  "2":{"class_type":"MiniMaxH3SigmaShift","inputs":{"model":["1",0],"shift_video":12,"shift_audio":3}},
+  "3":{"class_type":"RandomNoise","inputs":{"noise_seed":26092034}},
+  "4":{"class_type":"CLIPLoader","inputs":{"clip_name":"qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors","type":"minimax","device":"default"}},
+  "5":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_video_vae_fp16.safetensors"}},
+  "6":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_audio_vae_fp32.safetensors"}},
+  "7":{"class_type":"MiniMaxH3ReferenceToVideo","inputs":{"clip":["4",0],"vae":["5",0],"audio_vae":["6",0],"width":1344,"height":768,"length":240,"ref_image_size":"max","ref_images.ref_image_0":["20",0],"ref_images.ref_image_1":["21",0],"ref_audios.ref_audio_0":["22",0],"prompt":"<Picture 1>为S07首帧，<Picture 2>为S07尾帧。<Audio 1>是方栋VO-FANGDONG-01声纹参考，只用于锁定方栋成年男书生的音色，不得复制参考音频的台词、环境声或前置杂音。生成10秒、16:9、1344x768的《喷水》同类上美影二维手绘电影动画：粗手工墨线、二维赛璐璐平涂、低饱和青灰与旧木褐、宣纸水彩肌理、电影胶片颗粒。严格承接S06尾帧：同一书房，卧榻左侧、书案右前景、窗后方右侧、门最右侧、油灯位置固定。方栋始终是同一瘦削成年书生，黑色儒生幞头、深青长袍、短须，右眼保留薄灰翳。动作慢而稳定，不能快切、不能赶节奏。0至2秒方栋缓慢放下铜镜，停顿后取起唯一一卷经书和唯一一串木念珠；2至4秒方栋在卧榻旁调整坐姿，盘坐并翻开经卷；4至8秒方栋双手持念珠，面对经卷低声持续诵经，呼吸和手指动作轻微自然；8至10秒窗外光线从月夜缓慢推向晨光，香炉香烟和香灰微微变化，方栋保持平静诵经状态到达尾帧，暗示持诵一年但不跳切。全片只出现方栋一人；道具严格只有一卷经书、一串念珠、一面铜镜、一个香炉和一盏油灯，不能复制、漂浮或穿模。人声只允许一段平静古雅旁白“他持诵一年，万缘渐静”和方栋低声诵经，二者不得重叠；禁止妻子声、其他人声、对白抢话、音乐、狗叫、随机噪声、字幕、文字和水印。"
+  }},
+  "8":{"class_type":"BasicGuider","inputs":{"model":["15",0],"conditioning":["7",0]}},
+  "9":{"class_type":"KSamplerSelect","inputs":{"sampler_name":"euler"}},
+  "10":{"class_type":"SamplerCustomAdvanced","inputs":{"noise":["3",0],"guider":["8",0],"sampler":["9",0],"sigmas":["15",1],"latent_image":["7",1]}},
+  "11":{"class_type":"VAEDecode","inputs":{"samples":["10",0],"vae":["5",0]}},
+  "12":{"class_type":"VAEDecodeAudio","inputs":{"samples":["10",0],"vae":["6",0]}},
+  "13":{"class_type":"CreateVideo","inputs":{"images":["11",0],"audio":["12",0],"fps":24,"bit_depth":8}},
+  "14":{"class_type":"SaveVideo","inputs":{"video":["13",0],"filename_prefix":"tongrenyu/S07_发愿诵经_方栋声纹锁定_慢节奏_喷水风格_首尾帧_v1_1344x768","format":"mp4","codec":"auto"}},
+  "15":{"class_type":"MiniMaxH3PDDAccApply","inputs":{"model":["2",0],"pdd_file":"MiniMax-H3-FL2VA-Acc-8Step.safetensors","nfe":"8","lora_strength":1.0,"head_strength":1.0,"on_off_grid":"error","partition_check":"error"}},
+  "20":{"class_type":"LoadImage","inputs":{"image":"tongrenyu/S07_首帧_方栋取经卷念珠_单一道具_喷水风格_v1_exact.png"}},
+  "21":{"class_type":"LoadImage","inputs":{"image":"tongrenyu/S07_尾帧_方栋盘坐诵经_单一道具_喷水风格_v1_exact.png"}},
+  "22":{"class_type":"LoadAudio","inputs":{"audio":"tongrenyu/方栋_VO-FANGDONG-01.wav"}}
+}

@@ -1,0 +1,21 @@
+{
+  "1":{"class_type":"UNETLoader","inputs":{"unet_name":"MiniMax_H3_FL2VA_pruned_int8_convrot.safetensors","weight_dtype":"default"}},
+  "2":{"class_type":"MiniMaxH3SigmaShift","inputs":{"model":["1",0],"shift_video":12,"shift_audio":3}},
+  "3":{"class_type":"RandomNoise","inputs":{"noise_seed":26092038}},
+  "4":{"class_type":"CLIPLoader","inputs":{"clip_name":"qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors","type":"minimax","device":"default"}},
+  "5":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_video_vae_fp16.safetensors"}},
+  "6":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_audio_vae_fp32.safetensors"}},
+  "7":{"class_type":"MiniMaxH3ReferenceToVideo","inputs":{"clip":["4",0],"vae":["5",0],"audio_vae":["6",0],"width":1344,"height":768,"length":240,"ref_image_size":"max","ref_images.ref_image_0":["20",0],"ref_images.ref_image_1":["21",0],"ref_audios.ref_audio_0":["22",0],"prompt":"<Picture 1>为首帧，<Picture 2>为尾帧。<Audio 1>是旁白VO-NARRATOR-01的声音参考，只用于锁定画外讲述者的音色，绝不照搬参考音频内容。生成10秒、16:9、1344x768的《喷水》同类上美影二维手绘电影动画：粗手工墨线、二维赛璐璐平涂、宣纸水彩肌理、低饱和青灰旧木褐、电影胶片颗粒。严格保持同一书房：卧榻左侧、书案右前景、窗后方右侧、门最右侧、油灯和香炉位置固定。方栋是同一瘦削成年书生，黑色儒生幞头、深青长袍、短须，右眼薄翳；方栋全程闭口，绝不张口说话、绝不诵经、绝不发出任何人声。动作慢而连续：0至2秒方栋缓慢放下铜镜，停顿后取起唯一一卷经书和唯一一串木念珠；2至4秒盘坐并翻开经卷；4至6秒春天，窗外嫩绿新叶和柔和春光，方栋保持盘坐并缓慢拨动念珠；6至7秒明确进入盛夏，窗外树冠变得浓密葱郁、日光更强、庭院草木繁盛；7至8秒明确进入秋天，窗外树叶由绿变金黄，少量落叶飘入窗内；8至9秒明确进入冬天，窗外枝头几乎落尽、地面薄霜、冷蓝色光线；9至10秒明确回到春天，窗外重新长出嫩绿新叶、光线回暖，香灰明显增加，稳定到达尾帧，完整表现春→夏→秋→冬→春的一整年。季节变化通过窗外庭院、树叶、落叶、霜、光线和色温完成，室内卧榻、书案、门窗和人物位置始终不变，不跳切。画面内严格只有一卷经书、一串念珠、一面铜镜、一个香炉和一盏油灯，不得复制、漂浮、穿模或突然消失；只出现方栋一人，不新增人物。声音严格只允许一段真正的画外旁白，使用Audio 1的成熟、平静、古雅、客观讲述者口吻，像电影旁白而不是角色说话，旁白台词只说一次且只说这一句：“他诵经一年，万缘渐静。”除这一段旁白外，只允许无人的香火燃烧声、极轻室内空气声和远处庭院环境声；禁止方栋诵经声、方栋呼吸声、方栋说话、任何第二人声、参考音频台词泄漏、重叠对白、音乐、狗叫、随机噪声、字幕、文字和水印。"
+  }},
+  "8":{"class_type":"BasicGuider","inputs":{"model":["15",0],"conditioning":["7",0]}},
+  "9":{"class_type":"KSamplerSelect","inputs":{"sampler_name":"euler"}},
+  "10":{"class_type":"SamplerCustomAdvanced","inputs":{"noise":["3",0],"guider":["8",0],"sampler":["9",0],"sigmas":["15",1],"latent_image":["7",1]}},
+  "11":{"class_type":"VAEDecode","inputs":{"samples":["10",0],"vae":["5",0]}},
+  "12":{"class_type":"VAEDecodeAudio","inputs":{"samples":["10",0],"vae":["6",0]}},
+  "13":{"class_type":"CreateVideo","inputs":{"images":["11",0],"audio":["12",0],"fps":24,"bit_depth":8}},
+  "14":{"class_type":"SaveVideo","inputs":{"video":["13",0],"filename_prefix":"tongrenyu/S07_发愿诵经_旁白单人声_春夏秋冬一年_喷水风格_首尾帧_v5_1344x768","format":"mp4","codec":"auto"}},
+  "15":{"class_type":"MiniMaxH3PDDAccApply","inputs":{"model":["2",0],"pdd_file":"MiniMax-H3-FL2VA-Acc-8Step.safetensors","nfe":"8","lora_strength":1.0,"head_strength":1.0,"on_off_grid":"error","partition_check":"error"}},
+  "20":{"class_type":"LoadImage","inputs":{"image":"tongrenyu/S07_首帧_方栋取经卷念珠_单一道具_喷水风格_v1_exact.png"}},
+  "21":{"class_type":"LoadImage","inputs":{"image":"tongrenyu/S07_尾帧_方栋盘坐诵经_单一道具_喷水风格_v1_exact.png"}},
+  "22":{"class_type":"LoadAudio","inputs":{"audio":"tongrenyu/旁白_VO-NARRATOR-01.wav"}}
+}

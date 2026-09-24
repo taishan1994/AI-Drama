@@ -1,0 +1,19 @@
+{
+  "1":{"class_type":"UNETLoader","inputs":{"unet_name":"MiniMax_H3_FL2VA_pruned_int8_convrot.safetensors","weight_dtype":"default"}},
+  "2":{"class_type":"MiniMaxH3SigmaShift","inputs":{"model":["1",0],"shift_video":12,"shift_audio":3}},
+  "3":{"class_type":"RandomNoise","inputs":{"noise_seed":26091613}},
+  "4":{"class_type":"CLIPLoader","inputs":{"clip_name":"qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors","type":"minimax","device":"default"}},
+  "5":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_video_vae_fp16.safetensors"}},
+  "6":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_audio_vae_fp32.safetensors"}},
+  "7":{"class_type":"MiniMaxH3ReferenceToVideo","inputs":{"clip":["4",0],"vae":["5",0],"audio_vae":["6",0],"width":1344,"height":768,"length":120,"ref_image_size":"max","ref_images.ref_image_0":["20",0],"ref_images.ref_image_1":["21",0],"prompt":"<Picture 1>是S10尾帧，<Picture 2>是S11尾帧。生成5秒16:9、1344x768上美影二维手绘电影动画，严格承接同一纸窗和同一厅堂。0至1秒保持单眼隔窗的极近景；1至2.8秒窗外连续三次极短的冷雾冲击纸窗，第三次纸窗从外向内撕裂，碎纸向室内飞散；2.8至3.5秒冷雾穿入，油灯火焰短暂变细变蓝后熄灭；3.5至5秒镜头轻微震动后落到低机位，三个人自然失去支撑倒下：太夫人倒在卧榻前侧，阿莲倒在卧榻左侧地面，阿绣倒在左前窗下，三人服装发式保持一致、无血腥、无夸张摔倒。破窗外只有老妇一小束湿白发飘入，老妇本人不得进入厅堂。饭桌中央偏左、卧榻后方、最右通院门位置固定，空间不漂移。只允许三个人，不增加、不消失、不换脸。音轨只保留三次短促扑水声、纸张撕裂、木框断响、灯火熄灭声和三次轻微落地声；禁止对白、旁白、音乐、惨叫、呻吟、喘息、动物声和任何额外人声。无字幕、文字、水印、现代物件。"}},
+  "8":{"class_type":"BasicGuider","inputs":{"model":["15",0],"conditioning":["7",0]}},
+  "9":{"class_type":"KSamplerSelect","inputs":{"sampler_name":"euler"}},
+  "10":{"class_type":"SamplerCustomAdvanced","inputs":{"noise":["3",0],"guider":["8",0],"sampler":["9",0],"sigmas":["15",1],"latent_image":["7",1]}},
+  "11":{"class_type":"VAEDecode","inputs":{"samples":["10",0],"vae":["5",0]}},
+  "12":{"class_type":"VAEDecodeAudio","inputs":{"samples":["10",0],"vae":["6",0]}},
+  "13":{"class_type":"CreateVideo","inputs":{"images":["11",0],"audio":["12",0],"fps":24,"bit_depth":8}},
+  "14":{"class_type":"SaveVideo","inputs":{"video":["13",0],"filename_prefix":"pengshui/S11_窗纸破裂_三人倒地_无对白_首尾帧_上美影_1344x768","format":"mp4","codec":"auto"}},
+  "15":{"class_type":"MiniMaxH3PDDAccApply","inputs":{"model":["2",0],"pdd_file":"MiniMax-H3-FL2VA-Acc-8Step.safetensors","nfe":"8","lora_strength":1.0,"head_strength":1.0,"on_off_grid":"error","partition_check":"error"}},
+  "20":{"class_type":"LoadImage","inputs":{"image":"喷水/S11_new_start_asset.png"}},
+  "21":{"class_type":"LoadImage","inputs":{"image":"喷水/S11_new_end_asset.png"}}
+}

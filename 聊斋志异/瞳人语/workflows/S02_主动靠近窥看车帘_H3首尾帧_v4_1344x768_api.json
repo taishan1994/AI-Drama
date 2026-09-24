@@ -1,0 +1,19 @@
+{
+  "1":{"class_type":"UNETLoader","inputs":{"unet_name":"MiniMax_H3_FL2VA_pruned_int8_convrot.safetensors","weight_dtype":"default"}},
+  "2":{"class_type":"MiniMaxH3SigmaShift","inputs":{"model":["1",0],"shift_video":12,"shift_audio":3}},
+  "3":{"class_type":"RandomNoise","inputs":{"noise_seed":26092024}},
+  "4":{"class_type":"CLIPLoader","inputs":{"clip_name":"qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors","type":"minimax","device":"default"}},
+  "5":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_video_vae_fp16.safetensors"}},
+  "6":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_audio_vae_fp32.safetensors"}},
+  "7":{"class_type":"MiniMaxH3ReferenceToVideo","inputs":{"clip":["4",0],"vae":["5",0],"audio_vae":["6",0],"width":1344,"height":768,"length":120,"ref_image_size":"max","ref_images.ref_image_0":["20",0],"ref_images.ref_image_1":["21",0],"prompt":"<Picture 1>是已验收S01B实际尾帧：方栋在左侧三分之二侧脸，抬手遮眉，正盯着右侧车帘；<Picture 2>是S02结束状态：方栋仍在左侧，已经跟近车厢，侧脸和眼睛直盯右侧车帘缝隙，手指停在帘外不触碰。生成5秒、16:9、1344x768的《喷水》同类上美影二维手绘电影动画：粗手工墨线、二维平涂、灰蓝与赭褐色块、米白宣纸肌理、电影胶片颗粒。全程保持车帘在画面右前景、方栋在左侧，镜头沿车队原方向平稳前进，不切换机位、不反转、不拉远。0至2秒方栋跟随车厢向前走两步，头部和双眼始终朝向车帘；2至4秒他压低脚步靠近车厢，抬眼寻找帘缝，身体略前倾；4至5秒停下，手指停在帘外，保持窥看姿势。必须让观众清楚看到方栋主动尾随并窥看车帘，不能看道路、马匹或镜头。空间只保留同一条春郊石路、柳树和车厢侧面的连续背景；不显示可数马匹，不新增车夫、路人、动物或第二辆车。声音只保留方栋脚步、车轮、车铃、春风和远鸟；禁止旁白、对白、音乐、狗叫、呻吟、喊声、其他人声、字幕、文字和水印。"}},
+  "8":{"class_type":"BasicGuider","inputs":{"model":["15",0],"conditioning":["7",0]}},
+  "9":{"class_type":"KSamplerSelect","inputs":{"sampler_name":"euler"}},
+  "10":{"class_type":"SamplerCustomAdvanced","inputs":{"noise":["3",0],"guider":["8",0],"sampler":["9",0],"sigmas":["15",1],"latent_image":["7",1]}},
+  "11":{"class_type":"VAEDecode","inputs":{"samples":["10",0],"vae":["5",0]}},
+  "12":{"class_type":"VAEDecodeAudio","inputs":{"samples":["10",0],"vae":["6",0]}},
+  "13":{"class_type":"CreateVideo","inputs":{"images":["11",0],"audio":["12",0],"fps":24,"bit_depth":8}},
+  "14":{"class_type":"SaveVideo","inputs":{"video":["13",0],"filename_prefix":"tongrenyu/S02_主动靠近窥看车帘_喷水风格_首尾帧_v4_1344x768","format":"mp4","codec":"auto"}},
+  "15":{"class_type":"MiniMaxH3PDDAccApply","inputs":{"model":["2",0],"pdd_file":"MiniMax-H3-FL2VA-Acc-8Step.safetensors","nfe":"8","lora_strength":1.0,"head_strength":1.0,"on_off_grid":"error","partition_check":"error"}},
+  "20":{"class_type":"LoadImage","inputs":{"image":"tongrenyu/S02_首帧_承接S01B实际尾帧.jpg"}},
+  "21":{"class_type":"LoadImage","inputs":{"image":"tongrenyu/S02_尾帧_肩后窥看车帘_v1_exact.png"}}
+}

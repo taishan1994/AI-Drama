@@ -1,0 +1,18 @@
+{
+  "1":{"class_type":"UNETLoader","inputs":{"unet_name":"MiniMax_H3_FL2VA_pruned_int8_convrot.safetensors","weight_dtype":"default"}},
+  "2":{"class_type":"MiniMaxH3SigmaShift","inputs":{"model":["1",0],"shift_video":12,"shift_audio":3}},
+  "3":{"class_type":"RandomNoise","inputs":{"noise_seed":2026092303}},
+  "4":{"class_type":"CLIPLoader","inputs":{"clip_name":"qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors","type":"minimax","device":"default"}},
+  "5":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_video_vae_fp16.safetensors"}},
+  "6":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_audio_vae_fp32.safetensors"}},
+  "7":{"class_type":"MiniMaxH3ImageToVideo","inputs":{"clip":["4",0],"vae":["5",0],"width":1344,"height":768,"length":264,"first_frame":["20",0],"prompt":"以提供图片作为绝对首帧，生成11秒、24fps、16:9、1344x768的连续手绘绘本电影动画，单一连续镜头，暖金色傍晚，细腻彩铅线条、水粉背景和轻微纸纹。严格从首帧保持同一个童年林小满：约8岁，鹅黄色上衣、砖红围巾、深色短裤、短深色头发，身材比例一致；同一条村巷、老屋、石墙、老槐树和原有地理方向不变。女孩先继续沿石板路慢慢向前走，巷边两三位远景村民各自忙着收衣、择菜、坐在门口，自然抬手和她打招呼；不聚集、不靠近、不挡住主角。小满回以轻松笑容，走到一处矮墙边停下，低头看手里唯一的红纸风车，再将风车举向晚风，风车叶片缓慢转动。动作真实、轻柔、有童年日常的自在；镜头以非常缓慢的平行跟随为主，保持中远景，不突然推拉、不切镜。结尾让红纸风车逐渐靠近前景、轻轻旋转，女孩仍清晰留在中景，便于下一镜由风车旋转匹配到城市夜灯。风车只出现一个，四片红纸叶片和细竹柄；树、石墙、房屋保持静止，不出现橘子、额外道具、近景路人或成年小满。禁止字幕、文字、水印、唱歌、哼唱、对白、旁白、口型、环境人声、动物叫声、音乐；模型生成音轨将丢弃，成片只使用指定歌曲。"}},
+  "8":{"class_type":"BasicGuider","inputs":{"model":["15",0],"conditioning":["7",0]}},
+  "9":{"class_type":"KSamplerSelect","inputs":{"sampler_name":"euler"}},
+  "10":{"class_type":"SamplerCustomAdvanced","inputs":{"noise":["3",0],"guider":["8",0],"sampler":["9",0],"sigmas":["15",1],"latent_image":["7",1]}},
+  "11":{"class_type":"VAEDecode","inputs":{"samples":["10",0],"vae":["5",0]}},
+  "12":{"class_type":"VAEDecodeAudio","inputs":{"samples":["10",0],"vae":["6",0]}},
+  "13":{"class_type":"CreateVideo","inputs":{"images":["11",0],"audio":["12",0],"fps":24,"bit_depth":8}},
+  "14":{"class_type":"SaveVideo","inputs":{"video":["13",0],"filename_prefix":"mv_hometown/S03_村巷日常与红纸风车_raw","format":"mp4","codec":"auto"}},
+  "15":{"class_type":"MiniMaxH3PDDAccApply","inputs":{"model":["2",0],"pdd_file":"MiniMax-H3-FL2VA-Acc-8Step.safetensors","nfe":"8","lora_strength":1.0,"head_strength":1.0,"on_off_grid":"error","partition_check":"error"}},
+  "20":{"class_type":"LoadImage","inputs":{"image":"mv_hometown/S03_first_frame.png"}}
+}

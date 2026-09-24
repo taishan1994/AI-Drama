@@ -1,0 +1,19 @@
+{
+  "1":{"class_type":"UNETLoader","inputs":{"unet_name":"MiniMax_H3_FL2VA_pruned_int8_convrot.safetensors","weight_dtype":"default"}},
+  "2":{"class_type":"MiniMaxH3SigmaShift","inputs":{"model":["1",0],"shift_video":12,"shift_audio":3}},
+  "3":{"class_type":"RandomNoise","inputs":{"noise_seed":26091612}},
+  "4":{"class_type":"CLIPLoader","inputs":{"clip_name":"qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors","type":"minimax","device":"default"}},
+  "5":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_video_vae_fp16.safetensors"}},
+  "6":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_audio_vae_fp32.safetensors"}},
+  "7":{"class_type":"MiniMaxH3ReferenceToVideo","inputs":{"clip":["4",0],"vae":["5",0],"audio_vae":["6",0],"width":1344,"height":768,"length":144,"ref_image_size":"max","ref_images.ref_image_0":["20",0],"ref_images.ref_image_1":["21",0],"prompt":"<Picture 1>是S09尾帧，<Picture 2>是S10尾帧，严格保持同一纸窗、同一老妇和同一室内三人剪影。生成6秒16:9、1344x768上美影二维手绘电影质感动画。镜头始终在室内纸窗近处，0至1.5秒保持S09湿黑窗纸；1.5至3秒几颗水珠沿完整纸面下滑，窗纸只轻微向内鼓起；3至4.5秒窗孔中出现老妇的一只浑浊眼睛，另一只眼睛完全被湿白发遮挡；4.5至6秒老妇继续靠近但纸窗保持完整，停在<Picture 2>的单眼构图。老妇形象固定：极矮驼背、灰黑旧袍、扫帚般湿白发、异常高髻，绝不进入屋内，绝不撕裂或穿透纸窗。室内三人只作为模糊剪影：太夫人在卧榻内侧捂住阿绣的嘴，阿莲贴在窗边，三人不换位、不张口。禁止双眼同时清晰、禁止完整露脸、禁止破窗、裂口、撕纸、血腥、大水柱、大水幕、其他人物、动物、字幕、文字、水印。音轨只保留纸张吸水声、一次无声调的湿雾扑声、木窗轻响、低风和水滴；禁止对白、旁白、音乐、呻吟、喘息、笑声和任何额外人声。镜头只做极慢推近，不摇晃、不跳切、不改变窗框位置。"}},
+  "8":{"class_type":"BasicGuider","inputs":{"model":["15",0],"conditioning":["7",0]}},
+  "9":{"class_type":"KSamplerSelect","inputs":{"sampler_name":"euler"}},
+  "10":{"class_type":"SamplerCustomAdvanced","inputs":{"noise":["3",0],"guider":["8",0],"sampler":["9",0],"sigmas":["15",1],"latent_image":["7",1]}},
+  "11":{"class_type":"VAEDecode","inputs":{"samples":["10",0],"vae":["5",0]}},
+  "12":{"class_type":"VAEDecodeAudio","inputs":{"samples":["10",0],"vae":["6",0]}},
+  "13":{"class_type":"CreateVideo","inputs":{"images":["11",0],"audio":["12",0],"fps":24,"bit_depth":8}},
+  "14":{"class_type":"SaveVideo","inputs":{"video":["13",0],"filename_prefix":"pengshui/S10_浑浊眼睛_单眼隔窗_首尾帧_上美影_1344x768","format":"mp4","codec":"auto"}},
+  "15":{"class_type":"MiniMaxH3PDDAccApply","inputs":{"model":["2",0],"pdd_file":"MiniMax-H3-FL2VA-Acc-8Step.safetensors","nfe":"8","lora_strength":1.0,"head_strength":1.0,"on_off_grid":"error","partition_check":"error"}},
+  "20":{"class_type":"LoadImage","inputs":{"image":"喷水/S10_new_start_asset.png"}},
+  "21":{"class_type":"LoadImage","inputs":{"image":"喷水/S10_new_end_asset.png"}}
+}

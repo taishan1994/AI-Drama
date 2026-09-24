@@ -1,0 +1,233 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "MiniMax_H3_Ref2VA_pruned_int8_convrot.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "MiniMaxH3SigmaShift",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "shift_video": 12,
+      "shift_audio": 3
+    }
+  },
+  "3": {
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 26091017
+    }
+  },
+  "4": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+      "type": "minimax",
+      "device": "default"
+    }
+  },
+  "5": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_video_vae_fp16.safetensors"
+    }
+  },
+  "6": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_audio_vae_fp32.safetensors"
+    }
+  },
+  "7": {
+    "class_type": "MiniMaxH3ReferenceToVideo",
+    "inputs": {
+      "clip": [
+        "4",
+        0
+      ],
+      "vae": [
+        "5",
+        0
+      ],
+      "audio_vae": [
+        "6",
+        0
+      ],
+      "prompt": "subject_definitions:\n<Subject 1> is the exact last-frame composition from <Picture 1>, including the fixed doorway and four standing carters.\n<Subject 2> is the corpse-room layout revealed beyond the same doorway.\n<Subject 3> is the old innkeeper in <Picture 1>, distinct from the carters.\n<Subject 4> is exactly four distinct carters in <Picture 1>, all standing.\n<Picture 1> is the exact last frame of shot 6 and the first-frame anchor.\n\nsummary:\n[video continuation + keyframe completion + reference generation] Continue from <Picture 1> with the same doorway, old innkeeper, and exactly four standing carters. Slowly push toward the covered corpse. Generate no human voice.\n\nretention_analysis:\n<Subject 1> ([Shot 1]): fully_preserved - preserve doorway geometry, perspective, lighting, and composition.\n<Subject 2> ([Shot 1] reveal): partially_preserved - reveal only beyond the existing doorway.\n<Subject 3> ([Shot 1]): fully_preserved - preserve the innkeeper identity and lamp.\n<Subject 4> ([Shot 1]): fully_preserved - preserve exactly four visible, distinct, standing carters.\n<Picture 1> ([Shot 1] first frame): fully_preserved - exact starting frame.\n\ndetailed_description:\nShanghai Animation Film Studio-inspired 2D hand-painted animation with ink contours, painted paper texture, restrained rain-night colors, and film-grain finish. [Shot 1] Start exactly from <Picture 1>. <Subject 3> (S1) is the old innkeeper at the front with an oil lamp. <Subject 4> is exactly four separate carters, all simultaneously visible, standing with both feet on the floor; none may sit, kneel, lie down, or be hidden. Slowly push through the existing doorway. Keep its position, width, perspective, and material unchanged; the door only opens inward. Gradually reveal the covered female corpse, white curtains, and offering table beyond the same doorway. The corpse stays still and the right-side bench stays empty. The innkeeper only moves his lips and produces no audible speech. All four carters remain silent and standing. No extra person.\n\noverall_soundscape: Rain, low indoor wind, faint candle crackle, soft cloth movement, and restrained footsteps only. No human voice, speech, narration, animal calls, or unrelated noise.\n\nnon_diegetic_music: No music.",
+      "width": 1344,
+      "height": 768,
+      "length": 192,
+      "ref_image_size": "max",
+      "ref_images.ref_image_0": [
+        "20",
+        0
+      ],
+      "ref_images.ref_image_1": [
+        "21",
+        0
+      ],
+      "ref_audios.ref_audio_0": [
+        "22",
+        0
+      ]
+    }
+  },
+  "8": {
+    "class_type": "BasicGuider",
+    "inputs": {
+      "model": [
+        "15",
+        0
+      ],
+      "conditioning": [
+        "7",
+        0
+      ]
+    }
+  },
+  "9": {
+    "class_type": "KSamplerSelect",
+    "inputs": {
+      "sampler_name": "euler"
+    }
+  },
+  "10": {
+    "class_type": "SamplerCustomAdvanced",
+    "inputs": {
+      "noise": [
+        "3",
+        0
+      ],
+      "guider": [
+        "8",
+        0
+      ],
+      "sampler": [
+        "9",
+        0
+      ],
+      "sigmas": [
+        "15",
+        1
+      ],
+      "latent_image": [
+        "7",
+        1
+      ]
+    }
+  },
+  "11": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "10",
+        0
+      ],
+      "vae": [
+        "5",
+        0
+      ]
+    }
+  },
+  "12": {
+    "class_type": "VAEDecodeAudio",
+    "inputs": {
+      "samples": [
+        "10",
+        0
+      ],
+      "vae": [
+        "6",
+        0
+      ]
+    }
+  },
+  "13": {
+    "class_type": "CreateVideo",
+    "inputs": {
+      "images": [
+        "11",
+        0
+      ],
+      "audio": [
+        "12",
+        0
+      ],
+      "fps": 24,
+      "bit_depth": 8
+    }
+  },
+  "14": {
+    "class_type": "SaveVideo",
+    "inputs": {
+      "video": [
+        "13",
+        0
+      ],
+      "filename_prefix": "shibian/S07_H3规范_四车夫站立无声版_Ref2VA_PDD8",
+      "format": "mp4",
+      "codec": "auto"
+    }
+  },
+  "15": {
+    "class_type": "MiniMaxH3PDDAccApply",
+    "inputs": {
+      "model": [
+        "2",
+        0
+      ],
+      "pdd_file": "MiniMax-H3-Ref2VA-Acc-8Step.safetensors",
+      "nfe": "8",
+      "lora_strength": 1,
+      "head_strength": 1,
+      "on_off_grid": "error"
+    }
+  },
+  "20": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "shibian/S07_five_people_key.png"
+    }
+  },
+  "21": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "shibian/S07_five_people_key.png"
+    }
+  },
+  "22": {
+    "class_type": "LoadAudio",
+    "inputs": {
+      "audio": "shibian/老翁_加长纯人声参考_16k.wav"
+    }
+  },
+  "23": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "songgong/角色设定板/角色设定板_张秀才.png"
+    }
+  },
+  "24": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "songgong/环境设定板/环境设定板_阴司府廨大殿.png"
+    }
+  },
+  "25": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "songgong/道具设定板/道具设定板_题纸中文_A03.png"
+    }
+  },
+  "26": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "songgong/道具设定板/道具设定板_片名中文.png"
+    }
+  }
+}

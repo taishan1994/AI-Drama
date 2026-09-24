@@ -1,0 +1,17 @@
+{
+  "1":{"class_type":"UNETLoader","inputs":{"unet_name":"MiniMax_H3_FL2VA_pruned_int8_convrot.safetensors","weight_dtype":"default"}},
+  "2":{"class_type":"MiniMaxH3SigmaShift","inputs":{"model":["1",0],"shift_video":12,"shift_audio":3}},
+  "3":{"class_type":"RandomNoise","inputs":{"noise_seed":26091607}},
+  "4":{"class_type":"CLIPLoader","inputs":{"clip_name":"qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors","type":"minimax","device":"default"}},
+  "5":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_video_vae_fp16.safetensors"}},
+  "7":{"class_type":"MiniMaxH3ImageToVideo","inputs":{"clip":["4",0],"vae":["5",0],"width":1344,"height":768,"length":144,"first_frame":["20",0],"last_frame":["21",0],"prompt":"纯画面生成，不生成任何声音。<Picture 1>是S05尾帧后的唯一首帧锚点，<Picture 2>是本镜尾帧构图锚点。保持当前版上美影二维手绘动画、16:9、1344x768、深夜蓝黑色调和同一间荒宅厅堂。固定空间不可改变：纸窗左后方，阿绣坐在左前窗下，饭桌中央偏左，卧榻后方中间，通院木门最右侧；太夫人在卧榻内侧，阿莲在卧榻左侧。只有三个人，宋玉叔不出现。动作按时间推进：0至1.8秒阿莲从卧榻左侧缓慢走近卧榻外侧，停下并指向左后方纸窗；1.8至2.5秒保持停顿；2.5至4.5秒太夫人从卧榻内侧自然缓慢坐起并抬手阻止，阿莲停在原位；4.5秒至结尾镜头平稳从太夫人的抬手移向左后方纸窗小孔。阿绣全程坐着，三人的脸型、发式、服装、身高比例不变，不能换脸、增殖、消失、穿模。必须保留夜间静态窗景；窗外只有深蓝黑暗和极轻微雨痕，禁止水花、水柱、水雾、水幕、水流、喷水、怪物、白发、动物或任何可见超自然特效。绝对禁止字幕、对白文字、旁白文字、标题、标牌、任何文字、水印；人物可以有自然的嘴部动作但画面不得出现文字。镜头稳定，不漂移，不前后跳，不切换空间，不出现第二张桌子或额外家具。"}},
+  "8":{"class_type":"BasicGuider","inputs":{"model":["15",0],"conditioning":["7",0]}},
+  "9":{"class_type":"KSamplerSelect","inputs":{"sampler_name":"euler"}},
+  "10":{"class_type":"SamplerCustomAdvanced","inputs":{"noise":["3",0],"guider":["8",0],"sampler":["9",0],"sigmas":["15",1],"latent_image":["7",1]}},
+  "11":{"class_type":"VAEDecode","inputs":{"samples":["10",0],"vae":["5",0]}},
+  "13":{"class_type":"CreateVideo","inputs":{"images":["11",0],"fps":24,"bit_depth":8}},
+  "14":{"class_type":"SaveVideo","inputs":{"video":["13",0],"filename_prefix":"pengshui/S06_不要开门_纯画面无字幕_首尾帧锁定_上美影_1344x768","format":"mp4","codec":"auto"}},
+  "15":{"class_type":"MiniMaxH3PDDAccApply","inputs":{"model":["2",0],"pdd_file":"MiniMax-H3-FL2VA-Acc-8Step.safetensors","nfe":"8","lora_strength":1.0,"head_strength":1.0,"on_off_grid":"error","partition_check":"error"}},
+  "20":{"class_type":"LoadImage","inputs":{"image":"喷水/S06_new_start_asset.png"}},
+  "21":{"class_type":"LoadImage","inputs":{"image":"喷水/S06_new_end_asset.png"}}
+}

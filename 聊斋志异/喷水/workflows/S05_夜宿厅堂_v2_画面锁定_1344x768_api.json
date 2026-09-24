@@ -1,0 +1,18 @@
+{
+  "1":{"class_type":"UNETLoader","inputs":{"unet_name":"MiniMax_H3_FL2VA_pruned_int8_convrot.safetensors","weight_dtype":"default"}},
+  "2":{"class_type":"MiniMaxH3SigmaShift","inputs":{"model":["1",0],"shift_video":12,"shift_audio":3}},
+  "3":{"class_type":"RandomNoise","inputs":{"noise_seed":26091652}},
+  "4":{"class_type":"CLIPLoader","inputs":{"clip_name":"qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors","type":"minimax","device":"default"}},
+  "5":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_video_vae_fp16.safetensors"}},
+  "6":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_audio_vae_fp32.safetensors"}},
+  "7":{"class_type":"MiniMaxH3ImageToVideo","inputs":{"clip":["4",0],"vae":["5",0],"width":1344,"height":768,"length":144,"first_frame":["20",0],"prompt":"直接从提供的S05首帧开始，保持16:9、1344x768和当前版上美影式二维手绘动画。深夜荒宅厅堂的固定空间绝不改变：纸窗左后方，低矮饭桌中央偏左，卧榻后方中间，通院木门最右侧，孤灯只保留一盏且灯芯低矮。宋玉叔不在本镜。只有三个人：太夫人睡在后方卧榻内侧，阿莲睡在卧榻左侧，阿绣睡在左侧窗下铺席。前段三人安静睡着，只有非常轻微的自然翻身和被褥变化；随后阿绣缓慢睁眼、坐起，轻轻伸手触碰阿莲衣袖，最后停在她侧耳观察窗外的姿态。太夫人和阿莲始终不醒、不坐起、不张口。必须保持三个人的脸型、发式、服装一致，不增殖、不消失、不穿模。全程画面绝对禁止出现任何水花、水柱、水雾、水流、喷溅、湿痕扩散、液体飞溅或窗外可见特效；窗纸和地面保持干燥，窗外只是一片深蓝黑暗。只生成安静的室内动作和自然灯火变化，禁止所有可见鬼怪、人物和动物。音轨只保留极轻的木材声、布料摩擦、灯芯火声和远处风声；禁止对白、旁白、音乐、呼吸拟声、呻吟、喊叫、喷水声、动物声和任何额外人声。镜头固定稳定，不漂移，不切换空间，不要字幕、文字、水印、现代物件、真人摄影质感。"}},
+  "8":{"class_type":"BasicGuider","inputs":{"model":["15",0],"conditioning":["7",0]}},
+  "9":{"class_type":"KSamplerSelect","inputs":{"sampler_name":"euler"}},
+  "10":{"class_type":"SamplerCustomAdvanced","inputs":{"noise":["3",0],"guider":["8",0],"sampler":["9",0],"sigmas":["15",1],"latent_image":["7",1]}},
+  "11":{"class_type":"VAEDecode","inputs":{"samples":["10",0],"vae":["5",0]}},
+  "12":{"class_type":"VAEDecodeAudio","inputs":{"samples":["10",0],"vae":["6",0]}},
+  "13":{"class_type":"CreateVideo","inputs":{"images":["11",0],"audio":["12",0],"fps":24,"bit_depth":8}},
+  "14":{"class_type":"SaveVideo","inputs":{"video":["13",0],"filename_prefix":"pengshui/S05_夜宿厅堂_v2_画面无喷水_上美影_1344x768","format":"mp4","codec":"auto"}},
+  "15":{"class_type":"MiniMaxH3PDDAccApply","inputs":{"model":["2",0],"pdd_file":"MiniMax-H3-FL2VA-Acc-8Step.safetensors","nfe":"8","lora_strength":1.0,"head_strength":1.0,"on_off_grid":"error","partition_check":"error"}},
+  "20":{"class_type":"LoadImage","inputs":{"image":"喷水/S05_new_start_asset.png"}}
+}

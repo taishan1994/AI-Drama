@@ -1,0 +1,20 @@
+{
+  "1":{"class_type":"UNETLoader","inputs":{"unet_name":"MiniMax_H3_FL2VA_pruned_int8_convrot.safetensors","weight_dtype":"default"}},
+  "2":{"class_type":"MiniMaxH3SigmaShift","inputs":{"model":["1",0],"shift_video":12,"shift_audio":3}},
+  "3":{"class_type":"RandomNoise","inputs":{"noise_seed":26092122}},
+  "4":{"class_type":"CLIPLoader","inputs":{"clip_name":"qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors","type":"minimax","device":"default"}},
+  "5":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_video_vae_fp16.safetensors"}},
+  "6":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_audio_vae_fp32.safetensors"}},
+  "7":{"class_type":"MiniMaxH3ReferenceToVideo","inputs":{"clip":["4",0],"vae":["5",0],"audio_vae":["6",0],"width":1344,"height":768,"length":144,"ref_image_size":"max","ref_images.ref_image_0":["20",0],"ref_images.ref_image_1":["21",0],"ref_audios.ref_audio_0":["22",0],"prompt":"<Picture 1>是S13A实际尾帧，<Picture 2>是镜子对面视角尾帧。<Audio 1>只锁定旁白声纹。生成6秒上美影《喷水》同类二维手绘动画。全程保持镜子对面视角：前景只有铜镜和镜框，镜子对面只有方栋，镜中显示方栋的脸；妻子、其他人物和镜子背面均不得出现。方栋右手始终握住镜柄，镜面始终朝向方栋，手、镜柄、镜面和镜中倒影方向一致。0至3秒方栋屏息凝视镜中自己的眼睛，镜中左眼清楚呈现重瞳，右眼呈现旋螺状灰翳；3至6秒镜头轻微靠近镜面但不改变视角，重瞳和旋螺保持稳定。旁白在约3.5秒只说一次“原来，两枚瞳人已合居一眶。”，只使用Audio 1。禁止方栋对白、妻子声、瞳人声、第二旁白、音乐、狗叫、额外人声、画面字幕、汉字、文字和水印。"}},
+  "8":{"class_type":"BasicGuider","inputs":{"model":["15",0],"conditioning":["7",0]}},
+  "9":{"class_type":"KSamplerSelect","inputs":{"sampler_name":"euler"}},
+  "10":{"class_type":"SamplerCustomAdvanced","inputs":{"noise":["3",0],"guider":["8",0],"sampler":["9",0],"sigmas":["15",1],"latent_image":["7",1]}},
+  "11":{"class_type":"VAEDecode","inputs":{"samples":["10",0],"vae":["5",0]}},
+  "12":{"class_type":"VAEDecodeAudio","inputs":{"samples":["10",0],"vae":["6",0]}},
+  "13":{"class_type":"CreateVideo","inputs":{"images":["11",0],"audio":["12",0],"fps":24,"bit_depth":8}},
+  "14":{"class_type":"SaveVideo","inputs":{"video":["13",0],"filename_prefix":"tongrenyu/S13B_镜子对面重瞳特写_旁白声纹_无额外人声_喷水风格_首尾帧_v1_1344x768","format":"mp4","codec":"auto"}},
+  "15":{"class_type":"MiniMaxH3PDDAccApply","inputs":{"model":["2",0],"pdd_file":"MiniMax-H3-FL2VA-Acc-8Step.safetensors","nfe":"8","lora_strength":1.0,"head_strength":1.0,"on_off_grid":"error","partition_check":"error"}},
+  "20":{"class_type":"LoadImage","inputs":{"image":"tongrenyu/S13B_首帧_承接S13A_镜子对面视角_喷水风格.png"}},
+  "21":{"class_type":"LoadImage","inputs":{"image":"tongrenyu/S13B_尾帧_镜子对面视角_方栋重瞳_喷水风格_v1.png"}},
+  "22":{"class_type":"LoadAudio","inputs":{"audio":"tongrenyu/旁白_VO-NARRATOR-01.wav"}}
+}

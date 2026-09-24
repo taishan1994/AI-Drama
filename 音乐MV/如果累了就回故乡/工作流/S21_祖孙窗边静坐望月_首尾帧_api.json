@@ -1,0 +1,19 @@
+{
+  "1":{"class_type":"UNETLoader","inputs":{"unet_name":"MiniMax_H3_FL2VA_pruned_int8_convrot.safetensors","weight_dtype":"default"}},
+  "2":{"class_type":"MiniMaxH3SigmaShift","inputs":{"model":["1",0],"shift_video":12,"shift_audio":3}},
+  "3":{"class_type":"RandomNoise","inputs":{"noise_seed":2026092323}},
+  "4":{"class_type":"CLIPLoader","inputs":{"clip_name":"qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors","type":"minimax","device":"default"}},
+  "5":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_video_vae_fp16.safetensors"}},
+  "6":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_audio_vae_fp32.safetensors"}},
+  "7":{"class_type":"MiniMaxH3ImageToVideo","inputs":{"clip":["4",0],"vae":["5",0],"width":1344,"height":768,"length":264,"first_frame":["20",0],"last_frame":["21",0],"prompt":"11秒，24fps，16:9，温暖手绘绘本电影动画，彩铅轮廓、水粉光影、纸纹。以图1为首帧，以图2为尾帧，保持同一老屋室内、同一机位和同一家具锚点：左侧木茶桌、长凳与茶具固定，右侧格窗和窗台固定，窗台上始终只有一只红纸风车。接续上一镜，小满收回放好风车的手，缓缓转身坐到茶桌旁；奶奶将茶壶放稳后坐到她身边。两人相邻坐下，各自端起一只茶杯，先互相看一眼，再安静转向窗外的月亮。动作轻柔、顺序清楚，坐下时身体与长凳接触自然，桌椅不移动。人物保持与角色板一致：小满蓝灰上衣、深色低发髻；奶奶深蓝头巾、深棕花纹衣。窗外由暮色转为柔和月光，风车在窗台微微转动。镜头固定，不变焦不摇移。结束匹配图2祖孙坐姿、茶杯、窗台风车和月亮位置。仅生成画面，后期配原曲；无对白、旁白、哼唱、环境人声、动物声、歌词、字幕或文字。"}},
+  "8":{"class_type":"BasicGuider","inputs":{"model":["15",0],"conditioning":["7",0]}},
+  "9":{"class_type":"KSamplerSelect","inputs":{"sampler_name":"euler"}},
+  "10":{"class_type":"SamplerCustomAdvanced","inputs":{"noise":["3",0],"guider":["8",0],"sampler":["9",0],"sigmas":["15",1],"latent_image":["7",1]}},
+  "11":{"class_type":"VAEDecode","inputs":{"samples":["10",0],"vae":["5",0]}},
+  "12":{"class_type":"VAEDecodeAudio","inputs":{"samples":["10",0],"vae":["6",0]}},
+  "13":{"class_type":"CreateVideo","inputs":{"images":["11",0],"audio":["12",0],"fps":24,"bit_depth":8}},
+  "14":{"class_type":"SaveVideo","inputs":{"video":["13",0],"filename_prefix":"mv_hometown/S21_祖孙窗边静坐望月_raw","format":"mp4","codec":"auto"}},
+  "15":{"class_type":"MiniMaxH3PDDAccApply","inputs":{"model":["2",0],"pdd_file":"MiniMax-H3-FL2VA-Acc-8Step.safetensors","nfe":"8","lora_strength":1.0,"head_strength":1.0,"on_off_grid":"error","partition_check":"error"}},
+  "20":{"class_type":"LoadImage","inputs":{"image":"mv_hometown/S21_v1_first_frame.png"}},
+  "21":{"class_type":"LoadImage","inputs":{"image":"mv_hometown/S21_v1_last_frame.png"}}
+}

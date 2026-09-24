@@ -1,0 +1,246 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "MiniMax_H3_FL2VA_pruned_int8_convrot.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "MiniMaxH3SigmaShift",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "shift_video": 12,
+      "shift_audio": 3
+    }
+  },
+  "3": {
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 26091422
+    }
+  },
+  "4": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+      "type": "minimax",
+      "device": "default"
+    }
+  },
+  "5": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_video_vae_fp16.safetensors"
+    }
+  },
+  "6": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_audio_vae_fp32.safetensors"
+    }
+  },
+  "7": {
+    "class_type": "MiniMaxH3ImageToVideo",
+    "inputs": {
+      "clip": [
+        "4",
+        0
+      ],
+      "vae": [
+        "5",
+        0
+      ],
+      "prompt": "subject_definitions:\n<Subject 1> is Carter Jia, the same thin adult Chinese man with a messy topknot, sparse beard, gray-blue worn short jacket and cloth bundle, preserved from the preceding shot.\n<Subject 2> is the female corpse, with the same pale painted face, white mourning headband and stiff gray-white funeral robe, always behind Carter Jia on the road.\n<Picture 1> is the exact final frame of shot 20 and the required opening composition.\n<Picture 2> is the required final composition: Carter Jia in the foreground looking back, the female corpse far behind him on the same village road.\n<Audio 1> is the complete final soundtrack guide: one Carter Jia voice only, plus rain and running footsteps. The audio signal is used to synchronize the mouth and action timing; do not invent, duplicate or add any vocal event.\n\nsummary:\n[video continuation + keyframe completion + audio reference] Continue directly from <Picture 1> to <Picture 2> in an old Chinese village during a dark rainy night. Preserve Carter Jia's identity and the female corpse's identity and keep the corpse behind him. Use <Audio 1> as the exact timing guide for the only spoken voice and the physical soundscape.\n\nretention_analysis:\n<Subject 1> (S1) ([Shot 1]): fully_preserved - preserve Carter Jia's face, thin build, messy topknot, sparse beard, gray-blue worn jacket and cloth bundle.\n<Subject 2> (S2) ([Shot 1]): fully_preserved - preserve the female corpse's pale face, white mourning headband, gray-white robe and rigid pursuit.\n<Picture 1> ([Shot 1] first frame): fully_preserved - preserve the preceding shot's starting position and direction of movement.\n<Picture 2> ([Shot 1] final frame): fully_preserved - preserve the road composition, Carter in front looking back and corpse far behind.\n<Audio 1>: fully_copy - use the supplied audio guide as the sole source for the final soundtrack; no generated H3 audio is retained.\n\ndetailed_description:\nShanghai Animation Film Studio-inspired 2D hand-painted cinematic animation, expressive ink contours, painted paper texture, restrained flat colors, subtle film grain, no photorealism and no 3D. Start exactly from <Picture 1>. The camera follows behind and slightly to the side as Carter Jia runs forward along the same muddy village road. Keep the road, closed houses and lantern light spatially stable. Carter Jia looks back exactly once while continuing to run; the female corpse follows far behind on the same road and never overtakes him. Match the mouth movement and timing to <Audio 1>. Carter Jia (S1) shouts only the complete supplied line, <d>[Chinese] 救命！有人吗？救命啊！</d> No other person speaks, whispers, breathes words, cries out or vocalizes. No narrator, no bystander, no carter voice, no animal voice and no hallucinated speech. Do not add subtitles or visible text. End exactly at <Picture 2>.\n\noverall_soundscape: Use <Audio 1> as the final sound reference: continuous rain and running footsteps under one clear Carter Jia voice. Do not generate or retain any other human vocalization, animal call, music, drone or unrelated noise.\n\nnon_diegetic_music: none.",
+      "width": 1344,
+      "height": 768,
+      "length": 192,
+      "first_frame": [
+        "20",
+        0
+      ],
+      "last_frame": [
+        "21",
+        0
+      ]
+    }
+  },
+  "8": {
+    "class_type": "BasicGuider",
+    "inputs": {
+      "model": [
+        "15",
+        0
+      ],
+      "conditioning": [
+        "30",
+        0
+      ]
+    }
+  },
+  "9": {
+    "class_type": "KSamplerSelect",
+    "inputs": {
+      "sampler_name": "euler"
+    }
+  },
+  "10": {
+    "class_type": "SamplerCustomAdvanced",
+    "inputs": {
+      "noise": [
+        "3",
+        0
+      ],
+      "guider": [
+        "8",
+        0
+      ],
+      "sampler": [
+        "9",
+        0
+      ],
+      "sigmas": [
+        "15",
+        1
+      ],
+      "latent_image": [
+        "7",
+        1
+      ]
+    }
+  },
+  "11": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "10",
+        0
+      ],
+      "vae": [
+        "5",
+        0
+      ]
+    }
+  },
+  "12": {
+    "class_type": "VAEDecodeAudio",
+    "inputs": {
+      "samples": [
+        "10",
+        0
+      ],
+      "vae": [
+        "6",
+        0
+      ]
+    }
+  },
+  "13": {
+    "class_type": "CreateVideo",
+    "inputs": {
+      "images": [
+        "11",
+        0
+      ],
+      "audio": [
+        "12",
+        0
+      ],
+      "fps": 24,
+      "bit_depth": 8
+    }
+  },
+  "14": {
+    "class_type": "SaveVideo",
+    "inputs": {
+      "video": [
+        "13",
+        0
+      ],
+      "filename_prefix": "shibian/S21_重新生成_惊恐车夫甲声纹_雨声脚步",
+      "format": "mp4",
+      "codec": "auto"
+    }
+  },
+  "15": {
+    "class_type": "MiniMaxH3PDDAccApply",
+    "inputs": {
+      "model": [
+        "2",
+        0
+      ],
+      "pdd_file": "MiniMax-H3-FL2VA-Acc-8Step.safetensors",
+      "nfe": "8",
+      "lora_strength": 1,
+      "head_strength": 1,
+      "on_off_grid": "error"
+    }
+  },
+  "20": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "shibian/S21_首帧_S20尾帧.png"
+    }
+  },
+  "21": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "shibian/S21_终点_村路呼救.png"
+    }
+  },
+  "22": {
+    "class_type": "LoadAudio",
+    "inputs": {
+      "audio": "shibian/S21_车夫甲_惊恐对白加雨声脚步_唯一音轨.wav"
+    }
+  },
+  "23": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "songgong/角色设定板/角色设定板_张秀才.png"
+    }
+  },
+  "24": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "songgong/环境设定板/环境设定板_阴司府廨大殿.png"
+    }
+  },
+  "25": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "songgong/道具设定板/道具设定板_题纸中文_A03.png"
+    }
+  },
+  "26": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "songgong/道具设定板/道具设定板_片名中文.png"
+    }
+  },
+  "30": {
+    "class_type": "MiniMaxH3AddGuide",
+    "inputs": {
+      "positive": [
+        "7",
+        0
+      ],
+      "latent": [
+        "7",
+        1
+      ],
+      "audio_vae": [
+        "6",
+        0
+      ],
+      "audio": [
+        "22",
+        0
+      ],
+      "frame_idx": 0
+    }
+  }
+}

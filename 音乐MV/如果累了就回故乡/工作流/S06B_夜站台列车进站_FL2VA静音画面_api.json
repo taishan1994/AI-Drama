@@ -1,0 +1,18 @@
+{
+  "1":{"class_type":"UNETLoader","inputs":{"unet_name":"MiniMax_H3_FL2VA_pruned_int8_convrot.safetensors","weight_dtype":"default"}},
+  "2":{"class_type":"MiniMaxH3SigmaShift","inputs":{"model":["1",0],"shift_video":12,"shift_audio":3}},
+  "3":{"class_type":"RandomNoise","inputs":{"noise_seed":2026092364}},
+  "4":{"class_type":"CLIPLoader","inputs":{"clip_name":"qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors","type":"minimax","device":"default"}},
+  "5":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_video_vae_fp16.safetensors"}},
+  "6":{"class_type":"VAELoader","inputs":{"vae_name":"minimax_h3_audio_vae_fp32.safetensors"}},
+  "7":{"class_type":"MiniMaxH3ImageToVideo","inputs":{"clip":["4",0],"vae":["5",0],"width":1344,"height":768,"length":141,"first_frame":["20",0],"prompt":"以图1作为绝对首帧，生成约5.9秒、24fps、16:9、1344x768的单一稳定镜头。深夜城市火车站台，完全沿用图1的站台构图、人物位置、列车方向、透视、灯列和色彩。固定机位，绝不推拉摇移，不切镜，不改变景别。成年林小满保持图1同一脸型、深棕发束、灰蓝外套、米色上衣、深色裤子和橄榄色帆布包；她站在安全线内左侧，手扶肩带，包边只有一个小红风车。她全程位置基本不变，只自然呼吸并轻轻把视线投向右侧列车。列车沿右侧轨道从远处平稳缓慢驶近，车窗暖光逐格掠过，速度平缓；列车不可穿过站台、不可横向漂移出轨道。站台建筑、灯、人物衣服和包全部静止稳定。最后保持图1的空间关系，列车靠近一些但仍停在轨道上。画面无对白、唱歌、哼唱、旁白、环境人声、动物声、字幕、文字、水印；H3音轨将丢弃，成片只铺指定歌曲。手绘绘本电影动画，彩铅细线、水粉背景、轻微纸纹，风格与图1严格一致。"}},
+  "8":{"class_type":"BasicGuider","inputs":{"model":["15",0],"conditioning":["7",0]}},
+  "9":{"class_type":"KSamplerSelect","inputs":{"sampler_name":"euler"}},
+  "10":{"class_type":"SamplerCustomAdvanced","inputs":{"noise":["3",0],"guider":["8",0],"sampler":["9",0],"sigmas":["15",1],"latent_image":["7",1]}},
+  "11":{"class_type":"VAEDecode","inputs":{"samples":["10",0],"vae":["5",0]}},
+  "12":{"class_type":"VAEDecodeAudio","inputs":{"samples":["10",0],"vae":["6",0]}},
+  "13":{"class_type":"CreateVideo","inputs":{"images":["11",0],"audio":["12",0],"fps":24,"bit_depth":8}},
+  "14":{"class_type":"SaveVideo","inputs":{"video":["13",0],"filename_prefix":"mv_hometown/S06B_夜站台列车进站_raw","format":"mp4","codec":"auto"}},
+  "15":{"class_type":"MiniMaxH3PDDAccApply","inputs":{"model":["2",0],"pdd_file":"MiniMax-H3-FL2VA-Acc-8Step.safetensors","nfe":"8","lora_strength":1.0,"head_strength":1.0,"on_off_grid":"error","partition_check":"error"}},
+  "20":{"class_type":"LoadImage","inputs":{"image":"mv_hometown/S06B_station_first_frame.png"}}
+}
