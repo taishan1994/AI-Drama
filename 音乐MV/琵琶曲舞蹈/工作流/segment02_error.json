@@ -1,0 +1,50 @@
+{
+  "status_str": "error",
+  "completed": false,
+  "messages": [
+    [
+      "execution_start",
+      {
+        "prompt_id": "fffb56fa-2bf0-416d-b143-005010f12369",
+        "timestamp": 1790413832022
+      }
+    ],
+    [
+      "execution_cached",
+      {
+        "nodes": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "8",
+          "9",
+          "30",
+          "16",
+          "17",
+          "18"
+        ],
+        "prompt_id": "fffb56fa-2bf0-416d-b143-005010f12369",
+        "timestamp": 1790413832046
+      }
+    ],
+    [
+      "execution_interrupted",
+      {
+        "prompt_id": "fffb56fa-2bf0-416d-b143-005010f12369",
+        "node_id": "11",
+        "node_type": "SamplerCustomAdvanced",
+        "executed": [
+          "22",
+          "6",
+          "7",
+          "20",
+          "10",
+          "21"
+        ],
+        "timestamp": 1790413989628
+      }
+    ]
+  ]
+}

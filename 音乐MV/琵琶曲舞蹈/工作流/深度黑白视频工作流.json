@@ -1,0 +1,18 @@
+{
+  "name": "琵琶曲舞蹈_深度黑白",
+  "type": "ffmpeg_video_workflow",
+  "input": "../素材/7621879784973062134.mp4",
+  "output": "../处理/深度黑白/7621879784973062134_白模深度黑白.mp4",
+  "video_filter": "hue=s=0,gblur=sigma=1.8,eq=contrast=2.25:brightness=0.06:gamma=1.08,lut=y='if(lt(val,72),12,if(lt(val,142),88,if(lt(val,205),178,245)))'",
+  "video": {
+    "codec": "libx264",
+    "preset": "medium",
+  "crf": 17,
+    "pix_fmt": "yuv420p"
+  },
+  "audio": {
+    "codec": "aac",
+    "bitrate": "192k",
+    "preserve_source_audio": true
+  }
+}

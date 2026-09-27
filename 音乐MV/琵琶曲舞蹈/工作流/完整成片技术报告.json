@@ -1,0 +1,114 @@
+{
+  "output": "/nfs/FM/gongoubo/new_project/github/aigc/AI-Drama/音乐MV/琵琶曲舞蹈/视频/琵琶夜宴_双人古装舞_原曲_完整.mp4",
+  "segments": 6,
+  "video_frames": 668,
+  "fps": 24,
+  "resolution": "768x1344",
+  "expected_video_duration_seconds": 27.833333,
+  "audio_source": "/nfs/FM/gongoubo/new_project/github/aigc/AI-Drama/音乐MV/琵琶曲舞蹈/素材/原始音频.m4a",
+  "audio_policy": "use the standalone original audio file; preserve source timeline",
+  "transitions": [
+    {
+      "at_seconds": 5.167,
+      "duration_frames": 0,
+      "style": "pose-matched cut; adjacent frames closely match",
+      "mean_abs_seam_delta_0_255": 6.04
+    },
+    {
+      "at_seconds": 10.333,
+      "duration_frames": 0,
+      "style": "pose-matched cut; adjacent frames closely match",
+      "mean_abs_seam_delta_0_255": 4.889
+    },
+    {
+      "at_seconds": 15.5,
+      "duration_frames": 0,
+      "style": "pose-matched cut; adjacent frames closely match",
+      "mean_abs_seam_delta_0_255": 4.458
+    },
+    {
+      "at_seconds": 20.667,
+      "duration_frames": 0,
+      "style": "pose-matched cut; adjacent frames closely match",
+      "mean_abs_seam_delta_0_255": 4.706
+    },
+    {
+      "at_seconds": 25.833,
+      "duration_frames": 0,
+      "style": "pose-matched cut; adjacent frames closely match",
+      "mean_abs_seam_delta_0_255": 4.558
+    }
+  ],
+  "segment_files": [
+    "/nfs/FM/gongoubo/new_project/github/aigc/AI-Drama/音乐MV/琵琶曲舞蹈/视频/分段/段01_待检查.mp4",
+    "/nfs/FM/gongoubo/new_project/github/aigc/AI-Drama/音乐MV/琵琶曲舞蹈/视频/分段/段02_待检查.mp4",
+    "/nfs/FM/gongoubo/new_project/github/aigc/AI-Drama/音乐MV/琵琶曲舞蹈/视频/分段/段03_待检查.mp4",
+    "/nfs/FM/gongoubo/new_project/github/aigc/AI-Drama/音乐MV/琵琶曲舞蹈/视频/分段/段04_待检查.mp4",
+    "/nfs/FM/gongoubo/new_project/github/aigc/AI-Drama/音乐MV/琵琶曲舞蹈/视频/分段/段05_待检查.mp4",
+    "/nfs/FM/gongoubo/new_project/github/aigc/AI-Drama/音乐MV/琵琶曲舞蹈/视频/分段/段06_待检查.mp4"
+  ],
+  "ffprobe": {
+    "programs": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 768,
+        "height": 1344,
+        "avg_frame_rate": "24/1"
+      },
+      {
+        "codec_name": "aac",
+        "sample_rate": "44100",
+        "channels": 2,
+        "avg_frame_rate": "0/0"
+      }
+    ],
+    "format": {
+      "duration": "27.834000"
+    }
+  },
+  "audio_streams": [
+    {
+      "codec_name": "aac",
+      "sample_rate": "44100",
+      "channels": 2,
+      "avg_frame_rate": "0/0"
+    }
+  ],
+  "audio_beat_analysis": {
+    "method": "short-time spectral flux onset peaks",
+    "nearest_strong_onsets": [
+      {
+        "segment_boundary_sec": 5.167,
+        "nearest_strong_onset_sec": 5.097,
+        "delta_sec": -0.07
+      },
+      {
+        "segment_boundary_sec": 10.333,
+        "nearest_strong_onset_sec": 10.298,
+        "delta_sec": -0.035
+      },
+      {
+        "segment_boundary_sec": 15.5,
+        "nearest_strong_onset_sec": 15.511,
+        "delta_sec": 0.011
+      },
+      {
+        "segment_boundary_sec": 20.667,
+        "nearest_strong_onset_sec": 20.225,
+        "delta_sec": -0.442
+      },
+      {
+        "segment_boundary_sec": 25.833,
+        "nearest_strong_onset_sec": 25.925,
+        "delta_sec": 0.092
+      }
+    ]
+  },
+  "audio_alignment_check": {
+    "sample_rate_hz": 8000,
+    "compared_duration_seconds": 27.7944,
+    "best_lag_ms": 0.0,
+    "zero_lag_pearson_correlation": 0.99926
+  }
+}

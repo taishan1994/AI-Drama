@@ -1,0 +1,21 @@
+subject_definitions:
+<Subject 1> Qingyi from <Picture 1>, an adult woman with a long oval face, jade hairpin, high bun and teal dress.
+<Subject 2> Hongyi from <Picture 2>, an adult woman with a rounded face, gold floral ornaments, half-up hair and vermilion red dress.
+<Subject 3> The moonlit waterside pavilion and centered wooden chair from <Picture 3>.
+<Video 1> A grayscale depth motion reference of two dancers and a chair, used ONLY for choreography, silhouettes, spatial trajectory, contact and timing.
+<Audio 1> Original music soundtrack synchronized to the motion reference.
+
+summary:
+A 5.167-second photorealistic full-color Chinese historical duet. Replace the two depth figures with Qingyi and Hongyi dancing in the moonlit pavilion, preserving the motion and musical timing.
+
+retention_analysis:
+Preserve the face, hairstyle and teal costume of Qingyi and the distinct face, hairstyle and red costume of Hongyi throughout, including crossings. At the start Qingyi replaces the left figure and Hongyi replaces the right figure in <Video 1>. Follow each figure's trajectory, never swap identities when positions change. Transfer the source dance and chair contacts, not grayscale shading or the studio background. Preserve the pavilion and chair from <Picture 3>. Reference <Audio 1> for exact beat timing.
+
+detailed_description:
+[Shot 1, 00:00-00:05.167] Locked portrait full-body wide view. Exactly two adult women on a level wooden stage, Qingyi initially on the left and Hongyi initially on the right, one stationary wooden chair between them. Reproduce the continuous arm arcs, coordinated torso bends, weight transfers, fan gestures and steps in <Video 1> in temporal order, synchronized to <Audio 1>. Maintain full-body framing with hands and feet visible. Each dancer keeps her own face and dress color. Hands meet the actual chair back at source contact moments; both feet contact the wooden floor naturally. Warm amber lanterns light the skin; cool moonlight outlines silk; background pond and pillars remain fixed. Realistic faces, hands and flowing fabric. No cuts, camera movement, new figures, text, subtitles, watermark, grayscale body, duplicated arms or melting chair. No spoken dialogue or lip-sync performance.
+
+overall_soundscape:
+Only the supplied original music; no dialogue, no added vocals, no crowd.
+
+non_diegetic_music:
+Use <Audio 1> as the soundtrack and rhythmic reference. Preserve its melody and beat timing.

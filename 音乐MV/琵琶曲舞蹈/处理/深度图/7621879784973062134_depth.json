@@ -1,0 +1,12 @@
+{
+  "model": "/nfs/FM/gongoubo/new_project/github/aigc/ComfyUI/models/depth/Depth-Anything-V2-Small-hf",
+  "source": "/nfs/FM/gongoubo/new_project/github/aigc/AI-Drama/\u97f3\u4e50MV/\u7435\u7436\u66f2\u821e\u8e48/\u7d20\u6750/7621879784973062134.mp4",
+  "frames": 835,
+  "fps": 30.0,
+  "depth_range": [
+    0.24748021364212036,
+    7.056889057159424
+  ],
+  "near": "white",
+  "far": "black"
+}

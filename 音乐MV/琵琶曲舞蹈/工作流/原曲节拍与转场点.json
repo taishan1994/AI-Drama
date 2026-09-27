@@ -1,0 +1,204 @@
+{
+  "audio_duration_sec": 27.794,
+  "video_duration_sec": 27.834,
+  "generation_chunks": 6,
+  "chunk_frames": 124,
+  "fps": 24,
+  "boundaries_sec": [
+    5.167,
+    10.333,
+    15.5,
+    20.667,
+    25.833
+  ],
+  "nearest_strong_onsets": [
+    {
+      "segment_boundary_sec": 5.167,
+      "nearest_strong_onset_sec": 5.097,
+      "delta_sec": -0.07
+    },
+    {
+      "segment_boundary_sec": 10.333,
+      "nearest_strong_onset_sec": 10.298,
+      "delta_sec": -0.035
+    },
+    {
+      "segment_boundary_sec": 15.5,
+      "nearest_strong_onset_sec": 15.511,
+      "delta_sec": 0.011
+    },
+    {
+      "segment_boundary_sec": 20.667,
+      "nearest_strong_onset_sec": 20.225,
+      "delta_sec": -0.442
+    },
+    {
+      "segment_boundary_sec": 25.833,
+      "nearest_strong_onset_sec": 25.925,
+      "delta_sec": 0.092
+    }
+  ],
+  "detected_strong_onsets": [
+    {
+      "time_sec": 0.43,
+      "strength": 1.768
+    },
+    {
+      "time_sec": 0.685,
+      "strength": 1.994
+    },
+    {
+      "time_sec": 1.207,
+      "strength": 2.291
+    },
+    {
+      "time_sec": 1.463,
+      "strength": 1.746
+    },
+    {
+      "time_sec": 2.508,
+      "strength": 2.203
+    },
+    {
+      "time_sec": 3.553,
+      "strength": 2.365
+    },
+    {
+      "time_sec": 4.598,
+      "strength": 1.628
+    },
+    {
+      "time_sec": 5.097,
+      "strength": 1.735
+    },
+    {
+      "time_sec": 5.631,
+      "strength": 2.024
+    },
+    {
+      "time_sec": 6.142,
+      "strength": 1.702
+    },
+    {
+      "time_sec": 6.676,
+      "strength": 2.252
+    },
+    {
+      "time_sec": 7.721,
+      "strength": 2.375
+    },
+    {
+      "time_sec": 8.22,
+      "strength": 1.627
+    },
+    {
+      "time_sec": 9.799,
+      "strength": 1.953
+    },
+    {
+      "time_sec": 10.298,
+      "strength": 2.185
+    },
+    {
+      "time_sec": 10.844,
+      "strength": 2.21
+    },
+    {
+      "time_sec": 11.343,
+      "strength": 1.752
+    },
+    {
+      "time_sec": 11.889,
+      "strength": 1.974
+    },
+    {
+      "time_sec": 12.922,
+      "strength": 1.645
+    },
+    {
+      "time_sec": 13.421,
+      "strength": 1.795
+    },
+    {
+      "time_sec": 13.967,
+      "strength": 1.788
+    },
+    {
+      "time_sec": 15.012,
+      "strength": 1.901
+    },
+    {
+      "time_sec": 15.511,
+      "strength": 1.908
+    },
+    {
+      "time_sec": 16.057,
+      "strength": 1.938
+    },
+    {
+      "time_sec": 16.834,
+      "strength": 1.771
+    },
+    {
+      "time_sec": 18.634,
+      "strength": 1.622
+    },
+    {
+      "time_sec": 19.18,
+      "strength": 2.212
+    },
+    {
+      "time_sec": 19.679,
+      "strength": 2.032
+    },
+    {
+      "time_sec": 20.225,
+      "strength": 1.665
+    },
+    {
+      "time_sec": 21.258,
+      "strength": 1.646
+    },
+    {
+      "time_sec": 22.303,
+      "strength": 1.84
+    },
+    {
+      "time_sec": 22.802,
+      "strength": 1.917
+    },
+    {
+      "time_sec": 23.348,
+      "strength": 1.775
+    },
+    {
+      "time_sec": 23.847,
+      "strength": 1.697
+    },
+    {
+      "time_sec": 24.381,
+      "strength": 1.723
+    },
+    {
+      "time_sec": 25.17,
+      "strength": 1.686
+    },
+    {
+      "time_sec": 25.426,
+      "strength": 2.064
+    },
+    {
+      "time_sec": 25.925,
+      "strength": 1.649
+    },
+    {
+      "time_sec": 26.471,
+      "strength": 1.751
+    },
+    {
+      "time_sec": 26.97,
+      "strength": 1.694
+    }
+  ],
+  "note": "Onset strengths use spectral flux; final soundtrack is remuxed directly from the original source video. Transitions are only 4 frames and keep exact frame and audio counts."
+}

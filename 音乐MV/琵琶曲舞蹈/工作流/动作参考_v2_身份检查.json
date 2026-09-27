@@ -1,0 +1,7979 @@
+{
+  "frames": 668,
+  "fps": 24,
+  "stage_asset": "/nfs/FM/gongoubo/new_project/github/aigc/AI-Drama/音乐MV/琵琶曲舞蹈/资产/stage_v3_chair_matched.png",
+  "guide": "/nfs/FM/gongoubo/new_project/github/aigc/AI-Drama/音乐MV/琵琶曲舞蹈/处理/动作参考_目标舞台_v2.mp4",
+  "identity_rule": "lighter source costume maps permanently to teal; darker source costume maps permanently to vermilion",
+  "confidence_counts": {
+    "continuity_fallback": 7,
+    "costume_luma": 650,
+    "merged_nearest_prior_center": 2,
+    "missing": 9
+  },
+  "luma_median_by_id": [
+    141.0,
+    24.0
+  ],
+  "assignments": [
+    {
+      "frame": 0,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        13.0,
+        130.0
+      ]
+    },
+    {
+      "frame": 1,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        13.0,
+        130.0
+      ]
+    },
+    {
+      "frame": 2,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        13.0,
+        130.0
+      ]
+    },
+    {
+      "frame": 3,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        138.0,
+        61.0
+      ]
+    },
+    {
+      "frame": 4,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        140.0,
+        53.0
+      ]
+    },
+    {
+      "frame": 5,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        147.0,
+        30.0
+      ]
+    },
+    {
+      "frame": 6,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        152.0,
+        26.0
+      ]
+    },
+    {
+      "frame": 7,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        151.0,
+        31.0
+      ]
+    },
+    {
+      "frame": 8,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        149.0,
+        30.0
+      ]
+    },
+    {
+      "frame": 9,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        145.0,
+        31.0
+      ]
+    },
+    {
+      "frame": 10,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        141.0,
+        29.0
+      ]
+    },
+    {
+      "frame": 11,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        136.0,
+        20.0
+      ]
+    },
+    {
+      "frame": 12,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        131.0,
+        22.0
+      ]
+    },
+    {
+      "frame": 13,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        130.0,
+        23.0
+      ]
+    },
+    {
+      "frame": 14,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        125.0,
+        49.0
+      ]
+    },
+    {
+      "frame": 15,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        124.0,
+        91.0
+      ]
+    },
+    {
+      "frame": 16,
+      "confidence": "continuity_fallback",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        122.0,
+        107.0
+      ]
+    },
+    {
+      "frame": 17,
+      "confidence": "continuity_fallback",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        120.0,
+        104.0
+      ]
+    },
+    {
+      "frame": 18,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        89.0,
+        119.0
+      ]
+    },
+    {
+      "frame": 19,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        41.0,
+        125.0
+      ]
+    },
+    {
+      "frame": 20,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        31.0,
+        133.0
+      ]
+    },
+    {
+      "frame": 21,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        143.0,
+        26.0
+      ]
+    },
+    {
+      "frame": 22,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        156.0,
+        24.0
+      ]
+    },
+    {
+      "frame": 23,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        155.0,
+        24.0
+      ]
+    },
+    {
+      "frame": 24,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        153.0,
+        24.0
+      ]
+    },
+    {
+      "frame": 25,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        152.0,
+        25.0
+      ]
+    },
+    {
+      "frame": 26,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        152.0,
+        25.0
+      ]
+    },
+    {
+      "frame": 27,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        145.0,
+        26.0
+      ]
+    },
+    {
+      "frame": 28,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        139.0,
+        27.0
+      ]
+    },
+    {
+      "frame": 29,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        151.0,
+        30.0
+      ]
+    },
+    {
+      "frame": 30,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        36.0,
+        190.0
+      ]
+    },
+    {
+      "frame": 31,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        36.0,
+        162.0
+      ]
+    },
+    {
+      "frame": 32,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        132.0,
+        37.0
+      ]
+    },
+    {
+      "frame": 33,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        138.0,
+        33.0
+      ]
+    },
+    {
+      "frame": 34,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        134.0,
+        31.0
+      ]
+    },
+    {
+      "frame": 35,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        137.0,
+        37.0
+      ]
+    },
+    {
+      "frame": 36,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        133.0,
+        33.0
+      ]
+    },
+    {
+      "frame": 37,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        134.0,
+        32.0
+      ]
+    },
+    {
+      "frame": 38,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        133.0,
+        18.0
+      ]
+    },
+    {
+      "frame": 39,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        133.0,
+        19.0
+      ]
+    },
+    {
+      "frame": 40,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        132.0,
+        18.0
+      ]
+    },
+    {
+      "frame": 41,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        132.0,
+        16.0
+      ]
+    },
+    {
+      "frame": 42,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        131.0,
+        16.0
+      ]
+    },
+    {
+      "frame": 43,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        133.0,
+        17.0
+      ]
+    },
+    {
+      "frame": 44,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        132.0,
+        19.0
+      ]
+    },
+    {
+      "frame": 45,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        131.0,
+        19.0
+      ]
+    },
+    {
+      "frame": 46,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        130.0,
+        19.0
+      ]
+    },
+    {
+      "frame": 47,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        131.0,
+        19.0
+      ]
+    },
+    {
+      "frame": 48,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        131.0,
+        18.0
+      ]
+    },
+    {
+      "frame": 49,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        131.0,
+        18.0
+      ]
+    },
+    {
+      "frame": 50,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        132.0,
+        18.0
+      ]
+    },
+    {
+      "frame": 51,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        132.0,
+        18.0
+      ]
+    },
+    {
+      "frame": 52,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        131.0,
+        18.0
+      ]
+    },
+    {
+      "frame": 53,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        132.0,
+        19.0
+      ]
+    },
+    {
+      "frame": 54,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        132.0,
+        20.0
+      ]
+    },
+    {
+      "frame": 55,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        134.0,
+        23.0
+      ]
+    },
+    {
+      "frame": 56,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        138.0,
+        26.0
+      ]
+    },
+    {
+      "frame": 57,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        141.0,
+        24.0
+      ]
+    },
+    {
+      "frame": 58,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        144.0,
+        29.0
+      ]
+    },
+    {
+      "frame": 59,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        151.0,
+        37.0
+      ]
+    },
+    {
+      "frame": 60,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        152.0,
+        19.0
+      ]
+    },
+    {
+      "frame": 61,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        17.0,
+        154.0
+      ]
+    },
+    {
+      "frame": 62,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        13.0,
+        138.0
+      ]
+    },
+    {
+      "frame": 63,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        12.0,
+        154.0
+      ]
+    },
+    {
+      "frame": 64,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        12.0,
+        155.0
+      ]
+    },
+    {
+      "frame": 65,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        10.0,
+        156.0
+      ]
+    },
+    {
+      "frame": 66,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        9.0,
+        152.0
+      ]
+    },
+    {
+      "frame": 67,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        9.0,
+        151.0
+      ]
+    },
+    {
+      "frame": 68,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        9.0,
+        151.0
+      ]
+    },
+    {
+      "frame": 69,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        9.0,
+        150.0
+      ]
+    },
+    {
+      "frame": 70,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        9.0,
+        146.0
+      ]
+    },
+    {
+      "frame": 71,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        10.0,
+        145.0
+      ]
+    },
+    {
+      "frame": 72,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        10.0,
+        143.0
+      ]
+    },
+    {
+      "frame": 73,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        10.0,
+        144.0
+      ]
+    },
+    {
+      "frame": 74,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        10.0,
+        140.0
+      ]
+    },
+    {
+      "frame": 75,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        10.0,
+        141.0
+      ]
+    },
+    {
+      "frame": 76,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        10.0,
+        140.0
+      ]
+    },
+    {
+      "frame": 77,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        10.0,
+        138.0
+      ]
+    },
+    {
+      "frame": 78,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        12.0,
+        137.0
+      ]
+    },
+    {
+      "frame": 79,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        13.0,
+        136.0
+      ]
+    },
+    {
+      "frame": 80,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        13.0,
+        136.0
+      ]
+    },
+    {
+      "frame": 81,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        17.0,
+        141.0
+      ]
+    },
+    {
+      "frame": 82,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        145.0,
+        18.0
+      ]
+    },
+    {
+      "frame": 83,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        39.0,
+        129.0
+      ]
+    },
+    {
+      "frame": 84,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        135.0,
+        49.0
+      ]
+    },
+    {
+      "frame": 85,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        130.0,
+        37.0
+      ]
+    },
+    {
+      "frame": 86,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        125.0,
+        20.0
+      ]
+    },
+    {
+      "frame": 87,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        124.0,
+        19.0
+      ]
+    },
+    {
+      "frame": 88,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        118.0,
+        18.0
+      ]
+    },
+    {
+      "frame": 89,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        123.0,
+        17.0
+      ]
+    },
+    {
+      "frame": 90,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        125.0,
+        18.0
+      ]
+    },
+    {
+      "frame": 91,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        124.0,
+        15.0
+      ]
+    },
+    {
+      "frame": 92,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        122.0,
+        17.0
+      ]
+    },
+    {
+      "frame": 93,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        121.0,
+        19.0
+      ]
+    },
+    {
+      "frame": 94,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        18.0,
+        121.0
+      ]
+    },
+    {
+      "frame": 95,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        124.0,
+        16.0
+      ]
+    },
+    {
+      "frame": 96,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        123.0,
+        13.0
+      ]
+    },
+    {
+      "frame": 97,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        125.0,
+        13.0
+      ]
+    },
+    {
+      "frame": 98,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        126.0,
+        14.0
+      ]
+    },
+    {
+      "frame": 99,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        132.0,
+        19.0
+      ]
+    },
+    {
+      "frame": 100,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        133.0,
+        24.0
+      ]
+    },
+    {
+      "frame": 101,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        130.0,
+        25.0
+      ]
+    },
+    {
+      "frame": 102,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        138.0,
+        32.0
+      ]
+    },
+    {
+      "frame": 103,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        138.0,
+        29.0
+      ]
+    },
+    {
+      "frame": 104,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        25.0,
+        138.0
+      ]
+    },
+    {
+      "frame": 105,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        150.0,
+        24.0
+      ]
+    },
+    {
+      "frame": 106,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        160.0,
+        19.0
+      ]
+    },
+    {
+      "frame": 107,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        150.0,
+        20.0
+      ]
+    },
+    {
+      "frame": 108,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        145.0,
+        18.0
+      ]
+    },
+    {
+      "frame": 109,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        136.0,
+        18.0
+      ]
+    },
+    {
+      "frame": 110,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        133.0,
+        11.0
+      ]
+    },
+    {
+      "frame": 111,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        142.0,
+        7.0
+      ]
+    },
+    {
+      "frame": 112,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        137.0,
+        10.0
+      ]
+    },
+    {
+      "frame": 113,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        134.0,
+        10.0
+      ]
+    },
+    {
+      "frame": 114,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        137.0,
+        10.0
+      ]
+    },
+    {
+      "frame": 115,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        135.0,
+        11.0
+      ]
+    },
+    {
+      "frame": 116,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        146.0,
+        11.0
+      ]
+    },
+    {
+      "frame": 117,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        143.0,
+        11.0
+      ]
+    },
+    {
+      "frame": 118,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        146.0,
+        13.0
+      ]
+    },
+    {
+      "frame": 119,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        146.0,
+        13.0
+      ]
+    },
+    {
+      "frame": 120,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        146.0,
+        13.0
+      ]
+    },
+    {
+      "frame": 121,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        148.0,
+        13.5
+      ]
+    },
+    {
+      "frame": 122,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        145.0,
+        13.0
+      ]
+    },
+    {
+      "frame": 123,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        134.0,
+        12.0
+      ]
+    },
+    {
+      "frame": 124,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        134.0,
+        11.0
+      ]
+    },
+    {
+      "frame": 125,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        132.0,
+        10.0
+      ]
+    },
+    {
+      "frame": 126,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        129.0,
+        12.0
+      ]
+    },
+    {
+      "frame": 127,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        143.0,
+        15.0
+      ]
+    },
+    {
+      "frame": 128,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        149.0,
+        15.0
+      ]
+    },
+    {
+      "frame": 129,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        147.0,
+        15.0
+      ]
+    },
+    {
+      "frame": 130,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        15.0,
+        153.0
+      ]
+    },
+    {
+      "frame": 131,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        157.0,
+        16.0
+      ]
+    },
+    {
+      "frame": 132,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        160.0,
+        18.0
+      ]
+    },
+    {
+      "frame": 133,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        151.0,
+        24.0
+      ]
+    },
+    {
+      "frame": 134,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        121.0,
+        20.0
+      ]
+    },
+    {
+      "frame": 135,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        120.0,
+        19.0
+      ]
+    },
+    {
+      "frame": 136,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        121.0,
+        18.0
+      ]
+    },
+    {
+      "frame": 137,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        126.0,
+        20.0
+      ]
+    },
+    {
+      "frame": 138,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        126.0,
+        20.0
+      ]
+    },
+    {
+      "frame": 139,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        126.0,
+        24.0
+      ]
+    },
+    {
+      "frame": 140,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        130.0,
+        23.0
+      ]
+    },
+    {
+      "frame": 141,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        128.0,
+        20.0
+      ]
+    },
+    {
+      "frame": 142,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        129.0,
+        16.0
+      ]
+    },
+    {
+      "frame": 143,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        124.0,
+        16.0
+      ]
+    },
+    {
+      "frame": 144,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        120.0,
+        16.0
+      ]
+    },
+    {
+      "frame": 145,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        119.0,
+        16.0
+      ]
+    },
+    {
+      "frame": 146,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        118.0,
+        16.0
+      ]
+    },
+    {
+      "frame": 147,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        123.0,
+        18.0
+      ]
+    },
+    {
+      "frame": 148,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        123.0,
+        17.0
+      ]
+    },
+    {
+      "frame": 149,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        123.0,
+        16.0
+      ]
+    },
+    {
+      "frame": 150,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        125.0,
+        17.0
+      ]
+    },
+    {
+      "frame": 151,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        128.0,
+        17.0
+      ]
+    },
+    {
+      "frame": 152,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        124.0,
+        17.0
+      ]
+    },
+    {
+      "frame": 153,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        123.0,
+        18.0
+      ]
+    },
+    {
+      "frame": 154,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        124.0,
+        16.0
+      ]
+    },
+    {
+      "frame": 155,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        120.0,
+        16.0
+      ]
+    },
+    {
+      "frame": 156,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        121.0,
+        15.0
+      ]
+    },
+    {
+      "frame": 157,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        124.0,
+        15.0
+      ]
+    },
+    {
+      "frame": 158,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        130.0,
+        16.0
+      ]
+    },
+    {
+      "frame": 159,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        130.0,
+        16.0
+      ]
+    },
+    {
+      "frame": 160,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        129.0,
+        16.0
+      ]
+    },
+    {
+      "frame": 161,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        129.0,
+        18.0
+      ]
+    },
+    {
+      "frame": 162,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        129.0,
+        20.0
+      ]
+    },
+    {
+      "frame": 163,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        129.0,
+        26.0
+      ]
+    },
+    {
+      "frame": 164,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        130.0,
+        25.0
+      ]
+    },
+    {
+      "frame": 165,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        130.0,
+        26.0
+      ]
+    },
+    {
+      "frame": 166,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        129.0,
+        25.0
+      ]
+    },
+    {
+      "frame": 167,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        130.0,
+        24.0
+      ]
+    },
+    {
+      "frame": 168,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        129.0,
+        24.0
+      ]
+    },
+    {
+      "frame": 169,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        127.0,
+        19.0
+      ]
+    },
+    {
+      "frame": 170,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        125.0,
+        18.0
+      ]
+    },
+    {
+      "frame": 171,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        124.0,
+        21.0
+      ]
+    },
+    {
+      "frame": 172,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        129.0,
+        32.0
+      ]
+    },
+    {
+      "frame": 173,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        132.0,
+        34.0
+      ]
+    },
+    {
+      "frame": 174,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        159.0,
+        38.0
+      ]
+    },
+    {
+      "frame": 175,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        165.0,
+        31.0
+      ]
+    },
+    {
+      "frame": 176,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        172.0,
+        30.0
+      ]
+    },
+    {
+      "frame": 177,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        173.0,
+        18.0
+      ]
+    },
+    {
+      "frame": 178,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        169.0,
+        17.0
+      ]
+    },
+    {
+      "frame": 179,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        153.0,
+        39.0
+      ]
+    },
+    {
+      "frame": 180,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        148.0,
+        45.0
+      ]
+    },
+    {
+      "frame": 181,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        138.0,
+        19.0
+      ]
+    },
+    {
+      "frame": 182,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        138.0,
+        23.0
+      ]
+    },
+    {
+      "frame": 183,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        133.0,
+        52.0
+      ]
+    },
+    {
+      "frame": 184,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        131.0,
+        48.0
+      ]
+    },
+    {
+      "frame": 185,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        38.0,
+        143.0
+      ]
+    },
+    {
+      "frame": 186,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        139.0,
+        41.0
+      ]
+    },
+    {
+      "frame": 187,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        148.0,
+        124.0
+      ]
+    },
+    {
+      "frame": 188,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        144.0,
+        29.0
+      ]
+    },
+    {
+      "frame": 189,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        139.0,
+        27.0
+      ]
+    },
+    {
+      "frame": 190,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        138.0,
+        18.0
+      ]
+    },
+    {
+      "frame": 191,
+      "confidence": "continuity_fallback",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        136.0,
+        133.0
+      ]
+    },
+    {
+      "frame": 192,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        133.0,
+        114.0
+      ]
+    },
+    {
+      "frame": 193,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        131.0,
+        96.0
+      ]
+    },
+    {
+      "frame": 194,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        127.0,
+        54.0
+      ]
+    },
+    {
+      "frame": 195,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        127.0,
+        84.0
+      ]
+    },
+    {
+      "frame": 196,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        125.0,
+        105.0
+      ]
+    },
+    {
+      "frame": 197,
+      "confidence": "continuity_fallback",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        125.0,
+        109.0
+      ]
+    },
+    {
+      "frame": 198,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        126.0,
+        103.0
+      ]
+    },
+    {
+      "frame": 199,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        126.0,
+        103.0
+      ]
+    },
+    {
+      "frame": 200,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        125.0,
+        96.0
+      ]
+    },
+    {
+      "frame": 201,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        126.0,
+        96.0
+      ]
+    },
+    {
+      "frame": 202,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        126.0,
+        93.0
+      ]
+    },
+    {
+      "frame": 203,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        126.0,
+        87.0
+      ]
+    },
+    {
+      "frame": 204,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        127.0,
+        90.0
+      ]
+    },
+    {
+      "frame": 205,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        126.0,
+        89.0
+      ]
+    },
+    {
+      "frame": 206,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        127.0,
+        88.0
+      ]
+    },
+    {
+      "frame": 207,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        128.0,
+        85.0
+      ]
+    },
+    {
+      "frame": 208,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        127.0,
+        82.0
+      ]
+    },
+    {
+      "frame": 209,
+      "confidence": "continuity_fallback",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        127.0,
+        131.0
+      ]
+    },
+    {
+      "frame": 210,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        127.0,
+        91.0
+      ]
+    },
+    {
+      "frame": 211,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        127.0,
+        82.0
+      ]
+    },
+    {
+      "frame": 212,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        128.0,
+        83.0
+      ]
+    },
+    {
+      "frame": 213,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        129.0,
+        83.0
+      ]
+    },
+    {
+      "frame": 214,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        129.0,
+        86.0
+      ]
+    },
+    {
+      "frame": 215,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        129.0,
+        85.0
+      ]
+    },
+    {
+      "frame": 216,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        128.0,
+        85.0
+      ]
+    },
+    {
+      "frame": 217,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        128.0,
+        89.0
+      ]
+    },
+    {
+      "frame": 218,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        128.0,
+        91.0
+      ]
+    },
+    {
+      "frame": 219,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        128.0,
+        89.0
+      ]
+    },
+    {
+      "frame": 220,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        127.0,
+        88.0
+      ]
+    },
+    {
+      "frame": 221,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        128.0,
+        87.0
+      ]
+    },
+    {
+      "frame": 222,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        128.0,
+        89.0
+      ]
+    },
+    {
+      "frame": 223,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        128.0,
+        88.0
+      ]
+    },
+    {
+      "frame": 224,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        130.0,
+        85.0
+      ]
+    },
+    {
+      "frame": 225,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        131.0,
+        82.0
+      ]
+    },
+    {
+      "frame": 226,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        130.0,
+        81.0
+      ]
+    },
+    {
+      "frame": 227,
+      "confidence": "missing",
+      "visible_ids": [],
+      "luma": []
+    },
+    {
+      "frame": 228,
+      "confidence": "missing",
+      "visible_ids": [],
+      "luma": []
+    },
+    {
+      "frame": 229,
+      "confidence": "missing",
+      "visible_ids": [],
+      "luma": []
+    },
+    {
+      "frame": 230,
+      "confidence": "missing",
+      "visible_ids": [],
+      "luma": []
+    },
+    {
+      "frame": 231,
+      "confidence": "missing",
+      "visible_ids": [],
+      "luma": []
+    },
+    {
+      "frame": 232,
+      "confidence": "continuity_fallback",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        148.0,
+        142.0
+      ]
+    },
+    {
+      "frame": 233,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        155.0,
+        124.0
+      ]
+    },
+    {
+      "frame": 234,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        160.0,
+        107.0
+      ]
+    },
+    {
+      "frame": 235,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        160.0,
+        66.0
+      ]
+    },
+    {
+      "frame": 236,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        161.0,
+        56.0
+      ]
+    },
+    {
+      "frame": 237,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        164.0,
+        26.0
+      ]
+    },
+    {
+      "frame": 238,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        163.0,
+        22.0
+      ]
+    },
+    {
+      "frame": 239,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        157.0,
+        41.0
+      ]
+    },
+    {
+      "frame": 240,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        138.0,
+        47.0
+      ]
+    },
+    {
+      "frame": 241,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        129.0,
+        51.0
+      ]
+    },
+    {
+      "frame": 242,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        126.0,
+        62.0
+      ]
+    },
+    {
+      "frame": 243,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        117.0,
+        74.0
+      ]
+    },
+    {
+      "frame": 244,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        118.0,
+        74.0
+      ]
+    },
+    {
+      "frame": 245,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        119.0,
+        74.0
+      ]
+    },
+    {
+      "frame": 246,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        116.0,
+        69.0
+      ]
+    },
+    {
+      "frame": 247,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        112.0,
+        66.0
+      ]
+    },
+    {
+      "frame": 248,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        109.0,
+        66.0
+      ]
+    },
+    {
+      "frame": 249,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        105.0,
+        64.0
+      ]
+    },
+    {
+      "frame": 250,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        106.0,
+        62.0
+      ]
+    },
+    {
+      "frame": 251,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        98.0,
+        65.0
+      ]
+    },
+    {
+      "frame": 252,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        99.0,
+        64.0
+      ]
+    },
+    {
+      "frame": 253,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        99.0,
+        62.0
+      ]
+    },
+    {
+      "frame": 254,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        97.0,
+        62.0
+      ]
+    },
+    {
+      "frame": 255,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        102.0,
+        60.0
+      ]
+    },
+    {
+      "frame": 256,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        103.0,
+        60.0
+      ]
+    },
+    {
+      "frame": 257,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        102.0,
+        59.0
+      ]
+    },
+    {
+      "frame": 258,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        107.0,
+        59.0
+      ]
+    },
+    {
+      "frame": 259,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        115.0,
+        58.0
+      ]
+    },
+    {
+      "frame": 260,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        111.0,
+        66.0
+      ]
+    },
+    {
+      "frame": 261,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        112.0,
+        69.0
+      ]
+    },
+    {
+      "frame": 262,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        102.0,
+        79.0
+      ]
+    },
+    {
+      "frame": 263,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        108.0,
+        78.0
+      ]
+    },
+    {
+      "frame": 264,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        115.0,
+        80.0
+      ]
+    },
+    {
+      "frame": 265,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        113.0,
+        77.0
+      ]
+    },
+    {
+      "frame": 266,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        117.0,
+        83.0
+      ]
+    },
+    {
+      "frame": 267,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        119.0,
+        77.0
+      ]
+    },
+    {
+      "frame": 268,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        122.0,
+        77.0
+      ]
+    },
+    {
+      "frame": 269,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        118.0,
+        81.0
+      ]
+    },
+    {
+      "frame": 270,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        119.0,
+        81.0
+      ]
+    },
+    {
+      "frame": 271,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        119.0,
+        82.0
+      ]
+    },
+    {
+      "frame": 272,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        120.0,
+        80.0
+      ]
+    },
+    {
+      "frame": 273,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        120.0,
+        79.0
+      ]
+    },
+    {
+      "frame": 274,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        123.0,
+        78.0
+      ]
+    },
+    {
+      "frame": 275,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        124.0,
+        86.0
+      ]
+    },
+    {
+      "frame": 276,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        126.0,
+        84.0
+      ]
+    },
+    {
+      "frame": 277,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        129.0,
+        89.0
+      ]
+    },
+    {
+      "frame": 278,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        133.0,
+        89.0
+      ]
+    },
+    {
+      "frame": 279,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        136.0,
+        92.0
+      ]
+    },
+    {
+      "frame": 280,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        128.0,
+        100.0
+      ]
+    },
+    {
+      "frame": 281,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        140.0,
+        97.0
+      ]
+    },
+    {
+      "frame": 282,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        144.0,
+        97.0
+      ]
+    },
+    {
+      "frame": 283,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        145.0,
+        75.0
+      ]
+    },
+    {
+      "frame": 284,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        143.0,
+        110.0
+      ]
+    },
+    {
+      "frame": 285,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        147.0,
+        71.0
+      ]
+    },
+    {
+      "frame": 286,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        144.0,
+        83.0
+      ]
+    },
+    {
+      "frame": 287,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        142.0,
+        59.0
+      ]
+    },
+    {
+      "frame": 288,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        143.0,
+        48.0
+      ]
+    },
+    {
+      "frame": 289,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        144.0,
+        45.0
+      ]
+    },
+    {
+      "frame": 290,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        141.0,
+        38.0
+      ]
+    },
+    {
+      "frame": 291,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        144.0,
+        44.0
+      ]
+    },
+    {
+      "frame": 292,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        141.0,
+        53.0
+      ]
+    },
+    {
+      "frame": 293,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        60.0,
+        144.0
+      ]
+    },
+    {
+      "frame": 294,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        150.0,
+        60.0
+      ]
+    },
+    {
+      "frame": 295,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        56.0,
+        151.0
+      ]
+    },
+    {
+      "frame": 296,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        65.0,
+        153.0
+      ]
+    },
+    {
+      "frame": 297,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        63.0,
+        154.0
+      ]
+    },
+    {
+      "frame": 298,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        70.0,
+        154.0
+      ]
+    },
+    {
+      "frame": 299,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        75.0,
+        151.0
+      ]
+    },
+    {
+      "frame": 300,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        75.0,
+        148.0
+      ]
+    },
+    {
+      "frame": 301,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        74.0,
+        144.0
+      ]
+    },
+    {
+      "frame": 302,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        70.0,
+        136.0
+      ]
+    },
+    {
+      "frame": 303,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        68.0,
+        132.0
+      ]
+    },
+    {
+      "frame": 304,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        67.0,
+        131.0
+      ]
+    },
+    {
+      "frame": 305,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        59.0,
+        130.0
+      ]
+    },
+    {
+      "frame": 306,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        62.0,
+        131.0
+      ]
+    },
+    {
+      "frame": 307,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        61.0,
+        122.0
+      ]
+    },
+    {
+      "frame": 308,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        56.0,
+        120.0
+      ]
+    },
+    {
+      "frame": 309,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        114.0,
+        59.0
+      ]
+    },
+    {
+      "frame": 310,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        103.0,
+        59.0
+      ]
+    },
+    {
+      "frame": 311,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        99.0,
+        66.0
+      ]
+    },
+    {
+      "frame": 312,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        97.0,
+        69.0
+      ]
+    },
+    {
+      "frame": 313,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        98.0,
+        70.0
+      ]
+    },
+    {
+      "frame": 314,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        109.0,
+        69.0
+      ]
+    },
+    {
+      "frame": 315,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        118.0,
+        63.0
+      ]
+    },
+    {
+      "frame": 316,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        122.0,
+        57.0
+      ]
+    },
+    {
+      "frame": 317,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        126.0,
+        56.0
+      ]
+    },
+    {
+      "frame": 318,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        132.0,
+        54.0
+      ]
+    },
+    {
+      "frame": 319,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        132.0,
+        54.0
+      ]
+    },
+    {
+      "frame": 320,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        132.0,
+        56.0
+      ]
+    },
+    {
+      "frame": 321,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        131.0,
+        56.0
+      ]
+    },
+    {
+      "frame": 322,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        131.0,
+        55.0
+      ]
+    },
+    {
+      "frame": 323,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        129.0,
+        55.0
+      ]
+    },
+    {
+      "frame": 324,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        126.0,
+        53.0
+      ]
+    },
+    {
+      "frame": 325,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        127.0,
+        53.0
+      ]
+    },
+    {
+      "frame": 326,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        131.0,
+        56.0
+      ]
+    },
+    {
+      "frame": 327,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        135.0,
+        55.0
+      ]
+    },
+    {
+      "frame": 328,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        59.0,
+        137.0
+      ]
+    },
+    {
+      "frame": 329,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        138.0,
+        59.0
+      ]
+    },
+    {
+      "frame": 330,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        137.0,
+        60.0
+      ]
+    },
+    {
+      "frame": 331,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        66.0,
+        137.0
+      ]
+    },
+    {
+      "frame": 332,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        134.0,
+        69.0
+      ]
+    },
+    {
+      "frame": 333,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        126.0,
+        70.0
+      ]
+    },
+    {
+      "frame": 334,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        118.0,
+        75.0
+      ]
+    },
+    {
+      "frame": 335,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        109.0,
+        79.0
+      ]
+    },
+    {
+      "frame": 336,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        106.0,
+        81.0
+      ]
+    },
+    {
+      "frame": 337,
+      "confidence": "continuity_fallback",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        105.0,
+        89.0
+      ]
+    },
+    {
+      "frame": 338,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        105.0,
+        87.0
+      ]
+    },
+    {
+      "frame": 339,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        109.0,
+        88.0
+      ]
+    },
+    {
+      "frame": 340,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        110.0,
+        84.0
+      ]
+    },
+    {
+      "frame": 341,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        111.0,
+        82.0
+      ]
+    },
+    {
+      "frame": 342,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        110.0,
+        82.0
+      ]
+    },
+    {
+      "frame": 343,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        109.0,
+        80.0
+      ]
+    },
+    {
+      "frame": 344,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        110.0,
+        76.0
+      ]
+    },
+    {
+      "frame": 345,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        110.0,
+        75.0
+      ]
+    },
+    {
+      "frame": 346,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        110.0,
+        75.0
+      ]
+    },
+    {
+      "frame": 347,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        111.0,
+        74.0
+      ]
+    },
+    {
+      "frame": 348,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        114.0,
+        74.0
+      ]
+    },
+    {
+      "frame": 349,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        116.0,
+        77.0
+      ]
+    },
+    {
+      "frame": 350,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        120.0,
+        84.0
+      ]
+    },
+    {
+      "frame": 351,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        122.0,
+        88.0
+      ]
+    },
+    {
+      "frame": 352,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        124.0,
+        87.0
+      ]
+    },
+    {
+      "frame": 353,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        125.0,
+        86.0
+      ]
+    },
+    {
+      "frame": 354,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        127.0,
+        84.0
+      ]
+    },
+    {
+      "frame": 355,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        139.0,
+        88.0
+      ]
+    },
+    {
+      "frame": 356,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        143.0,
+        83.0
+      ]
+    },
+    {
+      "frame": 357,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        147.0,
+        88.0
+      ]
+    },
+    {
+      "frame": 358,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        152.0,
+        92.0
+      ]
+    },
+    {
+      "frame": 359,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        151.0,
+        89.0
+      ]
+    },
+    {
+      "frame": 360,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        151.0,
+        88.0
+      ]
+    },
+    {
+      "frame": 361,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        147.0,
+        89.0
+      ]
+    },
+    {
+      "frame": 362,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        151.0,
+        89.0
+      ]
+    },
+    {
+      "frame": 363,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        145.0,
+        87.0
+      ]
+    },
+    {
+      "frame": 364,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        141.0,
+        87.0
+      ]
+    },
+    {
+      "frame": 365,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        141.0,
+        85.0
+      ]
+    },
+    {
+      "frame": 366,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        136.0,
+        88.0
+      ]
+    },
+    {
+      "frame": 367,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        127.0,
+        92.0
+      ]
+    },
+    {
+      "frame": 368,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        128.0,
+        95.0
+      ]
+    },
+    {
+      "frame": 369,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        132.0,
+        100.0
+      ]
+    },
+    {
+      "frame": 370,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        137.0,
+        106.0
+      ]
+    },
+    {
+      "frame": 371,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        139.0,
+        104.0
+      ]
+    },
+    {
+      "frame": 372,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        146.0,
+        103.0
+      ]
+    },
+    {
+      "frame": 373,
+      "confidence": "merged_nearest_prior_center",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        146.0
+      ]
+    },
+    {
+      "frame": 374,
+      "confidence": "merged_nearest_prior_center",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        164.0
+      ]
+    },
+    {
+      "frame": 375,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        159.0,
+        66.0
+      ]
+    },
+    {
+      "frame": 376,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        168.0,
+        40.0
+      ]
+    },
+    {
+      "frame": 377,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        170.0,
+        37.0
+      ]
+    },
+    {
+      "frame": 378,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        165.0,
+        31.0
+      ]
+    },
+    {
+      "frame": 379,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        174.0,
+        26.0
+      ]
+    },
+    {
+      "frame": 380,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        172.0,
+        24.0
+      ]
+    },
+    {
+      "frame": 381,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        188.0,
+        21.0
+      ]
+    },
+    {
+      "frame": 382,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        198.0,
+        23.0
+      ]
+    },
+    {
+      "frame": 383,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        201.0,
+        28.0
+      ]
+    },
+    {
+      "frame": 384,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        196.0,
+        27.0
+      ]
+    },
+    {
+      "frame": 385,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        186.0,
+        22.0
+      ]
+    },
+    {
+      "frame": 386,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        172.0,
+        18.0
+      ]
+    },
+    {
+      "frame": 387,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        155.0,
+        16.0
+      ]
+    },
+    {
+      "frame": 388,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        173.0,
+        16.0
+      ]
+    },
+    {
+      "frame": 389,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        174.0,
+        14.0
+      ]
+    },
+    {
+      "frame": 390,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        194.0,
+        11.0
+      ]
+    },
+    {
+      "frame": 391,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        196.0,
+        10.0
+      ]
+    },
+    {
+      "frame": 392,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        204.0,
+        10.0
+      ]
+    },
+    {
+      "frame": 393,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        210.0,
+        13.0
+      ]
+    },
+    {
+      "frame": 394,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        216.0,
+        13.0
+      ]
+    },
+    {
+      "frame": 395,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        218.0,
+        14.0
+      ]
+    },
+    {
+      "frame": 396,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        216.0,
+        17.0
+      ]
+    },
+    {
+      "frame": 397,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        214.0,
+        18.0
+      ]
+    },
+    {
+      "frame": 398,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        209.0,
+        14.0
+      ]
+    },
+    {
+      "frame": 399,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        199.0,
+        11.0
+      ]
+    },
+    {
+      "frame": 400,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        196.0,
+        12.0
+      ]
+    },
+    {
+      "frame": 401,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        191.0,
+        12.0
+      ]
+    },
+    {
+      "frame": 402,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        186.0,
+        13.0
+      ]
+    },
+    {
+      "frame": 403,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        169.0,
+        14.0
+      ]
+    },
+    {
+      "frame": 404,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        165.0,
+        15.0
+      ]
+    },
+    {
+      "frame": 405,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        161.0,
+        17.0
+      ]
+    },
+    {
+      "frame": 406,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        157.0,
+        16.0
+      ]
+    },
+    {
+      "frame": 407,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        156.0,
+        15.0
+      ]
+    },
+    {
+      "frame": 408,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        155.0,
+        16.0
+      ]
+    },
+    {
+      "frame": 409,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        154.0,
+        13.0
+      ]
+    },
+    {
+      "frame": 410,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        153.0,
+        13.0
+      ]
+    },
+    {
+      "frame": 411,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        153.0,
+        12.0
+      ]
+    },
+    {
+      "frame": 412,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        151.0,
+        12.0
+      ]
+    },
+    {
+      "frame": 413,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        151.0,
+        12.0
+      ]
+    },
+    {
+      "frame": 414,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        150.0,
+        16.0
+      ]
+    },
+    {
+      "frame": 415,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        148.0,
+        15.0
+      ]
+    },
+    {
+      "frame": 416,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        147.0,
+        16.0
+      ]
+    },
+    {
+      "frame": 417,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        146.0,
+        15.0
+      ]
+    },
+    {
+      "frame": 418,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        145.0,
+        18.0
+      ]
+    },
+    {
+      "frame": 419,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        144.0,
+        25.0
+      ]
+    },
+    {
+      "frame": 420,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        144.0,
+        28.0
+      ]
+    },
+    {
+      "frame": 421,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        143.0,
+        27.0
+      ]
+    },
+    {
+      "frame": 422,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        141.0,
+        27.0
+      ]
+    },
+    {
+      "frame": 423,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        148.0,
+        26.0
+      ]
+    },
+    {
+      "frame": 424,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        155.0,
+        26.0
+      ]
+    },
+    {
+      "frame": 425,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        156.0,
+        25.0
+      ]
+    },
+    {
+      "frame": 426,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        159.0,
+        27.0
+      ]
+    },
+    {
+      "frame": 427,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        175.0,
+        25.0
+      ]
+    },
+    {
+      "frame": 428,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        179.0,
+        24.0
+      ]
+    },
+    {
+      "frame": 429,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        188.0,
+        19.0
+      ]
+    },
+    {
+      "frame": 430,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        193.0,
+        23.0
+      ]
+    },
+    {
+      "frame": 431,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        192.0,
+        23.0
+      ]
+    },
+    {
+      "frame": 432,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        182.0,
+        20.0
+      ]
+    },
+    {
+      "frame": 433,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        175.0,
+        17.0
+      ]
+    },
+    {
+      "frame": 434,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        171.0,
+        17.0
+      ]
+    },
+    {
+      "frame": 435,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        163.0,
+        20.0
+      ]
+    },
+    {
+      "frame": 436,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        159.0,
+        20.0
+      ]
+    },
+    {
+      "frame": 437,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        159.0,
+        22.0
+      ]
+    },
+    {
+      "frame": 438,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        154.0,
+        20.0
+      ]
+    },
+    {
+      "frame": 439,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        155.0,
+        25.0
+      ]
+    },
+    {
+      "frame": 440,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        161.0,
+        39.0
+      ]
+    },
+    {
+      "frame": 441,
+      "confidence": "missing",
+      "visible_ids": [],
+      "luma": []
+    },
+    {
+      "frame": 442,
+      "confidence": "missing",
+      "visible_ids": [],
+      "luma": []
+    },
+    {
+      "frame": 443,
+      "confidence": "missing",
+      "visible_ids": [],
+      "luma": []
+    },
+    {
+      "frame": 444,
+      "confidence": "missing",
+      "visible_ids": [],
+      "luma": []
+    },
+    {
+      "frame": 445,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        222.0,
+        37.0
+      ]
+    },
+    {
+      "frame": 446,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        24.0,
+        200.0
+      ]
+    },
+    {
+      "frame": 447,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        187.0,
+        19.0
+      ]
+    },
+    {
+      "frame": 448,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        181.0,
+        18.0
+      ]
+    },
+    {
+      "frame": 449,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        177.0,
+        15.0
+      ]
+    },
+    {
+      "frame": 450,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        171.0,
+        12.0
+      ]
+    },
+    {
+      "frame": 451,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        162.0,
+        15.0
+      ]
+    },
+    {
+      "frame": 452,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        164.0,
+        16.0
+      ]
+    },
+    {
+      "frame": 453,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        168.0,
+        18.0
+      ]
+    },
+    {
+      "frame": 454,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        161.0,
+        24.0
+      ]
+    },
+    {
+      "frame": 455,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        158.0,
+        28.0
+      ]
+    },
+    {
+      "frame": 456,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        155.0,
+        30.0
+      ]
+    },
+    {
+      "frame": 457,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        153.0,
+        33.0
+      ]
+    },
+    {
+      "frame": 458,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        147.0,
+        28.0
+      ]
+    },
+    {
+      "frame": 459,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        148.0,
+        24.0
+      ]
+    },
+    {
+      "frame": 460,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        146.0,
+        24.0
+      ]
+    },
+    {
+      "frame": 461,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        144.0,
+        24.0
+      ]
+    },
+    {
+      "frame": 462,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        143.0,
+        23.0
+      ]
+    },
+    {
+      "frame": 463,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        145.0,
+        24.0
+      ]
+    },
+    {
+      "frame": 464,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        151.0,
+        25.0
+      ]
+    },
+    {
+      "frame": 465,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        151.0,
+        25.0
+      ]
+    },
+    {
+      "frame": 466,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        154.0,
+        24.0
+      ]
+    },
+    {
+      "frame": 467,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        167.0,
+        22.0
+      ]
+    },
+    {
+      "frame": 468,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        171.0,
+        23.0
+      ]
+    },
+    {
+      "frame": 469,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        170.0,
+        22.0
+      ]
+    },
+    {
+      "frame": 470,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        180.0,
+        19.0
+      ]
+    },
+    {
+      "frame": 471,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        183.0,
+        21.0
+      ]
+    },
+    {
+      "frame": 472,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        184.0,
+        19.0
+      ]
+    },
+    {
+      "frame": 473,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        183.0,
+        19.0
+      ]
+    },
+    {
+      "frame": 474,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        175.0,
+        20.0
+      ]
+    },
+    {
+      "frame": 475,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        158.0,
+        23.0
+      ]
+    },
+    {
+      "frame": 476,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        151.0,
+        19.0
+      ]
+    },
+    {
+      "frame": 477,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        161.0,
+        20.0
+      ]
+    },
+    {
+      "frame": 478,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        177.0,
+        25.0
+      ]
+    },
+    {
+      "frame": 479,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        180.0,
+        24.0
+      ]
+    },
+    {
+      "frame": 480,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        180.0,
+        24.0
+      ]
+    },
+    {
+      "frame": 481,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        181.0,
+        24.0
+      ]
+    },
+    {
+      "frame": 482,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        182.0,
+        21.0
+      ]
+    },
+    {
+      "frame": 483,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        28.0,
+        179.0
+      ]
+    },
+    {
+      "frame": 484,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        177.0,
+        26.0
+      ]
+    },
+    {
+      "frame": 485,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        167.0,
+        23.0
+      ]
+    },
+    {
+      "frame": 486,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        152.0,
+        24.0
+      ]
+    },
+    {
+      "frame": 487,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        154.0,
+        24.0
+      ]
+    },
+    {
+      "frame": 488,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        150.0,
+        23.0
+      ]
+    },
+    {
+      "frame": 489,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        150.0,
+        24.0
+      ]
+    },
+    {
+      "frame": 490,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        153.0,
+        24.0
+      ]
+    },
+    {
+      "frame": 491,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        151.0,
+        27.0
+      ]
+    },
+    {
+      "frame": 492,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        153.0,
+        28.0
+      ]
+    },
+    {
+      "frame": 493,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        151.0,
+        27.0
+      ]
+    },
+    {
+      "frame": 494,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        147.0,
+        24.0
+      ]
+    },
+    {
+      "frame": 495,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        146.0,
+        23.0
+      ]
+    },
+    {
+      "frame": 496,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        146.0,
+        23.0
+      ]
+    },
+    {
+      "frame": 497,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        146.0,
+        23.0
+      ]
+    },
+    {
+      "frame": 498,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        146.0,
+        25.0
+      ]
+    },
+    {
+      "frame": 499,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        158.0,
+        27.0
+      ]
+    },
+    {
+      "frame": 500,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        32.0,
+        167.0
+      ]
+    },
+    {
+      "frame": 501,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        40.0,
+        170.0
+      ]
+    },
+    {
+      "frame": 502,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        175.0,
+        48.0
+      ]
+    },
+    {
+      "frame": 503,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        181.0,
+        50.0
+      ]
+    },
+    {
+      "frame": 504,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        191.0,
+        53.0
+      ]
+    },
+    {
+      "frame": 505,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        181.0,
+        52.0
+      ]
+    },
+    {
+      "frame": 506,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        176.0,
+        41.0
+      ]
+    },
+    {
+      "frame": 507,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        158.0,
+        33.0
+      ]
+    },
+    {
+      "frame": 508,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        156.0,
+        31.0
+      ]
+    },
+    {
+      "frame": 509,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        155.0,
+        27.0
+      ]
+    },
+    {
+      "frame": 510,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        153.0,
+        27.0
+      ]
+    },
+    {
+      "frame": 511,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        152.0,
+        28.0
+      ]
+    },
+    {
+      "frame": 512,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        151.0,
+        28.0
+      ]
+    },
+    {
+      "frame": 513,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        150.0,
+        30.0
+      ]
+    },
+    {
+      "frame": 514,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        149.0,
+        32.0
+      ]
+    },
+    {
+      "frame": 515,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        147.0,
+        39.0
+      ]
+    },
+    {
+      "frame": 516,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        145.0,
+        46.0
+      ]
+    },
+    {
+      "frame": 517,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        140.0,
+        47.0
+      ]
+    },
+    {
+      "frame": 518,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        137.0,
+        62.0
+      ]
+    },
+    {
+      "frame": 519,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        139.0,
+        68.0
+      ]
+    },
+    {
+      "frame": 520,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        144.0,
+        58.0
+      ]
+    },
+    {
+      "frame": 521,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        147.0,
+        53.0
+      ]
+    },
+    {
+      "frame": 522,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        151.0,
+        47.0
+      ]
+    },
+    {
+      "frame": 523,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        156.0,
+        42.0
+      ]
+    },
+    {
+      "frame": 524,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        157.0,
+        42.0
+      ]
+    },
+    {
+      "frame": 525,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        157.0,
+        40.0
+      ]
+    },
+    {
+      "frame": 526,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        157.0,
+        39.0
+      ]
+    },
+    {
+      "frame": 527,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        156.0,
+        37.0
+      ]
+    },
+    {
+      "frame": 528,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        158.0,
+        36.0
+      ]
+    },
+    {
+      "frame": 529,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        154.0,
+        30.0
+      ]
+    },
+    {
+      "frame": 530,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        141.0,
+        21.0
+      ]
+    },
+    {
+      "frame": 531,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        137.0,
+        20.0
+      ]
+    },
+    {
+      "frame": 532,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        129.0,
+        24.0
+      ]
+    },
+    {
+      "frame": 533,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        130.0,
+        25.0
+      ]
+    },
+    {
+      "frame": 534,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        129.0,
+        23.0
+      ]
+    },
+    {
+      "frame": 535,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        129.0,
+        23.0
+      ]
+    },
+    {
+      "frame": 536,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        130.0,
+        26.0
+      ]
+    },
+    {
+      "frame": 537,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        126.0,
+        31.0
+      ]
+    },
+    {
+      "frame": 538,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        127.0,
+        36.0
+      ]
+    },
+    {
+      "frame": 539,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        129.0,
+        28.0
+      ]
+    },
+    {
+      "frame": 540,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        129.0,
+        26.0
+      ]
+    },
+    {
+      "frame": 541,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        128.0,
+        27.0
+      ]
+    },
+    {
+      "frame": 542,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        130.0,
+        27.0
+      ]
+    },
+    {
+      "frame": 543,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        132.0,
+        24.0
+      ]
+    },
+    {
+      "frame": 544,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        131.0,
+        22.0
+      ]
+    },
+    {
+      "frame": 545,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        133.0,
+        21.0
+      ]
+    },
+    {
+      "frame": 546,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        135.0,
+        19.0
+      ]
+    },
+    {
+      "frame": 547,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        139.0,
+        13.0
+      ]
+    },
+    {
+      "frame": 548,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        141.0,
+        12.0
+      ]
+    },
+    {
+      "frame": 549,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        143.0,
+        9.0
+      ]
+    },
+    {
+      "frame": 550,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        145.0,
+        6.0
+      ]
+    },
+    {
+      "frame": 551,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        145.0,
+        6.0
+      ]
+    },
+    {
+      "frame": 552,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        5.0,
+        145.0
+      ]
+    },
+    {
+      "frame": 553,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        145.0,
+        6.0
+      ]
+    },
+    {
+      "frame": 554,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        5.0,
+        144.0
+      ]
+    },
+    {
+      "frame": 555,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        5.0,
+        144.0
+      ]
+    },
+    {
+      "frame": 556,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        5.0,
+        144.0
+      ]
+    },
+    {
+      "frame": 557,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        4.0,
+        144.0
+      ]
+    },
+    {
+      "frame": 558,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        142.0,
+        4.0
+      ]
+    },
+    {
+      "frame": 559,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        140.0,
+        4.0
+      ]
+    },
+    {
+      "frame": 560,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        4.0,
+        139.0
+      ]
+    },
+    {
+      "frame": 561,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        4.0,
+        139.0
+      ]
+    },
+    {
+      "frame": 562,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        4.0,
+        138.0
+      ]
+    },
+    {
+      "frame": 563,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        3.0,
+        138.0
+      ]
+    },
+    {
+      "frame": 564,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        137.0,
+        3.0
+      ]
+    },
+    {
+      "frame": 565,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        137.0,
+        3.0
+      ]
+    },
+    {
+      "frame": 566,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        137.0,
+        3.0
+      ]
+    },
+    {
+      "frame": 567,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        136.0,
+        3.0
+      ]
+    },
+    {
+      "frame": 568,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        3.0,
+        135.0
+      ]
+    },
+    {
+      "frame": 569,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        136.0,
+        4.0
+      ]
+    },
+    {
+      "frame": 570,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        136.0,
+        4.0
+      ]
+    },
+    {
+      "frame": 571,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        4.0,
+        135.0
+      ]
+    },
+    {
+      "frame": 572,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        135.0,
+        4.0
+      ]
+    },
+    {
+      "frame": 573,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        6.0,
+        135.0
+      ]
+    },
+    {
+      "frame": 574,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        18.0,
+        137.0
+      ]
+    },
+    {
+      "frame": 575,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        20.0,
+        136.0
+      ]
+    },
+    {
+      "frame": 576,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        19.0,
+        138.0
+      ]
+    },
+    {
+      "frame": 577,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        18.0,
+        136.0
+      ]
+    },
+    {
+      "frame": 578,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        17.0,
+        133.0
+      ]
+    },
+    {
+      "frame": 579,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        133.0,
+        17.0
+      ]
+    },
+    {
+      "frame": 580,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        18.0,
+        133.0
+      ]
+    },
+    {
+      "frame": 581,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        134.0,
+        18.0
+      ]
+    },
+    {
+      "frame": 582,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        139.0,
+        19.0
+      ]
+    },
+    {
+      "frame": 583,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        137.0,
+        19.0
+      ]
+    },
+    {
+      "frame": 584,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        137.0,
+        20.0
+      ]
+    },
+    {
+      "frame": 585,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        135.0,
+        20.0
+      ]
+    },
+    {
+      "frame": 586,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        135.0,
+        20.0
+      ]
+    },
+    {
+      "frame": 587,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        136.0,
+        19.0
+      ]
+    },
+    {
+      "frame": 588,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        138.0,
+        19.0
+      ]
+    },
+    {
+      "frame": 589,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        139.0,
+        20.0
+      ]
+    },
+    {
+      "frame": 590,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        143.0,
+        22.0
+      ]
+    },
+    {
+      "frame": 591,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        147.0,
+        23.0
+      ]
+    },
+    {
+      "frame": 592,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        152.0,
+        23.0
+      ]
+    },
+    {
+      "frame": 593,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        22.0,
+        157.0
+      ]
+    },
+    {
+      "frame": 594,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        158.0,
+        20.0
+      ]
+    },
+    {
+      "frame": 595,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        161.0,
+        20.0
+      ]
+    },
+    {
+      "frame": 596,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        162.0,
+        20.0
+      ]
+    },
+    {
+      "frame": 597,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        20.0,
+        162.0
+      ]
+    },
+    {
+      "frame": 598,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        20.0,
+        156.0
+      ]
+    },
+    {
+      "frame": 599,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        23.0,
+        149.0
+      ]
+    },
+    {
+      "frame": 600,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        23.0,
+        144.0
+      ]
+    },
+    {
+      "frame": 601,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        25.0,
+        133.0
+      ]
+    },
+    {
+      "frame": 602,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        131.0,
+        24.0
+      ]
+    },
+    {
+      "frame": 603,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        127.0,
+        22.0
+      ]
+    },
+    {
+      "frame": 604,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        125.0,
+        25.0
+      ]
+    },
+    {
+      "frame": 605,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        122.0,
+        28.0
+      ]
+    },
+    {
+      "frame": 606,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        119.0,
+        31.0
+      ]
+    },
+    {
+      "frame": 607,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        133.0,
+        30.0
+      ]
+    },
+    {
+      "frame": 608,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        144.0,
+        26.0
+      ]
+    },
+    {
+      "frame": 609,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        21.0,
+        156.0
+      ]
+    },
+    {
+      "frame": 610,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        18.0,
+        168.0
+      ]
+    },
+    {
+      "frame": 611,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        13.0,
+        167.0
+      ]
+    },
+    {
+      "frame": 612,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        12.0,
+        175.0
+      ]
+    },
+    {
+      "frame": 613,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        13.0,
+        188.0
+      ]
+    },
+    {
+      "frame": 614,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        13.0,
+        182.0
+      ]
+    },
+    {
+      "frame": 615,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        10.0,
+        169.0
+      ]
+    },
+    {
+      "frame": 616,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        10.0,
+        175.0
+      ]
+    },
+    {
+      "frame": 617,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        9.0,
+        153.0
+      ]
+    },
+    {
+      "frame": 618,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        8.0,
+        147.0
+      ]
+    },
+    {
+      "frame": 619,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        153.0,
+        10.0
+      ]
+    },
+    {
+      "frame": 620,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        157.0,
+        13.0
+      ]
+    },
+    {
+      "frame": 621,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        159.0,
+        17.0
+      ]
+    },
+    {
+      "frame": 622,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        155.0,
+        17.0
+      ]
+    },
+    {
+      "frame": 623,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        159.0,
+        18.0
+      ]
+    },
+    {
+      "frame": 624,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        159.0,
+        19.0
+      ]
+    },
+    {
+      "frame": 625,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        161.0,
+        21.0
+      ]
+    },
+    {
+      "frame": 626,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        168.0,
+        23.0
+      ]
+    },
+    {
+      "frame": 627,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        186.0,
+        27.0
+      ]
+    },
+    {
+      "frame": 628,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        199.0,
+        33.0
+      ]
+    },
+    {
+      "frame": 629,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        183.0,
+        34.0
+      ]
+    },
+    {
+      "frame": 630,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        41.0,
+        205.0
+      ]
+    },
+    {
+      "frame": 631,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        47.0,
+        209.0
+      ]
+    },
+    {
+      "frame": 632,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        52.0,
+        213.0
+      ]
+    },
+    {
+      "frame": 633,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        62.0,
+        219.0
+      ]
+    },
+    {
+      "frame": 634,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        239.0,
+        57.0
+      ]
+    },
+    {
+      "frame": 635,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        230.0,
+        40.0
+      ]
+    },
+    {
+      "frame": 636,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        219.0,
+        32.0
+      ]
+    },
+    {
+      "frame": 637,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        204.0,
+        29.0
+      ]
+    },
+    {
+      "frame": 638,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        23.0,
+        183.0
+      ]
+    },
+    {
+      "frame": 639,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        15.0,
+        170.0
+      ]
+    },
+    {
+      "frame": 640,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        15.0,
+        166.0
+      ]
+    },
+    {
+      "frame": 641,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        15.0,
+        165.0
+      ]
+    },
+    {
+      "frame": 642,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        16.0,
+        155.0
+      ]
+    },
+    {
+      "frame": 643,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        16.0,
+        151.0
+      ]
+    },
+    {
+      "frame": 644,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        13.0,
+        150.0
+      ]
+    },
+    {
+      "frame": 645,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        12.0,
+        148.0
+      ]
+    },
+    {
+      "frame": 646,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        12.0,
+        150.0
+      ]
+    },
+    {
+      "frame": 647,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        12.0,
+        150.0
+      ]
+    },
+    {
+      "frame": 648,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        13.0,
+        150.0
+      ]
+    },
+    {
+      "frame": 649,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        13.0,
+        150.0
+      ]
+    },
+    {
+      "frame": 650,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        15.0,
+        150.0
+      ]
+    },
+    {
+      "frame": 651,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        13.0,
+        147.0
+      ]
+    },
+    {
+      "frame": 652,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        14.0,
+        147.5
+      ]
+    },
+    {
+      "frame": 653,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        15.0,
+        145.0
+      ]
+    },
+    {
+      "frame": 654,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        15.0,
+        144.0
+      ]
+    },
+    {
+      "frame": 655,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        16.0,
+        145.0
+      ]
+    },
+    {
+      "frame": 656,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        16.0,
+        145.0
+      ]
+    },
+    {
+      "frame": 657,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        16.0,
+        144.0
+      ]
+    },
+    {
+      "frame": 658,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        15.0,
+        144.0
+      ]
+    },
+    {
+      "frame": 659,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        17.0,
+        145.0
+      ]
+    },
+    {
+      "frame": 660,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        17.0,
+        144.0
+      ]
+    },
+    {
+      "frame": 661,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        17.0,
+        144.0
+      ]
+    },
+    {
+      "frame": 662,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        17.0,
+        145.0
+      ]
+    },
+    {
+      "frame": 663,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        19.0,
+        144.0
+      ]
+    },
+    {
+      "frame": 664,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        17.0,
+        145.0
+      ]
+    },
+    {
+      "frame": 665,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        17.0,
+        144.0
+      ]
+    },
+    {
+      "frame": 666,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        18.0,
+        144.0
+      ]
+    },
+    {
+      "frame": 667,
+      "confidence": "costume_luma",
+      "visible_ids": [
+        0,
+        1
+      ],
+      "luma": [
+        18.0,
+        144.0
+      ]
+    }
+  ]
+}
