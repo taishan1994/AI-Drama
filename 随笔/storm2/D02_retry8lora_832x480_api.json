@@ -1,0 +1,232 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "MiniMax_H3_Ref2VA_pruned_int8_convrot_tailtrim_repair_v1.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "MiniMaxH3SigmaShift",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "shift_video": 12,
+      "shift_audio": 3
+    }
+  },
+  "3": {
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 71008304
+    }
+  },
+  "4": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+      "type": "minimax",
+      "device": "default"
+    }
+  },
+  "5": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_video_vae_fp16.safetensors"
+    }
+  },
+  "6": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_audio_vae_fp32.safetensors"
+    }
+  },
+  "7": {
+    "class_type": "MiniMaxH3ReferenceToVideo",
+    "inputs": {
+      "clip": [
+        "4",
+        0
+      ],
+      "vae": [
+        "5",
+        0
+      ],
+      "audio_vae": [
+        "6",
+        0
+      ],
+      "prompt": "subject_definitions:\n<Subject 1> is Carlos from <Picture 1>: the same adult male face, short dark hair, stubble, olive scarf, dark tactical vest, gloves and body proportions. Use the board only for identity and clothing; never render its four-panel layout.\n<Subject 2> is the white-suited adult from <Picture 2>: sealed white protective suit, opaque black full-face visor, covered hands and feet. Apply this costume to every separate background performer; use the board only for costume and identity.\n<Video 1> is the original 00:10-00:20 performance reference. It defines the lead action, camera, framing, performer count, depth, occlusion, formation and timing.\n\nsummary:\n[reference generation] Create one continuous ten-second photorealistic live-action shot. Replace the source lead with Carlos and the background performers with white-suited adults. Follow the source performance from 00:10 to 00:20 exactly, continuing from the preceding shot with Carlos already within the dense formation.\n\nretention_analysis:\n<Subject 1> (throughout [Shot 1]): attribute_transfer - identity and clothing only; inherit the source lead's path, turns, upper-body actions, scale and timing.\n<Subject 2> (throughout [Shot 1]): attribute_transfer - costume only; preserve the source formation and each separate person's position and depth.\n<Video 1> (throughout [Shot 1]): fully_preserved - controls all motion, camera progression and timing. The still images are never visible in the output.\n\ndetailed_description:\nPhotorealistic real-actor movie cinematography, one uninterrupted shot. Begin with Carlos already back-facing or side-facing inside the same dense formation as the preceding segment. Reproduce the source lead's 00:10-00:20 movement and camera progression frame by frame, including the lateral passage through the ranks, turns, visibility changes and final position. Carlos is the only person in the formation who performs the lead's arm and body actions.\nThe white-suited people are a dense, quiet, stationary formation. Every person stands upright with both arms hanging straight down beside the body, hands resting beside the thighs, elbows pointing downward, shoulders relaxed. This exact arms-down posture remains unchanged for the entire shot while the camera and Carlos move through the formation. Keep their bodies separate, evenly spaced according to the source, and at stable adult scale. The frame remains filled by the white-suited formation.\nUse no separate location view, no studio background, no character-sheet panels, no titles, subtitles or watermarks. No new action is added to the formation. End on the source 00:20 composition and pose.\n\noverall_soundscape:\nNo dialogue, crowd voices or invented vocalizations. Discard generated audio in the final music-video edit.\n\nnon_diegetic_music:\nRestore the original performance music aligned to source 00:10-00:20 in the final edit.\n",
+      "width": 832,
+      "height": 480,
+      "length": 240,
+      "ref_image_size": "match",
+      "ref_images.ref_image_0": [
+        "20",
+        0
+      ],
+      "ref_videos.ref_video_0": [
+        "31",
+        0
+      ],
+      "ref_images.ref_image_1": [
+        "22",
+        0
+      ]
+    }
+  },
+  "8": {
+    "class_type": "BasicGuider",
+    "inputs": {
+      "model": [
+        "2",
+        0
+      ],
+      "conditioning": [
+        "7",
+        0
+      ]
+    }
+  },
+  "9": {
+    "class_type": "KSamplerSelect",
+    "inputs": {
+      "sampler_name": "euler"
+    }
+  },
+  "10": {
+    "class_type": "SamplerCustomAdvanced",
+    "inputs": {
+      "noise": [
+        "3",
+        0
+      ],
+      "guider": [
+        "8",
+        0
+      ],
+      "sampler": [
+        "9",
+        0
+      ],
+      "sigmas": [
+        "15",
+        1
+      ],
+      "latent_image": [
+        "7",
+        1
+      ]
+    }
+  },
+  "11": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "10",
+        0
+      ],
+      "vae": [
+        "5",
+        0
+      ]
+    }
+  },
+  "12": {
+    "class_type": "VAEDecodeAudio",
+    "inputs": {
+      "samples": [
+        "10",
+        0
+      ],
+      "vae": [
+        "6",
+        0
+      ]
+    }
+  },
+  "13": {
+    "class_type": "CreateVideo",
+    "inputs": {
+      "images": [
+        "11",
+        0
+      ],
+      "fps": 24,
+      "bit_depth": 8
+    }
+  },
+  "14": {
+    "class_type": "SaveVideo",
+    "inputs": {
+      "video": [
+        "13",
+        0
+      ],
+      "filename_prefix": "storm2/retry8lora/D02_retry8lora_832x480",
+      "format": "mp4",
+      "codec": "auto"
+    }
+  },
+  "15": {
+    "class_type": "MiniMaxH3PDDAccApply",
+    "inputs": {
+      "model": [
+        "2",
+        0
+      ],
+      "pdd_file": "MiniMax-H3-Ref2VA-Acc-8Step.safetensors",
+      "nfe": "8",
+      "lora_strength": 1,
+      "head_strength": 1,
+      "on_off_grid": "error"
+    }
+  },
+  "20": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "carlos_crowd/Carlos_4view_v1.png"
+    }
+  },
+  "22": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "carlos_crowd/Umbrella_white_4view_v1.png"
+    }
+  },
+  "30": {
+    "class_type": "LoadVideo",
+    "inputs": {
+      "file": "carlos_crowd/D02_10-20s.mp4"
+    }
+  },
+  "31": {
+    "class_type": "GetVideoComponents",
+    "inputs": {
+      "video": [
+        "30",
+        0
+      ]
+    }
+  },
+  "21": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "carlos_crowd/Umbrella_ruins_empty_v1.png"
+    }
+  },
+  "16": {
+    "class_type": "BasicScheduler",
+    "inputs": {
+      "model": [
+        "2",
+        0
+      ],
+      "scheduler": "normal",
+      "steps": 20,
+      "denoise": 1.0
+    }
+  }
+}

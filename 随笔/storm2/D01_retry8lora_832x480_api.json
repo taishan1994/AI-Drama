@@ -1,0 +1,232 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "MiniMax_H3_Ref2VA_pruned_int8_convrot_tailtrim_repair_v1.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "2": {
+    "class_type": "MiniMaxH3SigmaShift",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "shift_video": 12,
+      "shift_audio": 3
+    }
+  },
+  "3": {
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 71008301
+    }
+  },
+  "4": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+      "type": "minimax",
+      "device": "default"
+    }
+  },
+  "5": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_video_vae_fp16.safetensors"
+    }
+  },
+  "6": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_audio_vae_fp32.safetensors"
+    }
+  },
+  "7": {
+    "class_type": "MiniMaxH3ReferenceToVideo",
+    "inputs": {
+      "clip": [
+        "4",
+        0
+      ],
+      "vae": [
+        "5",
+        0
+      ],
+      "audio_vae": [
+        "6",
+        0
+      ],
+      "prompt": "subject_definitions:\n<Subject 1> is Carlos from <Picture 1>: same adult male face, short dark hair, stubble, olive scarf, dark tactical vest and gloves. Use only his identity and clothing from the four-view character board, not the board's layout or gray background.\n<Subject 2> is the white-suited operative from <Picture 2>: sealed white protective suit, opaque black full-face visor, covered hands and feet. Every background performer wears this design, while retaining a separate adult body in the original video formation. Use only the costume, not the board's layout or background.\n<Video 1> is the full original 00:00-00:10 performance reference. It is the primary source for every pose, turn, step, arm gesture, performer count, formation, occlusion, camera move, framing and timing. The original lead and all original background performers are replaced in appearance only.\n\nsummary:\n[reference generation] One continuous ten-second photorealistic live-action performance. Carlos replaces the original foreground lead. White-suited operatives replace all background performers. Reproduce the original video's movements and camera progression on the same beats. The entire visible background is a dense wall of operatives; no buildings, road, ground, open sky or establishing view are visible in these first ten seconds.\n\nretention_analysis:\n<Subject 1> (throughout [Shot 1]): attribute_transfer - identity and outfit only; inherit the original lead's pose, movement, screen position and changing apparent size from <Video 1>.\n<Subject 2> (throughout [Shot 1]): attribute_transfer - white protective costume and black visor only; inherit each original background person's position, depth, posture and timing from <Video 1>.\n<Video 1> (throughout [Shot 1]): fully_preserved - the camera and performance reference, including the close opening, the turn, the move toward the ranks and the progressively wider final composition.\n\ndetailed_description:\nReal-actor movie image, physically plausible human scale and movement, natural fabric and skin. The frame is packed from left edge to right edge and top to bottom with close, overlapping rows of white-suited operatives behind Carlos; their bodies and visors cover the entire background. Their heads and shoulders continue beyond the frame edges just as the original crowd does. This is a single continuous performance shot, never an empty-location view or a separate scene.\n[Shot 1, 00:00-00:03] Match the original close framing and timing. Carlos occupies the original lead's foreground position and reproduces the cigarette, hand-to-mouth and gaze movements. The white-suited ranks remain densely packed and mostly still. The operative directly behind Carlos starts occluded by Carlos, then becomes visible only when his body movement reveals that position. Keep individual operatives at stable physical depth and scale.\n[Shot 1, 00:03-00:06] Match the original lead's exact turn direction and progression from face to profile to back view. Match the source camera's changing composition; do not hold the initial close-up and do not create an independent zoom. Carlos begins moving toward the ranks as the original lead does. The crowd fills every exposed part of the frame.\n[Shot 1, 00:06-00:10] Follow the original back-facing movement into the dense ranks and its progressively wider framing. Preserve the original timing of the lead's one low outward arm gesture near the end, while the rows of operatives remain in formation with restrained, source-matched movement. The final screen position and apparent size of Carlos match the original ten-second frame. The operatives do not clap, wave or start dancing. No person grows or shrinks independently of the source's perspective and movement. No cut, reverse angle, different location, character-sheet panels, titles, subtitles or watermarks.\n\noverall_soundscape:\nNo dialogue, crowd speech or invented vocalizations. The generated soundtrack is discarded for the final music-video edit.\n\nnon_diegetic_music:\nThe original ten-second music master is restored in the final edit, perfectly aligned to <Video 1>.\n",
+      "width": 832,
+      "height": 480,
+      "length": 240,
+      "ref_image_size": "match",
+      "ref_images.ref_image_0": [
+        "20",
+        0
+      ],
+      "ref_videos.ref_video_0": [
+        "31",
+        0
+      ],
+      "ref_images.ref_image_1": [
+        "22",
+        0
+      ]
+    }
+  },
+  "8": {
+    "class_type": "BasicGuider",
+    "inputs": {
+      "model": [
+        "2",
+        0
+      ],
+      "conditioning": [
+        "7",
+        0
+      ]
+    }
+  },
+  "9": {
+    "class_type": "KSamplerSelect",
+    "inputs": {
+      "sampler_name": "euler"
+    }
+  },
+  "10": {
+    "class_type": "SamplerCustomAdvanced",
+    "inputs": {
+      "noise": [
+        "3",
+        0
+      ],
+      "guider": [
+        "8",
+        0
+      ],
+      "sampler": [
+        "9",
+        0
+      ],
+      "sigmas": [
+        "15",
+        1
+      ],
+      "latent_image": [
+        "7",
+        1
+      ]
+    }
+  },
+  "11": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "10",
+        0
+      ],
+      "vae": [
+        "5",
+        0
+      ]
+    }
+  },
+  "12": {
+    "class_type": "VAEDecodeAudio",
+    "inputs": {
+      "samples": [
+        "10",
+        0
+      ],
+      "vae": [
+        "6",
+        0
+      ]
+    }
+  },
+  "13": {
+    "class_type": "CreateVideo",
+    "inputs": {
+      "images": [
+        "11",
+        0
+      ],
+      "fps": 24,
+      "bit_depth": 8
+    }
+  },
+  "14": {
+    "class_type": "SaveVideo",
+    "inputs": {
+      "video": [
+        "13",
+        0
+      ],
+      "filename_prefix": "storm2/retry8lora/D01_retry8lora_832x480",
+      "format": "mp4",
+      "codec": "auto"
+    }
+  },
+  "15": {
+    "class_type": "MiniMaxH3PDDAccApply",
+    "inputs": {
+      "model": [
+        "2",
+        0
+      ],
+      "pdd_file": "MiniMax-H3-Ref2VA-Acc-8Step.safetensors",
+      "nfe": "8",
+      "lora_strength": 1,
+      "head_strength": 1,
+      "on_off_grid": "error"
+    }
+  },
+  "20": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "carlos_crowd/Carlos_4view_v1.png"
+    }
+  },
+  "22": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "carlos_crowd/Umbrella_white_4view_v1.png"
+    }
+  },
+  "30": {
+    "class_type": "LoadVideo",
+    "inputs": {
+      "file": "carlos_crowd/D01_00-10s.mp4"
+    }
+  },
+  "31": {
+    "class_type": "GetVideoComponents",
+    "inputs": {
+      "video": [
+        "30",
+        0
+      ]
+    }
+  },
+  "21": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "carlos_crowd/Umbrella_ruins_empty_v1.png"
+    }
+  },
+  "16": {
+    "class_type": "BasicScheduler",
+    "inputs": {
+      "model": [
+        "2",
+        0
+      ],
+      "scheduler": "normal",
+      "steps": 20,
+      "denoise": 1.0
+    }
+  }
+}
