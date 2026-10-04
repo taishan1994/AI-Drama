@@ -1,0 +1,26 @@
+subject_definitions:
+<Subject 1> (S1) is Sun Sheng, one lean adult Chinese scholar matching the supplied character reference: same face, tied black hair, gray-blue robe, dark sash, and black cloth shoes.
+<Subject 2> is the same fixed Liugou Temple study: desk at screen left, paper window rear-left, centered wooden door with an interior metal latch, bed at screen right. Preserve the supplied empty-room composition.
+<Subject 3> is Sun Sheng's cloth satchel, short knife, and single oil lamp from the prop reference.
+The fourth reference image is only a clean room-layout guide: its closed central door, left desk, rear-left window, and right bed must remain in those positions.
+
+summary:
+A 10-second live-action historical drama establishing the study's layout and showing Sun Sheng personally close and latch the central door before settling in. Calm, deliberate, realistic motion. One continuous evening visit, no supernatural events and no dialogue.
+
+retention_analysis:
+Sun Sheng is the only person. He enters through the central door, puts the satchel on the floor beside the left desk, visibly closes and latches the central door, places one short knife on the right edge of the left desk and one lit oil lamp on its left edge, then sits on the right bed and removes one shoe. The room layout never changes.
+
+detailed_description:
+[00:00-00:02] Begin with a wide interior view matching the room reference: desk and lamp area left, paper window rear-left, central doorway, bed right. In rain, Sun Sheng enters alone through the central door carrying one cloth satchel. Keep the doorway and his entry fully visible.
+[00:02-00:03] He sets the satchel on the floor directly beside the left desk, then turns back toward the door. Do not put it on the chair or bed.
+[00:03-00:04] In a medium shot from inside, Sun Sheng pulls the central wooden door fully closed. Show the door panels meeting the frame; no cut during this motion.
+[00:04-00:05.5] Cut to a clear, unobstructed close-up of the room-side metal latch. Sun Sheng's hand visibly slides the horizontal metal bar into its receiving bracket. Hold long enough to see the bar seated and hear one distinct metal click. The door remains shut and latched afterward. His body must not cover the latch.
+[00:05.5-00:06.8] Cut back to the left desk. He places the short knife on the desk's right edge and the one lit oil lamp on its left edge, visibly separated. Do not move the lamp again.
+[00:06.8-00:08.5] He crosses to the bed on the right, sits on its edge, and removes exactly one wet shoe. Do not lie down; the other shoe remains on.
+[00:08.5-00:10] He settles seated on the right bed, tired but alert, and looks toward the visibly closed and latched center door. End with the stable layout readable: satchel on the floor by the left desk, knife at desk-right, lamp at desk-left, door shut and latched center, Sun Sheng on the right bed. No other people, shadows, creatures, or supernatural effects.
+
+overall_soundscape:
+Rain outside the rear-left paper window and mild mountain wind. One door creak as Sun Sheng closes the door, one distinct metal latch click during the close-up, cloth satchel settling on the floor, knife and lamp touching wood, and one quiet bed creak. No intelligible speech, no narration, no music.
+
+non_diegetic_music:
+None.

@@ -1,0 +1,225 @@
+{
+  "1": {
+    "class_type": "ClipProjLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_4b_int8_convrot.safetensors",
+      "type": "krea2",
+      "projection": "mmh3-4b-ClipProj-v3-mlp.safetensors",
+      "device": "cuda:0",
+      "mode": "streaming"
+    }
+  },
+  "2": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "minimax_h3_ref2va_pruned_int8_convrot.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "3": {
+    "class_type": "MiniMaxH3SigmaShift",
+    "inputs": {
+      "model": [
+        "2",
+        0
+      ],
+      "shift_video": 12.0,
+      "shift_audio": 3.0
+    }
+  },
+  "4": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_video_vae_fp16.safetensors"
+    }
+  },
+  "5": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_audio_vae_fp32.safetensors"
+    }
+  },
+  "6": {
+    "class_type": "MiniMaxH3ReferenceToVideo",
+    "inputs": {
+      "clip": [
+        "1",
+        0
+      ],
+      "vae": [
+        "4",
+        0
+      ],
+      "audio_vae": [
+        "5",
+        0
+      ],
+      "prompt": "subject_definitions:\n<Picture 1> Fixed 柳沟寺 study: door centered, paper window and desk left, bed right foreground.\n<Picture 2> 孙生 (S1), late-20s scholar, gray-blue robe, same face and costume.\n\nsummary:\nAt dawn family members enter only through the left paper window and lift S1 to the bed.\n\nretention_analysis:\nKeep the exact room geometry and left/right anchors from the supplied references. Preserve character faces, costume, scale, and exits. Live-action historical cinema; no subtitles, logos, watermarks, modern objects, or extra human voices.\n\ndetailed_description:\nThe third supplied reference is a locked S05 composition guide: preserve its family positions, left window entrance, wounded S1 on the floor, and fully closed center door. [Shot 1] Start after the family has entered through the left-rear paper lattice window. Exactly three indistinct family silhouettes remain on the left half of the room. Keep the centered wooden door completely shut, latched, and opaque for every frame; it is a static background anchor and nobody touches, approaches, crosses, or opens it. [Shot 2] The family carries a lamp and folded quilt only across the left half, with the camera framing the left window and desk more prominently; the closed center door remains visible at the far right edge. [Shot 3] They lift S1 from the floor to the right bed while staying clear of the door. Do not show an open doorway, exterior light through the center door, a person in the doorway, a demon, a door gap, or readable family dialogue.\n\noverall_soundscape:\nDawn birds, hurried steps, lamp glass, muffled nonverbal gasps, paper and cloth movement, bed creak.\n\nnon_diegetic_music:\nN/A - no score.",
+      "width": 1344,
+      "height": 768,
+      "length": 81,
+      "ref_image_size": "match",
+      "ref_images.ref_image_0": [
+        "16",
+        0
+      ],
+      "ref_images.ref_image_1": [
+        "17",
+        0
+      ],
+      "ref_images.ref_image_2": [
+        "18",
+        0
+      ]
+    }
+  },
+  "7": {
+    "class_type": "BasicGuider",
+    "inputs": {
+      "model": [
+        "30",
+        0
+      ],
+      "conditioning": [
+        "6",
+        0
+      ]
+    }
+  },
+  "8": {
+    "class_type": "KSamplerSelect",
+    "inputs": {
+      "sampler_name": "euler"
+    }
+  },
+  "9": {
+    "class_type": "MiniMaxH3PDDAccApply",
+    "inputs": {
+      "model": [
+        "3",
+        0
+      ],
+      "pdd_file": "MiniMax-H3-Ref2VA-Acc-8Step.safetensors",
+      "nfe": "8",
+      "lora_strength": 1.0,
+      "head_strength": 1.0,
+      "on_off_grid": "error",
+      "partition_check": "error"
+    }
+  },
+  "10": {
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 881006
+    }
+  },
+  "11": {
+    "class_type": "SamplerCustomAdvanced",
+    "inputs": {
+      "noise": [
+        "10",
+        0
+      ],
+      "guider": [
+        "7",
+        0
+      ],
+      "sampler": [
+        "8",
+        0
+      ],
+      "sigmas": [
+        "9",
+        1
+      ],
+      "latent_image": [
+        "6",
+        1
+      ]
+    }
+  },
+  "12": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "11",
+        0
+      ],
+      "vae": [
+        "4",
+        0
+      ]
+    }
+  },
+  "13": {
+    "class_type": "VAEDecodeAudio",
+    "inputs": {
+      "samples": [
+        "11",
+        0
+      ],
+      "vae": [
+        "5",
+        0
+      ]
+    }
+  },
+  "14": {
+    "class_type": "CreateVideo",
+    "inputs": {
+      "images": [
+        "12",
+        0
+      ],
+      "audio": [
+        "13",
+        0
+      ],
+      "fps": 24.0,
+      "bit_depth": 8,
+      "color_space": "sRGB",
+      "codec": "none"
+    }
+  },
+  "15": {
+    "class_type": "SaveVideo",
+    "inputs": {
+      "video": [
+        "14",
+        0
+      ],
+      "filename_prefix": "video/shanxiao_live_action/shot_05",
+      "format": "mp4",
+      "format.codec": "h264"
+    }
+  },
+  "16": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "shanxiao_s05_0.png"
+    }
+  },
+  "17": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "shanxiao_s05_1.png"
+    }
+  },
+  "18": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "shanxiao_s05_2.png"
+    }
+  },
+  "30": {
+    "class_type": "PathchSageAttentionKJ",
+    "inputs": {
+      "model": [
+        "9",
+        0
+      ],
+      "sage_attention": "auto",
+      "allow_compile": false
+    }
+  }
+}

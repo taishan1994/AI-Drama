@@ -1,0 +1,8 @@
+file '/nfs/FM/gongoubo/new_project/github/aigc/AI-Drama/聊斋志异/山魈/视频/source/S01_他自己的声音_v3d_自验通过.mp4'
+file '/nfs/FM/gongoubo/new_project/github/aigc/AI-Drama/聊斋志异/山魈/视频/source/S02_借宿柳沟寺_v3_自验通过.mp4'
+file '/nfs/FM/gongoubo/new_project/github/aigc/AI-Drama/聊斋志异/山魈/视频/source/S03_第一次应声_v3i_自验通过.mp4'
+file '/nfs/FM/gongoubo/new_project/github/aigc/AI-Drama/聊斋志异/山魈/视频/source/S04_第二次应声_v3c_自验通过.mp4'
+file '/nfs/FM/gongoubo/new_project/github/aigc/AI-Drama/聊斋志异/山魈/视频/source/S05_灰线_脚印从床下爬出_v3b_自验通过.mp4'
+file '/nfs/FM/gongoubo/new_project/github/aigc/AI-Drama/聊斋志异/山魈/视频/source/S06_床底第三声_v3b_自验通过.mp4'
+file '/nfs/FM/gongoubo/new_project/github/aigc/AI-Drama/聊斋志异/山魈/视频/source/S07_不出声_v3e_自验通过.mp4'
+file '/nfs/FM/gongoubo/new_project/github/aigc/AI-Drama/聊斋志异/山魈/视频/source/S08_空屋回声_v3a_自验通过.mp4'

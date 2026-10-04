@@ -1,0 +1,255 @@
+{
+  "1": {
+    "class_type": "ClipProjLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_4b_int8_convrot.safetensors",
+      "type": "krea2",
+      "projection": "mmh3-4b-ClipProj-v3-mlp.safetensors",
+      "device": "cuda:0",
+      "mode": "streaming"
+    }
+  },
+  "2": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "minimax_h3_ref2va_pruned_int8_convrot.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "3": {
+    "class_type": "MiniMaxH3SigmaShift",
+    "inputs": {
+      "model": [
+        "2",
+        0
+      ],
+      "shift_video": 12.0,
+      "shift_audio": 3.0
+    }
+  },
+  "4": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_video_vae_fp16.safetensors"
+    }
+  },
+  "5": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_audio_vae_fp32.safetensors"
+    }
+  },
+  "6": {
+    "class_type": "MiniMaxH3ReferenceToVideo",
+    "inputs": {
+      "clip": [
+        "1",
+        0
+      ],
+      "vae": [
+        "4",
+        0
+      ],
+      "audio_vae": [
+        "5",
+        0
+      ],
+      "prompt": "Create a 15-second realistic Chinese period horror segment. Use the supplied reference as the exact previous-frame continuity. Same rainy night, same fixed temple study, same gray-blue-robed young scholar Sun Sheng and face. Bed on frame right, desk and window left, central wooden door at the back. Start with a motivated HARD CUT from the previous left-desk shot to a low camera beside the right bed. Sun Sheng enters this angle carrying one oil lamp in his LEFT hand and one short knife in his RIGHT hand. Keep both props in those hands throughout; his mouth stays closed and he never speaks.\n\nHe steps to the bed as the hanging quilt is pulled sharply toward the dark space beneath. He braces his left forearm and lamp beside the bed, keeps the knife in his right hand, and makes one controlled downward thrust into the wooden floor just outside the bed. The knife only hits wood with a dull sound. Absolutely no blood, no wounds, no red or dark liquid, no stains on the floor, no gore. No splinters or flying debris. The quilt remains intact at first.\n\nOne single long yellow-brown clawed forearm reaches from beneath the right bed, catches only the loose quilt edge and briefly tugs it. Show exactly one clawed hand and one forearm, anatomically attached to an unseen creature fully hidden beneath the bed. No second arm, no body, no face, no human hand. Sun Sheng holds the lamp in his left and knife in his right; he lifts the lamp so its warm light lands on the claw. The single claw recoils fully into darkness. The quilt edge is left slightly torn, with no stains. Sun Sheng uses the knife once to free the snagged cloth, then backs away toward the central door without dropping either prop.\n\nAt the door, show a clear close view of Sun Sheng's LEFT hand reaching to and visibly lifting the interior wooden latch out of its socket. Only after the latch is visibly removed does he push the door open a narrow hand-width. He stays inside the threshold. End with his back to camera, left lamp raised, right knife down, cold rain visible outside. The door is only opened by his hand; it must not open by itself.\n\nKeep the set layout and wardrobe stable. No camera teleport, no time-of-day shift, no stains or injury marks, no extra characters, no creature above bed level, no blood, no writing, no modern objects. Restrained physical suspense, natural grounded movement, photorealistic.\n\nNative synchronized sound: quick steps to bed, quilt scrape, one soft wooden impact from the knife point, fabric tug, one short strained breath, quiet lamp movement, low nonverbal growl from beneath only when the claw withdraws, retreating steps, a clear wood latch lifted by hand, door hinge creak, steady rain. No words, no scream, no narration, no music, no extra voices.",
+      "width": 1344,
+      "height": 768,
+      "length": 360,
+      "ref_image_size": "match",
+      "ref_images.ref_image_0": [
+        "16",
+        0
+      ],
+      "ref_images.ref_image_1": [
+        "17",
+        0
+      ],
+      "ref_images.ref_image_2": [
+        "18",
+        0
+      ],
+      "ref_images.ref_image_3": [
+        "19",
+        0
+      ],
+      "ref_images.ref_image_4": [
+        "20",
+        0
+      ],
+      "ref_images.ref_image_5": [
+        "21",
+        0
+      ]
+    }
+  },
+  "7": {
+    "class_type": "BasicGuider",
+    "inputs": {
+      "model": [
+        "30",
+        0
+      ],
+      "conditioning": [
+        "6",
+        0
+      ]
+    }
+  },
+  "8": {
+    "class_type": "KSamplerSelect",
+    "inputs": {
+      "sampler_name": "euler"
+    }
+  },
+  "9": {
+    "class_type": "MiniMaxH3PDDAccApply",
+    "inputs": {
+      "model": [
+        "3",
+        0
+      ],
+      "pdd_file": "MiniMax-H3-Ref2VA-Acc-8Step.safetensors",
+      "nfe": "8",
+      "lora_strength": 1.0,
+      "head_strength": 1.0,
+      "on_off_grid": "error",
+      "partition_check": "error"
+    }
+  },
+  "10": {
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 904273
+    }
+  },
+  "11": {
+    "class_type": "SamplerCustomAdvanced",
+    "inputs": {
+      "noise": [
+        "10",
+        0
+      ],
+      "guider": [
+        "7",
+        0
+      ],
+      "sampler": [
+        "8",
+        0
+      ],
+      "sigmas": [
+        "9",
+        1
+      ],
+      "latent_image": [
+        "6",
+        1
+      ]
+    }
+  },
+  "12": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "11",
+        0
+      ],
+      "vae": [
+        "4",
+        0
+      ]
+    }
+  },
+  "13": {
+    "class_type": "VAEDecodeAudio",
+    "inputs": {
+      "samples": [
+        "11",
+        0
+      ],
+      "vae": [
+        "5",
+        0
+      ]
+    }
+  },
+  "14": {
+    "class_type": "CreateVideo",
+    "inputs": {
+      "images": [
+        "12",
+        0
+      ],
+      "audio": [
+        "13",
+        0
+      ],
+      "fps": 24.0,
+      "bit_depth": 8,
+      "color_space": "sRGB",
+      "codec": "none"
+    }
+  },
+  "15": {
+    "class_type": "SaveVideo",
+    "inputs": {
+      "video": [
+        "14",
+        0
+      ],
+      "filename_prefix": "video/shanxiao_v3b/S07",
+      "format": "mp4",
+      "format.codec": "h264"
+    }
+  },
+  "16": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "shanxiao_v3_s07_1.png"
+    }
+  },
+  "17": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "shanxiao_v3_s07_2.png"
+    }
+  },
+  "18": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "shanxiao_v3_s07_3.png"
+    }
+  },
+  "19": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "shanxiao_v3_s07_4.png"
+    }
+  },
+  "20": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "shanxiao_v3_s07_5.png"
+    }
+  },
+  "21": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "shanxiao_v3b_opening.png"
+    }
+  },
+  "30": {
+    "class_type": "PathchSageAttentionKJ",
+    "inputs": {
+      "model": [
+        "9",
+        0
+      ],
+      "sage_attention": "auto",
+      "allow_compile": false
+    }
+  }
+}

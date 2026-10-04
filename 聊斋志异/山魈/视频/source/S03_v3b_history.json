@@ -1,0 +1,300 @@
+{
+  "prompt": [
+    7,
+    "0028111d-e67a-4cdc-ac12-60295894f140",
+    {
+      "1": {
+        "class_type": "ClipProjLoader",
+        "inputs": {
+          "clip_name": "qwen3vl_4b_int8_convrot.safetensors",
+          "type": "krea2",
+          "projection": "mmh3-4b-ClipProj-v3-mlp.safetensors",
+          "device": "cuda:0",
+          "mode": "streaming"
+        }
+      },
+      "2": {
+        "class_type": "UNETLoader",
+        "inputs": {
+          "unet_name": "minimax_h3_ref2va_pruned_int8_convrot.safetensors",
+          "weight_dtype": "default"
+        }
+      },
+      "3": {
+        "class_type": "MiniMaxH3SigmaShift",
+        "inputs": {
+          "model": [
+            "2",
+            0
+          ],
+          "shift_video": 12.0,
+          "shift_audio": 3.0
+        }
+      },
+      "4": {
+        "class_type": "VAELoader",
+        "inputs": {
+          "vae_name": "minimax_h3_video_vae_fp16.safetensors"
+        }
+      },
+      "5": {
+        "class_type": "VAELoader",
+        "inputs": {
+          "vae_name": "minimax_h3_audio_vae_fp32.safetensors"
+        }
+      },
+      "6": {
+        "class_type": "MiniMaxH3ReferenceToVideo",
+        "inputs": {
+          "clip": [
+            "1",
+            0
+          ],
+          "vae": [
+            "4",
+            0
+          ],
+          "audio_vae": [
+            "5",
+            0
+          ],
+          "prompt": "subject_definitions:\n<Subject 1> (S1) is the same adult Chinese scholar Sun Sheng from the supplied character reference: same face, tied hair, gray-blue robe, dark sash, one shoe removed after sitting on the right bed.\n<Subject 2> (S2) is the unseen Shanxiao. It has no visible body in this segment. It copies exactly Sun Sheng's one spoken word in the same low, dry adult male Mandarin voice, from outside the door, and later knocks beneath the left desk.\n<Subject 3> is the same Liugou Temple study: left desk and lit oil lamp, rear-left paper window, centered closed wooden door with the interior horizontal latch, right bed.\nThe fourth supplied image is the exact continuity reference from the previous segment's ending: use it to preserve the room layout and Sun Sheng's starting position. It does not authorize opening the door.\n\nsummary:\nA 10-second live-action Chinese historical horror scene. Three knocks come from the latched central door. Sun Sheng approaches, asks “谁？”, and the unseen voice copies him from outside. The door stays fully closed and locked throughout. Then three knocks move to the underside of the left desk.\n\nretention_analysis:\nExactly one visible person: Sun Sheng. He starts seated at the right bed, rises, stops two steps inside the central door, speaks once, then backs away and turns toward the left desk. The central door never opens, cracks, or loses its inserted latch. The unseen copied voice is never represented by a visible person, face, hand, or shadow. The final three knocks come only from under the left desk.\n\ndetailed_description:\n[00:00-00:01] Start from the supplied continuity reference: Sun Sheng is seated at the right edge of the bed, one shoe removed, looking toward the centered fully shut door. Begin with a clear insert of the inside horizontal latch already seated in its receiving bracket. The door panels meet tightly; no light or gap shows through the center seam.\n[00:01-00:03] Three separate dry knocks sound from outside the central door. Sun Sheng rises from the bed and takes only two cautious steps, stopping two steps inside the door. The door remains completely shut, the horizontal latch remains fully inserted and motionless.\n[00:03-00:04] Medium close shot of Sun Sheng facing the door. He visibly whispers exactly one word in a low, careful adult male Mandarin voice: “谁？”. Make natural lip motion only during this word.\n[00:04-00:05] Cut to the closed door and clearly visible inserted latch. An unseen voice directly outside repeats exactly “谁？” in the identical male voice and timbre. Sun Sheng is not visible speaking. The latch gives one tiny vibration but stays fully inserted; both door leaves stay closed, with no opening or gap.\n[00:05-00:07] Cut back to Sun Sheng. He freezes, closes his lips, then backs exactly one step away from the closed door and turns his eyes and shoulders toward the left desk. Keep his mouth closed; no further speech.\n[00:07-00:10] Three separate knocks now come from directly beneath the left desk, one at a time. The camera follows his gaze down and ends on a low view of the desk underside and trembling dust. The door remains closed and latched in the background. No creature, hand, face, shadow, extra person, or supernatural image appears.\n\noverall_soundscape:\nRain at the rear-left paper window. Exactly three knocks outside the center door, Sun Sheng's one spoken word “谁？”, the exact copied “谁？” from outside the still-latched door, a faint latch tremor, then exactly three knocks beneath the left desk. No other intelligible speech, no additional knocks, no footsteps outside, no music.\n\nnon_diegetic_music:\nNone.",
+          "width": 1344,
+          "height": 768,
+          "length": 240,
+          "ref_image_size": "match",
+          "ref_images.ref_image_0": [
+            "16",
+            0
+          ],
+          "ref_images.ref_image_1": [
+            "17",
+            0
+          ],
+          "ref_images.ref_image_2": [
+            "18",
+            0
+          ]
+        }
+      },
+      "7": {
+        "class_type": "BasicGuider",
+        "inputs": {
+          "model": [
+            "30",
+            0
+          ],
+          "conditioning": [
+            "6",
+            0
+          ]
+        }
+      },
+      "8": {
+        "class_type": "KSamplerSelect",
+        "inputs": {
+          "sampler_name": "euler"
+        }
+      },
+      "9": {
+        "class_type": "MiniMaxH3PDDAccApply",
+        "inputs": {
+          "model": [
+            "3",
+            0
+          ],
+          "pdd_file": "MiniMax-H3-Ref2VA-Acc-8Step.safetensors",
+          "nfe": "8",
+          "lora_strength": 1.0,
+          "head_strength": 1.0,
+          "on_off_grid": "error",
+          "partition_check": "error"
+        }
+      },
+      "10": {
+        "class_type": "RandomNoise",
+        "inputs": {
+          "noise_seed": 904273
+        }
+      },
+      "11": {
+        "class_type": "SamplerCustomAdvanced",
+        "inputs": {
+          "noise": [
+            "10",
+            0
+          ],
+          "guider": [
+            "7",
+            0
+          ],
+          "sampler": [
+            "8",
+            0
+          ],
+          "sigmas": [
+            "9",
+            1
+          ],
+          "latent_image": [
+            "6",
+            1
+          ]
+        }
+      },
+      "12": {
+        "class_type": "VAEDecode",
+        "inputs": {
+          "samples": [
+            "11",
+            0
+          ],
+          "vae": [
+            "4",
+            0
+          ]
+        }
+      },
+      "13": {
+        "class_type": "VAEDecodeAudio",
+        "inputs": {
+          "samples": [
+            "11",
+            0
+          ],
+          "vae": [
+            "5",
+            0
+          ]
+        }
+      },
+      "14": {
+        "class_type": "CreateVideo",
+        "inputs": {
+          "images": [
+            "12",
+            0
+          ],
+          "audio": [
+            "13",
+            0
+          ],
+          "fps": 24.0,
+          "bit_depth": 8,
+          "color_space": "sRGB",
+          "codec": "none"
+        }
+      },
+      "15": {
+        "class_type": "SaveVideo",
+        "inputs": {
+          "video": [
+            "14",
+            0
+          ],
+          "filename_prefix": "video/shanxiao_v3b/S03",
+          "format": "mp4",
+          "format.codec": "h264"
+        }
+      },
+      "16": {
+        "class_type": "LoadImage",
+        "inputs": {
+          "image": "shanxiao_v3_s03_1.png"
+        }
+      },
+      "17": {
+        "class_type": "LoadImage",
+        "inputs": {
+          "image": "shanxiao_v3_s03_2.png"
+        }
+      },
+      "18": {
+        "class_type": "LoadImage",
+        "inputs": {
+          "image": "shanxiao_v3b_opening.png"
+        }
+      },
+      "30": {
+        "class_type": "PathchSageAttentionKJ",
+        "inputs": {
+          "model": [
+            "9",
+            0
+          ],
+          "sage_attention": "auto",
+          "allow_compile": false
+        }
+      }
+    },
+    {
+      "client_id": "shanxiao-v3-single-shot",
+      "create_time": 1790512080520
+    },
+    [
+      "15"
+    ]
+  ],
+  "outputs": {
+    "15": {
+      "images": [
+        {
+          "filename": "S03_00001_.mp4",
+          "subfolder": "video/shanxiao_v3b",
+          "type": "output"
+        }
+      ],
+      "animated": [
+        true
+      ]
+    }
+  },
+  "status": {
+    "status_str": "success",
+    "completed": true,
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "0028111d-e67a-4cdc-ac12-60295894f140",
+          "timestamp": 1790512080522
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "8",
+            "9",
+            "10",
+            "16",
+            "17",
+            "30"
+          ],
+          "prompt_id": "0028111d-e67a-4cdc-ac12-60295894f140",
+          "timestamp": 1790512080573
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "0028111d-e67a-4cdc-ac12-60295894f140",
+          "timestamp": 1790512877507
+        }
+      ]
+    ]
+  },
+  "meta": {
+    "15": {
+      "node_id": "15",
+      "display_node": "15",
+      "parent_node": null,
+      "real_node_id": "15"
+    }
+  }
+}

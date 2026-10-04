@@ -1,0 +1,311 @@
+{
+  "prompt": [
+    5,
+    "8246e42a-9748-4160-8ea0-2f336e871ec4",
+    {
+      "1": {
+        "class_type": "ClipProjLoader",
+        "inputs": {
+          "clip_name": "qwen3vl_4b_int8_convrot.safetensors",
+          "type": "krea2",
+          "projection": "mmh3-4b-ClipProj-v3-mlp.safetensors",
+          "device": "cuda:0",
+          "mode": "streaming"
+        }
+      },
+      "2": {
+        "class_type": "UNETLoader",
+        "inputs": {
+          "unet_name": "minimax_h3_ref2va_pruned_int8_convrot.safetensors",
+          "weight_dtype": "default"
+        }
+      },
+      "3": {
+        "class_type": "MiniMaxH3SigmaShift",
+        "inputs": {
+          "model": [
+            "2",
+            0
+          ],
+          "shift_video": 12.0,
+          "shift_audio": 3.0
+        }
+      },
+      "4": {
+        "class_type": "VAELoader",
+        "inputs": {
+          "vae_name": "minimax_h3_video_vae_fp16.safetensors"
+        }
+      },
+      "5": {
+        "class_type": "VAELoader",
+        "inputs": {
+          "vae_name": "minimax_h3_audio_vae_fp32.safetensors"
+        }
+      },
+      "6": {
+        "class_type": "MiniMaxH3ReferenceToVideo",
+        "inputs": {
+          "clip": [
+            "1",
+            0
+          ],
+          "vae": [
+            "4",
+            0
+          ],
+          "audio_vae": [
+            "5",
+            0
+          ],
+          "prompt": "subject_definitions:\n<Subject 1> (S1) is Sun Sheng, one lean adult Chinese scholar matching the supplied character reference: same face, tied black hair, gray-blue robe, dark sash, and black cloth shoes.\n<Subject 2> is the same fixed Liugou Temple study: desk at screen left, paper window rear-left, centered wooden door with an interior metal latch, bed at screen right. Preserve the supplied empty-room composition.\n<Subject 3> is Sun Sheng's cloth satchel, short knife, and single oil lamp from the prop reference.\nThe fourth reference image is only a clean room-layout guide: its closed central door, left desk, rear-left window, and right bed must remain in those positions.\n\nsummary:\nA 10-second live-action historical drama establishing the study's layout and showing Sun Sheng personally close and latch the central door before settling in. Calm, deliberate, realistic motion. One continuous evening visit, no supernatural events and no dialogue.\n\nretention_analysis:\nSun Sheng is the only person. He enters through the central door, puts the satchel on the floor beside the left desk, visibly closes and latches the central door, places one short knife on the right edge of the left desk and one lit oil lamp on its left edge, then sits on the right bed and removes one shoe. The room layout never changes.\n\ndetailed_description:\n[00:00-00:02] Begin with a wide interior view matching the room reference: desk and lamp area left, paper window rear-left, central doorway, bed right. In rain, Sun Sheng enters alone through the central door carrying one cloth satchel. Keep the doorway and his entry fully visible.\n[00:02-00:03] He sets the satchel on the floor directly beside the left desk, then turns back toward the door. Do not put it on the chair or bed.\n[00:03-00:04] In a medium shot from inside, Sun Sheng pulls the central wooden door fully closed. Show the door panels meeting the frame; no cut during this motion.\n[00:04-00:05.5] Cut to a clear, unobstructed close-up of the room-side metal latch. Sun Sheng's hand visibly slides the horizontal metal bar into its receiving bracket. Hold long enough to see the bar seated and hear one distinct metal click. The door remains shut and latched afterward. His body must not cover the latch.\n[00:05.5-00:06.8] Cut back to the left desk. He places the short knife on the desk's right edge and the one lit oil lamp on its left edge, visibly separated. Do not move the lamp again.\n[00:06.8-00:08.5] He crosses to the bed on the right, sits on its edge, and removes exactly one wet shoe. Do not lie down; the other shoe remains on.\n[00:08.5-00:10] He settles seated on the right bed, tired but alert, and looks toward the visibly closed and latched center door. End with the stable layout readable: satchel on the floor by the left desk, knife at desk-right, lamp at desk-left, door shut and latched center, Sun Sheng on the right bed. No other people, shadows, creatures, or supernatural effects.\n\noverall_soundscape:\nRain outside the rear-left paper window and mild mountain wind. One door creak as Sun Sheng closes the door, one distinct metal latch click during the close-up, cloth satchel settling on the floor, knife and lamp touching wood, and one quiet bed creak. No intelligible speech, no narration, no music.\n\nnon_diegetic_music:\nNone.",
+          "width": 1344,
+          "height": 768,
+          "length": 240,
+          "ref_image_size": "match",
+          "ref_images.ref_image_0": [
+            "16",
+            0
+          ],
+          "ref_images.ref_image_1": [
+            "17",
+            0
+          ],
+          "ref_images.ref_image_2": [
+            "18",
+            0
+          ],
+          "ref_images.ref_image_3": [
+            "19",
+            0
+          ]
+        }
+      },
+      "7": {
+        "class_type": "BasicGuider",
+        "inputs": {
+          "model": [
+            "30",
+            0
+          ],
+          "conditioning": [
+            "6",
+            0
+          ]
+        }
+      },
+      "8": {
+        "class_type": "KSamplerSelect",
+        "inputs": {
+          "sampler_name": "euler"
+        }
+      },
+      "9": {
+        "class_type": "MiniMaxH3PDDAccApply",
+        "inputs": {
+          "model": [
+            "3",
+            0
+          ],
+          "pdd_file": "MiniMax-H3-Ref2VA-Acc-8Step.safetensors",
+          "nfe": "8",
+          "lora_strength": 1.0,
+          "head_strength": 1.0,
+          "on_off_grid": "error",
+          "partition_check": "error"
+        }
+      },
+      "10": {
+        "class_type": "RandomNoise",
+        "inputs": {
+          "noise_seed": 904272
+        }
+      },
+      "11": {
+        "class_type": "SamplerCustomAdvanced",
+        "inputs": {
+          "noise": [
+            "10",
+            0
+          ],
+          "guider": [
+            "7",
+            0
+          ],
+          "sampler": [
+            "8",
+            0
+          ],
+          "sigmas": [
+            "9",
+            1
+          ],
+          "latent_image": [
+            "6",
+            1
+          ]
+        }
+      },
+      "12": {
+        "class_type": "VAEDecode",
+        "inputs": {
+          "samples": [
+            "11",
+            0
+          ],
+          "vae": [
+            "4",
+            0
+          ]
+        }
+      },
+      "13": {
+        "class_type": "VAEDecodeAudio",
+        "inputs": {
+          "samples": [
+            "11",
+            0
+          ],
+          "vae": [
+            "5",
+            0
+          ]
+        }
+      },
+      "14": {
+        "class_type": "CreateVideo",
+        "inputs": {
+          "images": [
+            "12",
+            0
+          ],
+          "audio": [
+            "13",
+            0
+          ],
+          "fps": 24.0,
+          "bit_depth": 8,
+          "color_space": "sRGB",
+          "codec": "none"
+        }
+      },
+      "15": {
+        "class_type": "SaveVideo",
+        "inputs": {
+          "video": [
+            "14",
+            0
+          ],
+          "filename_prefix": "video/shanxiao_v3b/S02",
+          "format": "mp4",
+          "format.codec": "h264"
+        }
+      },
+      "16": {
+        "class_type": "LoadImage",
+        "inputs": {
+          "image": "shanxiao_v3_s02_1.png"
+        }
+      },
+      "17": {
+        "class_type": "LoadImage",
+        "inputs": {
+          "image": "shanxiao_v3_s02_2.png"
+        }
+      },
+      "18": {
+        "class_type": "LoadImage",
+        "inputs": {
+          "image": "shanxiao_v3_s02_3.png"
+        }
+      },
+      "19": {
+        "class_type": "LoadImage",
+        "inputs": {
+          "image": "shanxiao_v3b_opening.png"
+        }
+      },
+      "30": {
+        "class_type": "PathchSageAttentionKJ",
+        "inputs": {
+          "model": [
+            "9",
+            0
+          ],
+          "sage_attention": "auto",
+          "allow_compile": false
+        }
+      }
+    },
+    {
+      "client_id": "shanxiao-v3-single-shot",
+      "create_time": 1790510289266
+    },
+    [
+      "15"
+    ]
+  ],
+  "outputs": {
+    "15": {
+      "images": [
+        {
+          "filename": "S02_00001_.mp4",
+          "subfolder": "video/shanxiao_v3b",
+          "type": "output"
+        }
+      ],
+      "animated": [
+        true
+      ]
+    }
+  },
+  "status": {
+    "status_str": "success",
+    "completed": true,
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "8246e42a-9748-4160-8ea0-2f336e871ec4",
+          "timestamp": 1790510289268
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "8",
+            "9",
+            "10",
+            "16",
+            "17",
+            "18",
+            "30"
+          ],
+          "prompt_id": "8246e42a-9748-4160-8ea0-2f336e871ec4",
+          "timestamp": 1790510289308
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "8246e42a-9748-4160-8ea0-2f336e871ec4",
+          "timestamp": 1790511118553
+        }
+      ]
+    ]
+  },
+  "meta": {
+    "15": {
+      "node_id": "15",
+      "display_node": "15",
+      "parent_node": null,
+      "real_node_id": "15"
+    }
+  }
+}

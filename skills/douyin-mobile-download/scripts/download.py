@@ -83,6 +83,50 @@ def media_urls(item):
     return urls[:3]
 
 
+def browser_error_message(exc):
+    """Return a useful, credential-safe explanation for browser failures."""
+    message = str(exc)
+    lowered = message.lower()
+    if 'captcha' in lowered or '验证码' in message:
+        return 'CAPTCHA required; stop and use an authorized interactive browser session'
+    if 'err_ssl_protocol_error' in lowered or 'wrong version number' in lowered:
+        return 'Network TLS handshake failed while contacting Douyin; check outbound HTTPS connectivity and proxy configuration'
+    if 'err_name_not_resolved' in lowered or 'name or service not known' in lowered:
+        return 'Network DNS lookup failed while contacting Douyin; check DNS and outbound network access'
+    if any(token in lowered for token in ('err_connection_reset', 'err_connection_refused', 'err_connection_closed', 'internet_disconnected')):
+        return 'Network connection failed while contacting Douyin; check outbound network access and proxy configuration'
+    if 'timeout' in lowered or 'timed out' in lowered:
+        return 'Timed out while contacting Douyin; check network access or retry later'
+    if 'error while loading shared libraries' in lowered or 'cannot open shared object file' in lowered:
+        return 'Chromium system dependency is missing; install Playwright Chromium dependencies'
+    return f'Browser navigation failed ({type(exc).__name__})'
+
+
+def public_error_message(exc):
+    """Keep expected diagnostics while never returning raw browser/network logs."""
+    message = str(exc)
+    safe_markers = (
+        'CAPTCHA required',
+        'Network TLS handshake failed',
+        'Network DNS lookup failed',
+        'Network connection failed',
+        'Timed out while contacting Douyin',
+        'No matching video data returned by mobile page',
+        'This item is an image gallery, not a single video',
+        'Matching video has no downloadable media URL',
+        'No valid video stream or duration',
+        'ffprobe could not read the downloaded video',
+        'Full video decode failed',
+        'Media download/validation failed:',
+        'Missing dependency:',
+        'A previous .part file exists',
+        'Destination appeared during download',
+    )
+    if any(marker in message for marker in safe_markers):
+        return message
+    return browser_error_message(exc)
+
+
 def verify(path):
     probe = subprocess.run(['ffprobe', '-v', 'error', '-show_streams', '-show_format', '-of', 'json', str(path)], capture_output=True, text=True, timeout=60)
     if probe.returncode:
@@ -168,7 +212,7 @@ async def run(args):
                         break
                     errors.append('No matching video data returned by mobile page')
                 except Exception as exc:
-                    errors.append('CAPTCHA required' if str(exc) == 'CAPTCHA required' else type(exc).__name__)
+                    errors.append(browser_error_message(exc))
             if not item:
                 raise RuntimeError('; '.join(errors))
             details = await asyncio.to_thread(save_media, media_urls(item), await page.evaluate('navigator.userAgent'), destination)
@@ -193,8 +237,8 @@ def main():
     try:
         result = asyncio.run(run(args))
     except Exception as exc:
-        # Avoid printing signed media URLs or browser credentials from exception text.
-        message = re.sub(r'https?://\S+', '[URL]', str(exc))
+        # Browser exceptions can include signed media URLs, cookies, and full logs.
+        message = public_error_message(exc)
         print(json.dumps({'success': False, 'error': message}, ensure_ascii=False))
         return 1
     print(json.dumps(result, ensure_ascii=False, indent=2))

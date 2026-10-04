@@ -1,0 +1,235 @@
+{
+  "1": {
+    "class_type": "ClipProjLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_4b_int8_convrot.safetensors",
+      "type": "krea2",
+      "projection": "mmh3-4b-ClipProj-v3-mlp.safetensors",
+      "device": "cuda:0",
+      "mode": "streaming"
+    }
+  },
+  "2": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "minimax_h3_ref2va_pruned_int8_convrot.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "3": {
+    "class_type": "MiniMaxH3SigmaShift",
+    "inputs": {
+      "model": [
+        "2",
+        0
+      ],
+      "shift_video": 12.0,
+      "shift_audio": 3.0
+    }
+  },
+  "4": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_video_vae_fp16.safetensors"
+    }
+  },
+  "5": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_audio_vae_fp32.safetensors"
+    }
+  },
+  "6": {
+    "class_type": "MiniMaxH3ReferenceToVideo",
+    "inputs": {
+      "clip": [
+        "1",
+        0
+      ],
+      "vae": [
+        "4",
+        0
+      ],
+      "audio_vae": [
+        "5",
+        0
+      ],
+      "prompt": "An 11-second suspense segment continuing from the previous shot. Same ancient Chinese temple study, same gray-robed young scholar Sun Sheng. Begin with a hard cut to a low, close angle beside the right bed: the last damp footprints lead out from beneath the bed and stop several steps into the room. Sun Sheng is crouched beside the bed, short knife in his right hand, lips closed. Keep the bed at frame right, left-side desk and oil lamp in their established positions, paper window at rear left. The central door remains shut and latched; no light gap.\n\nThree dull knocks sound from inside the bed frame. Then an unseen low adult male voice beneath the bed copies Sun Sheng's timbre and says exactly once, “谁？”. Sun Sheng never speaks. His eyes widen; he almost opens his lips but bites his lower lip and holds them shut. At 4 seconds cut to the rear-left paper window. A single tall long-armed shadow slowly appears on the paper. The rain and the visible branches outside move toward frame left, but the shadow's long arm moves inward toward frame right, clearly against the wind. The shadow remains flat on the paper and never becomes a person or creature in the room. One wet heavy breath comes from beneath the bed while the shadow lifts one arm; when the shadow stops, the breath stops.\n\nSun Sheng slowly rises between the bed and center of the room. He keeps the short knife in his right hand pointed down. He reaches with his left hand and takes the oil lamp from the left desk. End with him standing, knife in right hand and lamp in left, facing the bed and the wrong-way shadow. His mouth stays firmly closed in every frame.\n\nExactly one visible shadow, attached only to the paper window; no full monster, no animal, no second person, no extra limbs, no face in the window, no figure beneath furniture, no open door, and no extra shadow on the walls. Keep the same room geometry, character face, hair, robe, knife, and lamp.\n\nNative synchronized audio only: three muffled knocks below the bed, exactly one offscreen copied “谁？” from beneath the bed, restrained breathing, steady rain and reversed wind texture, one wet nonverbal breath, soft knife-grip sound, oil lamp lifted from its base. Sun Sheng gives no spoken reply. No other words, no music, no narration, no animal call.",
+      "width": 1344,
+      "height": 768,
+      "length": 264,
+      "ref_image_size": "match",
+      "ref_images.ref_image_0": [
+        "16",
+        0
+      ],
+      "ref_images.ref_image_1": [
+        "17",
+        0
+      ],
+      "ref_images.ref_image_2": [
+        "18",
+        0
+      ],
+      "ref_images.ref_image_3": [
+        "19",
+        0
+      ]
+    }
+  },
+  "7": {
+    "class_type": "BasicGuider",
+    "inputs": {
+      "model": [
+        "30",
+        0
+      ],
+      "conditioning": [
+        "6",
+        0
+      ]
+    }
+  },
+  "8": {
+    "class_type": "KSamplerSelect",
+    "inputs": {
+      "sampler_name": "euler"
+    }
+  },
+  "9": {
+    "class_type": "MiniMaxH3PDDAccApply",
+    "inputs": {
+      "model": [
+        "3",
+        0
+      ],
+      "pdd_file": "MiniMax-H3-Ref2VA-Acc-8Step.safetensors",
+      "nfe": "8",
+      "lora_strength": 1.0,
+      "head_strength": 1.0,
+      "on_off_grid": "error",
+      "partition_check": "error"
+    }
+  },
+  "10": {
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 440175
+    }
+  },
+  "11": {
+    "class_type": "SamplerCustomAdvanced",
+    "inputs": {
+      "noise": [
+        "10",
+        0
+      ],
+      "guider": [
+        "7",
+        0
+      ],
+      "sampler": [
+        "8",
+        0
+      ],
+      "sigmas": [
+        "9",
+        1
+      ],
+      "latent_image": [
+        "6",
+        1
+      ]
+    }
+  },
+  "12": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "11",
+        0
+      ],
+      "vae": [
+        "4",
+        0
+      ]
+    }
+  },
+  "13": {
+    "class_type": "VAEDecodeAudio",
+    "inputs": {
+      "samples": [
+        "11",
+        0
+      ],
+      "vae": [
+        "5",
+        0
+      ]
+    }
+  },
+  "14": {
+    "class_type": "CreateVideo",
+    "inputs": {
+      "images": [
+        "12",
+        0
+      ],
+      "audio": [
+        "13",
+        0
+      ],
+      "fps": 24.0,
+      "bit_depth": 8,
+      "color_space": "sRGB",
+      "codec": "none"
+    }
+  },
+  "15": {
+    "class_type": "SaveVideo",
+    "inputs": {
+      "video": [
+        "14",
+        0
+      ],
+      "filename_prefix": "video/shanxiao_v3a/S06",
+      "format": "mp4",
+      "format.codec": "h264"
+    }
+  },
+  "16": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "shanxiao_v3_s06_1.png"
+    }
+  },
+  "17": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "shanxiao_v3_s06_2.png"
+    }
+  },
+  "18": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "shanxiao_v3_s06_3.png"
+    }
+  },
+  "19": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "shanxiao_v3a_opening.png"
+    }
+  },
+  "30": {
+    "class_type": "PathchSageAttentionKJ",
+    "inputs": {
+      "model": [
+        "9",
+        0
+      ],
+      "sage_attention": "auto",
+      "allow_compile": false
+    }
+  }
+}

@@ -1,0 +1,225 @@
+{
+  "1": {
+    "class_type": "ClipProjLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_4b_int8_convrot.safetensors",
+      "type": "krea2",
+      "projection": "mmh3-4b-ClipProj-v3-mlp.safetensors",
+      "device": "cuda:0",
+      "mode": "streaming"
+    }
+  },
+  "2": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "minimax_h3_ref2va_pruned_int8_convrot.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "3": {
+    "class_type": "MiniMaxH3SigmaShift",
+    "inputs": {
+      "model": [
+        "2",
+        0
+      ],
+      "shift_video": 12.0,
+      "shift_audio": 3.0
+    }
+  },
+  "4": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_video_vae_fp16.safetensors"
+    }
+  },
+  "5": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_audio_vae_fp32.safetensors"
+    }
+  },
+  "6": {
+    "class_type": "MiniMaxH3ReferenceToVideo",
+    "inputs": {
+      "clip": [
+        "1",
+        0
+      ],
+      "vae": [
+        "4",
+        0
+      ],
+      "audio_vae": [
+        "5",
+        0
+      ],
+      "prompt": "subject_definitions:\n<Subject 1> (S1) is Sun Sheng, the same scholar and costume established in the previous segment.\n<Subject 2> is the unseen Shanxiao, using only a copied adult male voice outside the door, then shifting the next three knocks to beneath the left desk; no creature body is visible.\n<Subject 3> is the fixed temple study with its centered latched door, left desk and oil lamp, rear-left paper window, and right bed. The fourth supplied reference image shows only the fully inserted interior horizontal crossbar latch and its metal hardware; use it only to reproduce the latch design, not as an action or new scene.\n\nsummary:\n[reference generation] Create a 10-second suspense segment. Sun Sheng answers the unseen caller once; the voice copies his words and moves from the latched central door to beneath the left desk. The room remains physically ordinary and stable.\n\nretention_analysis:\n<Subject 1> moves only from the right bed to a position two steps inside the central door, then backs away.\n<Subject 2> is first heard copying Sun Sheng outside the closed door, then its next three knocks come from beneath the left desk; it is never shown.\n<Subject 3> remains unchanged. The centered door stays fully closed and motionless; its horizontal crossbar is fully inserted at all times.\n\ndetailed_description:\n[Shot 1] <Subject 1> Sun Sheng rises from the right bed and stops two steps inside the central door as the camera begins on the clearly visible horizontal iron crossbar, fully inserted across the closed double door and seated in its receiving brackets; no daylight or blue gap is visible along the center seam. Three separate knocks sound outside; the shot cuts from the latch to his cautious face.\n[Shot 2] At 00:04.000, Sun Sheng (S1) whispers in a low, careful adult male voice with a 低沉、略干、语速偏慢的声线: <d>[Chinese] 谁？</d>. Show his mouth moving naturally for this line. A short pause follows. [Shot 3] At 00:05.000, the unseen voice beyond the door repeats the exact same words, “谁？”, with the same low timbre and restrained pace. Sun Sheng's lips remain closed during the copied voice.\nThe latch gives one small metallic tremor but stays inserted. The two door leaves stay flush and fully shut with no visible gap, no outdoor light through the seam, and no hand or face appearing through it. Sun Sheng backs one step away and turns his gaze toward the left desk. Three knocks now come from beneath that desk, one at a time; a few wood dust particles tremble. End low on the desk underside. Preserve the same lamp position and room layout.\n\noverall_soundscape:\nRain against the rear-left paper window, three dry knocks on the central door, Sun Sheng's single whispered line, an exact copied reply from the other side, one small latch vibration, then a quiet wood tap from the left desk. No footsteps outside and no other voices.\n\nnon_diegetic_music:\nNo music.\n\nContinuity lock: the centered door is physically shut and latched in every frame. Do not reveal the courtyard through the door seam. The last sound is three separate knocks from beneath the left desk, not from the door.",
+      "width": 1344,
+      "height": 768,
+      "length": 240,
+      "ref_image_size": "match",
+      "ref_images.ref_image_0": [
+        "16",
+        0
+      ],
+      "ref_images.ref_image_1": [
+        "17",
+        0
+      ],
+      "ref_images.ref_image_2": [
+        "18",
+        0
+      ]
+    }
+  },
+  "7": {
+    "class_type": "BasicGuider",
+    "inputs": {
+      "model": [
+        "30",
+        0
+      ],
+      "conditioning": [
+        "6",
+        0
+      ]
+    }
+  },
+  "8": {
+    "class_type": "KSamplerSelect",
+    "inputs": {
+      "sampler_name": "euler"
+    }
+  },
+  "9": {
+    "class_type": "MiniMaxH3PDDAccApply",
+    "inputs": {
+      "model": [
+        "3",
+        0
+      ],
+      "pdd_file": "MiniMax-H3-Ref2VA-Acc-8Step.safetensors",
+      "nfe": "8",
+      "lora_strength": 1.0,
+      "head_strength": 1.0,
+      "on_off_grid": "error",
+      "partition_check": "error"
+    }
+  },
+  "10": {
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 613547
+    }
+  },
+  "11": {
+    "class_type": "SamplerCustomAdvanced",
+    "inputs": {
+      "noise": [
+        "10",
+        0
+      ],
+      "guider": [
+        "7",
+        0
+      ],
+      "sampler": [
+        "8",
+        0
+      ],
+      "sigmas": [
+        "9",
+        1
+      ],
+      "latent_image": [
+        "6",
+        1
+      ]
+    }
+  },
+  "12": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "11",
+        0
+      ],
+      "vae": [
+        "4",
+        0
+      ]
+    }
+  },
+  "13": {
+    "class_type": "VAEDecodeAudio",
+    "inputs": {
+      "samples": [
+        "11",
+        0
+      ],
+      "vae": [
+        "5",
+        0
+      ]
+    }
+  },
+  "14": {
+    "class_type": "CreateVideo",
+    "inputs": {
+      "images": [
+        "12",
+        0
+      ],
+      "audio": [
+        "13",
+        0
+      ],
+      "fps": 24.0,
+      "bit_depth": 8,
+      "color_space": "sRGB",
+      "codec": "none"
+    }
+  },
+  "15": {
+    "class_type": "SaveVideo",
+    "inputs": {
+      "video": [
+        "14",
+        0
+      ],
+      "filename_prefix": "video/shanxiao_v3e/S03",
+      "format": "mp4",
+      "format.codec": "h264"
+    }
+  },
+  "16": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "shanxiao_v3_s03_1.png"
+    }
+  },
+  "17": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "shanxiao_v3_s03_2.png"
+    }
+  },
+  "18": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "shanxiao_v3e_opening.png"
+    }
+  },
+  "30": {
+    "class_type": "PathchSageAttentionKJ",
+    "inputs": {
+      "model": [
+        "9",
+        0
+      ],
+      "sage_attention": "auto",
+      "allow_compile": false
+    }
+  }
+}

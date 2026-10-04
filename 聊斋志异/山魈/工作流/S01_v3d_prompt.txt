@@ -1,0 +1,24 @@
+subject_definitions:
+<Subject 1> (S1) is Sun Sheng, matching the supplied character reference: one lean adult Chinese scholar, tied black hair, gray-blue robe, dark sash, black cloth shoes; preserve the same face and clothes.
+<Subject 2> is the same Shanxiao, present only as one elongated long-armed shadow cast on the wall; no visible creature body.
+<Subject 3> is the same Liugou Temple study: desk and single oil lamp at screen left, paper window rear-left, closed wooden door and inserted interior latch at center, bed at screen right.
+The fourth supplied image is a composition reference for the opening pose only. It is not a new character, location, or prop.
+
+summary:
+A 7-second live-action Chinese historical horror cold open. The viewer sees Sun Sheng's mouth covered while his own voice comes from the closed central door. One impossible long-armed shadow reaches toward the latch. Restrained, realistic acting; no music.
+
+retention_analysis:
+Sun Sheng is already seated upright at the right edge of the bed in the very first frame. His left hand already covers his mouth before any sound. He never uncovers his mouth or visibly speaks. Exactly one copied male voice says “谁？” at the beginning. The room layout remains fixed. Only one shadow appears; no full Shanxiao body.
+
+detailed_description:
+[00:00.000 opening frame] Match the fourth reference image's composition and pose exactly: Sun Sheng sits upright at the right bed edge, both feet on the floor, torso raised, left palm fully covering his lips, frightened eyes fixed on the center door latch. Do not show him lying down, reclining, moving into position, or with his mouth uncovered. The single oil lamp is on the left desk; the central wooden door is closed with the latch visibly inserted; the bed remains on the right.
+[00:00.350-00:00.950] A single quiet adult male Mandarin voice matching Sun Sheng exactly says only “谁？” (“Who?”). This uncanny copied voice comes from behind the closed central door. It is an off-screen voice; Sun Sheng is not speaking and his lips remain sealed beneath his hand. The line must occur in this first second, not later.
+[00:01.000-00:03.900] No more speech. Hold on Sun Sheng's frightened eyes and covered mouth, then begin a very slow push toward him. Use only faint rain and wind outside, restrained breathing, and one oil-lamp wick crackle. Keep the door closed and latched.
+[00:04.000-00:06.800] Shift focus toward the rear wall. Exactly one elongated shadow arm, much longer than a human arm, slowly extends from darkness beside the right bed toward the central door latch. It is cast by the left oil lamp and reveals no body. Sun Sheng tightens his hand over his mouth without speaking. Add one dry wall scrape, no other voice.
+[00:06.800-00:07.000] End with the shadow fingers almost touching the latch; hard cut to black.
+
+overall_soundscape:
+The only intelligible voice in the entire clip is the one male Mandarin word “谁？” at 00:00.350-00:00.950, heard from behind the closed central door. It must not be delayed to the end. Sun Sheng's mouth stays covered and he makes no speech. After the word: quiet rain and wind, restrained breathing, one lamp-wick crackle, one dry scrape. No other voices, no narration, no music, no subtitles.
+
+non_diegetic_music:
+None.

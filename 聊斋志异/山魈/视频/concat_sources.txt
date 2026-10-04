@@ -1,0 +1,8 @@
+file 'source/S01_归寺清扫点灯_验收版.mp4'
+file 'source/S02_月夜寝门自开.mp4'
+file 'source/S03_山魈入室.mp4'
+file 'source/S04_刺腹夺被_重制.mp4'
+file 'source/S05_家人破窗_最终候选.mp4'
+file 'source/S06_门板爪痕.mp4'
+file 'source/S07_负笈离寺_重制.mp4'
+file 'source/S08_空屋收束.mp4'

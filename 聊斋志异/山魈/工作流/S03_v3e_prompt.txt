@@ -1,0 +1,25 @@
+subject_definitions:
+<Subject 1> (S1) is Sun Sheng, the same scholar and costume established in the previous segment.
+<Subject 2> is the unseen Shanxiao, using only a copied adult male voice outside the door, then shifting the next three knocks to beneath the left desk; no creature body is visible.
+<Subject 3> is the fixed temple study with its centered latched door, left desk and oil lamp, rear-left paper window, and right bed. The fourth supplied reference image shows only the fully inserted interior horizontal crossbar latch and its metal hardware; use it only to reproduce the latch design, not as an action or new scene.
+
+summary:
+[reference generation] Create a 10-second suspense segment. Sun Sheng answers the unseen caller once; the voice copies his words and moves from the latched central door to beneath the left desk. The room remains physically ordinary and stable.
+
+retention_analysis:
+<Subject 1> moves only from the right bed to a position two steps inside the central door, then backs away.
+<Subject 2> is first heard copying Sun Sheng outside the closed door, then its next three knocks come from beneath the left desk; it is never shown.
+<Subject 3> remains unchanged. The centered door stays fully closed and motionless; its horizontal crossbar is fully inserted at all times.
+
+detailed_description:
+[Shot 1] <Subject 1> Sun Sheng rises from the right bed and stops two steps inside the central door as the camera begins on the clearly visible horizontal iron crossbar, fully inserted across the closed double door and seated in its receiving brackets; no daylight or blue gap is visible along the center seam. Three separate knocks sound outside; the shot cuts from the latch to his cautious face.
+[Shot 2] At 00:04.000, Sun Sheng (S1) whispers in a low, careful adult male voice with a 低沉、略干、语速偏慢的声线: <d>[Chinese] 谁？</d>. Show his mouth moving naturally for this line. A short pause follows. [Shot 3] At 00:05.000, the unseen voice beyond the door repeats the exact same words, “谁？”, with the same low timbre and restrained pace. Sun Sheng's lips remain closed during the copied voice.
+The latch gives one small metallic tremor but stays inserted. The two door leaves stay flush and fully shut with no visible gap, no outdoor light through the seam, and no hand or face appearing through it. Sun Sheng backs one step away and turns his gaze toward the left desk. Three knocks now come from beneath that desk, one at a time; a few wood dust particles tremble. End low on the desk underside. Preserve the same lamp position and room layout.
+
+overall_soundscape:
+Rain against the rear-left paper window, three dry knocks on the central door, Sun Sheng's single whispered line, an exact copied reply from the other side, one small latch vibration, then a quiet wood tap from the left desk. No footsteps outside and no other voices.
+
+non_diegetic_music:
+No music.
+
+Continuity lock: the centered door is physically shut and latched in every frame. Do not reveal the courtyard through the door seam. The last sound is three separate knocks from beneath the left desk, not from the door.
