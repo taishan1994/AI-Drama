@@ -1,0 +1,531 @@
+{
+  "prompt": {
+    "2": {
+      "class_type": "H3ModelModeLoader",
+      "inputs": {
+        "mode": [
+          "3",
+          8
+        ],
+        "fl2va_model": "minimax_h3_fl2va_pruned_int8_convrot.safetensors",
+        "ref2va_model": "minimax_h3_ref2va_pruned_int8_convrot.safetensors",
+        "text_encoder": "qwen3vl_32b_minimax_h3_int8_convrot.safetensors",
+        "video_vae": "minimax_h3_video_vae_fp16.safetensors",
+        "audio_vae": "minimax_h3_audio_vae_fp32.safetensors",
+        "llm_model": "Qwen3.5-4B-GGUF/Qwen3.5-4B-Q4_K_M.gguf"
+      }
+    },
+    "3": {
+      "class_type": "H3GenerationSettings",
+      "inputs": {
+        "mode": "Reference to Video",
+        "resolution": "768p Native 1344x768",
+        "custom_width": 1344,
+        "custom_height": 768,
+        "duration_seconds": 5,
+        "steps": 8,
+        "video_shift": 12.0,
+        "audio_shift": 3.0,
+        "aspect_ratio": "16:9"
+      }
+    },
+    "4": {
+      "class_type": "H3PromptInput",
+      "inputs": {
+        "mode": [
+          "3",
+          8
+        ],
+        "media_bundle": [
+          "5",
+          21
+        ],
+        "prompt": "@video1 是原始视频 0.000 秒至 5.167 秒这一段的唯一动作、表情、构图和运镜参考。完整保留这一段每一时刻的左右分布、取景范围、两个人物在画面中的位置与大小、手机拍摄角度和轻微手持移动；不得重排、简化、增加或删除动作，不得改变动作速度、表情变化顺序或镜头。左侧人物替换为 @pic2 中的女性，只迁移她的身份、脸、发型和服装；严格复现原视频左侧近景人物的表情变化、眼神、头部和可见上身动作，保持脸在画面中的尺寸与裁切，不得改成全身或中景，不得让她跳舞。右侧舞者替换为 @pic3 中外观不同的女性，只迁移她的身份、脸、发型和服装；严格按原视频右侧舞者的动作顺序、每个姿势、手臂和脚步动作、速度与节奏逐时刻复现，不得简化、增加、删除或循环舞步。@pic1 是唯一目标背景：傍晚外滩桥、江景、栏杆和亮灯高楼，完整替换原视频的灰色抠像底及原街道环境，并从本段首帧持续到末帧。灰色只是技术抠像底，成片不可见。不要改变原始画面构图、人物比例、镜头角度或运镜，不添加镜头切换；不要出现原视频人物、原衣服、街道店铺、字幕或水印。使用真实摄影风格。保留 @video1 的原始音轨。"
+      }
+    },
+    "23": {
+      "class_type": "MiniMax H3 Context IR Input",
+      "inputs": {
+        "mode": [
+          "3",
+          8
+        ],
+        "prompt": [
+          "56",
+          0
+        ],
+        "media_bundle": [
+          "5",
+          21
+        ]
+      }
+    },
+    "31": {
+      "class_type": "MiniMaxH3ImageToVideo",
+      "inputs": {
+        "clip": [
+          "2",
+          1
+        ],
+        "vae": [
+          "2",
+          2
+        ],
+        "prompt": [
+          "56",
+          0
+        ],
+        "width": [
+          "62",
+          0
+        ],
+        "height": [
+          "62",
+          1
+        ],
+        "length": [
+          "3",
+          2
+        ]
+      }
+    },
+    "32": {
+      "class_type": "MiniMaxH3ImageToVideo",
+      "inputs": {
+        "clip": [
+          "2",
+          1
+        ],
+        "vae": [
+          "2",
+          2
+        ],
+        "first_frame": [
+          "5",
+          0
+        ],
+        "prompt": [
+          "56",
+          0
+        ],
+        "width": [
+          "62",
+          0
+        ],
+        "height": [
+          "62",
+          1
+        ],
+        "length": [
+          "3",
+          2
+        ]
+      }
+    },
+    "33": {
+      "class_type": "MiniMaxH3ImageToVideo",
+      "inputs": {
+        "clip": [
+          "2",
+          1
+        ],
+        "vae": [
+          "2",
+          2
+        ],
+        "first_frame": [
+          "5",
+          0
+        ],
+        "last_frame": [
+          "5",
+          1
+        ],
+        "prompt": [
+          "56",
+          0
+        ],
+        "width": [
+          "62",
+          0
+        ],
+        "height": [
+          "62",
+          1
+        ],
+        "length": [
+          "3",
+          2
+        ]
+      }
+    },
+    "34": {
+      "class_type": "MiniMaxH3ReferenceToVideo",
+      "inputs": {
+        "clip": [
+          "2",
+          1
+        ],
+        "vae": [
+          "2",
+          2
+        ],
+        "audio_vae": [
+          "2",
+          3
+        ],
+        "prompt": [
+          "56",
+          0
+        ],
+        "width": [
+          "62",
+          0
+        ],
+        "height": [
+          "62",
+          1
+        ],
+        "length": [
+          "3",
+          2
+        ],
+        "ref_image_size": "match",
+        "ref_images.ref_image_0": [
+          "5",
+          0
+        ],
+        "ref_images.ref_image_1": [
+          "5",
+          1
+        ],
+        "ref_images.ref_image_2": [
+          "5",
+          2
+        ],
+        "ref_videos.ref_video_0": [
+          "5",
+          10
+        ],
+        "ref_video_audios.ref_video_audio_0": [
+          "5",
+          11
+        ]
+      }
+    },
+    "35": {
+      "class_type": "ComfySwitchNode",
+      "inputs": {
+        "on_false": [
+          "33",
+          0
+        ],
+        "on_true": [
+          "32",
+          0
+        ],
+        "switch": [
+          "23",
+          3
+        ]
+      }
+    },
+    "36": {
+      "class_type": "ComfySwitchNode",
+      "inputs": {
+        "on_false": [
+          "35",
+          0
+        ],
+        "on_true": [
+          "31",
+          0
+        ],
+        "switch": [
+          "23",
+          2
+        ]
+      }
+    },
+    "37": {
+      "class_type": "ComfySwitchNode",
+      "inputs": {
+        "on_false": [
+          "36",
+          0
+        ],
+        "on_true": [
+          "34",
+          0
+        ],
+        "switch": [
+          "23",
+          5
+        ]
+      }
+    },
+    "38": {
+      "class_type": "MiniMaxH3SigmaShift",
+      "inputs": {
+        "model": [
+          "57",
+          0
+        ],
+        "shift_video": [
+          "3",
+          5
+        ],
+        "shift_audio": [
+          "3",
+          6
+        ]
+      }
+    },
+    "39": {
+      "class_type": "BasicGuider",
+      "inputs": {
+        "model": [
+          "38",
+          0
+        ],
+        "conditioning": [
+          "37",
+          0
+        ]
+      }
+    },
+    "40": {
+      "class_type": "EmptyMiniMaxH3LatentAV",
+      "inputs": {
+        "width": [
+          "62",
+          0
+        ],
+        "height": [
+          "62",
+          1
+        ],
+        "length": [
+          "3",
+          2
+        ]
+      }
+    },
+    "42": {
+      "class_type": "RandomNoise",
+      "inputs": {
+        "noise_seed": 539978758301247
+      }
+    },
+    "43": {
+      "class_type": "KSamplerSelect",
+      "inputs": {
+        "sampler_name": "euler"
+      }
+    },
+    "44": {
+      "class_type": "H3SamplerStepPreviews",
+      "inputs": {
+        "noise": [
+          "42",
+          0
+        ],
+        "guider": [
+          "39",
+          0
+        ],
+        "sampler": [
+          "43",
+          0
+        ],
+        "sigmas": [
+          "57",
+          1
+        ],
+        "latent_image": [
+          "40",
+          0
+        ]
+      }
+    },
+    "45": {
+      "class_type": "VAEDecode",
+      "inputs": {
+        "samples": [
+          "44",
+          0
+        ],
+        "vae": [
+          "2",
+          2
+        ]
+      }
+    },
+    "46": {
+      "class_type": "VAEDecodeAudio",
+      "inputs": {
+        "samples": [
+          "44",
+          0
+        ],
+        "vae": [
+          "2",
+          3
+        ]
+      }
+    },
+    "49": {
+      "class_type": "CreateVideo",
+      "inputs": {
+        "images": [
+          "45",
+          0
+        ],
+        "audio": [
+          "46",
+          0
+        ],
+        "fps": 24,
+        "bit_depth": 8,
+        "color_space": "sRGB",
+        "codec": "none"
+      }
+    },
+    "50": {
+      "class_type": "SaveVideo",
+      "inputs": {
+        "video": [
+          "49",
+          0
+        ],
+        "filename_prefix": "video/H3_Ref2VA_SilhouetteMotion_Segment01",
+        "format": "mp4",
+        "codec": "auto"
+      }
+    },
+    "5": {
+      "class_type": "H3MediaInput",
+      "inputs": {
+        "mode": [
+          "3",
+          8
+        ],
+        "image_1": "背景参考_外滩桥_傍晚.png",
+        "image_2": "人物参考_左侧_香槟色.png",
+        "image_3": "人物参考_右侧_黑红色.png",
+        "image_4": "",
+        "image_5": "",
+        "image_6": "",
+        "image_7": "",
+        "image_8": "",
+        "image_9": "",
+        "video_1": "动作轮廓_分段_01.mp4",
+        "video_2": "",
+        "video_3": "",
+        "audio_1": "",
+        "audio_2": "",
+        "audio_3": ""
+      }
+    },
+    "56": {
+      "class_type": "H3LlamaCppPrompt",
+      "inputs": {
+        "llm_gguf_path": [
+          "2",
+          4
+        ],
+        "mode": [
+          "4",
+          0
+        ],
+        "duration_seconds": [
+          "3",
+          3
+        ],
+        "prompt": [
+          "4",
+          0
+        ],
+        "optimize": true,
+        "max_tokens": 1024,
+        "temperature": 0.1
+      }
+    },
+    "57": {
+      "class_type": "H3PDDAccModeApply",
+      "inputs": {
+        "model": [
+          "2",
+          0
+        ],
+        "mode": [
+          "3",
+          8
+        ]
+      }
+    },
+    "60": {
+      "class_type": "PreviewAny",
+      "inputs": {
+        "source": [
+          "56",
+          0
+        ]
+      }
+    },
+    "62": {
+      "class_type": "H3ResolutionScale",
+      "inputs": {
+        "width": [
+          "3",
+          0
+        ],
+        "height": [
+          "3",
+          1
+        ],
+        "resolution_factor": 0.5
+      }
+    }
+  },
+  "prompt_text": "subject_definitions:\n<Subject 1> is the adult woman shown in @picture_1, with long dark-brown hair and the champagne-cream satin outfit. This is the identity for the left close-up panel.\n<Subject 2> is the second adult woman shown in @picture_2, with shoulder-length dark hair and the black dance outfit with burgundy-red accents. She is visibly different from <Subject 1> and is the dancer in the right panel.\n<Picture 3> is a people-free visual reference for the Shanghai Bund bridge environment, evening sky, warm bridge lamps, Huangpu River, and illuminated skyline. It is an environment reference, not a target frame.\n<Video 1> is the source video, used only for left/right split-screen composition, choreography, timing, gestures, poses, and camera framing. The original people, clothing, shop corridor, and background are not retained.\n<Audio 1> is the original soundtrack embedded in @video_1 and is reused unchanged and synchronized.\n\nsummary:\n[video editing + reference generation + audio reuse] The target video is a 15-second edited version of @video_1. It replaces both original women with the distinct identities from @picture_1 and @picture_2, transfers the dance and split-screen timing from @video_1, uses the Bund bridge environment from @picture_3 as the setting reference, and reuses the original soundtrack unchanged.\n\nretention_analysis:\n<Subject 1> (left panel): attribute_transfer - use the face, hair, and cream outfit from @picture_1 for a consistent new left-panel woman.\n<Subject 2> (right panel): attribute_transfer - use the distinct face, hairstyle, and black-and-burgundy dance outfit from @picture_2 for a consistent new dancer.\n<Picture 3> (environment reference): weak_reference - use the bridge, blue-hour lighting, river, and illuminated skyline as environmental guidance; do not reproduce it as a static frame.\n<Video 1> (dance and composition): weak_reference - transfer the original timing, gestures, dance poses, split-screen layout, and camera framing only; replace both original women and the location.\n<Audio 1>: fully_copy - retain the original soundtrack unchanged and synchronized throughout.\n\ndetailed_description:\nPhotorealistic live-action with realistic skin texture, natural facial detail, and stable identities. Maintain the source's clean vertical split-screen from beginning to end, with the same panel sizes and arrangement. In the left panel, <Subject 1> appears in a close selfie-style portrait with subtle natural handheld camera movement. In the right panel, <Subject 2> is shown head-to-toe and follows the same sequence, rhythm, arm gestures, steps, and poses as the dancer in @video_1. Both women are clearly adult and visibly distinct from each other and from the source women. Both panels depict the same bridge at Shanghai's Bund at blue hour, guided by @picture_3: warm bridge lights in the foreground, the Huangpu River, and the illuminated Lujiazui high-rise skyline clearly visible behind them. Replace the source shop corridor completely. Keep an elegant cinematic look with cool early-evening tones and warm practical lights. No extra people, no dialogue, no sports or arena imagery, no cuts away from the split-screen, and no captions, logos, or watermarks.\n\noverall_soundscape:\nThe original audio from @video_1 continues unchanged and synchronized. Add no dialogue or sound effects.\n\nnon_diegetic_music:\n<Audio 1> is reused unchanged as the only music.",
+  "queue": {
+    "prompt_id": "67c04e51-6038-4b5d-9cb0-0275684e102d",
+    "number": 2,
+    "node_errors": {}
+  },
+  "workflow_node_ids": [
+    "2",
+    "23",
+    "3",
+    "31",
+    "32",
+    "33",
+    "34",
+    "35",
+    "36",
+    "37",
+    "38",
+    "39",
+    "4",
+    "40",
+    "42",
+    "43",
+    "44",
+    "45",
+    "46",
+    "49",
+    "5",
+    "50",
+    "56",
+    "57",
+    "60"
+  ],
+  "assets": [
+    "/nfs/FM/gongoubo/new_project/github/aigc/短剧/顺拐舞/资产/人物参考_左侧_香槟色.png",
+    "/nfs/FM/gongoubo/new_project/github/aigc/短剧/顺拐舞/资产/人物参考_右侧_黑红色.png",
+    "/nfs/FM/gongoubo/new_project/github/aigc/短剧/顺拐舞/资产/背景参考_外滩桥_傍晚.png",
+    "/nfs/FM/gongoubo/new_project/github/aigc/短剧/顺拐舞/资产/舞蹈动作参考_15秒.mp4"
+  ],
+  "client_id": "h3-motion-segment-1"
+}
