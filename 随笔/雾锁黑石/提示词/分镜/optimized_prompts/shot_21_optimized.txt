@@ -1,0 +1,20 @@
+subject_definitions:
+<Subject 1> is the foggy Black Stone Town main street environment in <Picture 1> and <Picture 2>, featuring a community hospital with a bright white sign, a half-open main gate, and a wide, bulky shadow of a giant corpse blocking the center of the road.
+<Subject 2> is the stationary, bulky giant corpse (臃肿巨尸) in <Picture 2>, characterized by its massive, immobile form that occupies the majority of the road surface.
+
+summary:
+[reference generation] The target video is a single 10-second shot depicting the distant view of a community hospital entrance blocked by a massive, stationary giant corpse in a foggy town street. The scene preserves the architectural layout and spatial direction from <Picture 1> and <Picture 2> without copying the reference sheet's specific composition.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): weak_reference - the architecture, screen direction, and spatial layout are retained, but the specific reference-sheet composition is not copied.
+<Subject 2> (appears in [Shot 1]): fully_preserved - the bulky, stationary form of the giant corpse is fully preserved as a visual element blocking the road.
+
+detailed_description:
+The target video is a distant long shot (远景) capturing a foggy, eerie atmosphere in Black Stone Town.
+[Shot 1] At 00:00.000, the camera holds a static, distant view of the community hospital's main entrance. The bright white sign of the hospital stands out against the foggy background. The main gate is half-open. In the center of the distant street, a massive, bulky giant corpse (臃肿巨尸) stands motionless, blocking the majority of the road. The corpse is a dark, wide shadow, completely still. The environment is filled with wind and rain sounds, accompanied by distant, continuous hissing and the low, heavy breathing of the giant corpse. There is no dialogue. The shot maintains the spatial layout defined by <Picture 1> and <Picture 2>, showing the relationship between the hospital and the blocking corpse without inventing extra limbs or graphic gore.
+
+overall_soundscape:
+Wind howling, heavy rain falling, distant continuous hissing, and the low, deep breathing of the giant corpse.
+
+non_diegetic_music:
+N/A

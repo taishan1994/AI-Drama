@@ -1,0 +1,25 @@
+subject_definitions:
+<Subject 1> is Lin Mo, a young adult male with slightly breathless and anxious vocal qualities, wearing a dark jacket and holding a cold-chain sample box tightly.
+<Picture 1> is the environment and spatial-layout reference for the underground emergency corridor, featuring an architecture with water accumulation on the floor, fog, and a specific screen direction.
+<Picture 2> is the character identity and clothing reference for Lin Mo, providing face identity from the large portrait area and body proportions from the turnaround figures.
+<Picture 3> is the prop appearance reference for the cold-chain sample box, preserving its recognizable shape and markings.
+
+summary:
+[reference generation] The target video is a single 12-second shot depicting Lin Mo in a foggy underground emergency corridor holding a cold-chain sample box. The scene focuses on Lin Mo's anxious questioning about the truth being known after they leave. Visuals are anchored by <Picture 1> for the environment, <Picture 2> for Lin Mo's appearance, and <Picture 3> for the prop. The audio references Lin Mo's specific voice timbre and dialogue.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): fully_preserved - Lin Mo's appearance, clothing, and anxious/breathless vocal quality are retained.
+<Picture 1> (environment): fully_preserved - the architecture, fog, and water accumulation on the floor are retained without copying the reference sheet layout.
+<Picture 2> (Lin Mo): fully_preserved - face identity and body proportions are retained without reproducing the reference sheet layout.
+<Picture 3> (sample box): fully_preserved - the recognizable shape and markings are retained without copying the image layout.
+
+detailed_description:
+The target video is a cinematic, atmospheric shot in a dimly lit underground emergency corridor filled with fog and water accumulation.
+[Shot 1] At 00:00.000, the scene opens on <Subject 1>, Lin Mo, standing in the environment defined by <Picture 1>. The architecture features a wet, flooded corridor with heavy fog obscuring the background. Lin Mo is tightly clutching <Picture 3>, the cold-chain sample box, with his fingers exerting force on the surface. His expression is one of confusion and hope. He speaks with a slightly breathless, anxious, and rough male voice (S1), his tone low and hoarse. <d>[Chinese] 出去之后，真相能被人知道吗？</d> The camera remains relatively static, focusing on Lin Mo's upper body and the box, emphasizing his grip and the weight of the question. The lighting is low and diffuse, highlighting the moisture on the floor and the fog.
+At 00:09.000, the shot continues with Lin Mo holding the pose, the sound of his breathing remains audible in the background. The scene ends on this moment of questioning.
+
+overall_soundscape:
+The soundscape is dominated by the sound of heavy fog and the drip of water on the wet floor, creating a damp, oppressive atmosphere. A low, steady breathing sound from Lin Mo is present throughout the shot.
+
+non_diegetic_music:
+A low, tense ambient drone with a hint of dissonance, matching the foggy and anxious mood of the corridor.

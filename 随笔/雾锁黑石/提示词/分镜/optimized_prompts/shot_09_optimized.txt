@@ -1,0 +1,21 @@
+subject_definitions:
+<Picture 1> is the environment and spatial-layout reference for the delivery truck cabin, showing the interior structure, the rainy night view through the windshield, and the screen direction.
+<Picture 2> is the environment and spatial-layout reference for the Black Stone Town main street and hospital entrance, showing the misty atmosphere, traditional architecture, and wet cobblestones.
+<Picture 3> is the character identity and clothing reference for Lin Mo, using the large portrait area for face identity and turnaround figures for body proportions.
+
+summary:
+[reference generation] The target video is a single 10-second close-up shot of Lin Mo (S1) in the delivery truck cabin, looking out at the misty town. The scene utilizes <Picture 1> for the cabin environment and <Picture 2> for the background town view. Lin Mo (S1) delivers a monologue in Chinese about his determination to take the old route, accompanied by ambient rain and breathing sounds.
+
+retention_analysis:
+<Picture 1> (cabin environment): fully_preserved - the truck cabin interior, windshield view, and screen direction are retained.
+<Picture 2> (town background): fully_preserved - the misty town architecture, wet street layout, and screen direction are preserved.
+<Picture 3> (Lin Mo): fully_preserved - Lin Mo's anxious expression, furrowed brow, and dark clothing are retained exactly as defined.
+
+detailed_description:
+The target video is a cinematic close-up shot set inside a delivery truck cabin during a heavy rainstorm. The camera is static, focusing tightly on Lin Mo (S1), who sits in the driver's seat. Through the wet windshield, the view of <Picture 2>, the misty Black Stone Town main street and hospital entrance, is visible, with rain streaking the glass and streetlights reflecting on the wet pavement. Lin Mo (S1) stares out the window, his brow furrowed in deep conflict, his expression shifting from hesitation to a firm resolve. He speaks softly to himself in a slightly breathless, anxious voice, <d>[Chinese] 只能穿镇走老路了，快点送完，快点回家。</d> The audio includes the sound of heavy rain hitting the roof and glass, mixed with the sound of his labored breathing. The lighting is low and moody, dominated by the cool blue tones of the rain and the warm amber glow of the dashboard, highlighting the texture of his face and the wetness of the glass.
+
+overall_soundscape:
+Heavy rain falling on the truck roof and windshield, accompanied by the steady, rhythmic sound of Lin Mo's breathing.
+
+non_diegetic_music:
+N/A

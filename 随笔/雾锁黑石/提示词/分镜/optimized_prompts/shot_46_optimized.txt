@@ -1,0 +1,22 @@
+subject_definitions:
+<Subject 1> is the environment in <Picture 1>, depicting the community hospital lobby and rear corridor with foggy atmospheric lighting, tiled floors, and structural columns.
+<Subject 2> is the character Su Wan in <Picture 2>, a young woman with a calm expression, wearing a light-colored top and dark trousers.
+<Subject 3> is the prop medical kit in <Picture 3>, a compact rectangular bag with a red cross symbol and a zipper.
+
+summary:
+[reference generation] The target video is a single continuous shot of Su Wan preparing for escape in a foggy hospital corridor. The environment is defined by <Subject 1>, Su Wan's appearance by <Subject 2>, and the medical kit by <Subject 3>. The action focuses on rapid, efficient movement to gather supplies.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): fully_preserved - the foggy hospital atmosphere, tiled floor texture, and spatial layout are retained.
+<Subject 2> (appears in [Shot 1]): fully_preserved - Su Wan's facial identity, clothing proportions, and calm demeanor are retained.
+<Subject 3> (appears in [Shot 1]): fully_preserved - the medical kit's shape, red cross marking, and compact form are retained.
+
+detailed_description:
+The target video is a single continuous shot in a cinematic, high-contrast style with cool blue and grey tones, emphasizing the foggy atmosphere of the hospital.
+[Shot 1] The scene opens in the hospital corridor defined by <Subject 1>, where fog drifts between the tiled floors and structural columns. <Subject 2>, Su Wan, stands in the center of the frame, her posture tense and ready. She reaches out and quickly grabs <Subject 3>, the medical kit, pulling it from a nearby surface with a sharp, decisive motion. Simultaneously, she snatches a spare battery from her pocket. Her movements are fast and jerky, conveying urgency. As she secures the items, the sound of objects scraping against the floor and each other is heard clearly. The camera remains static, focusing on her upper body and the immediate action. The lighting highlights the texture of the fog and the metallic sheen of the battery against the matte finish of the medical kit.
+
+overall_soundscape:
+The soundscape is dominated by the sharp, dry sound of fabric and plastic scraping against the tiled floor as Su Wan grabs the items. A low, ambient hum of the hospital ventilation system provides a constant background layer, slightly obscured by the fog.
+
+non_diegetic_music:
+N/A

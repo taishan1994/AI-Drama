@@ -1,0 +1,24 @@
+subject_definitions:
+<Subject 1> is the ordinary zombie from <Picture 3>, characterized by a hunched posture, tattered greyish-green skin, and a forward-leaning sprinting motion.
+<Subject 2> is the crawling zombie from <Picture 2>, characterized by a low-to-the-ground posture, elongated limbs, and a rapid sliding motion across the surface.
+<Subject 3> is the hospital entrance environment from <Picture 1> and <Picture 2>, featuring a foggy atmosphere, a dark stone archway, and a narrow alleyway layout.
+
+summary:
+[reference generation] The target video is a single 10-second shot depicting a dual zombie ambush. <Subject 1> charges from the front while <Subject 2> slides up from the shadows of the hospital entrance environment defined by <Subject 3>. The scene relies on <Picture 3> for the appearance of the sprinting zombie and <Picture 2> for the crawling zombie's design.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): fully_preserved - the hunched posture, tattered skin, and sprinting action are retained.
+<Subject 2> (appears in [Shot 1]): fully_preserved - the low-to-ground posture, elongated limbs, and sliding action are retained.
+<Subject 3> (appears in [Shot 1]): fully_preserved - the foggy atmosphere, dark stone archway, and narrow alleyway layout are retained.
+<Picture 3> (zombie appearance): weak_reference - used to define the visual style and posture of <Subject 1>.
+<Picture 2> (crawling zombie appearance): weak_reference - used to define the visual style and posture of <Subject 2>.
+
+detailed_description:
+The target video is a high-tension action sequence set in a foggy hospital alleyway. The lighting is dim and atmospheric, with shadows obscuring the edges of the frame to enhance the sense of danger.
+[Shot 1] At 00:00.000, the shot opens on the foggy hospital entrance environment from <Subject 3>, showing a dark stone archway and a narrow alleyway. From the center foreground, <Subject 1>, the ordinary zombie from <Picture 3>, lunges forward with a hunched posture and tattered greyish-green skin, sprinting directly at the camera with intense speed. Simultaneously, from the deep shadows on the right side of the alley, <Subject 2>, the crawling zombie from <Picture 2>, bursts forth. It maintains a low-to-the-ground posture with elongated limbs, sliding rapidly across the ground with a scraping motion. The two creatures converge in a dual attack, creating an overwhelming sense of pressure. The sound design features the sound of rapid footsteps and a sharp, guttural roar from <Subject 1>, mixed with the high-pitched, screeching sound of <Subject 2> dragging its body across the pavement. There is no dialogue in this shot. The camera remains relatively static but shakes slightly to mimic the impact of the approaching threats, maintaining the screen direction established by the environment.
+
+overall_soundscape:
+Heavy fog muffles the ambient sounds, but the sound of rapid footsteps and the sharp, guttural roar of the sprinting zombie are prominent. The high-pitched, screeching sound of the crawling zombie dragging its body across the pavement adds a layer of visceral tension.
+
+non_diegetic_music:
+N/A

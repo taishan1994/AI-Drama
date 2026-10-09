@@ -1,0 +1,22 @@
+subject_definitions:
+<Subject 1> is the underwater environment in <Picture 1>, featuring a dark, flooded corridor with iron doors, wet concrete walls, and a low ceiling, serving as the spatial layout and background.
+<Picture 2> is the character identity and clothing reference for Lin Mo (S1), used to define his face and body proportions without reproducing the reference sheet layout.
+<Picture 3> is the character identity and clothing reference for Su Wan (S2), used to define her face and body proportions without reproducing the reference sheet layout.
+
+summary:
+[reference generation] The target video is a single 10-second underwater shot depicting Lin Mo and Su Wan's reflections in rippling water near an iron door, with dark, submerged figures turning toward them. The environment is defined by <Picture 1>, and the characters are identified by <Picture 2> and <Picture 3>. No external video or audio assets are used; all sound is newly generated.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): weak_reference - the architecture, screen direction, and spatial layout are preserved without copying the reference-sheet layout.
+<Picture 2> (appears in [Shot 1]): weak_reference - Lin Mo's identity and clothing proportions are retained based on <Picture 2>, but the reference sheet layout is not reproduced.
+<Picture 3> (appears in [Shot 1]): weak_reference - Su Wan's identity and clothing proportions are retained based on <Picture 3>, but the reference sheet layout is not reproduced.
+
+detailed_description:
+The target video is a cinematic underwater sequence with a dark, moody atmosphere and a slightly desaturated blue-grey color palette.
+[Shot 1] At 00:00.000, the shot begins with a low-angle camera positioned close to the water surface, slowly panning horizontally. The scene is dominated by <Subject 1>, the dark, flooded corridor from <Picture 1>, featuring iron doors, wet concrete walls, and a low ceiling. Several concentric ripples spread outward from beneath an iron door at the bottom of the frame. The reflections of Lin Mo (S1) and Su Wan (S2) are visible in the water; their forms are distorted and twisted by the ripples. In the darkness beneath the surface, several blurry, indistinct human-like silhouettes simultaneously turn their heads toward the camera. The camera movement is smooth and slow, maintaining the low angle throughout. There is no dialogue. The sound design features a muffled underwater thud, followed by the sudden cessation of dripping water, and a lingering, distant whistling echo. The shot ends at 00:10.000 with the ripples still expanding and the silhouettes facing the camera.
+
+overall_soundscape:
+Muffled underwater thuds, the abrupt stop of dripping water, and a distant, lingering whistling echo.
+
+non_diegetic_music:
+N/A

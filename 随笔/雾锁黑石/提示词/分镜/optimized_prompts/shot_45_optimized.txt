@@ -1,0 +1,22 @@
+subject_definitions:
+<Subject 1> is Lin Mo, a young adult male with slightly breathless and anxious vocal qualities (S1), characterized by determined eyes, a clenched jaw, and a rugged appearance consistent with the character identity in <Picture 2>.
+<Subject 2> is the cold-chain sample box, a prop with a recognizable shape and markings as defined in <Picture 3>, appearing as a metallic or insulated container held tightly in Lin Mo's hands.
+<Subject 3> is the hospital environment, an interior space featuring a layout and architectural style consistent with <Picture 1>, including the main hall and rear corridor areas, with dim, foggy lighting and a sense of confinement.
+
+summary:
+[reference generation] The target video is a single 10-second shot depicting Lin Mo's resolve to escape. The environment is defined by <Subject 3>, Lin Mo's appearance by <Subject 1>, and the prop by <Subject 2>. The scene captures a moment of high tension where Lin Mo grips the sample box tightly, his expression shifting from hesitation to determination.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): fully_preserved - Lin Mo's identity, clothing proportions, and facial expression of determination are retained.
+<Subject 2> (appears in [Shot 1]): fully_preserved - The cold-chain sample box's shape and markings are retained.
+<Subject 3> (appears in [Shot 1]): fully_preserved - The hospital environment's architecture and spatial layout are retained.
+
+detailed_description:
+The target video is a cinematic, high-tension close-up shot with a shallow depth of field, focusing on Lin Mo's face and hands while blurring the background slightly to emphasize isolation.
+[Shot 1] At 00:00.000, the scene opens on Lin Mo (S1), the young adult male with slightly breathless and anxious vocal qualities, standing in <Subject 3>, the hospital environment. The lighting is dim and foggy, consistent with the atmosphere of <Picture 1>, casting long shadows across the floor of the main hall and rear corridor. Lin Mo's eyes shift from hesitation to a steely determination, his jaw clenched tight as he grits his teeth. He holds <Subject 2>, the cold-chain sample box, with both hands, his fingers digging into the surface until his knuckles turn white. The box, defined by its recognizable shape and markings from <Picture 3>, is pressed firmly against his chest. The camera slowly pushes in, tightening the frame on his face and the grip of his hands. The sound of a heavy heartbeat grows louder and more erratic, syncing with the tightening of his grip. Outside the frame, a sharp, high-pitched wail of a siren or alarm begins to rise in intensity, creating a sense of imminent danger. Lin Mo's expression hardens into a mask of resolve. He takes a deep, ragged breath, his chest heaving slightly. He looks directly forward, his gaze fixed on an unseen exit, his voice trembling but firm as he speaks. <d>[Chinese] 我要活着回去。我带箱子走。</d> The dialogue is delivered with a slight breathlessness, reflecting his anxiety but underpinned by a newfound steel. The camera holds steady on his determined face as the siren's wail reaches a crescendo, the heartbeat sound swelling to a peak before the shot cuts.
+
+overall_soundscape:
+A low, rumbling hospital ambient drone continues throughout, punctuated by the sharp, rising pitch of a siren or alarm that grows louder and more urgent. A heavy, rhythmic heartbeat sound is prominent, syncing with Lin Mo's breathing and physical tension.
+
+non_diegetic_music:
+A tense, dissonant string score with a slow, driving rhythm, featuring low brass and high-pitched violin screeches that mirror the rising tension of the siren and the character's heartbeat.

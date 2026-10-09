@@ -1,0 +1,24 @@
+subject_definitions:
+<Subject 1> is Lin Mo, a young adult male with slightly breathless and anxious vocal qualities (S1), characterized by the appearance defined in <Picture 2>.
+<Picture 1> is the environment and spatial-layout reference for the underground emergency corridor, featuring an architecture with accumulated water and a specific screen layout.
+<Picture 2> is the character identity and clothing reference for Lin Mo, providing face identity and body proportions.
+<Picture 3> is the prop appearance reference for the cold chain sample box, defining its recognizable shape and markings.
+
+summary:
+[reference generation] The target video is a single 12-second shot depicting Lin Mo interacting with a cold chain sample box in a dark, flooded underground emergency corridor. The scene preserves the visual style and character appearance from <Picture 2> and <Picture 3>, and the environment from <Picture 1>. There is no source video or audio asset to edit or continue; the audio and dialogue are generated based on the script provided.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): fully_preserved - Lin Mo's appearance and anxious vocal quality are retained.
+<Picture 1> (environment): weak_reference - the architecture and spatial layout are preserved without copying the reference sheet's specific composition.
+<Picture 2> (character): fully_preserved - Lin Mo's face identity and clothing proportions are retained.
+<Picture 3> (prop): fully_preserved - the cold chain sample box's shape and markings are retained.
+
+detailed_description:
+The target video is a single continuous shot in a dark, flooded underground emergency corridor with a cinematic, slightly desaturated color palette.
+[Shot 1] The scene opens in a dimly lit corridor where water has accumulated on the floor. <Subject 1> (S1), Lin Mo, stands near a cold chain sample box <Picture 3>. He reaches out and opens the exterior temperature control screen of the box. As he touches the screen, a brief digital signal flashes on the display before it goes dark. Simultaneously, an emergency light at the far end of the corridor flickers on, illuminating the dark space. A ripple appears on the distant water surface and slowly approaches the camera. An electronic prompt sound plays, followed by the sound of current flowing through the emergency light, and finally, the sound of water waves approaching from far to near. Lin Mo remains still, looking at the screen and the approaching water.
+
+overall_soundscape:
+The soundscape consists of an electronic prompt sound, the hum of the emergency light, and the sound of water waves approaching from the distance, creating a tense and quiet atmosphere.
+
+non_diegetic_music:
+N/A

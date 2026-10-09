@@ -1,0 +1,23 @@
+subject_definitions:
+<Subject 1> is Old Zhou, a middle-aged man with a rough and forceful voice quality (S3), characterized by a sweaty, disheveled appearance, furrowed brows, and an expression of extreme panic and self-preservation.
+<Subject 2> is the hospital environment in <Picture 1>, featuring a dimly lit, fog-locked interior with a chaotic layout of corridors and a large open hall, serving as the spatial anchor for the scene.
+<Picture 1> is the environment reference for <Subject 2>, defining the architectural style, lighting, and spatial depth of the community hospital hall and back corridor.
+<Picture 2> is the character reference for <Subject 1>, providing the facial identity and clothing proportions for Old Zhou, though the reference sheet layout itself is not reproduced.
+
+summary:
+[reference generation] The target video is a single close-up shot of Old Zhou (S3) in the fog-locked community hospital (Subject 2), displaying extreme panic and selfish survival instincts. The scene features high emotional tension with Old Zhou shouting a specific line of dialogue in Chinese.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): fully_preserved - Old Zhou's middle-aged appearance, rough voice quality (S3), and panicked expression are retained exactly as defined.
+<Picture 1> (environment): weak_reference - the fog-locked hospital architecture and spatial layout are used as a background reference without copying the specific reference-sheet composition.
+<Picture 2> (character): weak_reference - Old Zhou's facial identity and clothing proportions are used as a design guide without reproducing the reference sheet layout.
+
+detailed_description:
+The target video is a single close-up shot with a handheld, slightly shaky camera movement to convey extreme agitation and instability. The lighting is dim and atmospheric, consistent with the fog-locked environment of <Subject 2>.
+[Shot 1] At 00:00.000, the shot opens on Old Zhou (S3), a middle-aged man with a rough and forceful voice quality (S3), filling the frame with a look of frantic desperation. His face is flushed and sweaty, brows furrowed in intense anxiety, revealing a selfish survival mindset. He is shouting with maximum emotional tension, his voice rising to a scream. He yells, <d>[Chinese] 可活着才最重要！留着它，万一再泄漏，我们全都得死在这！</d> The camera pushes in slightly, mirroring his escalating panic. The audio is dominated by the raw, distorted sound of his scream, creating a sense of claustrophobia and imminent danger. The shot holds on his face until the end of the line, emphasizing the sheer force of his outburst.
+
+overall_soundscape:
+A low, rumbling ambient drone of the fog-locked hospital hall continues underneath, mixed with the sharp, piercing sound of Old Zhou's scream which dominates the audio mix.
+
+non_diegetic_music:
+N/A

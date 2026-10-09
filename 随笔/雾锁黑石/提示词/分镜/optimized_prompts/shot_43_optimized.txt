@@ -1,0 +1,27 @@
+subject_definitions:
+<Subject 1> is Lin Mo, a young adult male with slightly breathless and anxious vocal qualities (S1), characterized by a rugged appearance consistent with the character design in <Picture 2>.
+<Subject 2> is Su Wan, a female with calm, clear, and controlled vocal qualities (S2), characterized by a determined expression consistent with the character design in <Picture 3>.
+<Subject 3> is Old Zhou, a middle-aged male with a rough and forceful vocal quality (S3), though he does not appear in this specific shot.
+<Picture 1> is the environment reference for the community hospital lobby and back corridor, defining the spatial layout, architecture, and screen direction without serving as a keyframe or target frame.
+<Picture 2> is the character identity and clothing reference for Lin Mo, providing face identity and body proportions.
+<Picture 3> is the character identity and clothing reference for Su Wan, providing face identity and body proportions.
+
+summary:
+[reference generation] The target video is a single 12-second shot set in the community hospital lobby and back corridor. It features Su Wan confronting Lin Mo, delivering a critical ultimatum regarding a sample and the truth. The scene relies on <Picture 1> for environment, <Picture 2> and <Picture 3> for character identities, and preserves the exact Chinese dialogue and silent atmosphere of the source script.
+
+retention_analysis:
+<Subject 2> (appears in [Shot 1]): fully_preserved - Su Wan's calm demeanor, clear voice, and determined expression are fully retained.
+<Subject 1> (appears in [Shot 1]): fully_preserved - Lin Mo's anxious presence and slightly breathless voice are fully retained.
+<Picture 1> (environment): weak_reference - the architecture and screen direction are loosely referenced to establish the hospital setting without copying the reference sheet layout.
+<Picture 2> (Lin Mo): weak_reference - Lin Mo's face identity and clothing proportions are referenced for consistency without reproducing the reference sheet layout.
+<Picture 3> (Su Wan): weak_reference - Su Wan's face identity and clothing proportions are referenced for consistency without reproducing the reference sheet layout.
+
+detailed_description:
+The target video is a cinematic close-up shot in a dimly lit community hospital lobby and back corridor, characterized by oppressive atmosphere and heavy silence.
+[Shot 1] At 00:00.000, the camera focuses tightly on Su Wan (S2), the female with a calm, clear, and controlled voice, who turns her head to face Lin Mo directly. Her eyes are sharp and resolute, locking onto Lin Mo's gaze. The background consists of the hospital lobby and back corridor environment, where the architecture and screen direction are loosely referenced from <Picture 1> to establish the setting without copying the reference layout. Su Wan (S2) delivers a stern ultimatum, her voice steady and commanding. <d>[Chinese] 你选。带着样本走，赌一把能求救、能曝光真相；或者留在这，等着被尸群围困等死。</d> The audio is completely silent save for the ambient pressure of the moment, creating a heavy, suffocating silence that matches the source script's "无声留白". The shot holds on Su Wan's intense expression as she waits for Lin Mo's response, emphasizing the weight of her choice.
+
+overall_soundscape:
+Complete silence except for the heavy, oppressive atmospheric pressure. No background noise, footsteps, or ambient sound is present to emphasize the tension.
+
+non_diegetic_music:
+N/A

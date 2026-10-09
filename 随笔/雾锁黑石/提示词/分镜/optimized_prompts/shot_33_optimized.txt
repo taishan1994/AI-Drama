@@ -1,0 +1,23 @@
+subject_definitions:
+<Subject 1> is Lin Mo, a young adult male with slightly breathless and anxious vocal qualities (S1), characterized by his appearance in <Picture 2> where the large portrait area defines his facial identity and the turnaround figures establish his clothing and body proportions.
+<Subject 2> is the cold-chain sample box, a prop defined by <Picture 3>, preserving its recognizable shape and markings without copying the image layout.
+<Picture 1> is the environment and spatial-layout reference for the community hospital lobby and back corridor, defining the architecture and screen direction without copying the reference-sheet layout.
+
+summary:
+[reference generation] The target video is an 8-second close-up shot of Lin Mo staring intently at a cold-chain sample box in a dimly lit hospital corridor. The scene focuses on the glowing blue indicator light of the box and Lin Mo's trembling fingers, using <Picture 1> for environment, <Picture 2> for character identity, and <Picture 3> for the prop.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): attribute_transfer - Lin Mo's appearance is derived from <Picture 2>, but his specific action of trembling fingers and his anxious expression are adapted to the close-up context.
+<Picture 1> (environment): weak_reference - The architecture and screen direction are retained to establish the hospital setting, but the specific layout is not copied.
+<Picture 2> (character): attribute_transfer - Facial identity and clothing proportions from <Picture 2> are used to define Lin Mo's look in the close-up.
+<Picture 3> (prop): attribute_transfer - The recognizable shape and markings of the cold-chain box from <Picture 3> are preserved in the shot.
+
+detailed_description:
+The target video is a tight close-up shot focusing on Lin Mo's face and hands interacting with a cold-chain sample box in a dimly lit hospital corridor. The lighting is low, making the blue indicator light on the box appear particularly glaring and intense.
+[Shot 1] At 00:00.000, the camera holds a static extreme close-up on Lin Mo (S1). He is looking down, his gaze fixed intently on the cold-chain sample box (<Subject 2>). The box, defined by <Picture 3>, sits in the foreground, its blue LED light glowing brightly against the dark surroundings. Lin Mo's fingers are visible near the box, trembling slightly with anxiety. The background is the blurred interior of the community hospital (<Picture 1>), showing the dark, narrow corridor and the faint outline of the lobby area, establishing a claustrophobic atmosphere. There is no dialogue in this shot. The audio features a low, amplified hum from the box itself, emphasizing the tension.
+
+overall_soundscape:
+A low, amplified humming sound from the cold-chain box dominates the audio landscape, creating a sense of unease and tension in the dimly lit environment.
+
+non_diegetic_music:
+N/A

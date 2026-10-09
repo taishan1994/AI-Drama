@@ -1,0 +1,24 @@
+subject_definitions:
+<Subject 1> is Old Zhou, a middle-aged man with a rough and forceful voice quality (S3), wearing a dark, worn jacket.
+<Subject 2> is the community hospital environment in <Picture 1>, featuring an industrial-style interior with exposed pipes, concrete floors, and a large wooden crate in the center.
+<Subject 3> is the fire extinguisher wrench prop in <Picture 3>, characterized by its heavy metal construction, rusted texture, and distinct handle shape.
+<Picture 2> is the character identity and clothing reference for Old Zhou, used to define his face identity and body proportions without reproducing the reference sheet layout.
+
+summary:
+[reference generation] The target video depicts Old Zhou (S3) in the community hospital (Subject 2) becoming enraged and raising a fire extinguisher wrench (Subject 3) to smash a crate. The scene uses <Picture 1> for environmental layout and <Picture 2> for character identity, while <Picture 3> defines the prop's appearance.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): fully_preserved - Old Zhou's middle-aged appearance, rough voice quality (S3), and aggressive posture are retained.
+<Picture 1> ([Shot 1] environment): weak_reference - the architecture, spatial layout, and screen direction are preserved without copying the reference sheet's specific composition.
+<Picture 2> (character identity): weak_reference - face identity and clothing/body proportions are retained, but the reference sheet layout is not reproduced.
+<Picture 3> (prop appearance): weak_reference - the recognizable shape, rusted texture, and markings of the wrench are preserved without copying the image layout.
+
+detailed_description:
+The target video is a single shot in a cinematic, high-tension style with a slightly desaturated color palette to reflect the anger and urgency.
+[Shot 1] The scene opens in the community hospital environment (Subject 2), an industrial space with exposed pipes and concrete floors. In the center stands a large wooden crate. Old Zhou (S3), a middle-aged man with a rough and forceful voice quality (S3), stands in the foreground, his body language aggressive and his face contorted with rage. He is holding the fire extinguisher wrench (Subject 3), a heavy metal tool with a rusted texture and distinct handle shape. He raises the wrench high above his head, his muscles tensed, intending to smash the crate. The camera remains relatively static, focusing on the threat. As he swings the wrench down, a loud, sharp clanging sound of metal hitting metal echoes through the room. He shouts with intensity, <d>[Chinese] 那这箱子就是祸根！就是因为它，全镇才变成这样！直接砸了！</d>. The action is abrupt and violent, capturing the moment just before impact.
+
+overall_soundscape:
+Heavy industrial ambient noise of the hospital hall mixes with the sharp, rhythmic clanging sound of the metal wrench swinging and the heavy thud of impact.
+
+non_diegetic_music:
+A low, dissonant drone with a sudden, staccato percussion hit on the line "直接砸了" to underscore the violence.

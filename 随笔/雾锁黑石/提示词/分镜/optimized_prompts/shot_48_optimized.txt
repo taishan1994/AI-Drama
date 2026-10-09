@@ -1,0 +1,20 @@
+subject_definitions:
+<Subject 1> is the environment defined by <Picture 1> and <Picture 2>, featuring a dimly lit hospital corridor with wet floor tiles, flickering fluorescent lights, and a spatial layout that includes a corner at the far end where a body is located.
+<Subject 2> is the two figures running through the corridor, consisting of Lin Mo (S1) and Su Wan (S2), depicted as a pair moving urgently with dynamic motion blur.
+
+summary:
+[reference generation] The target video is a single 12-second shot depicting a frantic chase through a hospital corridor. The environment is defined by <Picture 1> and <Picture 2>, while the action and mood are derived from the storyboard source. No source video or audio assets are used; the scene relies on visual motion and ambient sound effects.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): weak_reference - the architecture, wet floor texture, and flickering light patterns are retained as atmospheric elements without copying the reference sheet layout.
+<Subject 2> (appears in [Shot 1]): weak_reference - the composition of two figures running is retained, focusing on the action of fleeing rather than specific character designs.
+
+detailed_description:
+The target video is a handheld, shaky-cam sequence capturing a high-intensity chase in a dim hospital corridor.
+[Shot 1] At 00:00.000, the shot begins with a frantic handheld tracking shot, mimicking the perspective of someone running. The camera moves rapidly forward and slightly to the right, following the motion of Lin Mo (S1) and Su Wan (S2) as they sprint into a dark, narrow corridor. The lighting is unstable, with flickering fluorescent lights casting erratic, patchy shadows that dance across the walls and floor. The environment, defined by <Subject 1>, shows wet, reflective floor tiles and the oppressive atmosphere of a hospital hallway. As the camera pushes forward, the background blurs due to the speed of the run. At the far end of the corridor, in a corner, a static, motionless figure is visible, representing the water-stained corpse referenced in the storyboard. The camera shakes violently, conveying the panic and urgency of the chase. The sound of heavy, rapid footsteps echoes loudly in the empty space, accompanied by the lingering, high-pitched wail of a distant scream that fades into the background. There is no dialogue spoken in this shot. The shot continues until 00:12.000, maintaining the forward momentum and the chaotic lighting until the end of the clip.
+
+overall_soundscape:
+The soundscape is dominated by the rhythmic, heavy thud of running footsteps echoing off the sterile walls, creating a sense of isolation. A faint, high-pitched wail of a distant scream lingers in the background, adding to the tension. The ambient noise includes the hum of flickering fluorescent lights and the slight drip of water on the wet floor.
+
+non_diegetic_music:
+N/A

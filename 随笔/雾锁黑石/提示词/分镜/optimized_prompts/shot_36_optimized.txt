@@ -1,0 +1,28 @@
+subject_definitions:
+<Subject 1> is Lin Mo, a young adult male with slightly breathless and anxious vocal qualities (S1), depicted in the large portrait area of <Picture 2> for facial identity and in the turnaround figures for clothing and body proportions.
+<Subject 2> is Su Wan, a middle-aged male with a rough and forceful vocal quality (S3), depicted in the large portrait area of <Picture 2> for facial identity and in the turnaround figures for clothing and body proportions.
+<Subject 3> is Su Wan, a female with a calm, clear, and controlled vocal quality (S2), depicted in the large portrait area of <Picture 2> for facial identity and in the turnaround figures for clothing and body proportions.
+<Picture 1> is the environment and spatial-layout reference for the community hospital lobby and back corridor, defining the architecture and screen direction without copying the reference-sheet layout.
+<Picture 2> is the character identity and clothing reference for Lin Mo, Su Wan (S3), and Su Wan (S2), providing facial features and body proportions without reproducing the reference sheet layout.
+
+summary:
+[reference generation] The target video is a single 12-second shot depicting Lin Mo in a state of崩溃 (collapse/panic) within a community hospital setting. The scene uses <Picture 1> for the hospital environment and <Picture 2> for character appearances. Lin Mo (S1) is trapped between Su Wan (S3) and Su Wan (S2), expressing confusion and desperation. The audio references the specific dialogue and sound effects from the source script.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): fully_preserved - Lin Mo's appearance, clothing, and anxious state are fully retained.
+<Subject 2> (appears in [Shot 1]): fully_preserved - Su Wan (S3)'s appearance and forceful presence are fully retained.
+<Subject 3> (appears in [Shot 1]): fully_preserved - Su Wan (S2)'s appearance and calm presence are fully retained.
+<Picture 1> (environment): fully_preserved - The hospital lobby architecture and spatial layout are fully preserved.
+<Picture 2> (character design): fully_preserved - The facial identities and clothing proportions are fully preserved.
+
+detailed_description:
+The target video is a medium shot set in a dimly lit community hospital lobby, characterized by sterile white walls, fluorescent lighting, and a cluttered reception desk. The camera remains static, focusing on the central tension.
+[Shot 1] Lin Mo (S1), the young adult male with slightly breathless and anxious vocal qualities, stands in the center of the frame, physically trapped between Su Wan (S3) on his left and Su Wan (S2) on his right. His expression is one of panic and helplessness, eyes wide with confusion and a look of utter bewilderment. He is dressed in a standard delivery uniform. To his left, Su Wan (S3), the middle-aged male with a rough and forceful vocal quality, looms slightly, his posture imposing. To his right, Su Wan (S2), the female with a calm, clear, and controlled vocal quality, stands with a steady, unyielding stance. The background is the hospital environment defined by <Picture 1>, showing the typical institutional architecture of the community hospital lobby and back corridor, with blurred medical equipment and signage in the distance. The lighting is cool and clinical, casting sharp shadows that emphasize Lin Mo's distress.
+The ambient sound is dominated by chaotic, ragged breathing sounds, creating a sense of suffocation and urgency.
+Lin Mo (S1) speaks with a voice that is slightly breathless and anxious, struggling to maintain composure. <d>[Chinese] 到底能砸还是不能砸？我只是来送货的，我要回家！</d> His words are delivered with a mix of desperation and confusion, emphasizing his role as a delivery person who simply wants to go home. As he finishes the line, the chaotic breathing continues, underscoring his emotional turmoil. The shot holds on his panicked face as the two women stand firm on either side, blocking his path.
+
+overall_soundscape:
+Chaotic, ragged breathing sounds dominate the audio landscape, creating a tense and claustrophobic atmosphere. The sound is dry and close-mic'd, emphasizing the physical exertion and panic of the character.
+
+non_diegetic_music:
+N/A

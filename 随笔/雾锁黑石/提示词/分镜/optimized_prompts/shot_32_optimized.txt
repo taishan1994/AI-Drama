@@ -1,0 +1,22 @@
+subject_definitions:
+<Subject 1> is the environment in <Picture 1>, depicting the community hospital lobby and rear corridor with exposed brick walls, dim fluorescent lighting, and a cluttered reception desk.
+<Subject 2> is the young woman in <Picture 2>, with long dark hair, wearing a light grey blazer over a white blouse, and a determined expression.
+<Subject 3> is the middle-aged man in <Picture 2>, with short grey hair and a rugged face, wearing a dark vest over a striped shirt.
+
+summary:
+[reference generation] The target video is a single close-up shot of <Subject 2> explaining the nature of zombie mutations to <Subject 3> within the hospital environment defined by <Subject 1>. The scene uses <Subject 2> as the primary speaker delivering a serious monologue about the grey fog mutagen and its effects on the infected.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): weak_reference - the architectural style and spatial layout are retained as a background setting without copying the reference sheet's specific composition.
+<Subject 2> (appears in [Shot 1]): fully_preserved - the character's identity, clothing, and facial features are retained.
+<Subject 3> (appears in [Shot 1]): fully_preserved - the character's identity and clothing are retained.
+
+detailed_description:
+The target video is a cinematic close-up with a shallow depth of field, focusing on <Subject 2> and <Subject 3> in the dimly lit hospital corridor. The lighting is low-key, casting soft shadows on the brick walls of <Subject 1>.
+[Shot 1] At 00:00.000, the shot begins with <Subject 2> (S2) leaning slightly forward, her eyes intense and serious. She speaks in a low, steady voice, her expression grave as she explains the truth about the infection. <Subject 2> (S2) says, <d>[Chinese] 不是试剂。是凯生生物地下实验室泄漏的灰雾诱变剂。山体滑坡震裂储罐，雾气扩散全镇，感染后会出现多种畸变：普通行尸无脑追击，还有爬行突袭、体型巨化的变异体，甚至能尖叫召集尸群，所有活物都是它们的猎物。</d> Her voice is calm but heavy with the gravity of the information. As she speaks, <Subject 3> (S3) listens intently, his face etched with concern and confusion. The background remains the blurred interior of <Subject 1>, with the faint hum of hospital equipment providing a low-frequency atmospheric bed. The camera remains static, keeping the focus tight on the speaker's face and upper body.
+
+overall_soundscape:
+A low-frequency atmospheric drone and the distant, muffled hum of hospital machinery create a tense, oppressive ambient soundscape throughout the shot.
+
+non_diegetic_music:
+A minimal, dissonant string score with a slow, creeping tempo underscores the scene, building subtle tension without overpowering the dialogue.

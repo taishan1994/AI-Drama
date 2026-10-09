@@ -1,0 +1,26 @@
+subject_definitions:
+<Subject 1> is Lin Mo (S1), a young adult male with slightly breathless and anxious vocal qualities, depicted in the large portrait area of <Picture 2> wearing his specific clothing and body proportions derived from the turnaround figures in <Picture 2>.
+<Picture 1> is the environment and spatial-layout reference for the scene, defining the architecture, screen direction, and the setting of the black stone town during a landslide closure at night.
+<Picture 2> is the character identity and clothing reference for Lin Mo (S1), providing the facial identity and body proportions for the character.
+<Picture 3> is the prop appearance reference for the cold chain sample box, preserving its recognizable shape and markings.
+<Picture 4> is the prop appearance reference for the flashlight and mobile phone, preserving their recognizable shapes and markings.
+
+summary:
+[reference generation] The target video is a single 4-second shot showing Lin Mo (S1) entering a rainstorm and foggy environment. The scene utilizes <Picture 1> for the environment, <Picture 2> for Lin Mo's appearance, and <Picture 3> and <Picture 4> for the props he is carrying.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): attribute_transfer - Lin Mo's identity and clothing are transferred from <Picture 2> to the character in the target video.
+<Picture 1> ([Shot 1] environment): weak_reference - the architecture and screen direction are retained as a background environment without copying the reference sheet layout.
+<Picture 2> (Lin Mo's appearance): attribute_transfer - the facial identity and body proportions are transferred to the character in the target video.
+<Picture 3> (cold chain box): attribute_transfer - the recognizable shape and markings are transferred to the prop in the target video.
+<Picture 4> (flashlight and phone): attribute_transfer - the recognizable shapes and markings are transferred to the props in the target video.
+
+detailed_description:
+The target video is a cinematic short shot with a dark, moody atmosphere dominated by heavy rain and dense fog.
+[Shot 1] The scene opens with Lin Mo (S1), a young adult male with slightly breathless and anxious vocal qualities, stepping through a heavy wooden door. He is holding <Subject 3>, the cold chain sample box, and clutching <Subject 4>, the flashlight and mobile phone. As he pushes the door open, the scene is immediately engulfed by a torrential downpour and thick fog. The environment, defined by the architecture and screen direction of <Picture 1>, reveals a dark, landslide-closed road at night in the black stone town. Lin Mo's figure is instantly swallowed by the dense fog and rain, becoming barely visible against the chaotic backdrop. The camera remains relatively static, focusing on the action of entry and the immediate overwhelming of the character by the weather. There is no dialogue in this shot.
+
+overall_soundscape:
+The soundscape is dominated by the sharp, metallic sound of the door opening followed immediately by the roar of heavy rain pouring into the vehicle and the thick, wet hiss of the storm. The sound of the rain is intense and continuous, matching the visual intensity of the downpour.
+
+non_diegetic_music:
+N/A

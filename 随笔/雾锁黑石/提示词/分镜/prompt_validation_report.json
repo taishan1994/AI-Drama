@@ -1,0 +1,312 @@
+[
+  {
+    "shot": 1,
+    "status": "validated",
+    "chars": 2303
+  },
+  {
+    "shot": 2,
+    "status": "validated",
+    "chars": 2591
+  },
+  {
+    "shot": 3,
+    "status": "validated",
+    "chars": 2096
+  },
+  {
+    "shot": 4,
+    "status": "validated",
+    "chars": 1662
+  },
+  {
+    "shot": 5,
+    "status": "validated",
+    "chars": 2911
+  },
+  {
+    "shot": 6,
+    "status": "validated",
+    "chars": 1867
+  },
+  {
+    "shot": 7,
+    "status": "validated",
+    "chars": 2666
+  },
+  {
+    "shot": 8,
+    "status": "validated",
+    "chars": 2163
+  },
+  {
+    "shot": 9,
+    "status": "validated",
+    "chars": 2525
+  },
+  {
+    "shot": 10,
+    "status": "validated",
+    "chars": 2078
+  },
+  {
+    "shot": 11,
+    "status": "validated",
+    "chars": 3232
+  },
+  {
+    "shot": 12,
+    "status": "validated",
+    "chars": 2889
+  },
+  {
+    "shot": 13,
+    "status": "validated",
+    "chars": 2105
+  },
+  {
+    "shot": 14,
+    "status": "validated",
+    "chars": 2008
+  },
+  {
+    "shot": 15,
+    "status": "validated",
+    "chars": 3566
+  },
+  {
+    "shot": 16,
+    "status": "validated",
+    "chars": 2390
+  },
+  {
+    "shot": 17,
+    "status": "validated",
+    "chars": 3164
+  },
+  {
+    "shot": 18,
+    "status": "validated",
+    "chars": 3412
+  },
+  {
+    "shot": 19,
+    "status": "validated",
+    "chars": 3588
+  },
+  {
+    "shot": 20,
+    "status": "validated",
+    "chars": 2849
+  },
+  {
+    "shot": 21,
+    "status": "validated",
+    "chars": 2206
+  },
+  {
+    "shot": 22,
+    "status": "validated",
+    "chars": 3263
+  },
+  {
+    "shot": 23,
+    "status": "validated",
+    "chars": 2636
+  },
+  {
+    "shot": 24,
+    "status": "validated",
+    "chars": 2794
+  },
+  {
+    "shot": 25,
+    "status": "validated",
+    "chars": 3110
+  },
+  {
+    "shot": 26,
+    "status": "validated",
+    "chars": 3107
+  },
+  {
+    "shot": 27,
+    "status": "validated",
+    "chars": 2839
+  },
+  {
+    "shot": 28,
+    "status": "validated",
+    "chars": 3340
+  },
+  {
+    "shot": 29,
+    "status": "validated",
+    "chars": 3123
+  },
+  {
+    "shot": 30,
+    "status": "validated",
+    "chars": 2397
+  },
+  {
+    "shot": 31,
+    "status": "validated",
+    "chars": 1830
+  },
+  {
+    "shot": 32,
+    "status": "validated",
+    "chars": 2615
+  },
+  {
+    "shot": 33,
+    "status": "validated",
+    "chars": 2892
+  },
+  {
+    "shot": 34,
+    "status": "validated",
+    "chars": 3022
+  },
+  {
+    "shot": 35,
+    "status": "validated",
+    "chars": 2745
+  },
+  {
+    "shot": 36,
+    "status": "validated",
+    "chars": 4201
+  },
+  {
+    "shot": 37,
+    "status": "validated",
+    "chars": 2952
+  },
+  {
+    "shot": 38,
+    "status": "validated",
+    "chars": 2819
+  },
+  {
+    "shot": 39,
+    "status": "validated",
+    "chars": 2246
+  },
+  {
+    "shot": 40,
+    "status": "validated",
+    "chars": 3898
+  },
+  {
+    "shot": 41,
+    "status": "validated",
+    "chars": 2857
+  },
+  {
+    "shot": 42,
+    "status": "validated",
+    "chars": 2628
+  },
+  {
+    "shot": 43,
+    "status": "validated",
+    "chars": 3442
+  },
+  {
+    "shot": 44,
+    "status": "validated",
+    "chars": 1693
+  },
+  {
+    "shot": 45,
+    "status": "validated",
+    "chars": 3678
+  },
+  {
+    "shot": 46,
+    "status": "validated",
+    "chars": 2463
+  },
+  {
+    "shot": 47,
+    "status": "validated",
+    "chars": 2532
+  },
+  {
+    "shot": 48,
+    "status": "validated",
+    "chars": 2907
+  },
+  {
+    "shot": 49,
+    "status": "validated",
+    "chars": 2982
+  },
+  {
+    "shot": 50,
+    "status": "validated",
+    "chars": 3065
+  },
+  {
+    "shot": 51,
+    "status": "validated",
+    "chars": 3280
+  },
+  {
+    "shot": 52,
+    "status": "validated",
+    "chars": 4266
+  },
+  {
+    "shot": 53,
+    "status": "validated",
+    "chars": 3357
+  },
+  {
+    "shot": 54,
+    "status": "validated",
+    "chars": 2791
+  },
+  {
+    "shot": 55,
+    "status": "validated",
+    "chars": 3314
+  },
+  {
+    "shot": 56,
+    "status": "validated",
+    "chars": 2759
+  },
+  {
+    "shot": 57,
+    "status": "validated",
+    "chars": 3127
+  },
+  {
+    "shot": 58,
+    "status": "validated",
+    "chars": 2667
+  },
+  {
+    "shot": 59,
+    "status": "validated",
+    "chars": 3438
+  },
+  {
+    "shot": 60,
+    "status": "validated",
+    "chars": 2787
+  },
+  {
+    "shot": 61,
+    "status": "validated",
+    "chars": 2709
+  },
+  {
+    "shot": 62,
+    "status": "validated",
+    "chars": 2685
+  }
+]

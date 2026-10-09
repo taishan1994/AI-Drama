@@ -1,0 +1,22 @@
+subject_definitions:
+<Subject 1> is Lin Mo, a young adult male with a pale complexion, disheveled dark hair, and a slightly breathless, anxious expression, wearing a standard delivery uniform with a backpack.
+<Subject 2> is the hospital environment in <Picture 1>, featuring a dimly lit corridor with exposed pipes, flickering fluorescent lights, and a heavy steel door that Lin Mo is leaning against.
+<Picture 2> is the character identity and clothing reference for Lin Mo, used to define his face, hair, and delivery uniform proportions without copying the reference sheet layout.
+
+summary:
+[reference generation] The target video is a single 12-second close-up shot of Lin Mo explaining a frantic situation in a hospital corridor. The character's appearance is derived from <Subject 1> and <Picture 2>, and the environment is based on <Subject 2>. The scene captures Lin Mo's panic and physical exhaustion as he tries to explain his presence to unseen listeners.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): fully_preserved - Lin Mo's pale face, anxious expression, delivery uniform, and physical state of exhaustion are retained.
+<Subject 2> (appears in [Shot 1]): fully_preserved - The hospital corridor architecture, lighting, and the steel door are retained.
+<Picture 2> (character identity reference): fully_preserved - Lin Mo's facial features, hair style, and clothing proportions are retained based on the reference sheet.
+
+detailed_description:
+The target video is a tight close-up shot in a cinematic, high-contrast style with cool, desaturated tones to emphasize the eerie atmosphere.
+[Shot 1] At 00:00.000, the shot opens on Lin Mo (S1), the young adult male with a pale complexion and disheveled dark hair, leaning heavily against a heavy steel door within the hospital corridor environment. His face is contorted in panic, eyes wide and darting, mouth slightly open as he gasps for air. He is wearing a standard delivery uniform with a backpack slung over his shoulder, matching the proportions defined in <Picture 2>. The background shows the dimly lit corridor with flickering fluorescent lights and exposed pipes, matching the spatial layout of <Subject 2>. Lin Mo (S1) is breathing heavily, his chest heaving visibly. He raises his left hand, palm open, gesturing wildly to emphasize his point while his right hand grips the door frame for support. His voice is shaky and breathless as he speaks with a frantic, hurried pace. <d>[Chinese] 我不知道……街上全是怪人！有爬的、有堵路的，疯了一样追着我跑！我是送货的，我只是来送试剂！</d> The audio is dominated by the sound of rapid, ragged breathing mixed with the low hum of the hospital lights. The camera remains static, keeping the focus entirely on Lin Mo's terrified expression and his desperate attempt to explain his innocence. The shot holds on his face as he continues to explain, capturing the sheer terror in his eyes.
+
+overall_soundscape:
+The soundscape is dominated by the sound of heavy, rapid breathing and the low, intermittent hum of flickering fluorescent lights in the hospital corridor. There is a faint, distant echo of footsteps or scuttling sounds in the background, adding to the sense of being pursued.
+
+non_diegetic_music:
+A low, dissonant drone with a slow, irregular heartbeat rhythm underlies the scene, creating a tense and unsettling atmosphere that matches Lin Mo's panic.

@@ -1,0 +1,20 @@
+subject_definitions:
+<Subject 1> is the dark alley environment in <Picture 1> and <Picture 2>, featuring deep shadows, indistinct silhouettes of multiple figures, and a chaotic, oppressive atmosphere.
+
+summary:
+[reference generation] The target video is a single 8-second shot depicting a tense, horror-filled scene in a dark alley where multiple shadowy figures move erratically, accompanied by the sounds of groaning and dragging limbs. The visual style and spatial layout are derived from <Picture 1> and <Picture 2>, while the audio consists of ambient horror sounds and no dialogue.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): weak_reference - the dark alley environment, deep shadows, and general spatial layout are retained as a mood reference without copying the specific reference-sheet composition.
+<Picture 1>: weak_reference - used solely for environmental design and screen direction guidance.
+<Picture 2>: weak_reference - used solely for environmental design and screen direction guidance.
+
+detailed_description:
+The target video is a single, continuous 8-second shot in a cinematic horror style, utilizing a handheld camera to simulate unease and instability.
+[Shot 1] At 00:00.000, the shot opens on a deep, narrow alleyway shrouded in heavy darkness. The environment, defined by <Subject 1>, is characterized by deep shadows and indistinct silhouettes of multiple figures moving in the background. The camera moves slightly, mimicking the shaky, erratic motion of the surroundings. From the darkness, multiple groans and the sound of limbs dragging across the ground are heard, creating a chaotic and oppressive atmosphere. The audio layer consists of multiple zombie groans and dragging sounds, with no dialogue spoken. The shot holds on this tension until the end of the 8-second duration.
+
+overall_soundscape:
+Heavy, low-frequency ambient drone mixed with multiple zombie groans and the distinct sound of limbs dragging across rough ground surfaces.
+
+non_diegetic_music:
+N/A

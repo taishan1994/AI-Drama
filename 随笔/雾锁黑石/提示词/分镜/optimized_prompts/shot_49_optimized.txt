@@ -1,0 +1,27 @@
+subject_definitions:
+<Subject 1> is the narrow, cavernous hospital corridor environment in <Picture 1>, featuring exposed concrete walls, flickering fluorescent lights, and a sense of deep emptiness.
+<Subject 2> is the two human figures (Lin Mo and Su Wan) moving rapidly through the corridor, appearing as silhouettes against the dim light.
+
+summary:
+[reference generation] The target video is a single 10-second shot depicting Lin Mo and Su Wan running frantically down a dark, abandoned hospital corridor. The scene uses <Subject 1> as the environmental reference for the spatial layout and lighting conditions, and <Subject 2> to represent the two characters' movement and positioning.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): weak_reference - the architecture and screen direction are retained, but the specific layout is not copied.
+<Subject 2> (appears in [Shot 1]): fully_preserved - the action of two figures running rapidly and the mood of urgency are fully preserved.
+
+detailed_description:
+The target video is a single continuous shot lasting 10 seconds, filmed in a wide long-distance perspective (long shot) from a fixed camera position. The scene is set in a narrow, cavernous hospital corridor with flickering fluorescent lights that create a strobe-like effect, casting deep shadows. The environment is defined by <Subject 1>, a desolate space with exposed concrete walls and a sense of profound emptiness.
+
+[Shot 1] At 00:00.000, the shot opens on the corridor. Two figures, Lin Mo (S1) and Su Wan (S2), are seen as silhouettes moving rapidly away from the camera toward the deep end of the hall. Their movement is fast and panicked. The lighting is unstable, with lights turning on and off intermittently, causing the shadows of the two figures to dance and distort. On either side of the corridor, the doorways of the ward rooms are visible; through the cracks of the doors, vague, shadowy shapes resembling zombies can be seen swaying or moving slightly in the darkness. The atmosphere is tense and claustrophobic.
+
+The audio consists of a continuous, echoing sound of heavy footsteps pounding against the floor, accompanied by the faint, scratchy sound of something dragging or clawing in the distance. There is no dialogue in this shot.
+
+At 00:05.000, the two figures continue their rapid movement, their forms becoming smaller and more indistinct as they approach the vanishing point of the corridor. The flickering lights intensify the sense of disorientation.
+
+At 00:09.000, the shot ends abruptly with the figures still in motion, heading deeper into the darkness. The sound of footsteps and scratching continues until the very last frame.
+
+overall_soundscape:
+The soundscape is dominated by the rhythmic, echoing sound of heavy footsteps and the intermittent, high-pitched scratchy noise of unseen creatures moving in the background. The ambient noise is low, emphasizing the isolation and danger of the corridor.
+
+non_diegetic_music:
+N/A

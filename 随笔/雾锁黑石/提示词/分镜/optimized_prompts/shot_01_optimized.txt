@@ -1,0 +1,18 @@
+subject_definitions:
+<Subject 1> is the deep mountain environment in <Picture 1>, characterized by a pitch-black night sky, torrential rain, thick rolling fog, and a valley town barely visible in the distance.
+
+summary:
+[reference generation] The target video is an 8-second establishing shot of a deep mountain town at night during a heavy storm. The scene uses <Subject 1> as a design reference for the environment, preserving the architecture and spatial layout without copying the reference sheet's specific composition. The shot captures the atmosphere of dense fog, torrential rain, and distant, eerie sounds.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): weak_reference - the architectural style and spatial layout are retained as a design guide, but the specific composition and screen direction are adapted to fit the target shot's framing.
+
+detailed_description:
+The target video is a single, continuous establishing shot lasting 8 seconds, rendered in a realistic, high-contrast cinematic style with a dark, moody palette dominated by blacks, greys, and the white of the rain and fog.
+[Shot 1] At 00:00.000, the scene opens on a vast, deep mountain valley at night. The sky is an oppressive, pitch-black void, completely obscured by a dense, churning fog that rolls across the landscape, severely limiting visibility. Torrential rain falls in heavy, diagonal sheets, creating a chaotic texture against the darkness. In the far distance, the faint, blurry silhouette of a valley town is barely discernible through the mist, with no clear lights or movement visible. The camera remains static, allowing the viewer to absorb the overwhelming sense of isolation and danger. The audio is dominated by the sound of dense, relentless rain hitting surfaces, mixed with the deep, dull rumble of distant rocks falling from the mountains. Underneath the rain, there is a faint, blurry, and eerie low growl or whispering sound, adding to the unsettling atmosphere. There are no visible characters or dialogue in this shot.
+
+overall_soundscape:
+The soundscape is defined by the intense, rhythmic sound of heavy rain, the deep, resonant rumble of distant falling rocks, and a vague, unsettling low-frequency hum or whispering that creates an eerie, ambiguous atmosphere.
+
+non_diegetic_music:
+N/A

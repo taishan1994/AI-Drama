@@ -1,0 +1,18 @@
+subject_definitions:
+<Subject 1> is the mountain road environment in <Picture 1>, featuring a night-rain setting, a landslide blocking the entire winding road, debris scattered across the asphalt, and dark silhouettes of bushes swaying in the wind.
+
+summary:
+[reference generation] The target video is a single shot of a car's front view facing a completely blocked mountain road at night. The scene depicts a landslide sealing the winding highway with debris and swaying bushes under heavy rain. The visual style is cinematic and realistic, capturing the atmosphere of a road closure.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): fully_preserved - the architecture of the mountain road, the layout of the landslide, the debris on the asphalt, and the swaying bushes are retained.
+
+detailed_description:
+The target video is a single shot in a cinematic, realistic style with a dark, moody atmosphere created by heavy night rain and the glow of vehicle headlights cutting through the mist.
+[Shot 1] The camera is positioned at a long distance, capturing the front view of a car facing directly forward. The entire winding mountain road ahead is completely sealed by a massive landslide of mud and rocks. The asphalt is littered with debris, and the roadside bushes are dark silhouettes swaying violently in the wind. The scene is illuminated by the car's headlights, which cast a beam through the falling rain and mist. There is no dialogue. The audio consists of the sound of the car's brakes making a slight thud, followed by the lingering echo of falling rocks and the rustling of branches being rubbed by the wind. The shot holds steady on this blocked road until the end of the clip.
+
+overall_soundscape:
+Heavy night rain, the sound of falling rocks echoing, and the rustling of wind-blown bushes continue throughout the shot.
+
+non_diegetic_music:
+N/A

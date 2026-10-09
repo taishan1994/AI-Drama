@@ -1,0 +1,20 @@
+subject_definitions:
+<Subject 1> is the zombie subject in the source shot, characterized by a pale, ashen complexion, hollow and unfocused eyes, a mouth with white foam hanging from the corners, and a completely intact skin surface with no visible rot or wounds.
+<Subject 2> is the environment and spatial layout defined by <Picture 1> and <Picture 2>, representing the fog-locked Black Stone Town main street and hospital entrance, featuring a misty atmosphere, specific architectural structures, and a defined screen direction.
+
+summary:
+[reference generation] The target video is an 8-second shot depicting a zombie freezing upon hearing a sound, turning its head slowly with a vacant gaze and pale skin, while emitting a clear growl. The visual style and environment are derived from <Subject 2>, which serves as a design reference for the architecture and spatial layout without acting as a frame anchor.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): fully_preserved - the zombie's pale complexion, unfocused eyes, white foam at the mouth, and lack of rot are retained exactly as shown in the source.
+<Subject 2> (appears in [Shot 1]): weak_reference - the architectural style, foggy atmosphere, and screen direction are used as design guides, but the specific layout is not copied; the shot is generated based on the mood and setting defined by these references.
+
+detailed_description:
+The target video is a single 8-second shot in a realistic horror style, utilizing the foggy, misty atmosphere and architectural layout defined by <Subject 2> to establish the setting of the Black Stone Town hospital entrance.
+[Shot 1] At 00:00.000, the shot opens on a close-up of <Subject 1>, the zombie. The creature freezes abruptly upon hearing a sound, its body going rigid. It slowly turns its head, revealing eyes that are completely unfocused and blank, and a face that is a sickly, pale white. White foam hangs from the corners of its mouth. The skin remains intact with no visible rot or wounds. As the head turns, a low, clear growl sound becomes audible. At 00:06.500, the shot holds on the frozen expression of the zombie as the growl continues.
+
+overall_soundscape:
+A low, clear growl emanates from the zombie, rising in intensity slightly as it turns its head, followed by the ambient sound of heavy fog and distant wind in the hospital courtyard.
+
+non_diegetic_music:
+N/A

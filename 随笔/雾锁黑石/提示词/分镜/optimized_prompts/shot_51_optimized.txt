@@ -1,0 +1,24 @@
+subject_definitions:
+<Subject 1> is the young male character Lin Mo (S1), characterized by a slightly breathless and anxious demeanor, moving with urgency.
+<Subject 2> is the female character Su Wan (S2), characterized by a calm, clear, and controlled demeanor, moving in sync with Lin Mo.
+<Picture 1> is the environment and spatial-layout reference for the community hospital lobby and back corridor, defining the architecture and screen direction.
+<Picture 2> is the environment and spatial-layout reference for the water-stained floor area, defining the specific hazard location.
+
+summary:
+[reference generation] The target video depicts a high-tension action sequence where Lin Mo and Su Wan rush forward to evade zombies. The scene utilizes <Picture 1> and <Picture 2> as environmental design references to establish the hospital setting and the location of a hidden zombie beneath water stains. The action focuses on their stealthy movement and the successful avoidance of the threat.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): fully_preserved - Lin Mo's anxious expression and urgent movement are retained.
+<Subject 2> (appears in [Shot 1]): fully_preserved - Su Wan's calm demeanor and synchronized movement are retained.
+<Picture 1> (environmental context): weak_reference - the architectural style and screen direction are referenced to maintain spatial consistency without copying the layout.
+<Picture 2> (environmental hazard): weak_reference - the water-stained floor and the presence of the zombie beneath it are referenced to establish the danger zone.
+
+detailed_description:
+The target video is a cinematic action sequence shot in a realistic, slightly desaturated color palette to convey tension and urgency.
+[Shot 1] The camera tracks forward from a low angle, following Lin Mo (S1) and Su Wan (S2) as they move rapidly through the community hospital lobby and back corridor. The environment is defined by the architecture and screen direction seen in <Picture 1>, with dim lighting filtering through the hospital windows. Both characters are hunched forward, keeping their bodies low to the ground and placing their feet lightly to avoid making noise, strictly adhering to the spatial layout of <Picture 1>. As they navigate the path, they approach the area marked by <Picture 2>, where water stains cover the floor. A zombie lies motionless beneath the wet tiles, its head partially obscured. Lin Mo (S1) and Su Wan (S2) accelerate slightly to slip past the hazard, their movements fluid and desperate. They successfully bypass the zombie without detection. The audio consists of the soft, rhythmic sound of their footsteps on the wet floor, mixed with the sound of suppressed, heavy breathing. There is no dialogue spoken in this shot.
+
+overall_soundscape:
+The soundscape is dominated by the sound of footsteps on a wet, tiled floor, which are light and hurried. Underneath, there is a low, oppressive hum of heavy breathing from both characters. The ambient noise of the hospital is minimal, creating a sense of isolation and danger.
+
+non_diegetic_music:
+A tense, low-frequency drone with a slow, rising percussion beat underscores the urgency of the escape, building anxiety without overpowering the diegetic sounds of footsteps and breathing.

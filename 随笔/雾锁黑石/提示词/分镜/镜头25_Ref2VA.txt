@@ -1,0 +1,17 @@
+subject_definitions:
+<Subject 1> is the community clinic lobby environment in <Picture 1>, with a public reception desk, waiting chairs, fluorescent ceiling lights, a corridor extending toward the rear, scattered medical supplies, and rain-darkened windows marked by scratches.
+
+summary:
+[reference generation] The target video establishes the abandoned community clinic lobby from <Subject 1>, preserving its spatial layout while revealing the damage left by the evacuation.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): fully_preserved - the clinic lobby layout, reception desk, waiting area, rear corridor, fluorescent lighting, and rain-marked windows remain consistent with <Picture 1>.
+<Picture 1> ([Shot 1] environment reference): fully_preserved - the image guides the lobby architecture, camera orientation, and practical lighting.
+
+detailed_description:
+The target video is a grounded live-action survival-horror scene, with cold fluorescent light, rain-muted blue-gray tones, realistic handheld camera movement, and no visible gore.
+[Shot 1] The empty community clinic lobby from <Subject 1> fills a wide establishing composition. The reception desk remains on the left, overturned waiting chairs and scattered medical supplies occupy the center foreground, and the rear corridor recedes along the right side. Scratches catch the intermittent light on the rain-darkened window glass. The camera makes a slow, restrained pan from the entrance toward the nurse station, then settles facing the corridor. Ceiling lights flicker irregularly, briefly dimming the far end without changing the floor plan. Dust and fine mist hang in the air; no people or creatures enter the frame. A faint electrical buzz and distant rain establish the sound before the shot ends on the dark corridor opening, ready for a cut to the survivors.
+
+overall_soundscape: A low electrical hum, faint rain against the windows, and occasional soft settling sounds in the empty clinic.
+
+non_diegetic_music: A restrained low drone with a slow pulse, held nearly inaudible and without a melodic theme.

@@ -1,0 +1,20 @@
+subject_definitions:
+<Subject 1> is the mist-shrouded Black Stone Town environment in <Picture 1>, featuring a narrow main street, a hospital entrance, and scattered dim lights visible through thick fog.
+<Subject 2> is the atmospheric sound texture derived from <Picture 1>, characterized by heavy wind, continuous rain, and low, rhythmic zombie growls.
+
+summary:
+[reference generation] The target video is a single long shot of the mist-shrouded Black Stone Town, using <Picture 1> as an environmental and spatial-layout reference to establish the eerie atmosphere of the valley town.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): weak_reference - the architecture and screen direction are preserved, but the specific layout of the reference sheet is not copied.
+<Subject 2> (appears in [Shot 1]): weak_reference - the wind, rain, and zombie growls are referenced as ambient sound textures without direct copying.
+
+detailed_description:
+The target video is a single long shot establishing a desolate, mist-shrouded Black Stone Town in the valley.
+[Shot 1] At 00:00.000, the camera performs a slow, steady dolly-out movement from a high vantage point, looking down into the valley floor. The scene is dominated by <Subject 1>, the mist-shrouded Black Stone Town environment in <Picture 1>, where thick fog obscures the ground and surrounds the narrow main street. Through the haze, the scattered dim lights of the town appear and disappear in a flickering pattern, marking the only inhabited area. The hospital entrance is visible in the distance, its structure faintly outlined against the grey fog. The entire town is enveloped in a strange, dead silence that is broken only by the heavy wind and continuous rain. As the camera pulls back, the low, rhythmic zombie growls from <Subject 2> rise in volume, creating a dissonant contrast to the stillness of the fog. The mood is one of oppressive isolation and supernatural dread.
+
+overall_soundscape:
+Heavy wind howling through the narrow streets, continuous rain drumming on unseen surfaces, and a low, continuous drone of zombie growls that pulses with the rhythm of the fog.
+
+non_diegetic_music:
+N/A

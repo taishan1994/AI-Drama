@@ -1,0 +1,32 @@
+subject_definitions:
+<Subject 1> is Lin Mo (S1), a young adult male with slightly breathless and anxious vocal qualities, wearing dark clothing consistent with his character identity reference in <Picture 2>.
+<Subject 2> is Su Wan (S2), a female with calm, clear, and controlled vocal qualities, wearing an outer coat used to cover the blue light of the cold chain sample box, consistent with her identity in <Picture 3>.
+<Subject 3> is Old Zhou (S3), a middle-aged male with a rough and forceful voice, though he does not appear in this specific shot.
+<Picture 1> is the environment reference for the community hospital lobby and back corridor, defining the architecture, damp walls, and spatial layout.
+<Picture 2> is the character identity and clothing reference for Lin Mo, providing face identity and body proportions.
+<Picture 3> is the character identity and clothing reference for Su Wan, providing face identity and body proportions.
+<Picture 4> is the prop appearance reference for the cold chain sample box, defining its recognizable shape and markings.
+<Picture 5> is the environment reference for the water stains and damp surfaces, defining the texture and location of the puddle.
+
+summary:
+[reference generation] The target video depicts a tense moment where Lin Mo and Su Wan navigate a damp hospital corridor while avoiding a submerged corpse. The scene utilizes <Picture 1> and <Picture 5> for the environment, <Picture 2> and <Picture 3> for character appearances, and <Picture 4> for the prop. The action is driven by the sound of dripping water and the physical movement of the characters.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): fully_preserved - Lin Mo's anxious demeanor and physical reaction to the corpse are retained.
+<Subject 2> (appears in [Shot 1]): fully_preserved - Su Wan's calm demeanor and her action of covering the light source are retained.
+<Subject 3> (appears in [Shot 1]): weak_reference - Old Zhou is referenced as a potential threat or context but does not visually appear in this shot.
+<Picture 1> (environment): fully_preserved - The hospital corridor architecture and screen direction are preserved.
+<Picture 2> (Lin Mo): fully_preserved - Face identity and clothing proportions are retained.
+<Picture 3> (Su Wan): fully_preserved - Face identity and clothing proportions are retained.
+<Picture 4> (cold chain box): fully_preserved - The shape and markings are preserved, though the blue light is physically obscured by the coat.
+<Picture 5> (water stains): fully_preserved - The damp walls and puddle location are preserved.
+
+detailed_description:
+The target video is a cinematic, suspenseful sequence shot in a dimly lit, damp hospital corridor.
+[Shot 1] The scene opens in a narrow corridor defined by <Picture 1>, featuring exposed brick and concrete walls covered in <Picture 5> water stains. The floor is wet, with a small puddle forming near the center. <Subject 2> (S2), Su Wan, moves first, her hand raised to signal a stop. She wears a dark outer coat that she uses to cover the glowing blue light of <Subject 4>, the cold chain sample box, which is positioned near her feet. Beside her, <Subject 1> (S1), Lin Mo, moves slowly along the damp wall, his breathing heavy and visible in the low light. From the puddle at their feet, a submerged corpse rises, its eyes opening as it looks up. Lin Mo immediately holds his breath, his eyes wide with fear. Su Wan quickly uses the coat to shield the blue light of the box, dimming the glow. As the corpse turns its head toward the source of dripping water, Su Wan and Lin Mo move swiftly together, leaping over the doorway to escape the immediate danger. The camera follows their movement with a slight handheld shake to emphasize the tension.
+
+overall_soundscape:
+The soundscape is dominated by the rhythmic, heavy sound of dripping water echoing off the damp walls, creating a claustrophobic atmosphere. There are subtle sounds of fabric rubbing against the floor and the soft, suppressed sound of breathing. The sound of the corpse rising is a low, wet gurgle.
+
+non_diegetic_music:
+A low, dissonant drone with a slow, irregular heartbeat rhythm underlies the scene, building tension without overpowering the diegetic sounds of water and breathing.

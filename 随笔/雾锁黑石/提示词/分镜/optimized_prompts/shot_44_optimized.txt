@@ -1,0 +1,18 @@
+subject_definitions:
+<Subject 1> is the warm domestic-memory appearance and setting reference from <Picture 1>, featuring a woman with a gentle profile, soft warm domestic lighting, and a cozy home environment.
+
+summary:
+[reference generation] The target video is an 8-second flashback short shot depicting a warm domestic memory. <Subject 1> serves as the visual reference for the woman's appearance and the warm home setting. The shot captures a quick flash of warm yellow home lighting, a gentle profile of the wife, and fragments of a warm daily life scene without dialogue.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): weak_reference - the warm domestic appearance, gentle profile, and cozy home setting are used as visual style and atmosphere references, not as exact frame anchors.
+
+detailed_description:
+The target video is a quick, warm-toned flashback short shot with a soft focus and gentle camera movement.
+[Shot 1] At 00:00.000, the scene opens with a rapid flash of warm yellow domestic lighting, creating a hazy, nostalgic atmosphere. <Subject 1> appears as a gentle profile of the wife, her features soft and blurred by the memory effect, surrounded by fragments of a warm daily life setting. The camera performs a slow, drifting push-in, mimicking the fleeting nature of a memory. The mood is intimate and serene, contrasting with the cold reality of the present. There is no visible text or dialogue in this shot.
+
+overall_soundscape:
+Soft, gentle warm ambient tones fill the scene, creating an instant contrast with the cold reality of the present moment.
+
+non_diegetic_music:
+A subtle, warm piano melody with a slow tempo, evoking nostalgia and domestic warmth.

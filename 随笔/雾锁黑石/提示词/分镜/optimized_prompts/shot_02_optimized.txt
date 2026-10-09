@@ -1,0 +1,19 @@
+subject_definitions:
+<Subject 1> is the delivery truck cabin environment in <Picture 1>, featuring a rain-slicked windshield, a blurred interior dashboard, and a spatial layout defined by the heavy fog outside and the confined, enclosed space of the cab.
+
+summary:
+[reference generation] The target video is an 8-second interior close-up shot inside a delivery truck cabin during a heavy rainstorm. The scene utilizes <Subject 1> as the environmental and spatial reference, preserving the architecture and screen direction while depicting the relentless motion of the windshield wipers and the oppressive atmosphere of the fog.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): attribute_transfer - the architectural elements and screen direction from <Picture 1> are transferred to the target shot, while the specific layout is adapted to the cinematic framing of the interior close-up.
+
+detailed_description:
+The target video is a cinematic interior close-up shot inside a delivery truck cabin, rendered in a moody, desaturated palette to reflect the heavy rain and fog.
+[Shot 1] At 00:00.000, the shot opens on the interior of the truck cabin, focusing on the windshield where the wipers are swinging at high speed. The wipers move rapidly back and forth, but the windshield remains obscured by thick, rolling fog that prevents any clear view of the outside world. The atmosphere is hazy and oppressive, with the darkness of the storm filtering through the glass. Occasionally, indistinct dark silhouettes of shapes or shadows flash briefly against the blurred background outside the window, suggesting movement on the roadside but remaining unidentifiable. The camera remains relatively static, maintaining a tight framing on the glass and the wiper mechanism to emphasize the futility of the clearing effort. The lighting is dim and diffuse, dominated by the grey tones of the storm.
+The ambient soundscape is dominated by the mechanical whirring and clicking of the windshield wipers, which provides a rhythmic, driving texture. This is layered with the steady, rhythmic patter of heavy rain hitting the glass and the cabin roof. A faint, low-level electrical hum or static noise is audible in the background, adding to the sense of isolation and tension within the confined space. There is no dialogue or lyrical content in this segment.
+
+overall_soundscape:
+The soundscape consists of the mechanical sound of the windshield wipers, heavy rain noise, and a subtle low-frequency electrical hum, all contributing to a tense, isolated, and wet atmosphere.
+
+non_diegetic_music:
+N/A

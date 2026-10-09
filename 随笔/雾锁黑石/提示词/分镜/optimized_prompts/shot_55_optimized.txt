@@ -1,0 +1,23 @@
+subject_definitions:
+<Subject 1> is the rusted iron door environment in <Picture 1>, featuring corroded metal texture, a narrow gap leaking thick white fog, and faint scratch marks on the fog edge indicating zombie clawing.
+<Subject 2> is the atmospheric fog and sound texture in <Picture 1>, characterized by dense white mist, damp air, and the auditory presence of wind, dripping water, and distant muffled zombie growls.
+
+summary:
+[reference generation] The target video is a single 10-second shot focusing on a close-up of a rusted iron door in an underground emergency corridor. The scene utilizes <Subject 1> for the visual layout of the door and fog, and <Subject 2> for the ambient atmosphere and sound design. There are no characters or dialogue in this specific shot.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): fully_preserved - the rusted iron door, the narrow gap, the leaking white fog, and the scratch marks are retained exactly as referenced.
+<Subject 2> (appears in [Shot 1]): fully_preserved - the atmospheric fog, wind sound, dripping water, and distant zombie growls are retained exactly as referenced.
+
+detailed_description:
+The target video is a single, continuous close-up shot lasting 10 seconds, maintaining a static camera position to emphasize the texture and tension of the environment.
+[Shot 1] At 00:00.000, the shot opens on a tight close-up of a heavily rusted iron door, its surface pitted and stained with time. A narrow, jagged gap in the door frame leaks a thick, dense white fog that billows slightly, carrying a faint, sickly scent. Along the edge of the fog where it meets the metal, there are tiny, jagged scratch marks, suggesting the clawing of a zombie. The camera remains fixed, allowing the viewer to absorb the grim details of the decay and the oppressive atmosphere.
+[Shot 1] At 00:03.000, the visual focus remains on the door and the fog, but the audio layer shifts slightly to emphasize the isolation. The sound of a subtle wind whistling through the gap becomes more prominent, mixed with the rhythmic, slow drip of water hitting the metal surface below. In the deep background, obscured by the fog and distance, a muffled, indistinct zombie growl echoes faintly, adding to the sense of danger without breaking the visual focus on the door.
+[Shot 1] At 00:06.000, the shot continues to hold on the rusted iron door and the leaking fog. The scratch marks remain visible, a silent testament to the threat lurking just beyond the barrier. The dripping water sound continues its steady, hypnotic rhythm, punctuated by the occasional, distant thrum of the zombie sound. The scene builds a palpable tension through the stillness of the image and the creeping nature of the fog.
+[Shot 1] At 00:09.000, the shot concludes on the rusted iron door, the white fog, and the scratch marks. The dripping water and distant growl persist until the very end of the 10-second duration, leaving the audience with the lingering image of the barrier and the unseen threat.
+
+overall_soundscape:
+The soundscape is dominated by the ambient noise of the underground corridor: a subtle wind whistling through the door gap, the rhythmic dripping of water onto metal, and a low, muffled, distant zombie growl that creates an eerie, oppressive atmosphere.
+
+non_diegetic_music:
+N/A

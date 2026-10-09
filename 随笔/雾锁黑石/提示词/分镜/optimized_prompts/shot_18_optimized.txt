@@ -1,0 +1,24 @@
+subject_definitions:
+<Subject 1> is Lin Mo, a young adult male with slightly breathless and anxious vocal qualities (S1), characterized by disheveled hair, wide panicked eyes, and a state of high alert.
+<Subject 2> is the environment of the Black Stone Town Hospital Main Entrance, featuring foggy atmospheric conditions, specific architectural structures including the hospital doors and surrounding walls, and a spatial layout that defines the scene's depth and direction.
+<Picture 1> is the design reference for <Subject 2>, depicting the foggy hospital entrance architecture and spatial layout.
+<Picture 2> is the design reference for <Subject 1>, depicting Lin Mo's facial features, clothing, and body proportions.
+
+summary:
+[reference generation] The target video is a single 10-second shot depicting Lin Mo's panicked reaction to approaching zombies in the foggy hospital entrance. The visual style references the character design and environment from <Picture 2> and <Picture 1>, respectively, without using them as frame anchors. The audio references the specific dialogue and sound effects from the source script.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): attribute_transfer - Lin Mo's identity, clothing proportions, and facial features are transferred from <Picture 2>, while his anxious expression and panicked state are established in the target shot.
+<Subject 2> (appears in [Shot 1]): attribute_transfer - The hospital architecture and foggy atmosphere are transferred from <Picture 1>, preserving the spatial layout and screen direction without copying the reference sheet's composition.
+<Picture 1>: weak_reference - serves as an environmental and spatial-layout reference for the hospital entrance.
+<Picture 2>: weak_reference - serves as a character identity and clothing reference for Lin Mo.
+
+detailed_description:
+The target video is a close-up shot capturing the intense panic of Lin Mo in a foggy hospital setting.
+[Shot 1] The scene opens with a close-up on Lin Mo (S1), whose eyes are wide with shock and fear as he stares intensely at two mutated zombies approaching from the front and back. His pupils dilate rapidly, and his body jerks backward in a frantic retreat, his breathing becoming visibly ragged and heavy. The environment is the foggy hospital main entrance from <Subject 2>, where the dim, misty atmosphere obscures the background architecture but keeps the spatial layout consistent with the reference. Lin Mo's disheveled appearance and clothing, derived from <Subject 1>, are clearly visible as he flinches. He turns his head sharply to scan the surroundings, his expression a mix of confusion and terror. As he recoils, he speaks with a breathless, anxious voice, <d>[Chinese] 喂！你干什么？！</d>. The audio layer includes the sound of rapid, heavy breathing, the crunching footsteps of the zombies approaching, and the wet, dragging sounds of their crawling movements, all synchronized with the visual tension. The shot remains static on Lin Mo's face and upper body, emphasizing his reaction to the immediate threat.
+
+overall_soundscape:
+The soundscape is dominated by the oppressive silence of the foggy hospital broken by the harsh, rhythmic sound of approaching zombies. This includes heavy, ragged breathing from Lin Mo, the crunching footsteps of the mutated creatures, and the wet, dragging sounds of their crawling movements.
+
+non_diegetic_music:
+N/A

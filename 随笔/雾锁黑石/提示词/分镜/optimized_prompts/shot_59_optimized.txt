@@ -1,0 +1,26 @@
+subject_definitions:
+<Subject 1> is the environment defined by <Picture 1>, featuring a dark, flooded underground emergency corridor with wet concrete walls, puddles reflecting dim overhead lights, and a heavy iron door at the end of the frame.
+<Subject 2> is the young woman defined by <Picture 3>, wearing a dark jacket and holding her hand up in a "stop" gesture, standing near the iron door.
+<Subject 3> is the middle-aged man defined by <Picture 4>, wearing a rough, dark coat, positioned outside the door on the opposite side of the frame, pressing against the metal surface.
+<Picture 2> is a character identity reference for <Subject 2>, providing face identity and clothing proportions without serving as a frame anchor.
+<Picture 3> is a character identity reference for <Subject 3>, providing face identity and clothing proportions without serving as a frame anchor.
+<Picture 4> is a character identity reference for <Subject 4>, providing face identity and clothing proportions without serving as a frame anchor.
+
+summary:
+[reference generation] The target video is a single 12-second shot depicting the moment after Su Wan warns Lin Mo against answering the door. The scene utilizes <Subject 2> and <Subject 3> as the primary visible subjects within the environment of <Subject 1>. The audio references the specific sound effects of metal knocking and distant impact, and the voice qualities of Su Wan (S2) and Old Zhou (S3) are established for future scenes but are not spoken in this specific clip.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): fully_preserved - the flooded corridor architecture, puddles, and the heavy iron door are retained exactly as the spatial layout of the reference.
+<Subject 2> (appears in [Shot 1]): fully_preserved - Su Wan's identity, clothing, and the specific "stop" hand gesture are retained.
+<Subject 3> (appears in [Shot 1]): fully_preserved - Old Zhou's identity, clothing, and his posture of pressing against the door are retained.
+
+detailed_description:
+The target video is a cinematic, high-contrast shot in a dark, flooded underground corridor with a slightly desaturated color palette dominated by blues and greys.
+[Shot 1] The scene opens on a medium-long shot of the flooded emergency corridor defined by <Subject 1>. Puddles on the wet concrete floor reflect the dim, flickering overhead lights. At the far end of the corridor stands a heavy iron door. <Subject 2> (S2), the young woman with dark hair and a dark jacket, stands in the foreground near the door, her right hand raised in a clear "stop" gesture. Behind her, <Subject 3> (S3), the middle-aged man in a rough dark coat, is pressed firmly against the iron door from the outside. The camera remains static, focusing on the tension between the two figures.
+Simultaneously, the audio layer introduces three distinct, rhythmic metal knocks from the inside of the door, followed immediately by the sound of Old Zhou's hand hitting the door from the outside, creating a brief, jarring overlap of impact sounds. The ambient sound includes the low hum of the corridor and the sound of water dripping. There is no dialogue spoken in this shot.
+
+overall_soundscape:
+The soundscape is dominated by the metallic thud of the knocks, the distant impact of the door being hammered, and the wet, echoing ambience of the flooded corridor. A low, suppressed breathing sound is audible in the background.
+
+non_diegetic_music:
+N/A

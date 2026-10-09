@@ -1,0 +1,22 @@
+subject_definitions:
+<Subject 1> is Su Wan, the female protagonist with a calm, clear, and controlled voice (S2), depicted using the facial identity and clothing proportions from <Picture 2>, wearing professional attire that conveys authority.
+<Subject 2> is the hospital environment, featuring the architecture and spatial layout of the community hospital lobby and back corridor as referenced in <Picture 1>, with dim, low-contrast lighting to match the serious mood.
+
+summary:
+[reference generation] The target video is a single 14-second medium close-up shot of Su Wan delivering a critical explanation in a hospital setting. <Subject 1> (S2) speaks with a firm, controlled tone about evidence of a violation, while the environment <Subject 2> is established using <Picture 1> for spatial context. The audio references the low atmospheric tone and Su Wan's specific voice quality.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): fully_preserved - Su Wan's facial identity, clothing proportions, and calm, controlled voice timbre are fully retained.
+<Subject 2> (appears in [Shot 1]): fully_preserved - The hospital architecture and screen direction from <Picture 1> are fully preserved as the background environment.
+<Picture 1>: weak_reference - Used solely for architectural and spatial layout guidance; no specific layout elements are copied.
+<Picture 2>: weak_reference - Used solely for character identity and clothing proportions; no reference sheet layout is reproduced.
+
+detailed_description:
+The target video is a single 14-second medium close-up shot in a dimly lit hospital corridor, establishing a tense and serious atmosphere.
+[Shot 1] At 00:00.000, the camera holds a steady medium close-up on <Subject 1> (S2), Su Wan, who stands in the hospital environment <Subject 2>. The background shows the blurred architecture of the community hospital lobby and back corridor, with low-contrast lighting that emphasizes her face. Su Wan (S2) looks directly into the camera with a serious expression, her body language upright and authoritative. She begins speaking with a firm, controlled, and clear voice, explaining the gravity of the situation. She states, <d>[Chinese] 现在全镇封死、对外失联。我们手里的样本，是唯一能证明凯生违规实验、制造事故的证据。毁掉它，今晚所有死人、所有受灾的人，都会被定义成意外事故，企业可以彻底洗白。</d> Her delivery is methodical and unemotional, conveying the absolute necessity of preserving the evidence. The low atmospheric sound continues throughout, creating a heavy, oppressive mood. The shot remains static on Su Wan's face until the end of the line.
+
+overall_soundscape:
+A deep, low-frequency atmospheric hum fills the space, creating a sense of tension and isolation. The sound is dry and close, emphasizing the silence of the hospital corridor.
+
+non_diegetic_music:
+A minimal, dissonant ambient score with a slow, pulsing bass line and sparse, high-pitched synth notes, maintaining a low dynamic level to underscore the gravity of the dialogue without overpowering it.

@@ -1,0 +1,22 @@
+subject_definitions:
+<Subject 1> is the flooded underground emergency corridor environment in <Picture 1>, featuring a dark, wet brick wall, a rusted iron door, and a dilapidated emergency schematic diagram pinned to the wall.
+<Subject 2> is Su Wan in <Picture 2>, a young woman with a calm expression, wearing a dark jacket and trousers, with her face identity derived from the large portrait area and body proportions from the turnaround figures.
+<Subject 3> is Lin Mo in <Picture 3>, a young man holding a flashlight and a mobile phone, with the recognizable shape and markings of the flashlight preserved.
+
+summary:
+[reference generation] The target video is a single 12-second shot depicting Su Wan examining an emergency schematic diagram in a flooded underground corridor. The scene uses <Subject 1> for the environment, <Subject 2> for the character appearance, and <Subject 3> for the prop appearance. No source video or audio assets are used; the action is derived from the screenplay text.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): fully_preserved - the architecture, wet brick texture, rusted iron door, and the emergency schematic diagram are retained with their spatial layout.
+<Subject 2> (appears in [Shot 1]): fully_preserved - Su Wan's face identity and clothing proportions are retained without copying the reference sheet layout.
+<Subject 3> (appears in [Shot 1]): fully_preserved - the flashlight's shape and markings are retained.
+
+detailed_description:
+The target video is a cinematic, atmospheric shot in a dark, flooded underground corridor with soft, directional lighting from a flashlight.
+[Shot 1] At 00:00.000, the camera holds a medium shot of <Subject 2>, Su Wan, standing in <Subject 1>, the flooded underground emergency corridor. She is positioned slightly to the right of the frame, facing left towards a rusted iron door. In her right hand, she holds <Subject 3>, the flashlight, which emits a focused beam of light. The beam sweeps across the wall, illuminating a dilapidated emergency schematic diagram pinned to the wet brick surface. The diagram shows a route to an abandoned base station, with the edges soaked by water and a fresh scratch covering the base station location. Su Wan's expression is calm and controlled as she carefully moves the flashlight beam to inspect the details on the paper. The sound of dripping water gradually becomes denser, accompanied by the soft click of the flashlight switch. There is no dialogue. The lighting remains dim and desaturated, emphasizing the damp atmosphere of the corridor.
+
+overall_soundscape:
+The soundscape consists of the soft click of the flashlight switch and a gradually increasing density of dripping water sounds, creating a tense, quiet atmosphere.
+
+non_diegetic_music:
+N/A

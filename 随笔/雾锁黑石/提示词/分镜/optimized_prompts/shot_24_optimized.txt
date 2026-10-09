@@ -1,0 +1,20 @@
+subject_definitions:
+<Subject 1> is Lin Mo (S1), a young adult male with slightly breathless and anxious vocal qualities, depicted in the large portrait area of <Picture 2> wearing his specific clothing and body proportions.
+<Picture 1> is the environment and spatial-layout reference for the community hospital lobby and back corridor, defining the architecture and screen direction without serving as a target frame anchor.
+
+summary:
+[reference generation] The target video is an 8-second shot showing Lin Mo (S1) pinned against a hospital door, breathing heavily with a look of fear, while outside sounds of hissing, roaring, and crawling zombies layer over the scene. The visual style references <Picture 2> for character identity and <Picture 1> for the hospital environment.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): attribute_transfer - Lin Mo's identity, clothing, and body proportions are transferred from <Picture 2> to the target shot, focusing on the large portrait area for face and posture.
+<Picture 1> (environment): weak_reference - The architecture and spatial layout of the community hospital lobby and back corridor are referenced for context and screen direction, but the specific reference-sheet layout is not copied.
+
+detailed_description:
+The target video is a single 8-second shot in a cinematic horror style, focusing on the intense physical and auditory tension of Lin Mo (S1) trapped against a door.
+[Shot 1] At 00:00.000, the camera holds a medium shot of Lin Mo (S1), the young adult male with slightly breathless and anxious vocal qualities, whose appearance is defined by <Picture 2>. He is pinned tightly against a hospital door, his back pressed firmly to the wood, his body tense and rigid. His eyes are wide with unsteady fear, staring past the door into the darkness. The environment is the community hospital lobby and back corridor, as referenced by <Picture 1>, with dim, flickering fluorescent lighting casting long shadows across the floor and walls. Outside the door, the sound of hisses, roars, and crawling movements from multiple zombies layers densely and sharply over the scene. Lin Mo (S1) is panting heavily, his chest heaving rapidly as he struggles to breathe. There is no dialogue spoken in this shot. The audio consists of rapid, ragged breathing sounds from Lin Mo (S1) mixed with the chaotic, low-frequency growls and high-pitched screeches of the zombies outside. The shot remains static, emphasizing the claustrophobic confinement and the immediate threat.
+
+overall_soundscape:
+The soundscape is dominated by the urgent, ragged breathing of Lin Mo (S1) and the layered, dense cacophony of zombie noises outside the door, including hissing, roaring, and crawling sounds that are sharp and piercing.
+
+non_diegetic_music:
+N/A

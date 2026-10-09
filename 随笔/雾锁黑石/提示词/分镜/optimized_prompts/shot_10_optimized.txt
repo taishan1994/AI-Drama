@@ -1,0 +1,21 @@
+subject_definitions:
+<Subject 1> is Lin Mo (S1), a young adult male with a slightly breathless and anxious demeanor, defined by the character identity and clothing reference in <Picture 2>.
+<Subject 2> is the rain-soaked environment and spatial layout of the delivery truck's cabin, defined by the architecture and screen direction in <Picture 1>.
+
+summary:
+[reference generation] The target video is a 6-second close-up shot of Lin Mo (S1) extinguishing the engine and removing the key in a rain-soaked delivery truck cabin. The visual style references the character design in <Picture 2> and the cabin environment in <Picture 1>.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): attribute_transfer - Lin Mo's identity, clothing, and anxious demeanor are transferred from <Picture 2> to the target video's close-up.
+<Picture 1> (environment reference): weak_reference - The cabin's architecture and screen direction are referenced for spatial layout without copying the reference sheet's specific composition.
+
+detailed_description:
+The target video is a tight close-up focusing on the hands and the ignition area inside a delivery truck cabin. The scene is set in a heavy rainstorm, with water droplets visible on the glass and the interior dimly lit by the dying engine light.
+[Shot 1] At 00:00.000, the shot begins with a close-up of Lin Mo's (S1) hands gripping the ignition switch. The hands move with a sharp, urgent motion as he twists the key to turn off the engine. The sound of the engine cutting out—a sharp, sudden silence followed by the hiss of cooling fluids—fills the audio space. The camera remains static, keeping the focus entirely on the mechanical action and the texture of the wet dashboard. There is no dialogue spoken in this shot.
+At 00:05.000, the shot ends on the key being fully removed from the ignition, the engine silent, and the rain continuing to hammer against the windshield outside.
+
+overall_soundscape:
+Heavy rain drumming against the truck cabin glass and the sudden, sharp sound of the engine cutting out.
+
+non_diegetic_music:
+N/A

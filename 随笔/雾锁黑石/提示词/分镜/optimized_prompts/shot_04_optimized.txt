@@ -1,0 +1,20 @@
+subject_definitions:
+<Subject 1> is the cold-chain sample box from <Picture 1>, featuring a sleek, minimalist design with the "KaiSheng Bio" logo and a blue indicator light.
+<Picture 1> is the design reference for <Subject 1>, showing the specific shape, logo placement, and blue light color.
+
+summary:
+[reference generation] The target video is an 8-second close-up shot of a cold-chain sample box in the passenger seat, preserving the visual design from <Picture 1> and the ambient sounds of the box running and rain.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): fully_preserved - the box's shape, KaiSheng Bio logo, and blue flashing light are retained.
+<Picture 1>: weak_reference - the image provides the design blueprint for the box's appearance but is not used as a frame anchor.
+
+detailed_description:
+The target video is a tight close-up shot of a cold-chain sample box located in the passenger seat, filmed in a realistic, documentary style with cool, clinical lighting.
+[Shot 1] At 00:00.000, the camera holds a static extreme close-up on the cold-chain box from <Subject 1>. The box features the "KaiSheng Bio" logo in a minimalist font. A blue indicator light on the front panel flashes steadily. The surface is smooth and slightly reflective. In the background, the faint, rhythmic hum of the box's cooling system is audible, mixed with the steady, soft sound of rain falling outside. There is no dialogue or character movement in this shot.
+
+overall_soundscape:
+The low-frequency hum of the cold-chain box running and the steady, rhythmic sound of rain falling outside the vehicle continue throughout the shot.
+
+non_diegetic_music:
+N/A

@@ -1,0 +1,20 @@
+subject_definitions:
+<Subject 1> is Lin Mo, a young adult male with slightly breathless and anxious energy, defined by the facial identity and clothing proportions in <Picture 2>.
+<Subject 2> is the hospital environment, including the architecture, spatial layout, and screen direction, defined by <Picture 1>.
+
+summary:
+[reference generation] The target video is a single 12-second shot featuring Lin Mo in a hospital setting, expressing confusion while holding a box. The visual style and character appearance are derived from <Picture 1> and <Picture 2>, respectively.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): attribute_transfer - Lin Mo's identity, clothing, and body proportions are transferred from <Picture 2> to the target video without copying the reference sheet layout.
+<Picture 1> (environment): weak_reference - The hospital architecture and spatial layout are retained as a background reference without copying the reference-sheet composition.
+
+detailed_description:
+The target video is a medium shot in a hospital setting with a slightly desaturated, clinical color palette.
+[Shot 1] At 00:00.000, the scene opens on Lin Mo (S1), a young adult male with slightly breathless and anxious energy, standing in the hospital corridor defined by <Picture 2>. He looks confused, shaking his head slowly with a blank expression, his eyes gazing blankly downward at a box held in his arms. The background features the hospital environment from <Picture 1>, showing the sterile architecture and layout of the community hospital lobby and back corridor. There is no sound in the scene. Lin Mo (S1) speaks with a slightly breathless and anxious tone, <d>[Chinese] 我不知道，平台标注是普通医用生物试剂，医院加急要的。</d> He continues to look at the box with a look of pure confusion.
+
+overall_soundscape:
+Silence.
+
+non_diegetic_music:
+N/A

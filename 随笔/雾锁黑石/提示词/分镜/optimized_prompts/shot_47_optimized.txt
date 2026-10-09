@@ -1,0 +1,20 @@
+subject_definitions:
+<Subject 1> is Old Zhou, a middle-aged man with a rough and forceful voice quality (S3), wearing a dark, worn jacket and trousers, defined by the character identity and clothing reference in <Picture 2>.
+<Picture 1> is the environment and spatial-layout reference for the community hospital lobby and back corridor, featuring exposed brick walls, a heavy wooden door, and dim, foggy lighting.
+
+summary:
+[reference generation] The target video depicts Old Zhou (S3) desperately holding the door of a community hospital lobby as a giant corpse approaches outside. The scene uses <Picture 1> for the environment and <Picture 2> for Old Zhou's appearance and clothing.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): fully_preserved - Old Zhou's middle-aged appearance, rough voice quality (S3), and dark worn clothing are retained.
+<Picture 1> (environment): weak_reference - the architecture, heavy wooden door, and dim foggy atmosphere are retained without copying the reference-sheet layout.
+
+detailed_description:
+The target video is a tense, cinematic horror shot with a handheld camera that shakes slightly to convey urgency and instability. The lighting is low and dim, dominated by the cold blue-grey tones of the foggy hospital environment.
+[Shot 1] The shot is framed from a medium-long distance, focusing on the back of Old Zhou (S3) as he stands dead center, his body rigid and muscles tensed as he死死 (deadly tight) presses his back against the heavy wooden door. The environment, defined by <Picture 1>, shows the rough texture of the brick walls and the heavy grain of the wood, with thick fog obscuring the background. Outside the door, the darkness is absolute. The sound of a giant corpse colliding with the door is loud and rhythmic, accompanied by a low, guttural roar that fills the air. Old Zhou (S3) does not speak; he is entirely focused on holding the door shut against the impending threat. The camera slowly pushes in slightly, emphasizing the compression of his body and the increasing intensity of the impact sounds. The scene ends abruptly on the moment of maximum tension, with the door still being held firm.
+
+overall_soundscape:
+Continuous, heavy impact sounds of a giant corpse colliding with the wooden door, mixed with a low, menacing growl. The ambient sound of the foggy hospital is faint and oppressive.
+
+non_diegetic_music:
+A low, dissonant drone with irregular, pounding percussion that mimics the heartbeat and the impact sounds, creating a sense of imminent doom.

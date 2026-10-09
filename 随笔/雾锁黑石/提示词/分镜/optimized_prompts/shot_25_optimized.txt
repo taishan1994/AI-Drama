@@ -1,0 +1,23 @@
+subject_definitions:
+<Subject 1> is the chaotic hospital environment in <Picture 1>, featuring a dimly lit main hall with flickering lights, overturned chairs, scattered medicine, tilted IV stands, a floor littered with debris, and a window pane covered in claw marks with traces of a zombie climbing on the sill.
+
+summary:
+[reference generation] The target video is an 8-second shot depicting a chaotic hospital interior. <Subject 1> serves as the environmental and spatial-layout reference, defining the architecture, lighting, and state of disarray without acting as a frame anchor. The scene captures the aftermath of a zombie attack with specific visual details and ambient sound.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): weak_reference - the architectural layout, screen direction, and general state of the hospital are retained as a design guide, but the specific arrangement of debris and lighting is adapted to the target shot's composition.
+
+detailed_description:
+The target video is a single continuous shot lasting 8 seconds, rendered in a gritty, realistic style with a desaturated color palette to emphasize the decay and danger.
+[Shot 1] At 00:00.000, the camera holds a wide shot of the hospital main hall, establishing the scene from the perspective of <Subject 1>. The environment is in a state of total disarray: the overhead lights are flickering violently, casting strobe-like shadows across the room. In the center, a row of medical chairs has been overturned, their metal frames twisted. Piles of medicine boxes and medical supplies are scattered across the floor, creating a messy, broken landscape. Several IV stands are leaning precariously against walls or furniture. The floor is littered with debris, including broken glass and discarded equipment. To the right, a large window reveals a dark exterior; the glass is heavily scratched with claw marks, and the sill shows the faint, grimy residue of a zombie that has recently climbed up. The lighting is low and unstable, dominated by the harsh, buzzing glow of the failing bulbs.
+At 00:02.000, the camera begins a slow, subtle push-in, moving slightly closer to the center of the room to emphasize the scale of the destruction.
+At 00:04.000, the camera pans slowly to the left, following the line of the overturned chairs and the scattered medicine, revealing more of the floor's condition.
+At 00:06.000, the camera continues its slow pan, lingering on the window with the claw marks and the zombie residue, reinforcing the threat outside.
+At 00:08.000, the shot holds steady on the wide view of the ruined hall, capturing the stillness of the aftermath.
+The audio consists of a low, static environmental hum mixed with the distinct, high-pitched buzzing and crackling sound of failing light bulbs. There is no dialogue or other sound effects.
+
+overall_soundscape:
+The soundscape is dominated by the low-frequency static of the room and the sharp, intermittent buzzing of the flickering lights. The background is otherwise silent, save for the faint hiss of air conditioning or ventilation.
+
+non_diegetic_music:
+N/A

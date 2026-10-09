@@ -1,0 +1,28 @@
+subject_definitions:
+<Subject 1> is Su Wan, a female character with a calm and controlled demeanor, wearing a nurse's uniform as defined by the large portrait area of <Picture 2>.
+<Subject 2> is Old Zhou, a middle-aged male character with a rough and forceful voice quality, wearing a dark jacket and holding a fire department crowbar, as defined by the large portrait area of <Picture 3> and the prop appearance of <Picture 4>.
+<Picture 1> is the environment reference for the community hospital lobby and back corridor, featuring exposed brick walls, fluorescent lighting, and a layout that establishes the spatial direction for the scene.
+<Picture 2> is the character identity and clothing reference for Su Wan, providing the facial features and uniform details to be used for her appearance.
+<Picture 3> is the character identity and clothing reference for Old Zhou, providing the facial features and jacket details to be used for his appearance.
+<Picture 4> is the prop appearance reference for the fire department crowbar, preserving its recognizable shape and markings without copying the image layout.
+
+summary:
+[reference generation] The target video is an 8-second medium shot of two survivors in a hospital setting. Su Wan stands near a nurse's station holding gauze, while Old Zhou grips a crowbar near the doorway with a guarded posture. The scene uses <Picture 1> for environment, <Picture 2> and <Picture 3> for character identities, and <Picture 4> for the prop.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): fully_preserved - Su Wan's calm demeanor, nurse's uniform, and facial features from <Picture 2> are retained.
+<Subject 2> (appears in [Shot 1]): fully_preserved - Old Zhou's middle-aged appearance, rough voice quality, and jacket from <Picture 3> are retained.
+<Picture 1> (environment): fully_preserved - The hospital lobby architecture, brick walls, and spatial layout are retained.
+<Picture 2> (character): fully_preserved - Su Wan's identity and clothing details are retained.
+<Picture 3> (character): fully_preserved - Old Zhou's identity and clothing details are retained.
+<Picture 4> (prop): fully_preserved - The fire department crowbar's shape and markings are retained.
+
+detailed_description:
+The target video is a cinematic medium shot in a dimly lit hospital corridor with a slightly desaturated color palette, emphasizing tension.
+[Shot 1] The scene opens in a medium shot of the hospital lobby defined by <Picture 1>, featuring exposed brick walls and fluorescent lighting. On the left, <Subject 1> (S2), Su Wan, stands leaning slightly against a nurse's station, her expression tight and calm. She holds a piece of gauze in her hands. To the right, near the doorway, <Subject 2> (S3), Old Zhou, grips a fire department crowbar <Picture 4> tightly, his posture guarded and eyes fixed on the entrance. The atmosphere is heavy with the sound of <Subject 1> (S2) and <Subject 2> (S3) breathing. There is no dialogue in this shot.
+
+overall_soundscape:
+Faint, heavy breathing sounds from both characters fill the quiet hospital corridor.
+
+non_diegetic_music:
+N/A

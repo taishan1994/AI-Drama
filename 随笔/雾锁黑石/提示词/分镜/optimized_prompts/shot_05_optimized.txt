@@ -1,0 +1,22 @@
+subject_definitions:
+<Subject 1> is Lin Mo (S1), a young adult male with a slightly breathless and anxious voice, depicted in a medium close-up with a tired, weary expression, wearing a dark jacket.
+<Picture 1> is the environment and spatial layout reference for the delivery truck cabin, defining the architecture and screen direction of the vehicle interior in a foggy, rainy night.
+<Picture 2> is the character identity and clothing reference for Lin Mo, defining his facial features and body proportions for the turnaround figures.
+
+summary:
+[reference generation] The target video is a single 12-second shot of Lin Mo (S1) delivering a monologue inside a delivery truck cabin during a rainy night. The environment is anchored by <Picture 1> for spatial layout, and Lin Mo's appearance is anchored by <Picture 2> for facial identity and clothing proportions. The scene captures his exhaustion and frustration regarding a high-paying late-night delivery.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): attribute_transfer - Lin Mo's identity, clothing proportions, and tired expression are transferred from <Picture 2> to the target shot, focusing on the large portrait area for face and turnaround figures for body shape.
+<Picture 1> (appears in [Shot 1]): weak_reference - The environment's architecture and screen direction are retained as a design guide, but the specific layout of the reference sheet is not copied.
+<Picture 2> (appears in [Shot 1]): attribute_transfer - Lin Mo's facial identity and body proportions are transferred from <Picture 2> to the target shot.
+
+detailed_description:
+The target video is a medium close-up shot inside a delivery truck cabin, bathed in the cool, dim light of a rainy night. The atmosphere is heavy with the sound of continuous rain.
+[Shot 1] At 00:00.000, the camera focuses on Lin Mo (S1), a young adult male with a slightly breathless and anxious voice, shown in a medium close-up. His expression is one of deep fatigue and weariness. He raises his hand to rub his temples, his eyes conveying a sense of helplessness and resignation toward the high-paying late-night job. He glances slightly forward, his gaze fixed on the road ahead. As he speaks, the background is filled with the sound of steady rain and distant, faint snarling noises. Lin Mo (S1) delivers a low, weary monologue in a slightly breathy, anxious tone: <d>[Chinese] 双倍加急，深夜进山，说是医院急用试剂。老婆今晚孕吐厉害，等我回去煮粥，送完这单，再也不接夜单了。</d> His voice is quiet but carries the weight of his exhaustion. He keeps his eyes fixed on the direction of the road, maintaining the screen direction established by the environment. The shot remains static on his face, capturing the moment of decision and resignation.
+
+overall_soundscape:
+Continuous heavy rain sounds persist throughout the scene, mixed with faint, distant snarling noises that suggest a storm or wildlife in the distance.
+
+non_diegetic_music:
+N/A

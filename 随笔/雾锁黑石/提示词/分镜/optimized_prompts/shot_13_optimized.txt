@@ -1,0 +1,20 @@
+subject_definitions:
+<Subject 1> is the wet, debris-strewn street environment in <Picture 1>, featuring scattered umbrellas, slippers, miscellaneous clutter, puddles reflecting the gloomy sky, and a dark alleyway entrance in the distance.
+
+summary:
+[reference generation] The target video is an 8-second ground-level close-up shot of a wet street in a dark town, preserving the spatial layout and debris from <Picture 1> while emphasizing the sound of rain and the visual texture of the ground.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): fully_preserved - the architecture, screen direction, scattered debris, puddles, and the dark alleyway entrance are retained exactly as defined in the reference.
+
+detailed_description:
+The target video is a low-angle, ground-level close-up shot with a shallow depth of field, focusing on the texture of the wet asphalt. The scene is set in a dark, rainy environment with a slightly desaturated color palette dominated by greys and muddy browns.
+[Shot 1] At 00:00.000, the camera remains static, capturing the immediate ground surface. The composition shows a chaotic scattering of objects: a broken umbrella, a discarded slipper, and various small debris littering the pavement. Puddles of water reflect the dim, overcast sky, distorting the surroundings. In the background, slightly out of focus, a dark alleyway entrance is visible, marked by faint, dragging bloodstains on the ground that extend into the darkness. The lighting is low and diffuse, creating a somber and tense atmosphere.
+The audio is dominated by the sound of heavy rain falling and the continuous, rhythmic flow of water over the wet pavement. There is no dialogue or other sound effects in this shot.
+The shot holds steady for the full 8 seconds, allowing the viewer to absorb the details of the debris and the ominous trail of bloodstains leading into the unknown darkness.
+
+overall_soundscape:
+The soundscape consists entirely of the ambient sound of heavy rain falling and the continuous, flowing sound of water running over the wet asphalt and puddles.
+
+non_diegetic_music:
+N/A

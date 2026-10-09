@@ -1,0 +1,24 @@
+subject_definitions:
+<Subject 1> is Lin Mo (S1), a young adult male with slightly breathless and anxious vocal qualities, depicted in the large portrait area of <Picture 2> wearing his specific clothing and body proportions.
+<Subject 2> is Su Wan (S2), a female with calm, clear, and controlled vocal qualities, depicted in the large portrait area of <Picture 3> with her specific facial identity and clothing.
+<Subject 3> is the cold-chain sample box (prop), defined by its recognizable shape and markings from <Picture 4>, held in Lin Mo's arms.
+<Picture 1> is the environment reference for the community hospital lobby and back corridor, defining the spatial layout, architecture, and screen direction without serving as a frame anchor.
+
+summary:
+[reference generation] The target video is an 8-second close-up shot focusing on Su Wan's reaction to Lin Mo holding a cold-chain sample box. The scene takes place in the community hospital lobby. <Subject 2> (S2) is the primary focus, with <Subject 1> (S1) visible in the background holding the prop <Subject 3>. The visual style and character appearances are derived from <Picture 2>, <Picture 3>, and <Picture 4>, while the setting is based on <Picture 1>.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): weak_reference - Lin Mo's identity and clothing proportions are retained from <Picture 2>, but the reference sheet layout is not reproduced.
+<Subject 2> (appears in [Shot 1]): fully_preserved - Su Wan's facial identity and clothing are retained from <Picture 3>, with the reference sheet layout avoided.
+<Subject 3> (appears in [Shot 1]): fully_preserved - The cold-chain sample box's shape and markings are retained from <Picture 4>.
+<Picture 1> (environment): weak_reference - The hospital lobby architecture and screen direction are retained from <Picture 1>, but the reference sheet layout is not copied.
+
+detailed_description:
+The target video is a tight close-up shot with a shallow depth of field, focusing on Su Wan's face and upper body, with Lin Mo and the sample box slightly out of focus in the background. The lighting is cool and clinical, consistent with a hospital environment.
+[Shot 1] At 00:00.000, the camera is locked on Su Wan's (S2) face. Her eyes are wide and her pupils constrict as her gaze drops instantly to the cold-chain sample box held by Lin Mo (S1) in the background. Her expression shifts from neutral to shock, her face pale and her eyes narrowing. The background shows the blurred interior of the community hospital lobby defined by <Picture 1>, with Lin Mo (S1) standing slightly behind her, his breathless and anxious demeanor visible. He holds the cold-chain sample box <Subject 3>, its shape and markings clearly visible but slightly blurred due to the focus on Su Wan. There is no dialogue. The audio is silent, with the ambient sound of the hospital tightening in the air. The shot holds on Su Wan's horrified expression as she stares at the box.
+
+overall_soundscape:
+Complete silence. The ambient sound of the hospital lobby is present but muted, creating a sense of tension and stillness.
+
+non_diegetic_music:
+N/A

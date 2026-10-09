@@ -1,0 +1,23 @@
+subject_definitions:
+<Subject 1> is Lin Mo (S1), a young adult male with slightly breathless and anxious vocal qualities, defined by the character identity and clothing reference in <Picture 2>.
+<Subject 2> is the environment and spatial layout of the delivery truck's cabin in <Picture 1>, featuring the specific architecture and screen direction without copying the reference-sheet layout.
+<Subject 3> is the flashlight and mobile phone prop set in <Picture 3>, preserving the recognizable shape and markings without copying the image layout.
+
+summary:
+[reference generation] The target video is a 10-second close-up shot of Lin Mo (S1) retrieving a mobile phone from his pocket, displaying a screen with no signal, and sliding the screen repeatedly. The scene is set inside the delivery truck cabin defined by <Picture 1>, with the phone and flashlight referenced from <Picture 3>. The audio consists of a subtle mobile phone "no signal" prompt sound.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): fully_preserved - Lin Mo's identity, clothing, and anxious vocal quality are retained.
+<Picture 1> ([Shot 1] environment): fully_preserved - The truck cabin architecture and screen direction are preserved.
+<Picture 2> (Lin Mo appearance): fully_preserved - The character's face identity and clothing proportions are retained.
+<Picture 3> (Phone and flashlight): fully_preserved - The recognizable shape and markings of the phone and flashlight are retained.
+
+detailed_description:
+The target video is a cinematic close-up shot with a shallow depth of field, focusing on the hand and mobile phone in a dimly lit environment.
+[Shot 1] At 00:00.000, the shot begins inside the delivery truck cabin defined by <Picture 1>, where the architecture and screen direction are established. The camera focuses tightly on a hand reaching into a pocket. Lin Mo (S1), the young adult male with slightly breathless and anxious vocal qualities defined by <Picture 2>, pulls out the mobile phone and flashlight referenced from <Picture 3>. The hand holds the phone, and the screen lights up, revealing a display with no signal and no network connectivity. Lin Mo's hand repeatedly slides the screen, but the status remains unchanged. A subtle, faint "no signal" prompt sound from the phone plays continuously. There is no dialogue. The shot maintains the focus on the hand and the phone screen, emphasizing the futility of the action within the confined space of the truck.
+
+overall_soundscape:
+A low-level ambient hum of the delivery truck engine and the subtle, faint "no signal" prompt sound from the mobile phone continue throughout the shot.
+
+non_diegetic_music:
+N/A

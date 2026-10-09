@@ -1,0 +1,22 @@
+subject_definitions:
+<Subject 1> is Su Wan, the female character referenced in <Picture 2>, with a calm facial expression, controlled posture, and wearing the specific clothing proportions defined in the large portrait area of <Picture 2>.
+<Picture 1> is the environment and spatial-layout reference for the scene, depicting the community hospital lobby and back corridor with specific architectural details and screen direction.
+<Picture 2> is the character identity and clothing reference for Su Wan, providing face identity and body proportions but not serving as a frame anchor.
+
+summary:
+[reference generation] The target video is a single 10-second close-up shot of Su Wan asking a question in a hospital setting. The visual style references <Picture 1> for the environment and <Picture 2> for Su Wan's appearance. The audio features Su Wan's dialogue referencing her voice timbre.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): fully_preserved - Su Wan's identity, calm expression, and clothing proportions from <Picture 2> are retained.
+<Picture 1> (environment): fully_preserved - the hospital lobby architecture and screen direction are retained.
+<Picture 2> (character): fully_preserved - the face identity and clothing details are retained.
+
+detailed_description:
+The target video is a cinematic close-up with a slightly desaturated color palette and soft indoor lighting, establishing a tense yet controlled atmosphere.
+[Shot 1] At 00:00.000, the shot opens on a medium close-up of <Subject 1>, Su Wan, positioned slightly off-center in the frame. The background is the hospital lobby and back corridor defined by <Picture 1>, featuring sterile white walls, medical equipment, and a slightly blurred depth of field to emphasize the subject. Su Wan leans her body forward slightly, her expression calm but her eyes conveying underlying tension. She speaks with a controlled, clear voice, <d>[Chinese] 你送的，是诱变样本？</d>. The audio is synchronized with her speech, capturing the slight breathiness and anxiety in her delivery. The camera remains static, maintaining a steady focus on her face and upper torso. The shot ends at 00:10.000 with Su Wan's lips finishing the sentence and her gaze fixed forward.
+
+overall_soundscape:
+Faint ambient hospital sounds, including distant footsteps and low hums of medical equipment, are present throughout the scene.
+
+non_diegetic_music:
+N/A

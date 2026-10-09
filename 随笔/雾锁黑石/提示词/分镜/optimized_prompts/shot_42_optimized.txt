@@ -1,0 +1,23 @@
+subject_definitions:
+<Subject 1> is Old Zhou, a middle-aged man with a rough and forceful voice quality (S3), wearing a worn-out jacket and looking fearful.
+<Subject 2> is the dark corridor environment in <Picture 1>, featuring blackened walls, standing water, and a sense of oppressive darkness.
+<Subject 3> is the character identity and clothing reference for Old Zhou in <Picture 2>, used strictly for facial features and body proportions without copying the reference sheet layout.
+
+summary:
+[reference generation] The target video is a single storyboard shot depicting Old Zhou's hesitation and decision to stay in a dark, flooded corridor. The environment and character appearance are derived from <Picture 1> and <Picture 2> respectively. The scene features Old Zhou (S3) speaking Chinese dialogue about the dangers outside while displaying fear.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): fully_preserved - Old Zhou's middle-aged appearance, rough voice quality (S3), and fearful expression are retained.
+<Subject 2> (appears in [Shot 1]): fully_preserved - The dark corridor architecture, standing water, and screen direction from <Picture 1> are retained.
+<Picture 1>: weak_reference - The spatial layout and atmosphere are referenced for composition, not copied as a frame.
+<Picture 2>: weak_reference - The character identity and clothing proportions are referenced for design, not copied as a frame.
+
+detailed_description:
+The target video is a single shot in a cinematic horror style, lit by dim, flickering emergency lights that cast long shadows.
+[Shot 1] The camera holds a medium shot of <Subject 1>, Old Zhou (S3), standing in <Subject 2>, the dark corridor environment from <Picture 1>. The corridor is pitch black with standing water covering the floor, reflecting the sparse light. Old Zhou (S3) looks down the dark passage, his face contorted with fear and hesitation. He shakes his head vigorously, his eyes darting nervously as he makes up his mind to stay put, terrified of the mutated zombies outside. The audio includes hesitant breathing sounds and the continuous, high-pitched wailing of something outside the door. Old Zhou (S3) speaks with a rough, forceful, yet trembling voice, <d>[Chinese] 通道黑得很，积水遍地，肯定藏着怪物！我不走，我就在这等着！</d> The camera remains static, focusing on his fearful reaction and the oppressive atmosphere of the flooded, dark space.
+
+overall_soundscape:
+The soundscape is dominated by the oppressive silence of the dark corridor, punctuated by Old Zhou's hesitant breathing and the continuous, high-pitched wailing of something outside the door.
+
+non_diegetic_music:
+N/A

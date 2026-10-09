@@ -1,0 +1,24 @@
+subject_definitions:
+<Subject 1> is the heavy wooden door and its locking mechanism in <Picture 4>, featuring a rusted metal latch, a cracked wooden frame, and visible signs of warping under pressure.
+<Subject 2> is the group of ordinary zombies and crawling corpses surrounding the door in <Picture 3>, characterized by tattered clothing, decayed skin, and aggressive postures.
+<Subject 3> is the massive, bloated zombie approaching from the distance in <Picture 2>, defined by its swollen, distorted body shape and slow, heavy movement.
+<Subject 4> is the dimly lit hospital corridor and waiting room environment in <Picture 1>, featuring tiled floors, fluorescent lighting, and the specific spatial layout of the community hospital.
+
+summary:
+[reference generation] The target video is a single 8-second shot depicting a heavy wooden door under siege by zombies. The environment is established using <Subject 4>, while the attacking zombies are defined by <Subject 2> and the looming threat of <Subject 3>. The scene relies on <Subject 1> to represent the door's structural integrity failing under pressure.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): fully_preserved - the rusted latch, cracked frame, and warping wood are retained to show the door's imminent failure.
+<Subject 2> (appears in [Shot 1]): fully_preserved - the tattered appearance and aggressive posture of the surrounding zombies are retained.
+<Subject 3> (appears in [Shot 1]): fully_preserved - the swollen, bloated form and slow, heavy approach are retained.
+<Subject 4> (appears in [Shot 1]): fully_preserved - the tiled floor, fluorescent lighting, and hospital corridor layout are retained.
+
+detailed_description:
+The target video is a single, continuous close-up shot of a heavy wooden door, filmed in a gritty, high-tension style with a handheld camera that subtly shakes to mimic the vibration of the surroundings. The lighting is dim and flickering, casting long, distorted shadows across the scene.
+[Shot 1] At 00:00.000, the shot begins with an extreme close-up of <Subject 1>, the heavy wooden door. The rusted metal latch is visibly struggling against the pressure, the wood around it cracking and warping. The camera is positioned low, looking slightly up at the door, emphasizing its dominance. In the immediate foreground, <Subject 2>, the group of ordinary zombies and crawling corpses, presses against the door frame. Their tattered clothing and decayed skin are clearly visible as they push and claw at the wood. Behind them, further back in the frame, <Subject 3>, the massive bloated zombie, looms in the distance. Its swollen, distorted body is partially obscured by the fog and the other zombies, but its slow, heavy steps are visible. The ground beneath it ripples slightly with each step, creating a low-frequency rumble that is felt through the camera. The environment of <Subject 4>, the dimly lit hospital corridor, is visible in the background, with the tiled floor reflecting the flickering fluorescent lights. The camera shakes violently in sync with the impact sounds. There is no dialogue in this shot. The audio is dominated by the loud, rhythmic thuds of the door slamming against the frame, the guttural, multi-layered growls of the zombies, the deep, muffled thud of the ground vibrating, and the ragged, anxious breathing of the unseen survivors. The scene ends abruptly at 00:08.000 with the door still trembling, cutting to black.
+
+overall_soundscape:
+The soundscape is dominated by heavy, low-frequency impact noises and the chaotic, layered growls of multiple zombies. A deep, muffled thud accompanies every step of the approaching zombie, accompanied by the sound of the wooden door groaning and cracking under stress. The ambient noise includes the harsh, flickering buzz of fluorescent lights and the ragged, anxious breathing of the survivors.
+
+non_diegetic_music:
+N/A

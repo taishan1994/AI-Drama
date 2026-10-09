@@ -1,0 +1,22 @@
+subject_definitions:
+<Subject 1> is Su Wan, a female character with a calm, clear, and controlled voice (S2), defined by the appearance in <Picture 2>.
+<Picture 1> is the environment and spatial-layout reference for the scene, depicting a fog-locked black stone underground emergency corridor with water accumulation.
+<Picture 2> is the character identity and clothing reference for Su Wan, providing face identity and body proportions.
+
+summary:
+[reference generation] The target video is a single storyboard shot lasting 12 seconds, featuring Su Wan in a dark, flooded underground corridor. The scene relies on <Picture 1> for the environment and <Picture 2> for Su Wan's appearance. The shot captures a moment of silent reflection followed by a spoken line, with the audio referencing the specific dialogue and tone of Su Wan.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): fully_preserved - Su Wan's identity, clothing, and calm, controlled voice (S2) are retained.
+<Picture 1> (environment): weak_reference - the architecture, fog, and water accumulation are retained as atmospheric elements without copying the reference sheet layout.
+<Picture 2> (character): weak_reference - the face identity and clothing proportions are retained without reproducing the reference sheet layout.
+
+detailed_description:
+The target video is a cinematic, atmospheric shot in a dark, flooded underground corridor.
+[Shot 1] The scene opens on <Subject 1>, Su Wan, standing in the fog-locked black stone underground emergency corridor defined by <Picture 1>. The environment is dimly lit, with water accumulation visible on the floor and walls, creating a heavy, oppressive atmosphere. Su Wan stands still, her posture reflecting a complex mix of emotions. She looks down the dark, empty corridor ahead. After a two-second silence, she turns her head slightly and speaks. Her voice is calm, clear, and controlled (S2), matching the reference from <Picture 2>. She delivers the line with a soft, quiet tone: <d>[Chinese] 至少，我们没死得不明不白。</d> The audio is dominated by the sound of distant water dripping and the ambient fog, with a brief moment of silence before the line. The shot remains static, focusing on her face and upper body, emphasizing the isolation and the weight of her words. The lighting highlights her expression against the dark background.
+
+overall_soundscape:
+The soundscape is defined by a deep, low-frequency ambient hum of water dripping and the distant, muffled sound of fog moving through the stone corridor. There is a brief, deliberate silence before the spoken line, followed by the soft, resonant quality of Su Wan's voice.
+
+non_diegetic_music:
+N/A

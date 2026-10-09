@@ -1,0 +1,22 @@
+subject_definitions:
+<Subject 1> is the hospital corridor environment in <Picture 1> and <Picture 2>, featuring dim, foggy lighting, tiled walls, a long hallway with doors on either side, and a dark, oppressive atmosphere.
+<Subject 2> is the distorted wailing corpse in <Picture 3>, characterized by elongated, twisted limbs, a gaping mouth emitting a high-pitched scream, and a tattered, rotting appearance.
+<Subject 3> is the crawling rotting corpse in <Picture 3>, depicted as a mass of decaying flesh dragging along the floor with visible friction marks and a slow, dragging motion.
+
+summary:
+[reference generation] The target video is a single 12-second shot depicting two characters pausing in a foggy hospital corridor to listen to the approaching sound of a wailing corpse and a crawling rotting corpse. The scene utilizes <Subject 1> for the environment, <Subject 2> for the distant wailing entity, and <Subject 3> for the crawling entity, maintaining the spatial layout and mood without copying the reference-sheet layout.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): fully_preserved - the foggy hospital corridor, tiled walls, and dim lighting are retained to establish the setting.
+<Subject 2> (appears in [Shot 1]): fully_preserved - the distorted wailing corpse's appearance and high-pitched scream are retained as a distant threat.
+<Subject 3> (appears in [Shot 1]): fully_preserved - the crawling rotting corpse's dragging motion and friction sound are retained as a secondary auditory and visual threat.
+
+detailed_description:
+The target video is a single 12-second shot in a cinematic horror style with a handheld camera that slightly shakes to convey tension.
+[Shot 1] The scene opens in a dimly lit hospital corridor, <Subject 1>, where the foggy atmosphere and tiled walls create a claustrophobic environment. Two characters, Lin Mo (S1) and Su Wan (S2), stand in the middle of the hallway, their bodies angled slightly inward as they lean forward and press their ears against the air, listening intently. Behind them, <Subject 2>, the distorted wailing corpse, looms in the distance, its elongated, twisted limbs and gaping mouth emitting a piercing high-pitched scream that cuts through the silence. Simultaneously, <Subject 3>, the crawling rotting corpse, is visible further down the corridor, its mass of decaying flesh dragging slowly along the floor. The camera remains relatively static but with subtle handheld jitter, focusing on the characters' tense expressions and the looming figures behind them. The sound design is dominated by the high-frequency wail of <Subject 2> and the rhythmic, grating sound of <Subject 3> scraping against the floorboards, accompanied by the howling wind of the corridor. Lin Mo (S1) and Su Wan (S2) remain silent, their faces etched with anxiety as they wait for the next movement.
+
+overall_soundscape:
+High-frequency wailing scream, rhythmic dragging and scraping sounds of rotting flesh on floorboards, and the sound of wind howling through the hospital corridor.
+
+non_diegetic_music:
+N/A

@@ -1,0 +1,23 @@
+subject_definitions:
+<Picture 1> is the environment and spatial-layout reference for the alleyway entrance, featuring rough stone walls, a narrow passage, and dim, foggy lighting consistent with the black stone town atmosphere.
+<Picture 2> is the environment and spatial-layout reference for the general town setting, featuring similar rough stone textures and atmospheric fog to establish the visual style of the location.
+<Subject 1> is the ordinary zombie from the story source, characterized by a stiff, hunched posture, a drooping head, and a dull, greyish complexion.
+<Subject 2> is the environment of the alleyway entrance, derived from <Picture 1> and <Picture 2>, featuring rough stone walls, a narrow passage, and dim, foggy lighting.
+
+summary:
+[reference generation] The target video is a single 10-second shot depicting an ordinary zombie emerging from an alleyway entrance. The environment is defined by <Picture 1> and <Picture 2>, while the zombie's appearance and movement are based on <Subject 1>. No source video or audio assets are used; only still-image design references and the provided screenplay text guide the generation.
+
+retention_analysis:
+<Picture 1> (appears in [Shot 1]): weak_reference - the rough stone walls, narrow passage, and foggy dim lighting are retained as atmospheric design elements without copying any specific layout from the reference image.
+<Picture 2> (appears in [Shot 1]): weak_reference - the rough stone textures and atmospheric fog are retained to establish the visual style of the black stone town.
+<Subject 1> (appears in [Shot 1]): attribute_transfer - the zombie's stiff hunched posture, drooping head, and dull complexion are transferred from the story source description to the generated subject.
+
+detailed_description:
+The target video is a medium shot set in a dimly lit, foggy alleyway entrance within the black stone town. The atmosphere is heavy and oppressive, with low visibility and a cold, desaturated color palette.
+[Shot 1] At 00:00.000, the scene opens on <Picture 1>, the rough stone walls of the narrow alleyway entrance shrouded in thick fog. The lighting is low and diffuse, casting long, indistinct shadows. From the darkness of the alley, <Subject 1>, the ordinary zombie, emerges. The zombie moves with a stiff, hunched posture, its body contorted and unnatural. Its head is low, dragging slightly as it walks forward with a dull, greyish complexion that contrasts with the dark surroundings. The zombie repeatedly bumps its head against the rough stone wall, creating a dull, thudding sound. Its movements are slow, clumsy, and eerie, lacking any fluidity. The camera remains static, observing the zombie's awkward progress through the narrow space. As the zombie continues its repetitive motion, it emits a low, guttural growl that resonates in the quiet air. There is no dialogue spoken in this shot. The shot holds on the zombie's interaction with the wall until the end of the 10-second duration.
+
+overall_soundscape:
+The soundscape is dominated by the dull, thudding sound of the zombie's head repeatedly bumping against the rough stone wall, accompanied by a low, guttural growl. The ambient noise is minimal, consisting only of the faint, damp sound of fog settling in the narrow alleyway, enhancing the eerie silence.
+
+non_diegetic_music:
+A low, dissonant drone with a slow, irregular rhythm underpins the scene, evoking a sense of dread and unease. The music is sparse and atmospheric, avoiding any melodic elements that might distract from the horror of the zombie's movement.

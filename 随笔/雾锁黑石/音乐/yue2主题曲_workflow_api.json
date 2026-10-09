@@ -1,0 +1,119 @@
+{
+  "1": {
+    "class_type": "CheckpointLoaderSimple",
+    "inputs": {
+      "ckpt_name": "yue2_3b_int8_convrot.safetensors"
+    }
+  },
+  "2": {
+    "class_type": "YuE2GenerateABC",
+    "inputs": {
+      "clip": [
+        "1",
+        1
+      ],
+      "style": "Mandarin Chinese dark cinematic rock ballad, about 82 BPM in a minor key. A low, expressive male lead vocal tells a tense survival story with clear natural Mandarin diction; subtle female harmony joins only in the choruses. Rain-soaked atmosphere, low cello and pulsing drums in the intro, restrained electric guitar in the verses, then wide distorted guitars and orchestral strings in a memorable, powerful chorus. Gradual build, polished film-score production, no rap. End unresolved with distant water resonance and a fading low drone.",
+      "lyrics": "[Intro]\n雨落下来，山路失去方向\n远处的灯，在雾里摇晃\n\n[Verse 1]\n雨刮划破挡风玻璃\n却划不开无边夜色\n蓝色冷箱贴着心跳\n压住一句迟来的疑惑\n街口积水映出倒影\n忽然睁开的灰白眼眸\n我答应天亮回家煮粥\n这条命不能留在路口\n\n[Pre-Chorus]\n她说别回头，别出声\n尖啸正把黑夜叫醒\n若真相沉入这场雾\n谁还能替我们证明\n\n[Chorus]\n雾锁黑石，别松开我的手\n听那尖啸，尸潮正穿过街口\n若整个世界要把名字都带走\n就把彼此心跳记到最后\n雾锁黑石，天亮还有没有\n一步一步，走过雨和暗流\n只要真相还有人愿意开口\n我们就不把希望交给沉默\n\n[Verse 2]\n她用冷静挡住恐惧\n说灰雾来自地下深处\n撬棍落下，争吵撕开\n谁在守护，谁只想逃出\n水面无风却荡开涟漪\n铁门背后敲了三下\n信号亮起又熄灭\n黑暗里有谁回答\n\n[Pre-Chorus]\n别回头，别出声\n那回响越来越近\n如果希望只剩一格\n就把它送出这片雾\n\n[Chorus]\n雾锁黑石，别松开我的手\n听那尖啸，尸潮正穿过街口\n若整个世界要把名字都带走\n就把彼此心跳记到最后\n雾锁黑石，天亮还有没有\n一步一步，走过雨和暗流\n只要真相还有人愿意开口\n我们就不把希望交给沉默\n\n[Bridge]\n三声敲门，不要应答\n水面无风，影子向前\n如果希望只剩一格\n把它送到更远的天边\n我还欠她一碗热粥\n还欠一个未出世的拥抱\n真相能不能穿过长夜\n我带着所有人的声音寻找\n\n[Final Chorus]\n雾锁黑石，别松开我的手\n哪怕尖啸，淹没整个街口\n若整个世界要把名字都带走\n就把彼此心跳记到最后\n雾锁黑石，天亮还有没有\n一步一步，带着真相往前走\n只要还有人听见我们的呼救\n黑暗就不能带走最后的灯火\n\n[Outro]\n雨还在下\n手没有松\n黑暗深处\n水声回应",
+      "seed": 20261008,
+      "mode": "full",
+      "max_abc_tokens": 8192,
+      "temperature": 0.7,
+      "top_p": 0.9,
+      "top_k": 30,
+      "repetition_penalty": 1.005,
+      "penalty_window": 100
+    }
+  },
+  "3": {
+    "class_type": "YuE2GenerateMusic",
+    "inputs": {
+      "clip": [
+        "1",
+        1
+      ],
+      "style": "Mandarin Chinese dark cinematic rock ballad, about 82 BPM in a minor key. A low, expressive male lead vocal tells a tense survival story with clear natural Mandarin diction; subtle female harmony joins only in the choruses. Rain-soaked atmosphere, low cello and pulsing drums in the intro, restrained electric guitar in the verses, then wide distorted guitars and orchestral strings in a memorable, powerful chorus. Gradual build, polished film-score production, no rap. End unresolved with distant water resonance and a fading low drone.",
+      "lyrics": "[Intro]\n雨落下来，山路失去方向\n远处的灯，在雾里摇晃\n\n[Verse 1]\n雨刮划破挡风玻璃\n却划不开无边夜色\n蓝色冷箱贴着心跳\n压住一句迟来的疑惑\n街口积水映出倒影\n忽然睁开的灰白眼眸\n我答应天亮回家煮粥\n这条命不能留在路口\n\n[Pre-Chorus]\n她说别回头，别出声\n尖啸正把黑夜叫醒\n若真相沉入这场雾\n谁还能替我们证明\n\n[Chorus]\n雾锁黑石，别松开我的手\n听那尖啸，尸潮正穿过街口\n若整个世界要把名字都带走\n就把彼此心跳记到最后\n雾锁黑石，天亮还有没有\n一步一步，走过雨和暗流\n只要真相还有人愿意开口\n我们就不把希望交给沉默\n\n[Verse 2]\n她用冷静挡住恐惧\n说灰雾来自地下深处\n撬棍落下，争吵撕开\n谁在守护，谁只想逃出\n水面无风却荡开涟漪\n铁门背后敲了三下\n信号亮起又熄灭\n黑暗里有谁回答\n\n[Pre-Chorus]\n别回头，别出声\n那回响越来越近\n如果希望只剩一格\n就把它送出这片雾\n\n[Chorus]\n雾锁黑石，别松开我的手\n听那尖啸，尸潮正穿过街口\n若整个世界要把名字都带走\n就把彼此心跳记到最后\n雾锁黑石，天亮还有没有\n一步一步，走过雨和暗流\n只要真相还有人愿意开口\n我们就不把希望交给沉默\n\n[Bridge]\n三声敲门，不要应答\n水面无风，影子向前\n如果希望只剩一格\n把它送到更远的天边\n我还欠她一碗热粥\n还欠一个未出世的拥抱\n真相能不能穿过长夜\n我带着所有人的声音寻找\n\n[Final Chorus]\n雾锁黑石，别松开我的手\n哪怕尖啸，淹没整个街口\n若整个世界要把名字都带走\n就把彼此心跳记到最后\n雾锁黑石，天亮还有没有\n一步一步，带着真相往前走\n只要还有人听见我们的呼救\n黑暗就不能带走最后的灯火\n\n[Outro]\n雨还在下\n手没有松\n黑暗深处\n水声回应",
+      "abc": [
+        "2",
+        0
+      ],
+      "seed": 20261009,
+      "mode": "full",
+      "max_duration": 240.0,
+      "temperature": 1.0,
+      "top_p": 0.95,
+      "top_k": 100,
+      "repetition_penalty": 1.2,
+      "cfg_scale": 1.0
+    }
+  },
+  "4": {
+    "class_type": "EmptyYuE2LatentAudio",
+    "inputs": {
+      "seconds": [
+        "3",
+        1
+      ],
+      "batch_size": 1
+    }
+  },
+  "5": {
+    "class_type": "ConditioningZeroOut",
+    "inputs": {
+      "conditioning": [
+        "3",
+        0
+      ]
+    }
+  },
+  "6": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "seed": 20261010,
+      "steps": 32,
+      "cfg": 1.0,
+      "sampler_name": "dpm_2",
+      "scheduler": "sgm_uniform",
+      "positive": [
+        "3",
+        0
+      ],
+      "negative": [
+        "5",
+        0
+      ],
+      "latent_image": [
+        "4",
+        0
+      ],
+      "denoise": 1.0
+    }
+  },
+  "7": {
+    "class_type": "VAEDecodeAudio",
+    "inputs": {
+      "samples": [
+        "6",
+        0
+      ],
+      "vae": [
+        "1",
+        2
+      ]
+    }
+  },
+  "8": {
+    "class_type": "SaveAudio",
+    "inputs": {
+      "audio": [
+        "7",
+        0
+      ],
+      "filename_prefix": "audio/雾锁黑石主题曲_yue2"
+    }
+  }
+}

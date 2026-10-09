@@ -1,0 +1,19 @@
+subject_definitions:
+<Subject 1> is the exterior environment of the community hospital from <Picture 1> and <Picture 2>, featuring a heavy metal door, a darkened corridor beyond, and a spatial layout that preserves the architecture and screen direction without copying the reference-sheet layout.
+
+summary:
+[reference generation] The target video is a single 6-second shot depicting the sudden outbreak of a horde of zombies outside the community hospital. The scene captures the moment of high-intensity audio distortion and the visual surge of the undead, using <Subject 1> as the environmental reference for the door and corridor.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): weak_reference - the architectural elements of the door and corridor are retained to establish the setting, but the specific layout and screen direction are adapted to the target shot's composition.
+
+detailed_description:
+The target video is a single 6-second shot in a high-tension horror style, characterized by intense audio distortion and chaotic visual movement.
+[Shot 1] At 00:00.000, the shot begins on the exterior of the community hospital, focusing on a heavy metal door. The environment is dark and foreboding, with the corridor visible through the glass or gap, matching the spatial layout of <Subject 1>. Suddenly, a piercing, high-frequency screech erupts from outside, so loud and penetrating that the camera shakes violently. Instantly, a dense swarm of shadowy zombie figures surges forward from the darkness, crowding against the door. The visual action is one of sudden, overwhelming density as the horde is summoned in a single instant.
+At 00:02.000, the camera continues to jitter with the force of the impact. The sound of the distorted screech peaks and is immediately followed by a deafening roar of the zombie horde and the thunderous sound of them crashing against the door. There is no dialogue. The shot holds on the chaotic collision of the swarm against the barrier until the end of the clip.
+
+overall_soundscape:
+A deafening, distorted high-frequency screech dominates the audio, followed instantly by a cacophony of zombie growls and the loud, rhythmic thuds of the horde crashing against the door.
+
+non_diegetic_music:
+N/A

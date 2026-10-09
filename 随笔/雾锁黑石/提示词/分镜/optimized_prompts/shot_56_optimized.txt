@@ -1,0 +1,20 @@
+subject_definitions:
+<Subject 1> is Su Wan, a female character defined by <Picture 2>, featuring a calm facial expression, controlled posture, and specific clothing details derived from the large portrait area and turnaround figures.
+<Subject 2> is the underground emergency corridor environment defined by <Picture 1>, featuring a dimly lit, flooded spatial layout with visible water accumulation and architectural structures.
+
+summary:
+[reference generation] The target video is a single storyboard shot (Shot 56) lasting 14 seconds, depicting Su Wan delivering a low-volume warning about underground monster mechanics to Lin Mo. The scene utilizes <Subject 1> for character identity and <Subject 2> for environmental context, referencing <Picture 2> for appearance and <Picture 1> for spatial layout without using them as frame anchors.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): fully_preserved - Su Wan's identity, clothing, and calm demeanor are retained exactly as defined by <Picture 2>.
+<Subject 2> (appears in [Shot 1]): fully_preserved - The flooded corridor architecture and screen direction are retained exactly as defined by <Picture 1>.
+
+detailed_description:
+The target video is a cinematic close-up/medium shot in a dark, atmospheric style with low-key lighting and a desaturated color palette dominated by blues and greys.
+[Shot 1] At 00:00.000, the scene opens on <Subject 2>, the underground emergency corridor, characterized by a flooded spatial layout with visible water accumulation on the floor and dim ambient light filtering from above. <Subject 1>, Su Wan, stands slightly off-center to the right, her body angled slightly away from the camera but her face turned towards the left side of the frame where Lin Mo is implied to be. She maintains a cautious, serious expression with her eyes focused intently on the unseen listener. Her mouth moves as she speaks in a hushed, urgent tone, her lips forming the words of the dialogue. The camera remains relatively static with a very slight handheld shake to convey the tension of the moment. The audio consists of extremely low-volume human speech mixed with a subtle environmental floor noise. Su Wan (S2) whispers, <d>[Chinese] 通道积水多，全是蛰伏的水渍潜尸，丧尸靠听觉和热源追击，千万小声。基站就在尽头，信号一发，就有希望。</d> Her voice is controlled and clear, matching the calm but serious tone described for S2. The shot holds on her face and upper body as she finishes the sentence, emphasizing the gravity of the warning.
+
+overall_soundscape:
+The soundscape is dominated by a very low-volume human whisper mixed with a faint, continuous environmental floor noise (hiss and low hum) that suggests the dampness of the flooded corridor. There are no other distinct sound effects or music.
+
+non_diegetic_music:
+N/A

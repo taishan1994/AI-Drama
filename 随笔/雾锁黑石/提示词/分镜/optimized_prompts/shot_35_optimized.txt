@@ -1,0 +1,22 @@
+subject_definitions:
+<Subject 1> is Su Wan, a female character defined by the facial features and clothing proportions in <Picture 2>, wearing a dark, practical outfit suitable for a hospital setting.
+<Subject 2> is Old Zhou, a middle-aged male character defined by the facial features and clothing proportions in <Picture 3>, wearing a rough, forceful style consistent with his role.
+<Picture 1> is the environment reference for the hospital lobby and back corridor, defining the architectural layout, lighting, and spatial depth without serving as a direct frame anchor.
+
+summary:
+[reference generation] The target video is a single 6-second shot depicting Su Wan urgently intercepting Old Zhou in a hospital corridor. The scene utilizes <Picture 1> for environmental context and <Picture 2> and <Picture 3> for character identity and clothing details.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): fully_preserved - Su Wan's identity, facial features, and clothing proportions from <Picture 2> are retained.
+<Subject 2> (appears in [Shot 1]): fully_preserved - Old Zhou's identity, facial features, and clothing proportions from <Picture 3> are retained.
+<Picture 1> (environment): weak_reference - the architectural style, lighting, and spatial layout are referenced to establish the hospital setting without copying the reference sheet's specific composition.
+
+detailed_description:
+The target video is a tight, handheld-style short shot capturing a moment of urgent confrontation in a dimly lit hospital corridor. The camera moves slightly with the action, maintaining a medium-close framing that keeps both characters in view.
+[Shot 1] At 00:00.000, the scene opens in the hospital corridor defined by <Picture 1>, where the architecture features sterile white walls and overhead fluorescent lighting that casts harsh shadows. <Subject 2> (S3), Old Zhou, is seen in the background, moving forward with a rough, forceful demeanor. Suddenly, <Subject 1> (S2), Su Wan, rushes into the frame from the left, her movement sharp and decisive. She extends her arm to physically block Old Zhou's path, her expression intense and focused. The camera tracks her forward momentum briefly before settling on the standoff. The sound of hurried footsteps echoes loudly in the quiet corridor. <Subject 1> (S2) shouts with urgency, <d>[Chinese] 不能砸！</d> Her voice is clear and controlled, cutting through the ambient noise. The shot holds on the tension between the two characters as the scene ends.
+
+overall_soundscape:
+The soundscape is dominated by the sound of rapid, heavy footsteps echoing against the hard floor of the hospital corridor. A low, sterile hum of fluorescent lights provides the background ambience.
+
+non_diegetic_music:
+N/A

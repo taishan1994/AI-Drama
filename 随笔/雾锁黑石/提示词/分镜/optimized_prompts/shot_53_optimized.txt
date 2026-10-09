@@ -1,0 +1,25 @@
+subject_definitions:
+<Subject 1> is the environment defined by <Picture 1>, featuring a dimly lit underground hospital corridor with a heavy iron gate, wet concrete floors, and a spatial layout that conveys a sense of confinement and dampness.
+<Subject 2> is the character Su Wan defined by <Picture 2>, a young woman with a calm and controlled demeanor, wearing a dark jacket and holding a flashlight, with her body proportions and clothing details derived from the turnaround figures in the reference.
+<Subject 3> is the character Lin Mo defined by <Picture 3>, a young man with a slightly breathless and anxious expression, holding a flashlight and a mobile phone, with his prop appearance preserved as recognizable shapes and markings without copying the image layout.
+
+summary:
+[reference generation] The target video is a single 10-second shot depicting Lin Mo and Su Wan arriving at an underground hospital gate. The environment is established using <Subject 1> from <Picture 1>, while the characters Su Wan and Lin Mo are realized using <Subject 2> and <Subject 3> respectively, with their appearances derived from <Picture 2> and <Picture 3> without reproducing the reference sheet layouts. The scene features ambient wind and dripping sounds with no dialogue.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): fully_preserved - the architecture, iron gate, wet floor, and spatial layout are retained as the environment.
+<Subject 2> (appears in [Shot 1]): fully_preserved - Su Wan's identity, calm demeanor, and clothing proportions are retained.
+<Subject 3> (appears in [Shot 1]): fully_preserved - Lin Mo's identity, anxious expression, and prop shapes are retained.
+<Picture 1>: weak_reference - used solely for environmental layout and architectural style.
+<Picture 2>: weak_reference - used solely for character identity and clothing proportions.
+<Picture 3>: weak_reference - used solely for prop appearance and character details.
+
+detailed_description:
+The target video is a cinematic, low-angle tracking shot in a dark, damp underground hospital setting.
+[Shot 1] At 00:00.000, the camera tracks forward from behind Lin Mo and Su Wan, moving at a steady, slightly shaky pace to simulate their arrival. The shot begins with the view of the heavy iron gate of the underground passage. <Subject 2> (S2), Su Wan, is positioned slightly to the right, holding a flashlight low to the ground. She presses the beam down, illuminating a thin stream of white mist seeping from the cracks in the iron gate and the puddles of water on the wet concrete floor. <Subject 3> (S1), Lin Mo, is positioned slightly to the left, holding a flashlight and a mobile phone in his hands. His expression is slightly breathless and anxious as he looks ahead. The environment, <Subject 1>, is characterized by the cold, metallic texture of the gate and the slick, reflective surface of the water. The lighting is dim, dominated by the cold blue and white tones of the flashlight beams cutting through the darkness. There is no dialogue spoken in this shot.
+
+overall_soundscape:
+The soundscape is dominated by the sound of wind whistling through the narrow passage and the rhythmic, wet sound of dripping water hitting the concrete floor. The ambient noise is low and oppressive, matching the damp atmosphere of the underground hospital.
+
+non_diegetic_music:
+N/A

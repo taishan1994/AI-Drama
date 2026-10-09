@@ -1,0 +1,24 @@
+subject_definitions:
+<Subject 1> is the environment defined by <Picture 1>, featuring a dark underground emergency corridor with accumulated water, a metal door at the end, and a flashlight beam cutting through the gloom.
+<Subject 2> is the character Lin Mo (S1), a young adult male with slightly breathless and anxious voice qualities, wearing dark clothing as per <Picture 2>.
+<Subject 3> is the character Su Wan (S2), a female with calm, clear, and controlled voice qualities, wearing dark clothing as per <Picture 3>.
+<Subject 4> is the prop flashlight and mobile phone defined by <Picture 4>, preserving the recognizable shape and markings.
+
+summary:
+[reference generation] The target video is a single 6-second shot depicting Lin Mo and Su Wan in a dark underground corridor, looking at an empty iron door illuminated by a flashlight. The scene preserves the environment from <Picture 1> and character appearances from <Picture 2> and <Picture 3>, with props from <Picture 4>. Dialogue is preserved in Chinese.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): weak_reference - the architecture and spatial layout are retained without copying the reference-sheet layout.
+<Subject 2> (appears in [Shot 1]): fully_preserved - Lin Mo's identity and clothing proportions are retained.
+<Subject 3> (appears in [Shot 1]): fully_preserved - Su Wan's identity and clothing proportions are retained.
+<Subject 4> (appears in [Shot 1]): fully_preserved - the flashlight and phone shapes are retained.
+
+detailed_description:
+The target video is a cinematic, suspenseful shot in a dark underground environment with soft, directional lighting.
+[Shot 1] At 00:00.000, the scene opens on a dark underground emergency corridor. The environment, defined by <Subject 1>, shows a wet floor with accumulated water and a metal door at the far end. A beam of light from the flashlight and phone, <Subject 4>, illuminates the immediate area while the rest of the corridor remains in shadow. <Subject 2> (S1), Lin Mo, and <Subject 3> (S2), Su Wan, stand side-by-side in the middle ground, their faces illuminated by the light. Both characters are looking intently toward the empty iron door at the end of the tunnel. The water on the floor edges appears to be pushed back by an invisible force, creating a sense of danger. There is no dialogue. At 00:04.000, a low, close breathing sound is heard, followed by an abrupt silence. The shot holds steady on the two figures and the door until the end of the 6-second duration.
+
+overall_soundscape:
+A low, close breathing sound occurs briefly, followed by sudden silence. The ambient sound of the dark, wet corridor is minimal.
+
+non_diegetic_music:
+N/A

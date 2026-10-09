@@ -1,0 +1,19 @@
+subject_definitions:
+<Subject 1> is the navigation screen interface in <Picture 1>, featuring a dark background with a zeroed signal grid and a red warning popup displaying the text "前方山体滑坡，道路封闭" (Forward landslide, road closed).
+<Subject 2> is the handheld flashlight and mobile phone in <Picture 2>, characterized by the distinct shape of the flashlight and the visible markings on the phone casing.
+
+summary:
+[reference generation] The target video is an 8-second close-up shot of a vehicle navigation screen displaying a critical warning message during a storm. The visual style references the interface design from <Subject 1> and the prop appearance of the flashlight and phone from <Subject 2>. The shot captures the moment of system failure and the resulting alert.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): weak_reference - the interface layout is not copied; only the specific warning text "前方山体滑坡，道路封闭" and the red color scheme are retained as the core information.
+<Subject 2> (appears in [Shot 1]): weak_reference - the flashlight and phone are not copied; only their recognizable shapes and markings are retained as background props.
+
+detailed_description:
+The target video is a tight close-up shot of a vehicle's navigation screen, illuminated by the dim interior light. The screen displays a dark interface with a grid of signal bars that have all turned to zero. A bright red popup window dominates the center, displaying the Chinese text "前方山体滑坡，道路封闭" (Forward landslide, road closed) in bold white characters. The screen flickers slightly with a digital glitch effect. In the periphery, the shapes of a handheld flashlight and a mobile phone are visible, their forms matching the design in <Subject 2>, but they remain out of focus. The audio consists of a sharp, repetitive beeping sound indicating system failure, overlaid with the steady, rhythmic patter of heavy rain against the windshield. There is no dialogue.
+
+overall_soundscape:
+Heavy rain noise and a continuous, high-pitched digital beeping sound indicating navigation error.
+
+non_diegetic_music:
+N/A

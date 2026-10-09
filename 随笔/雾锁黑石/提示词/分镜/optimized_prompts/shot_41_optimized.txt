@@ -1,0 +1,20 @@
+subject_definitions:
+<Subject 1> is Su Wan, a female character defined by <Picture 2>, featuring a determined and urgent expression, wearing a practical dark tactical jacket with a high collar and a utility belt, with short, messy dark hair.
+<Subject 2> is the environment of the community hospital, defined by <Picture 1>, featuring a dimly lit main hall with exposed brick walls, a long corridor extending into the background, and a heavy steel door at the far end.
+
+summary:
+[reference generation] The target video is a single 12-second shot depicting Su Wan urgently informing Lin Mo about an impending monster attack and directing him to an escape route. The scene utilizes <Subject 1> for the character's appearance and <Subject 2> for the hospital environment. The audio references a high-tension atmosphere and Su Wan's specific dialogue.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): fully_preserved - Su Wan's urgent expression, short messy dark hair, and tactical jacket are retained exactly as per <Picture 2>.
+<Subject 2> (appears in [Shot 1]): fully_preserved - The hospital hall architecture, brick walls, and corridor layout from <Picture 1> are preserved without copying the reference sheet layout.
+
+detailed_description:
+The target video is a cinematic, high-tension action sequence shot in a handheld, slightly shaky style to convey urgency. The lighting is low-key and dim, with harsh shadows cast by emergency lights, creating a claustrophobic atmosphere.
+[Shot 1] At 00:00.000, the shot opens on <Subject 2>, the dimly lit community hospital main hall with exposed brick walls and a long corridor stretching into the darkness. <Subject 1>, Su Wan, stands in the foreground, her body language tense and her expression one of extreme urgency. She is wearing a dark tactical jacket with a high collar and a utility belt. She speaks rapidly and breathlessly, her eyes darting toward the heavy steel door at the far end of the hall. <Subject 1> (S2) says with a frantic, controlled but panicked tone, <d>[Chinese] 正门撑不住了！啸尸的尖叫召来了所有怪物，巨尸马上就到！后院应急地下通道能通往废弃基站，启动信号就能求救！</d> Her voice is clear but strained, conveying the immediate threat of the "roaring zombies" and the looming "giant corpse." The camera pushes in slightly on her face as she delivers the warning, emphasizing her desperation. The background remains static, showing the oppressive emptiness of the hospital corridor.
+
+overall_soundscape:
+The soundscape is dominated by a low, rumbling high-tension ambient drone that creates a sense of impending doom. Occasional sharp, metallic screeches and distant, muffled growls of monsters punctuate the silence, rising in volume as Su Wan speaks.
+
+non_diegetic_music:
+A dissonant, staccato string score plays in the background, featuring low, sustained notes that build in intensity, mirroring the rising panic of the scene.

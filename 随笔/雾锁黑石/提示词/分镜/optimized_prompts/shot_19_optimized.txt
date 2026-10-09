@@ -1,0 +1,27 @@
+subject_definitions:
+<Subject 1> is Lin Mo (S1), a young adult male with slightly breathless and anxious energy, defined by the facial identity and clothing proportions in <Picture 2>.
+<Subject 2> is the cold-chain sample box (prop), defined by its recognizable shape and markings in <Picture 3>.
+<Subject 3> is the ordinary zombie (creature), defined by the general appearance in <Picture 5>.
+<Subject 4> is the crawling rotting corpse (creature), defined by the general appearance in <Picture 4>.
+<Subject 5> is the mist-locked black stone town hospital main street environment, defined by the architecture and spatial layout in <Picture 1>.
+
+summary:
+[reference generation] The target video is a 12-second handheld chase sequence where Lin Mo (S1) flees from two zombies while clutching a cold-chain sample box. The environment is the mist-locked black stone town hospital main street. Lin Mo's appearance is based on <Picture 2>, the prop on <Picture 3>, and the background on <Picture 1> and <Picture 5>. No audio assets are referenced; the scene contains only diegetic sound.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): fully_preserved - Lin Mo's identity, clothing, and anxious demeanor are retained.
+<Subject 2> (appears in [Shot 1]): fully_preserved - The cold-chain sample box's shape and markings are retained.
+<Subject 3> (appears in [Shot 1]): fully_preserved - The ordinary zombie is retained as a pursuer.
+<Subject 4> (appears in [Shot 1]): fully_preserved - The crawling rotting corpse is retained as a pursuer.
+<Subject 5> (appears in [Shot 1]): fully_preserved - The hospital main street architecture and layout are retained.
+<Subject 1> (S1): fully_preserved - Lin Mo's voice quality is consistent with the established character profile (young adult, slightly breathless and anxious).
+
+detailed_description:
+The target video is a 12-second handheld chase sequence shot in a chaotic, high-energy style with a shaky camera to simulate panic.
+[Shot 1] At 00:00.000, the shot begins with a handheld, jittery camera movement following Lin Mo (S1) as he sprints frantically through the mist-locked black stone town hospital main street. The environment features the architecture and spatial layout of <Subject 5>, with rain pouring down heavily, soaking Lin Mo's face and clothes. Lin Mo (S1), defined by the identity and clothing in <Picture 2>, clutches the cold-chain sample box (<Subject 2>, defined by <Picture 3>) tightly against his chest. His steps are frantic and stumbling, his expression filled with anxiety. Behind him, two threats close in: an ordinary zombie (<Subject 3>, defined by <Picture 5>) and a crawling rotting corpse (<Subject 4>, defined by <Picture 4>). The ordinary zombie runs on two legs, while the rotting corpse crawls on the ground, both converging rapidly on Lin Mo. The camera shakes violently with the sound of heavy running footsteps, the roar of the storm, the hissing of the zombies, and the wet slap of rain on pavement. Lin Mo (S1) turns his body to face the approaching threats, his breath visible in the mist, eyes wide with fear. He continues to run forward, the distance between him and the zombies shrinking rapidly. The shot ends with Lin Mo still in mid-stride, the zombies just behind him, maintaining the intense momentum of the escape.
+
+overall_soundscape:
+Heavy rain, thunder, and the sound of running footsteps on wet pavement dominate the audio. The hissing and groaning of the ordinary zombie and the wet, dragging sounds of the crawling rotting corpse are audible in the background.
+
+non_diegetic_music:
+N/A

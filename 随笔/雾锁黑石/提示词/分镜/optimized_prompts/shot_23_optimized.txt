@@ -1,0 +1,20 @@
+subject_definitions:
+<Subject 1> is Lin Mo (S1), a young adult male with slightly breathless and anxious vocal qualities, defined by the character identity and clothing reference in <Picture 2>.
+<Picture 1> is the environment and spatial-layout reference for the community hospital lobby and back corridor, defining the architecture and screen direction without serving as a target frame anchor.
+
+summary:
+[reference generation] The target video depicts Lin Mo crashing into the community hospital lobby and frantically slamming the door shut. The scene uses <Picture 1> for environmental layout and <Picture 2> for character appearance. The audio consists of heavy door slams, impact sounds, and chaotic zombie noises outside, with no dialogue.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): attribute_transfer - Lin Mo's appearance and clothing are transferred from <Picture 2> to the target video's protagonist.
+<Picture 1> (environment): weak_reference - The architectural style and spatial layout are loosely referenced to establish the hospital setting without copying the reference sheet's specific composition.
+
+detailed_description:
+The target video is a single continuous shot in a cinematic, slightly desaturated tone, capturing the chaotic moment Lin Mo crashes into the community hospital lobby.
+[Shot 1] At 00:00.000, the camera is positioned inside the lobby, looking slightly upward as Lin Mo (S1) stumbles forward with a heavy, stumbling motion, his body language conveying panic and exhaustion. He is wearing the clothing defined in <Picture 2>. With a desperate, frantic energy, he grabs the door handle and throws his entire body weight against it, slamming the heavy door shut. The camera shakes slightly to match the impact. As the door slams, the sound of the wood hitting the frame echoes loudly. Immediately following the slam, the sound of multiple zombies banging, scratching, and clawing at the door from the outside fills the audio space, creating a sense of imminent danger. Lin Mo presses his back against the closed door, breathing heavily, his face showing a mix of fear and determination. The lighting is dim and atmospheric, consistent with the hospital environment referenced in <Picture 1>. The shot holds on Lin Mo's reaction as the chaotic noises continue outside.
+
+overall_soundscape:
+Heavy thud of the door slamming, followed by the sound of wood impact. A continuous, chaotic layer of zombie noises—banging, scratching, and clawing—plays from outside the door throughout the shot. The ambient sound of the hospital lobby is low and muffled by the closed door.
+
+non_diegetic_music:
+N/A

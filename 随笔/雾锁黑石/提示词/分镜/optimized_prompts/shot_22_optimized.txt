@@ -1,0 +1,22 @@
+subject_definitions:
+<Subject 1> is Lin Mo (S1), a young adult male with slightly breathless and anxious energy, defined by the character identity and clothing reference in <Picture 2>.
+<Picture 1> is the environment and spatial-layout reference for the hospital main entrance, featuring the foggy Black Stone Town main street and the specific architectural structure of the hospital door.
+<Picture 3> is the environment and spatial-layout reference for the street level, specifically detailing the puddle of water and the submerged corpse (Shui Zi) lurking within it.
+
+summary:
+[reference generation] The target video is a single continuous shot depicting Lin Mo sprinting to tackle the hospital entrance while dodging a sudden attack from a submerged corpse in a puddle. The visual style and character design are derived from <Picture 2>, while the setting and the specific obstacle are defined by <Picture 1> and <Picture 3>.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): fully_preserved - Lin Mo's identity, clothing, and anxious physical state are retained.
+<Picture 1> (appears in [Shot 1]): weak_reference - the hospital architecture and screen direction are preserved, but the specific layout is adapted to the action.
+<Picture 3> (appears in [Shot 1]): weak_reference - the puddle and the submerged corpse are retained as the immediate obstacle, but the specific reference-sheet layout is not copied.
+
+detailed_description:
+The target video is a high-intensity action sequence shot in a cinematic, slightly desaturated color palette with dynamic lighting to emphasize the fog and the sudden movement.
+[Shot 1] The camera tracks rapidly from the side, following Lin Mo (S1) as he sprints with maximum effort toward the hospital main entrance defined by <Picture 1>. The foggy atmosphere of the Black Stone Town main street from <Picture 1> envelops the scene, creating a sense of urgency. Lin Mo's body is angled forward, muscles tensed, embodying the breathless and anxious energy of <Subject 1>. As he approaches the threshold, the camera pans slightly to reveal the street level detail from <Picture 3>: a large puddle of water. Suddenly, a submerged corpse (Shui Zi) from <Picture 3> lifts its head and lunges upward with a violent splash. Lin Mo reacts instantly, diving sideways to avoid the attack. The camera shakes slightly to convey the impact and the chaotic motion of his body contorting to dodge the creature. The sound of rapid, pounding footsteps and a heavy, accelerating heartbeat fills the audio space, synchronized with the frantic movement. A sharp, wet splashing sound occurs as the corpse strikes the water, followed by the sound of Lin Mo's body hitting the ground or sliding past the obstacle. The shot ends with Lin Mo still moving forward toward the hospital entrance after his evasive sidestep.
+
+overall_soundscape:
+The soundscape is dominated by the sound of rapid, heavy footsteps echoing on the wet pavement, a low rumbling heartbeat that intensifies with every step, and the sudden, sharp sound of water splashing as the submerged corpse attacks.
+
+non_diegetic_music:
+A tense, driving orchestral score with a rising tempo and dissonant strings underscores the chase, cutting off abruptly when the door slams shut.

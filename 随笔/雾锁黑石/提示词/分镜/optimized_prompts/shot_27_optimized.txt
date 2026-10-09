@@ -1,0 +1,26 @@
+subject_definitions:
+<Subject 1> is Old Zhou, a middle-aged man with a rough and forceful voice quality (S3), wearing a dark jacket and holding a fire extinguisher tool.
+<Subject 2> is the fire extinguisher tool, a recognizable metal object with specific markings and shape, used as a prop in the scene.
+<Picture 1> is the environment and spatial-layout reference for the community hospital lobby and back corridor, defining the architecture and screen direction.
+<Picture 2> is the character identity and clothing reference for Old Zhou, providing face identity and body proportions.
+<Picture 3> is the prop appearance reference for the fire extinguisher tool, defining its shape and markings.
+
+summary:
+[reference generation] The target video is a single shot depicting Old Zhou scolding Lin Mo in a hospital corridor. The scene uses <Subject 1> and <Subject 2> as the primary visible elements, with the environment defined by <Picture 1> and the tool defined by <Picture 3>. The dialogue is delivered by Old Zhou (S3) with a rough, forceful tone, referencing the audio characteristics of S3.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): fully_preserved - the middle-aged man's rough voice quality (S3), dark jacket, and aggressive demeanor are retained.
+<Subject 2> (appears in [Shot 1]): fully_preserved - the recognizable shape and markings of the fire extinguisher tool are retained.
+<Picture 1> (environment): weak_reference - the architecture and screen direction are retained without copying the reference-sheet layout.
+<Picture 2> (character): weak_reference - the face identity and body proportions are retained without reproducing the reference sheet layout.
+<Picture 3> (prop): weak_reference - the shape and markings are retained without copying the image layout.
+
+detailed_description:
+The target video is a close-up shot in a dimly lit hospital corridor with a tense atmosphere.
+[Shot 1] The scene opens in a narrow corridor with tiled walls and fluorescent lighting, establishing the environment from <Picture 1>. <Subject 1> (S3), Old Zhou, steps forward half a step, his eyes narrowed with a fierce and hostile gaze. He raises <Subject 2>, the fire extinguisher tool, holding it high in a threatening manner. The lighting casts sharp shadows, emphasizing the tension. Old Zhou (S3) speaks with a rough, forceful, and commanding voice, exclaiming, <d>[Chinese] 别乱动！外面什么情况？你有没有被沾到？</d> His expression is one of extreme anger and suspicion. The camera remains static, focusing tightly on his upper body and the tool.
+
+overall_soundscape:
+Tense atmospheric sound effects, including low hums and subtle static, fill the background to enhance the anxiety of the scene.
+
+non_diegetic_music:
+A low, dissonant drone with occasional sharp metallic screeches plays in the background, matching the tension of the moment.
