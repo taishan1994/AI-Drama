@@ -1,0 +1,78 @@
+[Script Info]
+ScriptType: v4.00+
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Noto Sans CJK SC,44,&H00FFFFFF,&H0000FFFF,&H99000000,&H80000000,0,0,0,0,100,100,0,0,1,3,1,2,80,80,62,1
+Style: MainTitle,Noto Serif CJK SC,74,&H00E8E1D4,&H0000FFFF,&HAA000000,&H80000000,-1,0,0,0,100,100,7,0,1,3,2,5,80,80,80,1
+Style: SongTitle,Noto Serif CJK SC,34,&H00D0C8B8,&H0000FFFF,&HAA000000,&H80000000,0,0,0,0,100,100,3,0,1,2,1,5,80,80,80,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:01.00,0:00:07.00,MainTitle,,0,0,0,,{\fad(700,1000)\an5\pos(1420,175)}生化危机：爆发夜
+Dialogue: 1,0:00:01.20,0:00:07.00,SongTitle,,0,0,0,,{\fad(800,1000)\an5\pos(1420,245)}等不到天亮  ·  主题曲 MV
+Dialogue: 0,0:00:14.05,0:00:19.14,Default,,0,0,0,,雪落在没有信号的路上
+Dialogue: 0,0:00:19.17,0:00:26.81,Default,,0,0,0,,仪表盘的红光，照着空荡荡的副驾
+Dialogue: 0,0:00:26.84,0:00:29.37,Default,,0,0,0,,最后一单，双倍的价
+Dialogue: 0,0:00:29.40,0:00:35.29,Default,,0,0,0,,一只封好的箱子，一条进城的路
+Dialogue: 0,0:00:35.32,0:00:38.64,Default,,0,0,0,,你说有个孩子，正在来到我们身边
+Dialogue: 0,0:00:38.67,0:00:45.96,Default,,0,0,0,,我握着方向盘，没有答应，也没有说不
+Dialogue: 0,0:00:45.99,0:00:49.16,Default,,0,0,0,,山路尽头，有人倒在车灯前
+Dialogue: 0,0:00:49.19,0:00:52.22,Default,,0,0,0,,我下车时，还以为夜能解释一切
+Dialogue: 0,0:00:52.85,0:00:55.52,Default,,0,0,0,,警灯熄灭，车轮停在雪里
+Dialogue: 0,0:00:55.55,0:00:58.60,Default,,0,0,0,,我拿起那把枪，才知道回头太远
+Dialogue: 0,0:00:58.63,0:01:02.08,Default,,0,0,0,,我不是英雄，只想把这单送完
+Dialogue: 0,0:01:02.11,0:01:05.46,Default,,0,0,0,,只想天亮以前，再听你说晚安
+Dialogue: 0,0:01:05.49,0:01:08.24,Default,,0,0,0,,可手臂上的伤越来越烫
+Dialogue: 0,0:01:08.27,0:01:11.66,Default,,0,0,0,,远处的黑影，已经追到身旁
+Dialogue: 0,0:01:14.43,0:01:19.38,Default,,0,0,0,,再走一程，把这盏微光送到
+Dialogue: 0,0:01:19.41,0:01:21.40,Default,,0,0,0,,再撑一程，哪怕世界正在倾倒
+Dialogue: 0,0:01:21.43,0:01:23.74,Default,,0,0,0,,如果我还能赶上明天
+Dialogue: 0,0:01:23.77,0:01:26.84,Default,,0,0,0,,我会亲口说，我想见见那个孩子
+Dialogue: 0,0:01:26.87,0:01:28.96,Default,,0,0,0,,再走一程，别让这夜白白吞掉
+Dialogue: 0,0:01:28.99,0:01:31.00,Default,,0,0,0,,别让这座城，连最后的希望都找不到
+Dialogue: 0,0:01:31.03,0:01:34.06,Default,,0,0,0,,我曾以为家还远得很
+Dialogue: 0,0:01:34.09,0:01:41.30,Default,,0,0,0,,直到黑暗里，只剩你的名字陪我往前
+Dialogue: 0,0:01:43.61,0:01:46.74,Default,,0,0,0,,谷仓的门，在身后轰然合上
+Dialogue: 0,0:01:46.77,0:01:49.90,Default,,0,0,0,,隧道深处，有孩子低声求救
+Dialogue: 0,0:01:49.93,0:01:52.96,Default,,0,0,0,,我伸出手，她也伸出手
+Dialogue: 0,0:01:52.99,0:01:56.12,Default,,0,0,0,,下一秒，牙印把归途钉在袖口
+Dialogue: 0,0:01:56.15,0:01:57.88,Default,,0,0,0,,有人把我拉进车里
+Dialogue: 0,0:01:57.91,0:02:01.40,Default,,0,0,0,,说箱子里装着解药缺少的成分
+Dialogue: 0,0:02:01.93,0:02:05.42,Default,,0,0,0,,他们把城市的命交给一名快递员
+Dialogue: 0,0:02:05.45,0:02:09.08,Default,,0,0,0,,我只问一句：那我还能不能活着回去
+Dialogue: 0,0:02:09.11,0:02:12.38,Default,,0,0,0,,电梯向上，伤口一路灼烧
+Dialogue: 0,0:02:12.41,0:02:15.40,Default,,0,0,0,,二十八层，像走不完的夜
+Dialogue: 0,0:02:15.43,0:02:18.56,Default,,0,0,0,,我录下那句迟来的道歉
+Dialogue: 0,0:02:18.59,0:02:21.78,Default,,0,0,0,,信号没有来，只有自己的呼吸
+Dialogue: 0,0:02:24.97,0:02:28.30,Default,,0,0,0,,再走一程，把这盏微光送到
+Dialogue: 0,0:02:28.33,0:02:31.82,Default,,0,0,0,,再撑一程，哪怕世界正在倾倒
+Dialogue: 0,0:02:31.85,0:02:37.28,Default,,0,0,0,,如果我还能赶上明天
+Dialogue: 0,0:02:37.31,0:02:39.42,Default,,0,0,0,,我会亲口说，我想见见那个孩子
+Dialogue: 0,0:02:39.45,0:02:41.40,Default,,0,0,0,,再走一程，别让这夜白白吞掉
+Dialogue: 0,0:02:41.43,0:02:44.48,Default,,0,0,0,,别让这座城，连最后的希望都找不到
+Dialogue: 0,0:02:44.51,0:02:47.02,Default,,0,0,0,,我曾以为家还远得很
+Dialogue: 0,0:02:47.05,0:02:51.78,Default,,0,0,0,,直到黑暗里，只剩你的名字陪我往前
+Dialogue: 0,0:02:54.51,0:02:56.58,Default,,0,0,0,,米歇尔，听得到吗
+Dialogue: 0,0:02:56.61,0:02:59.80,Default,,0,0,0,,我刚刚才明白，我有多害怕
+Dialogue: 0,0:03:00.93,0:03:02.90,Default,,0,0,0,,不是害怕死在这里
+Dialogue: 0,0:03:02.93,0:03:05.88,Default,,0,0,0,,是怕从没见过那个孩子的脸
+Dialogue: 0,0:03:06.53,0:03:07.58,Default,,0,0,0,,我想回家
+Dialogue: 0,0:03:08.21,0:03:10.34,Default,,0,0,0,,我想做他的父亲
+Dialogue: 0,0:03:12.77,0:03:15.40,Default,,0,0,0,,如果这声音能穿过风雪
+Dialogue: 0,0:03:15.43,0:03:21.72,Default,,0,0,0,,替我告诉他——我曾经来过这里
+Dialogue: 0,0:03:22.85,0:03:25.92,Default,,0,0,0,,我把那盏微光，终于送到了
+Dialogue: 0,0:03:25.95,0:03:29.18,Default,,0,0,0,,实验室的灯亮了，针尖映着我的手
+Dialogue: 0,0:03:29.21,0:03:31.82,Default,,0,0,0,,可胸口长出陌生的黑暗
+Dialogue: 0,0:03:31.85,0:03:35.08,Default,,0,0,0,,他们叫我的名字，我却快要听不见
+Dialogue: 0,0:03:35.11,0:03:39.02,Default,,0,0,0,,再救我一次——我还认得回家的路
+Dialogue: 0,0:03:39.05,0:03:42.70,Default,,0,0,0,,再救我一次——我还没有说完那句话
+Dialogue: 0,0:03:42.73,0:03:44.88,Default,,0,0,0,,针剂从高处坠向夜色
+Dialogue: 0,0:03:44.91,0:03:48.02,Default,,0,0,0,,直升机的光，照见我不再像我
+Dialogue: 0,0:03:48.05,0:03:51.50,Default,,0,0,0,,雪还在落
+Dialogue: 0,0:03:51.53,0:03:54.70,Default,,0,0,0,,那句话没有寄达
+Dialogue: 0,0:03:56.71,0:03:58.00,Default,,0,0,0,,天亮了吗

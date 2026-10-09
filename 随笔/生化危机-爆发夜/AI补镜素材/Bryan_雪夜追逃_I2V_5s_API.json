@@ -1,0 +1,524 @@
+{
+  "prompt": {
+    "2": {
+      "class_type": "H3ModelModeLoader",
+      "inputs": {
+        "mode": [
+          "3",
+          8
+        ],
+        "fl2va_model": "minimax_h3_fl2va_pruned_int8_convrot.safetensors",
+        "ref2va_model": "minimax_h3_ref2va_pruned_int8_convrot.safetensors",
+        "text_encoder": "qwen3vl_32b_minimax_h3_int8_convrot.safetensors",
+        "video_vae": "minimax_h3_video_vae_fp16.safetensors",
+        "audio_vae": "minimax_h3_audio_vae_fp32.safetensors",
+        "llm_model": "Qwen3.5-4B-GGUF/Qwen3.5-4B-Q4_K_M.gguf"
+      }
+    },
+    "3": {
+      "class_type": "H3GenerationSettings",
+      "inputs": {
+        "mode": "Image to Video",
+        "resolution": "432p 768x432",
+        "custom_width": 768,
+        "custom_height": 432,
+        "duration_seconds": 5,
+        "steps": 8,
+        "video_shift": 12.0,
+        "audio_shift": 3.0,
+        "aspect_ratio": "16:9"
+      }
+    },
+    "4": {
+      "class_type": "H3PromptInput",
+      "inputs": {
+        "mode": [
+          "3",
+          8
+        ],
+        "media_bundle": [
+          "5",
+          21
+        ],
+        "prompt": "A live-action cinematic survival horror shot continuing directly from the provided first frame. The same young male medical courier Bryan, same face, messy short brown hair, same dark winter courier jacket and vest, same white insulated medical case with red marking. He runs toward the camera through a deserted snowbound Raccoon City street at night. The camera tracks backward handheld but controlled, keeping him and the case in the left foreground while parked cars, wet slushy pavement and distant infected silhouettes pass behind him. Snow whips across the lens, a street lamp flickers, shadowy infected creatures descend from rooftops in the far background. He glances back in fear without dropping the case. Preserve the first-frame composition, cold blue-gray cinematic color grade, realistic natural body motion and face, practical headlights and streetlights, fine film grain. Single continuous shot, no cuts, no new people, no wardrobe or prop changes, no titles, no subtitles, no logos, no watermark."
+      }
+    },
+    "23": {
+      "class_type": "MiniMax H3 Context IR Input",
+      "inputs": {
+        "mode": [
+          "3",
+          8
+        ],
+        "prompt": [
+          "56",
+          0
+        ],
+        "media_bundle": [
+          "5",
+          21
+        ]
+      }
+    },
+    "31": {
+      "class_type": "MiniMaxH3ImageToVideo",
+      "inputs": {
+        "clip": [
+          "2",
+          1
+        ],
+        "vae": [
+          "2",
+          2
+        ],
+        "prompt": [
+          "56",
+          0
+        ],
+        "width": [
+          "62",
+          0
+        ],
+        "height": [
+          "62",
+          1
+        ],
+        "length": [
+          "3",
+          2
+        ]
+      }
+    },
+    "32": {
+      "class_type": "MiniMaxH3ImageToVideo",
+      "inputs": {
+        "clip": [
+          "2",
+          1
+        ],
+        "vae": [
+          "2",
+          2
+        ],
+        "first_frame": [
+          "5",
+          0
+        ],
+        "prompt": [
+          "56",
+          0
+        ],
+        "width": [
+          "62",
+          0
+        ],
+        "height": [
+          "62",
+          1
+        ],
+        "length": [
+          "3",
+          2
+        ]
+      }
+    },
+    "33": {
+      "class_type": "MiniMaxH3ImageToVideo",
+      "inputs": {
+        "clip": [
+          "2",
+          1
+        ],
+        "vae": [
+          "2",
+          2
+        ],
+        "first_frame": [
+          "5",
+          0
+        ],
+        "last_frame": [
+          "5",
+          1
+        ],
+        "prompt": [
+          "56",
+          0
+        ],
+        "width": [
+          "62",
+          0
+        ],
+        "height": [
+          "62",
+          1
+        ],
+        "length": [
+          "3",
+          2
+        ]
+      }
+    },
+    "34": {
+      "class_type": "MiniMaxH3ReferenceToVideo",
+      "inputs": {
+        "clip": [
+          "2",
+          1
+        ],
+        "vae": [
+          "2",
+          2
+        ],
+        "audio_vae": [
+          "2",
+          3
+        ],
+        "prompt": [
+          "56",
+          0
+        ],
+        "width": [
+          "62",
+          0
+        ],
+        "height": [
+          "62",
+          1
+        ],
+        "length": [
+          "3",
+          2
+        ],
+        "ref_image_size": "match",
+        "ref_images.ref_image_0": [
+          "5",
+          0
+        ],
+        "ref_images.ref_image_1": [
+          "5",
+          1
+        ],
+        "ref_images.ref_image_2": [
+          "5",
+          2
+        ],
+        "ref_videos.ref_video_0": [
+          "5",
+          10
+        ],
+        "ref_video_audios.ref_video_audio_0": [
+          "5",
+          11
+        ]
+      }
+    },
+    "35": {
+      "class_type": "ComfySwitchNode",
+      "inputs": {
+        "on_false": [
+          "33",
+          0
+        ],
+        "on_true": [
+          "32",
+          0
+        ],
+        "switch": [
+          "23",
+          3
+        ]
+      }
+    },
+    "36": {
+      "class_type": "ComfySwitchNode",
+      "inputs": {
+        "on_false": [
+          "35",
+          0
+        ],
+        "on_true": [
+          "31",
+          0
+        ],
+        "switch": [
+          "23",
+          2
+        ]
+      }
+    },
+    "37": {
+      "class_type": "ComfySwitchNode",
+      "inputs": {
+        "on_false": [
+          "36",
+          0
+        ],
+        "on_true": [
+          "34",
+          0
+        ],
+        "switch": [
+          "23",
+          5
+        ]
+      }
+    },
+    "38": {
+      "class_type": "MiniMaxH3SigmaShift",
+      "inputs": {
+        "model": [
+          "57",
+          0
+        ],
+        "shift_video": [
+          "3",
+          5
+        ],
+        "shift_audio": [
+          "3",
+          6
+        ]
+      }
+    },
+    "39": {
+      "class_type": "BasicGuider",
+      "inputs": {
+        "model": [
+          "38",
+          0
+        ],
+        "conditioning": [
+          "37",
+          0
+        ]
+      }
+    },
+    "40": {
+      "class_type": "EmptyMiniMaxH3LatentAV",
+      "inputs": {
+        "width": [
+          "62",
+          0
+        ],
+        "height": [
+          "62",
+          1
+        ],
+        "length": [
+          "3",
+          2
+        ]
+      }
+    },
+    "42": {
+      "class_type": "RandomNoise",
+      "inputs": {
+        "noise_seed": 2026100901
+      }
+    },
+    "43": {
+      "class_type": "KSamplerSelect",
+      "inputs": {
+        "sampler_name": "euler"
+      }
+    },
+    "44": {
+      "class_type": "H3SamplerStepPreviews",
+      "inputs": {
+        "noise": [
+          "42",
+          0
+        ],
+        "guider": [
+          "39",
+          0
+        ],
+        "sampler": [
+          "43",
+          0
+        ],
+        "sigmas": [
+          "57",
+          1
+        ],
+        "latent_image": [
+          "40",
+          0
+        ]
+      }
+    },
+    "45": {
+      "class_type": "VAEDecode",
+      "inputs": {
+        "samples": [
+          "44",
+          0
+        ],
+        "vae": [
+          "2",
+          2
+        ]
+      }
+    },
+    "46": {
+      "class_type": "VAEDecodeAudio",
+      "inputs": {
+        "samples": [
+          "44",
+          0
+        ],
+        "vae": [
+          "2",
+          3
+        ]
+      }
+    },
+    "49": {
+      "class_type": "CreateVideo",
+      "inputs": {
+        "images": [
+          "45",
+          0
+        ],
+        "audio": [
+          "46",
+          0
+        ],
+        "fps": 24,
+        "bit_depth": 8,
+        "color_space": "sRGB",
+        "codec": "none"
+      }
+    },
+    "50": {
+      "class_type": "SaveVideo",
+      "inputs": {
+        "video": [
+          "49",
+          0
+        ],
+        "filename_prefix": "video/Resident_Evil_Outbreak_Night_MV/clip_01_Bryan_snow_chase_432p",
+        "format": "mp4",
+        "codec": "auto"
+      }
+    },
+    "5": {
+      "class_type": "H3MediaInput",
+      "inputs": {
+        "mode": [
+          "3",
+          8
+        ],
+        "image_1": "Bryan_雪夜医疗箱追逃_概念帧.png",
+        "image_2": "",
+        "image_3": "",
+        "image_4": "",
+        "image_5": "",
+        "image_6": "",
+        "image_7": "",
+        "image_8": "",
+        "image_9": "",
+        "video_1": "",
+        "video_2": "",
+        "video_3": "",
+        "audio_1": "",
+        "audio_2": "",
+        "audio_3": ""
+      }
+    },
+    "56": {
+      "class_type": "H3LlamaCppPrompt",
+      "inputs": {
+        "llm_gguf_path": [
+          "2",
+          4
+        ],
+        "mode": [
+          "3",
+          8
+        ],
+        "duration_seconds": [
+          "3",
+          3
+        ],
+        "prompt": [
+          "4",
+          0
+        ],
+        "optimize": false,
+        "max_tokens": 4096,
+        "temperature": 0.1
+      }
+    },
+    "57": {
+      "class_type": "H3PDDAccModeApply",
+      "inputs": {
+        "model": [
+          "2",
+          0
+        ],
+        "mode": [
+          "3",
+          8
+        ]
+      }
+    },
+    "60": {
+      "class_type": "PreviewAny",
+      "inputs": {
+        "source": [
+          "56",
+          0
+        ]
+      }
+    },
+    "62": {
+      "class_type": "H3ResolutionScale",
+      "inputs": {
+        "width": [
+          "3",
+          0
+        ],
+        "height": [
+          "3",
+          1
+        ],
+        "resolution_factor": 1.0
+      }
+    }
+  },
+  "prompt_text": "A live-action cinematic survival horror shot continuing directly from the provided first frame. The same young male medical courier Bryan, same face, messy short brown hair, same dark winter courier jacket and vest, same white insulated medical case with red marking. He runs toward the camera through a deserted snowbound Raccoon City street at night. The camera tracks backward handheld but controlled, keeping him and the case in the left foreground while parked cars, wet slushy pavement and distant infected silhouettes pass behind him. Snow whips across the lens, a street lamp flickers, shadowy infected creatures descend from rooftops in the far background. He glances back in fear without dropping the case. Preserve the first-frame composition, cold blue-gray cinematic color grade, realistic natural body motion and face, practical headlights and streetlights, fine film grain. Single continuous shot, no cuts, no new people, no wardrobe or prop changes, no titles, no subtitles, no logos, no watermark.",
+  "queue": {
+    "number": 1
+  },
+  "workflow_node_ids": [
+    "2",
+    "23",
+    "3",
+    "31",
+    "32",
+    "33",
+    "34",
+    "35",
+    "36",
+    "37",
+    "38",
+    "39",
+    "4",
+    "40",
+    "42",
+    "43",
+    "44",
+    "45",
+    "46",
+    "49",
+    "5",
+    "50",
+    "56",
+    "57",
+    "60"
+  ],
+  "assets": [],
+  "client_id": "mv-resident-evil"
+}
