@@ -1,0 +1,4 @@
+interface:
+  display_name: "WeChat Article Export"
+  short_description: "Export WeChat articles with local images and videos"
+  default_prompt: "Download this WeChat article as Markdown with its images and videos."

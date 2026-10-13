@@ -1,0 +1,194 @@
+{
+  "1": {
+    "class_type": "ClipProjLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_4b_int8_convrot.safetensors",
+      "type": "krea2",
+      "projection": "mmh3-4b-ClipProj-v3-mlp.safetensors",
+      "device": "cuda:0",
+      "mode": "streaming"
+    }
+  },
+  "2": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "minimax_h3_ref2va_pruned_int8_convrot.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "3": {
+    "class_type": "MiniMaxH3SigmaShift",
+    "inputs": {
+      "model": [
+        "2",
+        0
+      ],
+      "shift_video": 12.0,
+      "shift_audio": 3.0
+    }
+  },
+  "4": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_video_vae_fp16.safetensors"
+    }
+  },
+  "5": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "minimax_h3_audio_vae_fp32.safetensors"
+    }
+  },
+  "6": {
+    "class_type": "MiniMaxH3ReferenceToVideo",
+    "inputs": {
+      "clip": [
+        "1",
+        0
+      ],
+      "vae": [
+        "4",
+        0
+      ],
+      "audio_vae": [
+        "5",
+        0
+      ],
+      "prompt": "subject_definitions:\n<Subject 1> 成年东亚男性，约二十多岁，短黑发，深色夹克，脸型、发型、衣着和参考图保持一致；全片是同一个人，保持真实自然的皮肤纹理，不美颜，不改变年龄或身份。\n\nsummary:\n一段约12秒的电影感人物表演特写：一个情绪濒临崩溃的男人仍举着手枪，强忍悲痛，眼眶湿润，泪水滑落，闭眼失控片刻，再睁眼、视线失焦，最终缓慢把枪口和手臂垂下。重点是可见、细微、连续的面部表情变化；不发生射击。\n\ndetailed_description:\n单镜头连续拍摄，16:9横画幅，约85mm人像镜头的浅景深观感，固定机位，不剪辑、不变焦。构图紧贴参考图：男人居中偏右的面部近景，手枪和双手在画面左侧前景明显虚焦，枪口朝向镜头前方但不射击；背景为冷灰蓝色、柔和虚化的户外环境。低饱和冷色电影调色，画面左侧柔和冷色环境光，右侧微暖侧光描出皮肤和泪痕。保留毛孔、轻微泛红的眼眶、湿润但不过曝的泪水高光。表情可信克制，所有动作小而连贯；头部和肩膀基本稳定，手指不扣扳机，枪不抖动、不变形，不出现火光、枪口烟、伤口或其他人物。\n\n表演时间轴：\n[0–2秒] 男人双手持枪向前，手臂基本伸直并有极轻微的紧张颤动；凝视前方，眉心微收，嘴唇紧抿后略微分开，喉部轻轻吞咽一次，呼吸压住。\n[2–5秒] 视线仍固定，眼眶逐渐泛红湿润，眼泪在下眼睑聚起但暂不落下；嘴唇细微颤动，鼻翼随浅而短的呼吸轻动，眉心逐步收紧。\n[5–7秒] 一滴泪从右眼缓慢溢出并沿右脸颊滑下一小段；下巴绷紧，嘴角轻微向下抽动；身体仍努力保持持枪姿势。\n[7–9秒] 他缓慢闭上双眼，面部短暂皱紧，眉头收拢、鼻梁起褶、嘴唇颤抖，压抑转为无声崩溃；手臂开始一点点下沉。\n[9–11.25秒] 他重新睁眼，视线短暂失焦，再慢慢聚回；双手和枪口从水平位置缓慢转向斜下方，动作连续、克制，不松手、不扣扳机。\n[11.25–12.25秒] 停在半放下的持枪手臂与带泪的脸上，呼吸逐渐放缓，眼神疲惫而空茫；镜头保持稳定，最后自然压暗结束。\n\n整体声音：轻微户外风声、近距离压抑呼吸、一次吞咽和极轻的衣料摩擦；不说话，不配乐，不加入枪声。\n\n负面约束：不得开枪、不得出现枪口火焰或烟雾、不得出现血液或伤害、不得增加人物或道具、不得夸张嚎哭、不得大幅摇头或转身、不得改变服饰和脸部身份、不得镜头切换或运镜、不得改变背景色调、不得出现字幕和文字、不得让手指粘连或手枪扭曲、不得让泪水变成脸上的大片反光。\n",
+      "width": 1344,
+      "height": 768,
+      "length": 289,
+      "ref_image_size": "match",
+      "ref_images.ref_image_0": [
+        "16",
+        0
+      ]
+    }
+  },
+  "7": {
+    "class_type": "BasicGuider",
+    "inputs": {
+      "model": [
+        "9",
+        0
+      ],
+      "conditioning": [
+        "6",
+        0
+      ]
+    }
+  },
+  "8": {
+    "class_type": "KSamplerSelect",
+    "inputs": {
+      "sampler_name": "euler"
+    }
+  },
+  "9": {
+    "class_type": "MiniMaxH3PDDAccApply",
+    "inputs": {
+      "model": [
+        "3",
+        0
+      ],
+      "pdd_file": "MiniMax-H3-Ref2VA-Acc-8Step.safetensors",
+      "nfe": "8",
+      "lora_strength": 1.0,
+      "head_strength": 1.0,
+      "on_off_grid": "error",
+      "partition_check": "error"
+    }
+  },
+  "10": {
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 2026101301
+    }
+  },
+  "11": {
+    "class_type": "SamplerCustomAdvanced",
+    "inputs": {
+      "noise": [
+        "10",
+        0
+      ],
+      "guider": [
+        "7",
+        0
+      ],
+      "sampler": [
+        "8",
+        0
+      ],
+      "sigmas": [
+        "9",
+        1
+      ],
+      "latent_image": [
+        "6",
+        1
+      ]
+    }
+  },
+  "12": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "11",
+        0
+      ],
+      "vae": [
+        "4",
+        0
+      ]
+    }
+  },
+  "13": {
+    "class_type": "VAEDecodeAudio",
+    "inputs": {
+      "samples": [
+        "11",
+        0
+      ],
+      "vae": [
+        "5",
+        0
+      ]
+    }
+  },
+  "14": {
+    "class_type": "CreateVideo",
+    "inputs": {
+      "images": [
+        "12",
+        0
+      ],
+      "audio": [
+        "13",
+        0
+      ],
+      "fps": 24.0,
+      "bit_depth": 8,
+      "color_space": "sRGB",
+      "codec": "none"
+    }
+  },
+  "15": {
+    "class_type": "SaveVideo",
+    "inputs": {
+      "video": [
+        "14",
+        0
+      ],
+      "filename_prefix": "video/人物表情/minimax_h3_复刻",
+      "format": "mp4",
+      "format.codec": "h264"
+    }
+  },
+  "16": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "crying_man_ref.png"
+    }
+  }
+}
